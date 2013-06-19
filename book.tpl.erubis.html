@@ -1,0 +1,50 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>TODO - replace with title</title>
+    <!--[if lt IE 9]>
+    <script src="components/html5shiv/html5shiv.js"></script>
+	<![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script src="jquery.bookify.js"></script>
+	<style type="text/css">	
+		/* line-height, font-size efined in js */
+		* { 
+			/*font-size: 20px;*/
+		 }
+		
+		table, td, th {
+	 
+		  }
+
+		  td {
+	    	 /* height:50px; */
+	 	     vertical-align:top;
+	 	   	 text-align:left;
+	 	 	 padding-bottom:30px;/*行高的倍数-chenjing*/
+			 padding-left:20px;
+	 	  }
+		  /*chenjing*/
+		  .ebook_title{ position:absolute; left:20%; top:7%; font-weight:bold; font-size:35px; width:750px;}
+		  .zh_en{ position:absolute; left:70%; bottom:10%; font-size:14px;}
+
+	</style>
+	
+</head>    
+<body>
+<div class="ebook_title">TODO - replace with title</div>
+
+<div class="ebook_content">
+	<table cellpadding="0" cellspacing="0">
+		<% for para in paragraphs %>
+		<tr><td width="45%" class="zh" ><%= para[0] %></td>
+		<td class="en"><%= para[1] %></td></tr>
+		<% end %>
+</table>
+</div>
+
+<div class="zh_en"><a href="#" class="zh_btn">中文</a> | <a href="#" class="en_btn">英文</a> | <a href="#" class="zhen_btn">中英文</a></div>
+
+</body>
+</html>
