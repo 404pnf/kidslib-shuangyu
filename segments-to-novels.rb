@@ -43,6 +43,7 @@ book_hash.each do |bookid, paragraphs|
   html_str =  eruby.result(binding())   # TODO get result; all local variables are available in the template, might not be a good idea  
   # same old file writing
   p "generating #{OUTPUT}/#{title}.html"
+  p "generating #{OUTPUT}/#{id}.html"
   #p "go checkout #{OUTPUT}"
   File.open("#{OUTPUT}/#{title}.html", "w") do |file|
     file.puts html_str
