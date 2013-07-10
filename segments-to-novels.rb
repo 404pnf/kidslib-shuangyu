@@ -17,6 +17,7 @@ TPL_FILE =  "#{VIEW_FOLDER}/#{TPL_FN}"
 # ref: http://stackoverflow.com/questions/14534522/ruby-csv-parsing-string-with-escaped-quotes
 # if original csv is
 # 173,"Yukihiro \"The Ruby Guy\" Matsumoto","Japan"
+# NOTE NOTE NOTE NOTE
 # The \" is typical Unix whereas Ruby CSV expects ""
 c = CSV.parse(File.read(INPUT).gsub('\"', '""'))
 
