@@ -48,7 +48,7 @@ end
 book_hash.each do |bookid, paragraphs|
   id = bookid
   title_arr = book_title_hash["#{bookid}"]
-  title = title_arr.join("<br>") unless title_arr.nil?
+  title = title_arr.join(" | ") unless title_arr.nil?
   p title
   # here comes erubis
   eruby = Erubis::Eruby.new(File.read(TPL_FILE)) # create Eruby object
