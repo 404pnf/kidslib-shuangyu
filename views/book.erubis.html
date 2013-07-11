@@ -9,7 +9,7 @@
 		line-height, font-size defined in jquery.bookify.js */
 		
 		* { 
-			font-size: 20px;
+			/* font-size: 20px; */
 		 }
 		
 		table, td, th {
@@ -25,15 +25,19 @@
 	 	  }
 		  
 		  /*chenjing*/
-		.ebook_title{ position:absolute; left:20%; top:7%; font-weight:bold; font-size:35px; width:750px;}
-		.zh_en{ position:absolute; left:70%; bottom:10%; font-size:14px;}
-
+		  .ebook_title{ position:absolute; left:20%; top:7%; font-weight:bold; font-size:35px; width:750px;}
+		  .zh_en{ position:absolute; left:70%; bottom:10%; font-size:14px;}
+		  .pre,.next{ cursor:pointer; font-size:40px; font-weight:bold; position:absolute; top:40%}
+		  .pre{ display:none; left:7%}
+		  .next{right:7%}
+		
 	</style>
 	
 </head>    
 <body>
 <div class="ebook_title"><%= title %></div>
-
+<div class="pre"><<</div>
+<div class="next">>></div>
 <div class="ebook_content">
 	<table cellpadding="0" cellspacing="0">
 		<% for para in paragraphs %>
