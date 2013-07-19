@@ -255,6 +255,7 @@ if dirName is not None:
                 
 
                 for i in range(0, (int(fileNumber))):
+                    print(os.path.join(dirName, filest[i]))
                     txtFile = open(filest[i]+'.tsv', mode='w', encoding='utf-8')
                     print('Processing ' + filest[i] + '...')
                     #txtFile.write('***' + filest[i] + '\n');
