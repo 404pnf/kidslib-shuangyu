@@ -12,7 +12,9 @@ BOOK_TITLES = 'db/xin-book-titles.csv'
 
 files = Find.find(CSV_FILEFODLER).select { |f| f =~ /csv$/}
 titles = CSV.readlines(BOOK_TITLES).reduce(Hash.new) do |h, arr| 
-  h[arr[0].to_s] = [arr[1], arr[2]]
+  id, *title = arr
+  h[id] = title
+  #h[arr[0].to_s] = [arr[1], arr[2]]
   h
 end
 #pp titles
