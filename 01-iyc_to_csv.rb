@@ -35,7 +35,7 @@ book_hash = Hash.new{ |hash,key| hash[key] = Array.new }
 # 把书名先写在第一行
 # 这个不能放在后面的 each 中写，那样会重复很多次书名行
 # 第一次实际中用到了hash.merge
-book_hash.merge book_title_hash 
+book_hash.merge(book_title_hash) 
 zh_en_bookid_tuple.each do |tuple|
   
   # NB: id is string, therefore
