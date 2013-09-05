@@ -9,28 +9,25 @@ OUTPUT = 'output-html'
 VIEW_FOLDER = 'views'
 TPL_FILE = 'views/book.erubis.html'
 BOOK_TITLES = 'db/xin-book-titles.csv'
+SUFFIX = '.csv'
 
 files = Find.find(CSV_FILEFODLER).select { |f| f =~ /csv$/}
-titles = CSV.readlines(BOOK_TITLES).reduce(Hash.new) do |h, arr| 
-  id, *title = arr
-  h[id] = title
-  #h[arr[0].to_s] = [arr[1], arr[2]]
-  h
+titles = CSV.readlines(BOOK_TITLES).each_with_object(Hash.new) do |e, a|
+  id, *title = e
+  a[id] = title
 end
-#pp titles
+# pp titles
 files.each do |file|
   id = File.basename(file, '.csv')
   title = titles[id].join(' | ') unless titles[id].nil?
   paragraphs = CSV.readlines file
+
   eruby = Erubis::Eruby.new(File.read(TPL_FILE)) # create Eruby object
-  html_str =  eruby.result(binding())   # TODO get result; all local variables are available in the template, might not be a good idea  
-  
-  # same old file writing
+  html_str =  eruby.result(binding())   # TODO get result; all local variables are available in the template, might not be a good idea
+
   p "generating #{OUTPUT}/#{id}.html: #{title}"
-  File.open("#{OUTPUT}/#{id}.html", "w") do |f|
-    f.puts html_str
+  File.write("#{OUTPUT}/#{id}.html", html_str)
   end
-  
 end
 
 # copy necessary js/css files from views/ to output-html
