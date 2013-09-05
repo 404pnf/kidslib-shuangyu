@@ -1,0 +1,329 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+	<!-- link rel="stylesheet" type="text/css" href="book.css" -->
+	<style type="text/css">
+		/* IMPORTANT !!!!
+		line-height, font-size defined in jquery.bookify.js */
+
+		* {
+			/* font-size: 20px; */
+		 }
+
+		table, td, th {
+
+		  }
+
+		td {
+	    	 /* height:50px; */
+	 	     vertical-align:top;
+	 	   	 text-align:left;
+	 	 	 padding-bottom:30px;/*行高的倍数-chenjing*/
+			 padding-left:20px;
+	 	  }
+
+		  /*chenjing*/
+		  .ebook_title{ position:absolute; left:20%; top:7%; font-weight:bold; font-size:35px; width:750px;}
+		  .zh_en{ position:absolute; left:70%; bottom:10%; font-size:14px;}
+		  .pre,.next{ cursor:pointer; font-size:40px; font-weight:bold; position:absolute; top:40%}
+		  .pre{ display:none; left:7%}
+		  .next{right:7%}
+
+	</style>
+
+</head>
+<body>
+<div class="ebook_title"></div>
+<div class="pre"><<</div>
+<div class="next">>></div>
+<div class="ebook_content">
+	<table cellpadding="0" cellspacing="0">
+		<tr><td width="45%" class="zh" >Niagara</td>
+		<td class="en">尼亚加拉</td></tr>
+		<tr><td width="45%" class="zh" >by Mark Twain</td>
+		<td class="en">作者：马克·吐温</td></tr>
+		<tr><td width="45%" class="zh" >Niagara Falls is a most enjoyable place of resort.</td>
+		<td class="en">尼亚加拉瀑布是一个极其令人心旷神怡的度假胜地。</td></tr>
+		<tr><td width="45%" class="zh" >The hotels are excellent, and the prices not at all exorbitant.</td>
+		<td class="en">旅馆很不错，价格也合适。</td></tr>
+		<tr><td width="45%" class="zh" >The opportunities for fishing are not surpassed in the country; in fact, they are not even equaled elsewhere.</td>
+		<td class="en">在乡下，钓鱼的条件并不优越，实际上，它们还不如别的地方。</td></tr>
+		<tr><td width="45%" class="zh" >Because, in other localities, certain places in the streams are much better than others; but at Niagara one place is just as good as another, for the reason that the fish do not bite anywhere, and so there is no use in your walking five miles to fish, when you can depend on being just as unsuccessful nearer home.</td>
+		<td class="en">因为，在别的地方，河里的某些地段要比别的地段好得多；但在尼亚加拉河，哪里都一样，因为，鱼根本就不会咬钩，所以，要是你以为是因为离住处太近而钓不到鱼，而走去五英里外钓，那依然是枉费心机。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           </td></tr>
+		<tr><td width="45%" class="zh" >The advantages of this state of things have never heretofore been properly placed before the public.</td>
+		<td class="en">迄今为止，对公众而言，这种情况一直不存在什么真正的优越性。</td></tr>
+		<tr><td width="45%" class="zh" >The weather is cool in summer, and the walks and drives are all pleasant and none of them fatiguing.</td>
+		<td class="en">夏天天气凉爽，步行和开车旅行都很愉快，也不会让人觉得疲劳。</td></tr>
+		<tr><td width="45%" class="zh" >When you start out to “do” the Falls you first drive down about a mile, and pay a small sum for the privilege of looking down from a precipice into the narrowest part of the Niagara River.</td>
+		<td class="en">当你想要出去“游”这座瀑布时，你得先驱车行驶大约一英里，付一点儿钱，就可以从一处悬崖上俯瞰尼亚加拉河最狭窄的部分。</td></tr>
+		<tr><td width="45%" class="zh" >A railway “cut” through a hill would be as comely if it had the angry river tumbling and foaming through its bottom.</td>
+		<td class="en">一条铁路把小山拦腰斩断，如果有条愤怒的河流从山下汹涌咆哮而过，那景象一定会很迷人。</td></tr>
+		<tr><td width="45%" class="zh" >You can descend a staircase here a hundred and fifty feet down, and stand at the edge of the water.</td>
+		<td class="en">从那边的一个楼梯往下走150英尺，你就在水边了。</td></tr>
+		<tr><td width="45%" class="zh" >After you have done it, you will wonder why you did it; but you will then be too late.</td>
+		<td class="en">这样做了后，你会想为什么要这样做呢，然而，为时已晚。</td></tr>
+		<tr><td width="45%" class="zh" >The guide will explain to you, in his blood-curdling way, how he saw the little steamer, Maid of the Mist, descend the fearful rapids—how first one paddle-box was out of sight behind the raging billows and then the other, and at what point it was that her smokestack toppled overboard, and where her planking began to break and part asunder—and how she did finally live through the trip, after accomplishing the incredible feat of traveling seventeen miles in six minutes, or six miles in seventeen minutes, I have really forgotten which.</td>
+		<td class="en">导游会用他那令人心惊胆战的方式向你解释，他是如何看到那艘小帆船，雾中女郎号，随急流而下——开始时它的一个明轮是如何在汹涌的巨浪后消失，接着另一个也随之隐没，它的烟囱在哪一刻弃船而栽入水中，它的舢板在什么地方碎裂——最后，它在取得不可思议的成绩后怎样完成航行，它在6分内驶过17英里或是在17分钟内驶过6英里，我真的记不清是哪个了。</td></tr>
+		<tr><td width="45%" class="zh" >But it was very extraordinary, anyhow.</td>
+		<td class="en">但不管怎样，这真是非同寻常。</td></tr>
+		<tr><td width="45%" class="zh" >It is worth the price of admission to hear the guide tell the story nine times in succession to different parties, and never miss a word or alter a sentence or a gesture.</td>
+		<td class="en">这笔入场费值得听这位导游在一连串不同的宴会上将这个故事讲上九次，并且每次都字句不差，未曾改变过一个手势。</td></tr>
+		<tr><td width="45%" class="zh" >Then you drive over to Suspension Bridge, and divide your misery between the chances of smashing down two hundred feet into the river below, and the chances of having the railway-train overhead smashing down onto you.</td>
+		<td class="en">尔后，你驾车来到吊桥，有两种方法可供你解忧：一是跳入200英尺下的河流里，一是呆在桥底下，让火车从你头顶呼啸而过。</td></tr>
+		<tr><td width="45%" class="zh" >Either possibility is discomforting taken by itself, but, mixed together, they amount in the aggregate to positive unhappiness.</td>
+		<td class="en">单靠一种可能不会让你感到欣慰，但是，混合起来，它们一定会让你不愉快。</td></tr>
+		<tr><td width="45%" class="zh" >On the Canada side you drive along the chasm between long ranks of photographers standing guard behind their cameras, ready to make an ostentatious frontispiece of you and your decaying ambulance, and your solemn crate with a hide on it, which you are expected to regard in the light of a horse, and a diminished and unimportant background of sublime Niagara; and a great many people have the incredible effrontery or the native depravity to aid and abet this sort of crime.</td>
+		<td class="en">在加拿大那边，你驾车沿着峡谷，穿行在一长排守卫在相机后的摄影师之间，他们随时会拍出一张招摇的卷首插图，以你和你那破败的车子以及那盖了盖子的且你希望当它是一匹马的暗色木箱作为雄伟的尼亚加拉瀑布渺小的、不重要的背景；而还有一大群人竟然以那令人瞠目结舌的厚颜无耻或当地人的腐化行径，去帮助和教唆这种蠢事。</td></tr>
+		<tr><td width="45%" class="zh" >Any day, in the hands of these photographers, you may see stately pictures of papa and mamma, Johnny and Bub and Sis or a couple of country cousins, all smiling vacantly, and all disposed in studied and uncomfortable attitudes in their carriage, and all looming up in their awe-inspiring imbecility before the snubbed and diminished presentment of that majestic presence whose ministering spirits are the rainbows, whose voice is the thunder, whose awful front is veiled in clouds, who was monarch here dead and forgotten ages before this hackful of small reptiles was deemed temporarily necessary to fill a crack in the world’s unnoted myriads, and will still be monarch here ages and decades of ages after they shall have gathered themselves to their blood-relations, the other worms, and been mingled with the unremembering dust.</td>
+		<td class="en">兴许有一天，在这些摄影师的手中，你会看见谁的父母一本正经的照片、年纪不等的男孩和女孩，或三两个乡下人，他们茫然地微笑着，都以事先安排好的做作且不适的姿态坐在马车里，在备受冷淡和贬低的威严表象面前，他们呈现出令人叹为观止的愚笨，他们臣服的灵魂是彩虹，他们的声音是雷霆，他们可怕的模样隐藏在乌云之中，在这里，他们只是麻木的忘记了年纪的君王，被那些小人驱使着，暂时出来填补那不知名的芸芸众生里的一条裂缝；几十年后，他们把这些照片收集起来，和着那模糊的粉尘，一起传给后代，即另外一些小人物，而他们在照片里仍将是君王。</td></tr>
+		<tr><td width="45%" class="zh" >There is no actual harm in making Niagara a background whereon to display one’s marvelous insignificance in a good strong light, but it requires a sort of superhuman self-complacency to enable one to do it.</td>
+		<td class="en">以尼亚加拉瀑布作为背景，在强光下展现一个人的渺小，这也没什么不可以的，但是，这人得有超乎寻常的自信，才能这么做。</td></tr>
+		<tr><td width="45%" class="zh" >When you have examined the stupendous Horseshoe Fall till you are satisfied you cannot improve on it, you return to America by the new Suspension Bridge, and follow up the bank to where they exhibit the Cave of the Winds.</td>
+		<td class="en">当你参观完这了不起的马蹄形瀑布，且深深地感到它已是近乎完美了，你便从那高架铁路桥返回美国，沿着河岸来到“风之洞穴”。</td></tr>
+		<tr><td width="45%" class="zh" >Here I followed instructions, and divested myself of all my clothing, and put on a waterproof jacket and overalls.</td>
+		<td class="en">在这里，我按照指示，脱掉身上所有的衣服，换上防水夹克和工装裤。</td></tr>
+		<tr><td width="45%" class="zh" >This costume is picturesque, but not beautiful.</td>
+		<td class="en">这身装束很独特，但并不好看。</td></tr>
+		<tr><td width="45%" class="zh" >A guide, similarly dressed, led the way down a flight of winding stairs, which wound and wound, and still kept on winding long after the thing ceased to be a novelty, and then terminated long before it had begun to be a pleasure.</td>
+		<td class="en">一个穿着同样装束的导游，引导我们走下一段环梯，这楼梯弯弯曲曲地旋转着：当早就没有了开始时的新奇时，它还在旋转着；而在它成为一种旋转的乐趣之前，却又早早结束了。</td></tr>
+		<tr><td width="45%" class="zh" >We were then well down under the precipice, but still considerably above the level of the river.</td>
+		<td class="en">然后，我们正好处在悬崖下，但距离水面还是相当远。</td></tr>
+		<tr><td width="45%" class="zh" >We now began to creep along flimsy bridges of a single plank, our persons shielded from destruction by a crazy wooden railing, to which I clung with both hands—not because I was afraid, but because I wanted to.</td>
+		<td class="en">此时，我们开始在那座只有一层薄板的桥上蹑足前行，其中有些人抓住那令人抓狂的栏杆，以防自己掉下去，我则是用两只手抓住栏杆——并不是因为害怕，只是我就想这么做。</td></tr>
+		<tr><td width="45%" class="zh" >Presently the descent became steeper and the bridge flimsier, and sprays from the American Fall began to rain down on us in fast increasing sheets that soon became blinding, and after that our progress was mostly in the nature of groping.</td>
+		<td class="en">过了一会儿，桥更加向下倾斜，桥身也更加脆弱，而美国大瀑布的水花飞溅而下，落在我们的身上，很快就模糊了我们的视线，这之后，我们只能在摸索中前进。</td></tr>
+		<tr><td width="45%" class="zh" >Nova a furious wind began to rush out from behind the waterfall, which seemed determined to sweep us from the bridge, and scatter us on the rocks and among the torrents below.</td>
+		<td class="en">新一轮强风开始从瀑布后猛地向我们刮来，几乎把我们刮下桥，刮到岩石上和下面的激流中。</td></tr>
+		<tr><td width="45%" class="zh" >I remarked that I wanted to go home; but it was too late.</td>
+		<td class="en">我想说我要回家，但已经来不及了。</td></tr>
+		<tr><td width="45%" class="zh" >We were almost under the monstrous wall of water thundering down from above, and speech was in vain in the midst of such a pitiless crash of sound.</td>
+		<td class="en">那道咆哮而下的水墙几乎就在我们的正头顶上，处在这无情的轰鸣之中，说什么都没有用了。</td></tr>
+		<tr><td width="45%" class="zh" >In another moment the guide disappeared behind the deluge, and bewildered by the thunder, driven helplessly by the wind, and smitten by the arrowy tempest of rain, I followed.</td>
+		<td class="en">又过了会儿，导游消失在那片水幕后，而我始终追随着他，尽管那轰鸣让我手足无措，那风让我感到绝望，那雨若箭一般迅速地打在我身上。</td></tr>
+		<tr><td width="45%" class="zh" >All was darkness.</td>
+		<td class="en">黑暗吞噬了一切。</td></tr>
+		<tr><td width="45%" class="zh" >Such a mad storming, roaring, and bellowing of warring wind and water never crazed my ears before.</td>
+		<td class="en">这般疯狂的轰鸣和怒吼，风和水呼啸交战，我的耳朵感到从未有过的混乱。</td></tr>
+		<tr><td width="45%" class="zh" >I bent my head, and seemed to receive the Atlantic on my back.</td>
+		<td class="en">我低下头，背上似附有千斤般的重量。</td></tr>
+		<tr><td width="45%" class="zh" >The world seemed going to destruction.</td>
+		<td class="en">世界末日仿佛来临。</td></tr>
+		<tr><td width="45%" class="zh" >I could not see anything, the flood poured down savagely.</td>
+		<td class="en">我几乎什么也看不到，大水肆无忌惮地倾泻着。</td></tr>
+		<tr><td width="45%" class="zh" >I raised my head, with open mouth, and the most of the American cataract went down my throat.</td>
+		<td class="en">我抬起头，张开嘴，大量美国大瀑布的水花流进我的喉咙里。</td></tr>
+		<tr><td width="45%" class="zh" >If I had sprung a leak now I had been lost.</td>
+		<td class="en">我被淹没了，即使我的喉咙里有条裂缝。</td></tr>
+		<tr><td width="45%" class="zh" >And at this moment I discovered that the bridge had ceased, and we must trust for a foothold to the slippery and precipitous rocks.</td>
+		<td class="en">这时我发现已经到了桥的尽头，我们必须要相信有一个立足处可使我们通往那光滑的、陡峭的岩石。</td></tr>
+		<tr><td width="45%" class="zh" >I never was so scared before and survived it.</td>
+		<td class="en">我从未这么害怕过，然而，我还是挺过来了。</td></tr>
+		<tr><td width="45%" class="zh" >But we got through at last, and emerged into the open day, where we could stand in front of the laced and frothy and seething world of descending water, and look at it.</td>
+		<td class="en">最后，我们终于过去了，站在那翻涌着泡沫的带状水边上，看着这水奔腾着往下流逝。</td></tr>
+		<tr><td width="45%" class="zh" >When I saw how much of it there was, and how fearfully in earnest it was, I was sorry I had gone behind it.</td>
+		<td class="en">当我看到这么多的水，看到它这么郑重其事地奔涌着时，我真后悔不该走到它的后面去。</td></tr>
+		<tr><td width="45%" class="zh" >The noble Red Man has always been a friend and darling of mine.</td>
+		<td class="en">那个高尚的印第安人一直都是我的朋友和亲人。</td></tr>
+		<tr><td width="45%" class="zh" >I love to read about him in tales and legends and romances.</td>
+		<td class="en">我喜欢读他的故事、传说和传奇。</td></tr>
+		<tr><td width="45%" class="zh" >I love to read of his inspired sagacity, and his love of the wild free life of mountain and forest, and his general nobility of character, and his stately metaphorical manner of speech, and his chivalrous love for the dusky maiden, and the picturesque pomp of his dress and accoutrements.</td>
+		<td class="en">我喜欢读他的聪明睿智、他对自由的野外生活的热爱、他高尚的品格、他严谨而富有内涵的言辞、他对那位忧郁少女的绅士般的爱，还有他那优雅而别致的穿着。</td></tr>
+		<tr><td width="45%" class="zh" >Especially the picturesque pomp of his dress and accoutrements.</td>
+		<td class="en">尤其是他那优雅别致的穿着。</td></tr>
+		<tr><td width="45%" class="zh" >When I found the shops at Niagara Falls full of dainty Indian beadwork, and stunning moccasins, and equally stunning toy figures representing human beings who carried their weapons in holes bored through their arms and bodies, and had feet shaped like a pie, I was filled with emotion.</td>
+		<td class="en">在尼亚加拉瀑布这里，我发现了几家商店，里面摆满了雅致的印第安念珠、质地极好的鹿皮鞋，还有同样好的仿照真人制的木偶。他们带着武器，武器插在手臂或身体上的小孔里，他们的脚类似馅饼的形状，看到这些，我非常欣喜。</td></tr>
+		<tr><td width="45%" class="zh" >I knew that now, at last, I was going to come face to face with the noble Red Man.</td>
+		<td class="en">现在，我知道我终于可以见识到真正的印第安人了。</td></tr>
+		<tr><td width="45%" class="zh" >A lady clerk in a shop told me, indeed, that all her grand array of curiosities were made by the Indians, and that they were plenty about the Falls, and that they were friendly, and it would not be dangerous to speak to them.</td>
+		<td class="en">商店里的一个女店员告诉我，实际上，这里大量的珍品都是出自印第安人之手，其中大多数珍品都与瀑布相关，而且，印第安人很友善，同他们打交道是不会有危险的。</td></tr>
+		<tr><td width="45%" class="zh" >And sure enough, as I approached the bridge leading over to Luna Island, I came upon a noble Son of the Forest sitting under a tree, diligently at work on a bead reticule.</td>
+		<td class="en">的确是这样，当我走近那座通往鲁纳岛的桥时，我遇见了高贵的森林之子，他坐在树下，专注地编织着一个用珠串做成的手袋。</td></tr>
+		<tr><td width="45%" class="zh" >He wore a slouch hat and brogans, and had a short black pipe in his mouth.</td>
+		<td class="en">他戴着一顶阔边帽，穿着一双生皮翻毛皮鞋，嘴里含着一根黑色的短烟管。</td></tr>
+		<tr><td width="45%" class="zh" >Thus does the baneful contact with our effeminate civilization dilute the picturesque pomp which is so natural to the Indian when far removed from us in his native haunts.</td>
+		<td class="en">这和我们颓废的文明扭曲地结合，淡化了那别致的景象，但在远离我们的印第安人的居住地上，它显得如此自然。</td></tr>
+		<tr><td width="45%" class="zh" >I addressed the relic as follows:</td>
+		<td class="en">我对这剩下的土著居民述说如下：</td></tr>
+		<tr><td width="45%" class="zh" >“Is the Wawhoo-Wang-Wang of the Whack-a-Whack happy?</td>
+		<td class="en">“瓦卡瓦克的沃胡旺旺是不是很幸福？</td></tr>
+		<tr><td width="45%" class="zh" >Does the great Speckled Thunder sigh for the war-path, or is his heart contented with dreaming of the dusky maiden, the Pride of the Forest?</td>
+		<td class="en">这断断续续的轰鸣声难道是在为战争中受伤的人叹息？他内心难道真的满足于只与那位忧郁的少女在梦中相见？他难道真的对这森林感到骄傲？</td></tr>
+		<tr><td width="45%" class="zh" >Does the mighty Sachem yearn to drink the blood of his enemies, or is he satisfied to make bead reticules for the pappooses of the paleface?</td>
+		<td class="en">那孔武有力的酋长会不会恨不得喝了敌人的血？或者，他会不会只是满足于为那白人的婴孩做念珠串成的手袋？</td></tr>
+		<tr><td width="45%" class="zh" >Speak, sublime relic of bygone grandeur—venerable ruin, speak!”</td>
+		<td class="en">说说吧，残留着过去遗威的崇高的土著居民——神圣庄严的摧残，说吧！”</td></tr>
+		<tr><td width="45%" class="zh" >The relic said:</td>
+		<td class="en">土著居民说：</td></tr>
+		<tr><td width="45%" class="zh" >“An’ is it mesilf, Dennis Hooligan, that ye’d be takon’ for a dirty Injin, ye drawlin’, lantern-jawed, spider-legged divil!</td>
+		<td class="en">“那是我的族人啊，丹尼斯·胡立甘，你肯定把我当作是一个肮脏的印第安人，你这个拖着长调子讲话的、凸下巴、八字腿的恶魔！</td></tr>
+		<tr><td width="45%" class="zh" >By the piper that played before Moses, I’ll ate ye!”</td>
+		<td class="en">在摩西面前的笛声响起前，我要吃了你！”</td></tr>
+		<tr><td width="45%" class="zh" >I went away from there.</td>
+		<td class="en">我从那里走开了。</td></tr>
+		<tr><td width="45%" class="zh" >By and by, in the neighborhood of the Terrapin Tower, I came upon a gentle daughter of the aborigines in fringed and beaded buckskin moccasins and leggins, seated on a bench with her pretty wares about her.</td>
+		<td class="en">过了不久，在水龟塔附近，我看见一个文雅的土著女孩，她穿着用珠子镶了边的鹿皮鞋，还绑了腿，她坐在长凳上，周围摆着她诱人的货物。</td></tr>
+		<tr><td width="45%" class="zh" >She had just carved out a wooden chief that had a strong family resemblance to a clothes-pin, and was now boring a hole through his abdomen to put his bow through.</td>
+		<td class="en">她刚刚用木头雕刻出一个酋长，那很像一个衣夹，现在，她正在他腹部上钻一个洞，以便让他的弓从那里穿过去。</td></tr>
+		<tr><td width="45%" class="zh" >I hesitated a moment, and then addressed her:</td>
+		<td class="en">我犹豫了一下，但还是对她说：</td></tr>
+		<tr><td width="45%" class="zh" >“Is the heart of the forest maiden heavy?</td>
+		<td class="en">“那位森林少女的心情很沉重吗？</td></tr>
+		<tr><td width="45%" class="zh" >Is the Laughing Tadpole lonely?</td>
+		<td class="en">那个大笑的密西西比人孤独吗？</td></tr>
+		<tr><td width="45%" class="zh" >Does she mourn over the extinguished council-fires of her race, and the vanished glory of her ancestors?</td>
+		<td class="en">她是不是在哀悼她族人那熄灭了的会议之火以及她祖先那消失了的荣耀？</td></tr>
+		<tr><td width="45%" class="zh" >Or does her sad spirit wander afar toward the hunting-grounds whither her brave Gobbler-of-the-Lightnings is gone?</td>
+		<td class="en">或者，她那忧伤的灵魂是不是飘到了远方，到了狩猎场，但她的勇士却已经离开了？</td></tr>
+		<tr><td width="45%" class="zh" >Why is my daughter silent?</td>
+		<td class="en">为什么那女孩如此地安静？</td></tr>
+		<tr><td width="45%" class="zh" >Has she ought against the paleface stranger?”</td>
+		<td class="en">她是不是在抗拒陌生的白人？”</td></tr>
+		<tr><td width="45%" class="zh" >The maiden said:</td>
+		<td class="en">那女子说：</td></tr>
+		<tr><td width="45%" class="zh" >“Faix, an’ is it Biddy Malone ye dare to be callin’ names?</td>
+		<td class="en">“混蛋，你怎敢在这里像泼妇一样骂人？</td></tr>
+		<tr><td width="45%" class="zh" >Lave this, or I’ll shy your lean carcass over the cataract, ye sniveling blaggard!”</td>
+		<td class="en">离开这儿，不然，我就把你这瘦骨头丢到瀑布里去，你这个大骗子！”</td></tr>
+		<tr><td width="45%" class="zh" >I adjourned from there also.</td>
+		<td class="en">我又离开了这里。</td></tr>
+		<tr><td width="45%" class="zh" >“Confound these Indians!”</td>
+		<td class="en">“该死的印第安人！”</td></tr>
+		<tr><td width="45%" class="zh" >I said.</td>
+		<td class="en">我说，</td></tr>
+		<tr><td width="45%" class="zh" >“They told me they were tame; but, if appearances go for anything, I should say they were all on the warpath.”</td>
+		<td class="en">“人们告诉我他们是很温顺的，但如果对任何事他们都是这种表现，我不得不说他们完全沉浸在敌对情绪中。”</td></tr>
+		<tr><td width="45%" class="zh" >I made one more attempt to fraternize with them, and only one.</td>
+		<td class="en">我又一次试着亲近他们，仅此一次。</td></tr>
+		<tr><td width="45%" class="zh" >I came upon a camp of them gathered in the shade of a great tree, making wampum and moccasins, and addressed them in the language of friendship:</td>
+		<td class="en">我遇见一个印第安人的营地，他们聚集在树阴下，手里做着贝壳念珠和鹿皮鞋，我用友好的言语对他们说：</td></tr>
+		<tr><td width="45%" class="zh" >“Noble Red Men, Braves, Grand Sachems, War Chiefs, Squaws, and High Muck-a-Mucks, the paleface from the land of the setting sun greets you!</td>
+		<td class="en">“尊敬的印第安人、勇士们、杰出的酋长们、战争首领们、夫人们以及大人物们，从太阳落下的地方来的白人向你们致敬！</td></tr>
+		<tr><td width="45%" class="zh" >You, Beneficent Polecat—you, Devourer of Mountains—you, Roaring Thundergust—you, Bully Boy with a Glass eye—the paleface from beyond the great waters greets you all!</td>
+		<td class="en">你们，仁慈的鸡貂——你们，群山的喜爱者——你们，狂怒的暴风雨——你们，蒙住了一只眼睛的斗士们——从大河那边来的白人向大家致敬！</td></tr>
+		<tr><td width="45%" class="zh" >War and pestilence have thinned your ranks and destroyed your once proud nation.</td>
+		<td class="en">战争和瘟疫削弱了你们的队伍，摧毁了你们曾经引以为傲的民族。</td></tr>
+		<tr><td width="45%" class="zh" >Poker and seven-up, and a vain modern expense for soap, unknown to your glorious ancestors, have depleted your purses.</td>
+		<td class="en">你们光荣的祖先所不知道的东西，如扑克、七点儿和现代对于钱财的无用浪费，已经耗尽了你们的资产。</td></tr>
+		<tr><td width="45%" class="zh" >Appropriating, in your simplicity, the property of others has gotten you into trouble.</td>
+		<td class="en">因为你们的天真无知，你们去盗用别人的财产，这使你们陷入了麻烦。</td></tr>
+		<tr><td width="45%" class="zh" >Misrepresenting facts, in your simple innocence, has damaged your reputation with the soulless usurper.</td>
+		<td class="en">由于你们单纯天真，扭曲的事实已经毁掉了你们的名誉，使你们成为“无情的掠夺者”。</td></tr>
+		<tr><td width="45%" class="zh" >Trading for forty-rod whisky, to enable you to get drunk and happy and tomahawk your families, has played the everlasting mischief with the picturesque pomp of your dress, and here you are, in the broad light of the nineteenth century, gotten up like the ragtag and bobtail of the purlieus of New York.</td>
+		<td class="en">你们换取威士忌酒，寻欢作乐，醉了后拿家人撒气，这对你们那华丽别致的外表造成了不可磨灭的损害，而现在，在19世纪的光天化日之下，你们穿得像纽约贫民窟里的衣衫褴褛的乞丐。</td></tr>
+		<tr><td width="45%" class="zh" >For shame!</td>
+		<td class="en">这是多么可耻啊！</td></tr>
+		<tr><td width="45%" class="zh" >Remember your ancestors!</td>
+		<td class="en">想想你们的祖先们吧！</td></tr>
+		<tr><td width="45%" class="zh" >Recall their mighty deeds!</td>
+		<td class="en">回想下他们卓越的功绩！</td></tr>
+		<tr><td width="45%" class="zh" >Remember Uncas!—and Red jacket! and Hole in the Day!—and Whoopdedoodledo!</td>
+		<td class="en">想想昂卡斯——红夹克以及那段日子里的空洞——还有他们的呐喊！</td></tr>
+		<tr><td width="45%" class="zh" >Emulate their achievements!</td>
+		<td class="en">效法他们的成就！</td></tr>
+		<tr><td width="45%" class="zh" >Unfurl yourselves under my banner, noble savages, illustrious guttersnipes—”</td>
+		<td class="en">在我的旗帜下施展你们的才能，高尚的野蛮人，杰出的流浪者——”</td></tr>
+		<tr><td width="45%" class="zh" >“Down wid him!”</td>
+		<td class="en">“打倒他！”</td></tr>
+		<tr><td width="45%" class="zh" >“Scoop the blaggard!”</td>
+		<td class="en">“铲除这个流氓！”</td></tr>
+		<tr><td width="45%" class="zh" >“Burn him!”</td>
+		<td class="en">“烧死他！”</td></tr>
+		<tr><td width="45%" class="zh" >“Bang him!”</td>
+		<td class="en">“锤死他！”</td></tr>
+		<tr><td width="45%" class="zh" >“Dhround him!”</td>
+		<td class="en">“淹死他！”</td></tr>
+		<tr><td width="45%" class="zh" >It was the quickest operation that ever was.</td>
+		<td class="en">他们的行动比以往都要迅速。</td></tr>
+		<tr><td width="45%" class="zh" >I simply saw a sudden flash in the air of clubs, brickbats, fists, bead-baskets, and moccasins—a single flash, and they all appeared to hit me at once, and no two of them in the same place.</td>
+		<td class="en">我只见空中一闪而过的棍棒、砖头、拳头、念珠串成的手袋和鹿皮鞋——仅仅是一闪而过，它们一下子全砸在我身上，而且每件东西打的地方都不一样。</td></tr>
+		<tr><td width="45%" class="zh" >In the next instant the entire tribe was upon me.</td>
+		<td class="en">下一刻，整个部落的人全冲我而来。</td></tr>
+		<tr><td width="45%" class="zh" >They tore half the clothes off me; they broke my arms and legs; they gave me a thump that dented the top of my head till it would hold coffee like a saucer; and, to crown their disgraceful proceedings and add insult to injury, they threw me over the Niagara Falls, and I got wet.</td>
+		<td class="en">他们把我的衣服也撕掉了一半；他们打断了我的胳膊和腿；他们把我的头顶打得凹下了一块，像一个托盘，能托下一杯咖啡；然后，为了给他们这种行为予以嘉奖，他们还凌辱我，他们把我丢到尼亚加拉瀑布里，弄得我一身湿。</td></tr>
+		<tr><td width="45%" class="zh" >About ninety or a hundred feet from the top, the remains of my vest caught on a projecting rock, and I was almost drowned before I could get loose.</td>
+		<td class="en">距离顶部大约90到100英尺的地方有一块突出的石头，我的背心挂在了上面，在挣扎出水里之前，我差点儿淹死。</td></tr>
+		<tr><td width="45%" class="zh" >I finally fell, and brought up in a world of white foam at the foot of the Fall, whose celled and bubbly masses towered up several inches above my head.</td>
+		<td class="en">终于，我还是掉了下去并被水带到了瀑布脚下满是泡沫的世界，其中一部分还高过我的头顶几英寸。</td></tr>
+		<tr><td width="45%" class="zh" >Of course I got into the eddy.</td>
+		<td class="en">当然，我被卷进了漩涡当中。</td></tr>
+		<tr><td width="45%" class="zh" >I sailed round and round in it forty-four times—chasing a chip and gaining on it—each round trip a half-mile—reaching for the same bush on the bank forty-four times, and just exactly missing it by a hair’s-breadth every time.</td>
+		<td class="en">我顺着漩涡一圈又一圈地转着，转了44次——我追着一块木板并抓住了它——每一圈转半英里——44圈中每一次我都试图抓住岸边的灌木丛，但每次仅以毫厘之差而错过。</td></tr>
+		<tr><td width="45%" class="zh" >At last a man walked down and sat down close to that bush, and put a pipe in his mouth, and lit a match, and followed me with one eye and kept the other on the match, while he sheltered it in his hands from the wind.</td>
+		<td class="en">最后，有个人走了过来，坐在灌木丛的边上，嘴里叼着只烟斗，他擦了根火柴，在他用两手护着火柴不被风吹灭时，他一只眼瞄着我，另一只眼则盯着那根火柴。</td></tr>
+		<tr><td width="45%" class="zh" >Presently a puff of wind blew it out.</td>
+		<td class="en">一瞬间，风还是把火柴吹灭了。</td></tr>
+		<tr><td width="45%" class="zh" >The next time I swept around he said:</td>
+		<td class="en">等我再次漂到岸边时，他说：</td></tr>
+		<tr><td width="45%" class="zh" >“Got a match?”</td>
+		<td class="en">“你有火柴吗？”</td></tr>
+		<tr><td width="45%" class="zh" >“Yes; in my other vest.</td>
+		<td class="en">“有，但在我的另一件背心里。</td></tr>
+		<tr><td width="45%" class="zh" >Help me out, please.”</td>
+		<td class="en">请帮忙把我拉上来。”</td></tr>
+		<tr><td width="45%" class="zh" >“Not for Joe.”</td>
+		<td class="en">“不行。”</td></tr>
+		<tr><td width="45%" class="zh" >When I came round again, I said:</td>
+		<td class="en">当我又转了一圈时，我说：</td></tr>
+		<tr><td width="45%" class="zh" >“Excuse the seemingly impertinent curiosity of a drowning man, but will you explain this singular conduct of yours?”</td>
+		<td class="en">“请原谅一个即将被淹死的人看似无礼的好奇心，您能解释下您异常行为的原因吗？”</td></tr>
+		<tr><td width="45%" class="zh" >“With pleasure.</td>
+		<td class="en">“非常乐意。</td></tr>
+		<tr><td width="45%" class="zh" >I am the coroner.</td>
+		<td class="en">我是一个验尸官。</td></tr>
+		<tr><td width="45%" class="zh" >Don’t hurry on my account.</td>
+		<td class="en">听我这么说后，你可别慌。</td></tr>
+		<tr><td width="45%" class="zh" >I can wait for you.</td>
+		<td class="en">我可以等着你。</td></tr>
+		<tr><td width="45%" class="zh" >But I wish I had a match.”</td>
+		<td class="en">但我希望能弄到根火柴。”</td></tr>
+		<tr><td width="45%" class="zh" >I said: “Take my place, and I’ll go and get you one.”</td>
+		<td class="en">我说：“把我拉上过来，我会给您弄来一根。”</td></tr>
+		<tr><td width="45%" class="zh" >He declined.</td>
+		<td class="en">他拒绝了。</td></tr>
+		<tr><td width="45%" class="zh" ></td>
+		<td class="en"></td></tr>
+		<tr><td width="45%" class="zh" >This lack of confidence on his part created a coldness between us, and from that time forward I avoided him.</td>
+		<td class="en">他对我的不信任，在我们之间制造了一道冷冷的墙，从那时起，我尽量避免靠近他。</td></tr>
+		<tr><td width="45%" class="zh" >It was my idea, in case anything happened to me, to so time the occurrence as to throw my custom into the hands of the opposition coroner on the American side.</td>
+		<td class="en">我想着，万一我遭遇不测，不就正好落到这个与美国人敌对的验尸官手中了。</td></tr>
+		<tr><td width="45%" class="zh" >At last a policeman came along, and arrested me for disturbing the peace by yelling at people on shore for help.</td>
+		<td class="en">最后，来了一个警察，他逮捕了我，理由是我喊人寻求帮助时扰乱了这一方宁静。</td></tr>
+		<tr><td width="45%" class="zh" >The judge fined me, but had the advantage of him.</td>
+		<td class="en">法官罚了我的款，但这总比落到那个验尸官强。</td></tr>
+		<tr><td width="45%" class="zh" >My money was with my pantaloons, and my pantaloons were with the Indians.</td>
+		<td class="en">我的钱在裤子口袋里，而裤子却在那些印第安人手上。</td></tr>
+		<tr><td width="45%" class="zh" >Thus I escaped.</td>
+		<td class="en">因此，我就这样逃脱了。</td></tr>
+		<tr><td width="45%" class="zh" >I am now lying in a very critical condition.</td>
+		<td class="en">现在，我处于一种非常危险的境地。</td></tr>
+		<tr><td width="45%" class="zh" >At least I am lying anyway—critical or not critical.</td>
+		<td class="en">至少我还在这种境地中——不管是危险还是不危险。</td></tr>
+		<tr><td width="45%" class="zh" >I am hurt all over, but I cannot tell the full extent yet, because the doctor is not done taking inventory.</td>
+		<td class="en">我满身是伤，但我不能确切说出伤势，因为医生还没开出单子。</td></tr>
+		<tr><td width="45%" class="zh" >He will make out my manifest this evening.</td>
+		<td class="en">今晚，他会为我的伤开出证明。</td></tr>
+		<tr><td width="45%" class="zh" >However, thus far he thinks only sixteen of my wounds are fatal.</td>
+		<td class="en">然而，至今为止，他认为我只有16处伤是致命的。</td></tr>
+		<tr><td width="45%" class="zh" >I don’t mind the others.</td>
+		<td class="en">其余的伤我也没太在意。</td></tr>
+		<tr><td width="45%" class="zh" >Upon regaining my right mind, I said:</td>
+		<td class="en">当我神智恢复清醒时，我说：</td></tr>
+		<tr><td width="45%" class="zh" >“It is an awful savage tribe of Indians that do the beadwork and moccasins for Niagara Falls, doctor.</td>
+		<td class="en">“医生，那些在尼亚加拉瀑布做念珠饰品和鹿皮鞋的印第安族人太野蛮，太可怕了。</td></tr>
+		<tr><td width="45%" class="zh" >Where are they from?”</td>
+		<td class="en">他们是从哪里来的？”</td></tr>
+		<tr><td width="45%" class="zh" >“Limerick, my son.”</td>
+		<td class="en">“利默里克，我的孩子。”</td></tr>
+		<tr><td width="45%" class="zh" ></td>
+		<td class="en"></td></tr>
+	</table>
+</div>
+
+<div class="zh_en"><a href="#" class="zh_btn">中文</a> | <a href="#" class="en_btn">英文</a> | <a href="#" class="zhen_btn">中英文</a></div>
+
+<script src="jquery-1.10.1.min.js"></script>
+<script src="jquery.bookify.js"></script>
+</body>
+</html>
