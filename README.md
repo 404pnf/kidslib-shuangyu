@@ -16,7 +16,7 @@ Generate html for individual book.  Book contents are in db/*.csv
 
 mergeexcel.py使用方法
 
-    python3 mergeexcel.py inputfoder -f*xls
+    python3 03-merge-excel.py db/2-qi-xls -f*xls
 
 输出的文件在脚本执行的目录。输出的文件是tsv。
 
