@@ -4,7 +4,7 @@ require 'erubis'
 require 'pp'
 require 'fileutils'
 
-CSV_FILEFODLER = 'db/2qi-tsv-csv/'
+CSV_FILEFODLER = 'db/2qi-csv/'
 OUTPUT = 'output-html'
 VIEW_FOLDER = 'views'
 TPL_FILE = 'views/book.erubis.html'
