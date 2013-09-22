@@ -10,21 +10,22 @@ var log;
 //var localStorage = {};
 
 $(function() {
-		   //zh-chenjing
+	//zh-chenjing
 	$(".zh_btn").click(function(){
-    $(".en").css("visibility","visible");
-    $(".zh").css("visibility","hidden");
-  });
-	//en-chenjing
-	$(".en_btn").click(function(){
     $(".zh").css("visibility","visible");
     $(".en").css("visibility","hidden");
   });
-	//zh-chenjing
-	$(".zhen_btn").click(function(){
-  		$(".zh").css("visibility","visible");
- 		$(".en").css("visibility","visible");
+	//en-chenjing
+	$(".en_btn").click(function(){
+    $(".en").css("visibility","visible");
+    $(".zh").css("visibility","hidden");
   });
+  //zh-chenjing
+  $(".zhen_btn").click(function(){
+    $(".zh").css("visibility","visible");
+    $(".en").css("visibility","visible");
+  });
+
   $('.ebook_content').wrapInner('<div id="book" />');
   function up() { $('#book').animate({scrollTop:"-="+scroll_step+"px"}, 0);
   localStorage[window.location.href] = $('#book').scrollTop();

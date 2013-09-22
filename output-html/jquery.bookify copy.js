@@ -10,28 +10,27 @@ var log;
 //var localStorage = {};
 
 $(function() {
-	//zh-chenjing
+		   //zh-chenjing
 	$(".zh_btn").click(function(){
-    $(".zh").css("visibility","visible");
-    $(".en").css("visibility","hidden");
+ 		 $(".zh").css("visibility","visible");
+ 		 $(".en").css("visibility","hidden");
   });
 	//en-chenjing
 	$(".en_btn").click(function(){
-    $(".en").css("visibility","visible");
-    $(".zh").css("visibility","hidden");
+ 		 $(".en").css("visibility","visible");
+ 		 $(".zh").css("visibility","hidden");
   });
-  //zh-chenjing
-  $(".zhen_btn").click(function(){
-    $(".zh").css("visibility","visible");
-    $(".en").css("visibility","visible");
+	//zh-chenjing
+	$(".zhen_btn").click(function(){
+  		$(".zh").css("visibility","visible");
+ 		$(".en").css("visibility","visible");
   });
-
   $('.ebook_content').wrapInner('<div id="book" />');
-  function up() { $('#book').animate({scrollTop:"-="+scroll_step+"px"}, 0);
-  localStorage[window.location.href] = $('#book').scrollTop();
+  function up() { $('#book').animate({scrollTop:"-="+scroll_step+"px"}, 0); 
+  localStorage[window.location.href] = $('#book').scrollTop(); 
   }
-  function down() { $('#book').animate({scrollTop:"+="+scroll_step+"px"}, 0);
-
+  function down() { $('#book').animate({scrollTop:"+="+scroll_step+"px"}, 0); 
+   
   localStorage[window.location.href] = $('#book').scrollTop();
 
   }
@@ -39,7 +38,7 @@ $(function() {
 	//$(document).click(function(e){if(e.target.nodeName == "HTML"){if(e.clientY < $(this).height()/2){up();}else{down();}}});
 	$(".pre").click(function(){
 				up();
-				$(".next").css("display","block");
+				$(".next").css("display","block");		 
 				if($('#book').scrollTop()!=0){
 					$(".pre").css("display","block");
 					}else{ $(".pre").css("display","none");}
@@ -55,12 +54,12 @@ $(function() {
 	$(document).keyup(function(e){if(e.keyCode == 40 || e.keyCode == 32|| e.keyCode == 39 ){down();$(".pre").css("display","block");
 				if($('#book').scrollTop()==$('.table_height').height()-480){
 				$(".next").css("display","none");
-				}else{$(".next").css("display","block");}}else if(e.keyCode == 38|| e.keyCode == 37) {up();$(".next").css("display","block");
+				}else{$(".next").css("display","block");}}else if(e.keyCode == 38|| e.keyCode == 37) {up();$(".next").css("display","block");		 
 				if($('#book').scrollTop()!=0){
 					$(".pre").css("display","block");
 					}else{ $(".pre").css("display","none");}}});
 	if(localStorage[window.location.href]){$('#book').animate({scrollTop:localStorage[window.location.href]}, 0);}
-
+	
 });
 
 document.write(
