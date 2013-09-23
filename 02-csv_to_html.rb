@@ -5,7 +5,7 @@ require 'pp'
 require 'fileutils'
 
 CSV_FILEFODLER = 'db/1qi-csv/'
-OUTPUT = 'outputl'
+OUTPUT = 'output'
 VIEW_FOLDER = 'views'
 TPL_FILE = 'views/book.erubis.html'
 BOOK_TITLES = 'db/book_titles.csv'
@@ -38,5 +38,5 @@ end
 
 if __FILE__ == $PROGRAM_NAME
   csv_2_html
-  copy_asset_to_outputr
+  copy_asset_to_output
 end

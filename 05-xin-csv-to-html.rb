@@ -54,6 +54,6 @@ end
 
 if __FILE__ == $PROGRAM_NAME
   xin_csv_2_html
-  copy_asset_to_outputr
+  copy_asset_to_output
   #suceed_msg
 end
