@@ -1,0 +1,443 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+	<!-- link rel="stylesheet" type="text/css" href="book.css" -->
+	<style type="text/css">
+		/* IMPORTANT !!!!
+		line-height, font-size defined in jquery.bookify.js */
+
+		* {
+			/* font-size: 20px; */
+		 }
+
+		table, td, th {
+
+		  }
+
+		td {
+	    	 /* height:50px; */
+	 	     vertical-align:top;
+	 	   	 text-align:left;
+	 	 	 padding-bottom:30px;/*行高的倍数-chenjing*/
+			 padding-left:20px;
+	 	  }
+
+		  /*chenjing*/
+		  .ebook_title{ position:absolute; left:20%; top:7%; font-weight:bold; font-size:35px; width:750px;}
+		  .zh_en{ position:absolute; left:70%; bottom:10%; font-size:14px;}
+		  .pre,.next{ cursor:pointer; font-size:40px; font-weight:bold; position:absolute; top:40%}
+		  .pre{ display:none; left:7%}
+		  .next{right:7%}
+
+	</style>
+
+</head>
+<body>
+<div class="ebook_title"></div>
+<div class="pre"><<</div>
+<div class="next">>></div>
+<div class="ebook_content">
+	<table cellpadding="0" cellspacing="0">
+		<tr><td width="45%" class="zh" >想战胜命运的国王</td>
+		<td class="en">Story of the King Who Would Be Stronger Than Fate</td></tr>
+		<tr><td width="45%" class="zh" >作者：安德鲁·朗格</td>
+		<td class="en">by Andrew Lang</td></tr>
+		<tr><td width="45%" class="zh" >从前，在一个遥远的东方国家住着一位国王，他十分喜欢打猎，一旦发现鹿，他就会不顾自身安危，前去追赶。</td>
+		<td class="en">Once upon a time, far away in the east country, there lived a king who loved hunting so much that, when once there was a deer in sight, he was careless of his own safety.</td></tr>
+		<tr><td width="45%" class="zh" >事实上，他尤其喜欢独自一人去冒险，所以他常常会撇下自己的贵族和随从们，独自行动。</td>
+		<td class="en">Indeed, he often became quite separated from his nobles and attendants, and in fact was particularly fond of lonely adventures.</td></tr>
+		<tr><td width="45%" class="zh" >他的另一个爱好则是放出消息说自己身体不好，不能接见任何人。只有他忠诚的大臣瓦齐尔知道，他会把自己打扮成一个小商贩，牵着一头驮着便宜货物的驴子四处游走。</td>
+		<td class="en">Another of his favourite amusements was to give out that he was not well, and could not be seen; and then, with the knowledge only of his faithful Grand Wazeer, to disguise himself as a pedlar, load a donkey with cheap wares, and travel about.</td></tr>
+		<tr><td width="45%" class="zh" >这样他就能知道平民百姓对他的评价，还有他的法官和地方官员任务完成得如何。</td>
+		<td class="en">In this way he found out what the common people said about him, and how his judges and governors fulfilled their duties.</td></tr>
+		<tr><td width="45%" class="zh" >一天，他的王后为他生下了一个如黎明般漂亮的女儿。国王高兴极了，有整整一个星期都忘记了打猎，同民众和家人共同欢庆女儿的诞生。</td>
+		<td class="en">One day his queen presented him with a baby daughter as beautiful as the dawn, and the king himself was so happy and delighted that, for a whole week, he forgot to hunt, and spent the time in public and private rejoicing.</td></tr>
+		<tr><td width="45%" class="zh" >然而没过多久，他又出去追捕在森林深处发现的一些鹿了。</td>
+		<td class="en">Not long afterwards, however, he went out after some deer which were to be found in a far corner of his forests.</td></tr>
+		<tr><td width="45%" class="zh" >在捕猎过程中，他的猎狗惊扰了一只美丽的雄鹿，它浑身像雪一样白。国王一看见它，就下定决心无论如何都要抓到它。</td>
+		<td class="en">In the course of the beat his dogs disturbed a beautiful snow-white stag, and directly he saw it the king determined that he would have it at any cost.</td></tr>
+		<tr><td width="45%" class="zh" >于是他挥鞭策马，全速追赶它。</td>
+		<td class="en">So he put the spurs to his horse, and followed it as hard as he could gallop.</td></tr>
+		<tr><td width="45%" class="zh" >当然他所有的随从都以最快的速度跟在他身后，但是国王骑术高超，鹿的速度也非常快，所以一个小时后，国王发现只有他和自己心爱的猎犬还在追赶，其他人都被甩在后面，不见人影了。</td>
+		<td class="en">Of course all his attendants followed at the best speed that they could manage; but the king was so splendidly mounted, and the stag was so swift, that, at the end of an hour, the king found that only his favourite hound and himself were in the chase; all the rest were far, far behind and out of sight.</td></tr>
+		<tr><td width="45%" class="zh" >然而，国王仍然毫不畏惧地继续追赶，直到他发现自己进入了一个四周都是岩石的山谷。这时他的马已经十分劳累了，每走一步都在颤抖。</td>
+		<td class="en">Nothing daunted, however, he went on and on, till he perceived that he was entering a valley with great rocky mountains on all sides, and that his horse was getting very tired and trembled at every stride.</td></tr>
+		<tr><td width="45%" class="zh" >更糟的是，天色已经渐渐暗了下来，太阳很快就要落山了。</td>
+		<td class="en">Worse than all evening was already drawing on, and the sun would soon set.</td></tr>
+		<tr><td width="45%" class="zh" >他向漂亮的雄鹿射了一箭又一箭，但那都是徒劳。</td>
+		<td class="en">In vain had he sent arrow after arrow at the beautiful stag.</td></tr>
+		<tr><td width="45%" class="zh" >射出的箭离目标不是太近，就是太远，最后天色完全暗了下来，他也完全看不到雄鹿的踪迹了。</td>
+		<td class="en">Every shot fell short, or went wide of the mark; and at last, just as darkness was setting in, he lost sight altogether of the beast.</td></tr>
+		<tr><td width="45%" class="zh" >此时，他的马已经累得迈不开步子了，他的猎犬也喘着粗气，一瘸一拐地跟在他身边。他闯入了以前从未到过的大山中，已经完全迷了路，也看不见任何人迹和住所。</td>
+		<td class="en">By this time his horse could hardly move from fatigue, his hound staggered panting along beside him, he was far away amongst mountains where he had never been before, and had quite missed his way, and not a human creature or dwelling was in sight.</td></tr>
+		<tr><td width="45%" class="zh" >尽管情况很糟糕，但是国王并不在意，只是因为没猎到美丽的雄鹿而感到懊恼。</td>
+		<td class="en">All this was very discouraging, but the king would not have minded if he had not lost that beautiful stag.</td></tr>
+		<tr><td width="45%" class="zh" >尽管那使他感到懊恼，但是他从不为自己无能为力的事而忧虑。于是他翻身下马，用手臂拽着缰绳，牵着马沿着崎岖的小道行走，希望能发现一个牧羊人的小屋，或者至少找到一个可以勉强过夜的山洞或是岩石下的休息处。</td>
+		<td class="en">That troubled him a good deal, but he never worried over what he could not help, so he got down from his horse, slipped his arm through the bridle, and led the animal along the rough path in hopes of discovering some shepherd’s hut, or, at least, a cave or shelter under some rock, where he might pass the night.</td></tr>
+		<tr><td width="45%" class="zh" >不久他听见了哗哗的流水声，便朝着声音发出的方向走去。</td>
+		<td class="en">Presently he heard the sound of rushing water, and made towards it.</td></tr>
+		<tr><td width="45%" class="zh" >他吃力地爬过了山丘上一个陡峭的山肩，下方有一条小溪沿着险峻的峡谷奔流而下，而几乎在他脚下，溪水的表面有亮光闪烁，那是一盏灯发出的暗淡的灯光映在了水面上。</td>
+		<td class="en">He toiled over a steep rocky shoulder of a hill, and there, just below him, was a stream dashing down a precipitous glen, and, almost beneath his feet, twinkling and flickering from the level of the torrent, was a dim light as of a lamp.</td></tr>
+		<tr><td width="45%" class="zh" >国王牵着马和猎狗朝着灯光走去，沿着一个陡峭多石的小道踉踉跄跄地往下走。</td>
+		<td class="en">Towards this light the king with his horse and hound made his way, sliding and stumbling down a steep, stony path.</td></tr>
+		<tr><td width="45%" class="zh" >在小道的尽头，国王发现小溪边上有一个狭窄的岩架，上面长满了青草，岩架的尽头有一个山洞，洞顶上挂着一盏简陋的灯笼，它发出的灯光忽明忽暗，照亮了一大片地方。</td>
+		<td class="en">At the bottom the king found a narrow grassy ledge by the brink of the stream, across which the light from a rude lantern in the mount of a cave shed a broad beam of uncertain light.</td></tr>
+		<tr><td width="45%" class="zh" >小溪边上坐着一位上了年纪的隐士，他蓄着长长的白胡子。当国王走近时，他既没有说话也没有移动，只是坐在那里，把散落在身边的干树叶捡起来扔进小溪里。</td>
+		<td class="en">At the edge of the stream sat an old hermit with a long white beard, who neither spoke nor moved as the king approached, but sat throwing into the stream dry leaves which lay scattered about the ground near him.</td></tr>
+		<tr><td width="45%" class="zh" >“愿你平安。”国王按照在乡下通常用的方式向他问好。</td>
+		<td class="en">‘Peace be upon you,’ said the king, giving the usual country salutation.</td></tr>
+		<tr><td width="45%" class="zh" >“也祝你平安。”隐士回答说，但是他始终没有抬头看国王，也没有停下手里的活。</td>
+		<td class="en">‘And upon you peace,’ answered the hermit; but still he never looked up, nor stopped what he was doing.</td></tr>
+		<tr><td width="45%" class="zh" >国王在那里站了一两分钟，一直看着他。</td>
+		<td class="en">For a minute or two the king stood watching him.</td></tr>
+		<tr><td width="45%" class="zh" >他注意到，隐士每次会扔两片树叶，然后聚精会神地看着它们。</td>
+		<td class="en">He noticed that the hermit threw two leaves in at a time, and watched them attentively.</td></tr>
+		<tr><td width="45%" class="zh" >有时两片树叶会很快被溪水冲走，有时只有一片树叶被冲走，而另一片则在水流的边缘慢慢地打转，然后围着一个漩涡转圈，最后又冲回隐者脚边。</td>
+		<td class="en">Sometimes both were carried rapidly down by the stream; sometimes only one leaf was carried off, and the other, after whirling slowly round and round on the edge of the current, would come circling back on an eddy to the hermit’s feet.</td></tr>
+		<tr><td width="45%" class="zh" >还有的时候，两片叶子都陷入反方向的漩涡中，无法进入哗哗直响的小溪。</td>
+		<td class="en">At other times both leaves were held in the backward eddy, and failed to reach the main current of the noisy stream.</td></tr>
+		<tr><td width="45%" class="zh" >“你在做什么？”国王终于问道。隐士回答说他在给人们算命，他说，每个人的命运一开始就是注定的，而且无论命运是什么，人们都无法逃脱。</td>
+		<td class="en">‘What are you doing?’ asked the king at last, and the hermit replied that he was reading the fates of men; every one’s fate, he said, was settled from the beginning, and, whatever it were, there was no escape from it.</td></tr>
+		<tr><td width="45%" class="zh" >国王笑了起来。</td>
+		<td class="en">The king laughed.</td></tr>
+		<tr><td width="45%" class="zh" >“我的命运如何，我倒是不在乎，”他说，“但是我很想知道我小女儿的命运。”</td>
+		<td class="en">‘I care little,’ he said, ‘what my fate may be; but I should be curious to know the fate of my little daughter.’</td></tr>
+		<tr><td width="45%" class="zh" >“我不能说。”隐士回答。</td>
+		<td class="en">‘I cannot say,’ answered the hermit.</td></tr>
+		<tr><td width="45%" class="zh" >“那就是你不知道了？”国王质问到。</td>
+		<td class="en">‘Do you not know, then?’ demanded the king.</td></tr>
+		<tr><td width="45%" class="zh" >“我或许知道，”隐士回答，“但是知道太多总是不明智的。”</td>
+		<td class="en">‘I might know,’ returned the hermit, ‘but it is not always wisdom to know much.’</td></tr>
+		<tr><td width="45%" class="zh" >但是国王对这个回答并不满意，他开始劝老人说出知道的事情，可是劝了好久老人都不肯说。</td>
+		<td class="en">But the king was not content with this reply, and began to press the old man to say what he knew, which for a long time he would not do.</td></tr>
+		<tr><td width="45%" class="zh" >最后国王极力劝说他，他才肯说：</td>
+		<td class="en">At last, however, the king urged him so greatly that he said:</td></tr>
+		<tr><td width="45%" class="zh" >“国王的女儿会嫁给一个穷苦女奴的儿子，她叫普鲁娜，是北土国王的奴隶。</td>
+		<td class="en">‘The king’s daughter will marry the son of a poor slave-girl called Puruna, who belongs to the king of the land of the north.</td></tr>
+		<tr><td width="45%" class="zh" >这是无法逃离的命运。”</td>
+		<td class="en">There is no escaping from Fate.’</td></tr>
+		<tr><td width="45%" class="zh" >国王听到这些话，简直要气疯了，但他实在太累了，所以他只是笑了笑，说不管怎样希望能有逃脱这个命运的办法。</td>
+		<td class="en">The king was wild with anger at hearing these words, but he was also very tired; so he only laughed, and answered that he hoped there would be a way out of THAT fate anyhow.</td></tr>
+		<tr><td width="45%" class="zh" >随后，他问隐士能不能留他和带来的牲畜住一晚，隐士答应了。于是国王很快给马饮足水，把它拴好，自己吃了面包和烤豆子当晚饭，然后躺在山洞里，让猎狗躺在他脚边，努力想要进入梦乡。</td>
+		<td class="en">Then he asked if the hermit could shelter him and his beasts for the night, and the hermit said ‘Yes’; so, very soon the king had watered and tethered his horse, and, after a supper of bread and parched peas, lay down in the cave, with the hound at his feet, and tried to go to sleep.</td></tr>
+		<tr><td width="45%" class="zh" >但是他躺在那里，想着隐士的预言，怎么也睡不着，而且他越想越生气，最后他咬牙切齿地说这绝对，绝对不会发生。</td>
+		<td class="en">But instead of sleeping he only lay awake and thought of the hermit’s prophecy; and the more he thought of it the angrier he felt, until he gnashed his teeth and declared that it should never, never come true.</td></tr>
+		<tr><td width="45%" class="zh" >天亮了，国王起了床，他脸色苍白、闷闷不乐。在问了隐士该走哪条路之后，他很快翻身上马，毫不费劲地找到了回家的路。</td>
+		<td class="en">Morning came, and the king got up, pale and sulky, and, after learning from the hermit which path to take, was soon mounted and found his way home without much difficulty.</td></tr>
+		<tr><td width="45%" class="zh" >他一回到宫中就给北土国王写了封信，恳请他把女奴普鲁娜和她的儿子卖给他。他还在信中说，如果北土国王同意了，他会派一名信使到两国交界的河边接他们。</td>
+		<td class="en">Directly he reached his palace he wrote a letter to the king of the land of the north, begging him, as a favour, to sell him his slave girl Puruna and her son, and saying that, if he consented, he would send a messenger to receive them at the river which divided the kingdoms.</td></tr>
+		<tr><td width="45%" class="zh" >他等回信等了有五天，这期间一直寝食难安，而且十分焦躁。</td>
+		<td class="en">For five days he awaited the reply, and hardly slept or ate, but was as cross as could be all the time.</td></tr>
+		<tr><td width="45%" class="zh" >第五天，他的信使带来了回信，北土国王在信上说国王不必花钱来买女奴和她的儿子，他会把那对母子直接送给国王。</td>
+		<td class="en">On the fifth day his messenger returned with a letter to say that the king of the land of the north would not sell, but he would give, the king the slave girl and her son.</td></tr>
+		<tr><td width="45%" class="zh" >国王喜出望外。</td>
+		<td class="en">The king was overjoyed.</td></tr>
+		<tr><td width="45%" class="zh" >他找来大臣瓦齐尔，说他要独自一人出行，让瓦齐尔编个借口来解释他为什么不在宫中。</td>
+		<td class="en">He sent for his Grand Wazeer and told him that he was going on one of his lonely expeditions, and that the Wazeer must invent some excuse to account for his absence.</td></tr>
+		<tr><td width="45%" class="zh" >然后他化装成一名普通的信使，骑上一匹敏捷的骆驼，迅速赶往接女奴的地方。</td>
+		<td class="en">Next he disguised himself as an ordinary messenger, mounted a swift camel, and sped away to the place where the slave girl was to be handed over to him.</td></tr>
+		<tr><td width="45%" class="zh" >到了那里后，他交给带来女奴的信使一封向北土国王表示感谢的信、一份给他们主人的丰厚礼物，还有给信使的奖赏。然后，他立马把那个可怜的女人和她的小婴儿抱上骆驼，向一片荒漠驶去。</td>
+		<td class="en">When he got there he gave the messengers who brought her a letter of thanks and a handsome present for their master and rewards for themselves; and then without delay he took the poor woman and her tiny baby-boy up on to his camel and rode off to a wild desert.</td></tr>
+		<tr><td width="45%" class="zh" >在走了整整一天一夜后，他来到一个大洞穴，在那里把女人抱下马，把她和婴儿拽到洞里去，然后他拔出剑来，一剑砍下了她的脑袋。</td>
+		<td class="en">After riding for a day and a night, almost without stopping, he came to a great cave where he made the woman dismount, and, taking her and the baby into the cave, he drew his sword and with one blow chopped her head off.</td></tr>
+		<tr><td width="45%" class="zh" >尽管他在怒火的驱使下能做出各种残忍可怕的事情，国王还是觉得不能杀死一个无助的婴儿。他深信这婴儿失去了母亲，很快就会死在这个荒无人烟的地方，于是他把婴儿留在了山洞里，然后骑上骆驼，飞快地回家了。</td>
+		<td class="en">But although his anger made him cruel enough for anything so dreadful, the king felt that he could not turn his great sword on the helpless baby, who he was sure must soon die in this solitary place without its mother; so he left it in the cave where it was, and, mounting his camel, rode home as fast as he could.</td></tr>
+		<tr><td width="45%" class="zh" >在国王领土上的一个小村庄里，住着一个年迈的寡妇，她没有孩子，也没有任何亲人。</td>
+		<td class="en">Now, in a small village in his kingdom there lived an old widow who had no children or relations of any kind.</td></tr>
+		<tr><td width="45%" class="zh" >她主要靠卖自己养的一群山羊的奶过活。她非常非常穷，身子也不是很硬朗，所以她常想，等她因为身子太弱或生病了没法照顾山羊的时候，她该怎么活下去呢。</td>
+		<td class="en">She made her living mostly by selling the milk of a flock of goats; but she was very, very poor, and not very strong, and often used to wonder how she would live if she got too weak or ill to attend to her goats.</td></tr>
+		<tr><td width="45%" class="zh" >每个早晨，她都会赶山羊去吃沙漠上的灌木，到了晚上它们会自己回家，老寡妇就开始挤奶，然后在夜里把它们关在安全的地方。</td>
+		<td class="en">Every morning she drove the goats out into the desert to graze on the shrubs and bushes which grew there, and every evening they came home of themselves to be milked and to be shut up safely for the night.</td></tr>
+		<tr><td width="45%" class="zh" >一天晚上，老妇人惊讶地发现，产奶最多的一只母山羊回来的时候竟一滴奶水也没有。</td>
+		<td class="en">One evening the old woman was astonished to find that her very best nanny-goat returned without a drop of milk.</td></tr>
+		<tr><td width="45%" class="zh" >她以为这是哪个调皮的孩子和她开的玩笑，半路劫走了母羊，还挤完了羊奶。</td>
+		<td class="en">She thought that some naughty boy or girl was playing a trick upon her and had caught the goat on its way home and stolen all the milk.</td></tr>
+		<tr><td width="45%" class="zh" >但是接连好几个晚上，山羊回来时都没有奶水，她便下定决心要找出这个贼。</td>
+		<td class="en">But when evening after evening the goat remained almost dry she determined to find out who the thief was.</td></tr>
+		<tr><td width="45%" class="zh" >第二天，她远远地跟在羊群后面，在羊群吃草时看着它们。</td>
+		<td class="en">So the next day she followed the goats at a distance and watched them while they grazed.</td></tr>
+		<tr><td width="45%" class="zh" >终于，在中午的时候，老妇人发现这只母羊悄悄地离开了羊群，于是她立即跟了过去。</td>
+		<td class="en">At length, in the afternoon, the old woman noticed this particular nanny-goat stealing off by herself away from the herd and she at once went after her.</td></tr>
+		<tr><td width="45%" class="zh" >山羊走了一会儿，便消失在岩石中的一个山洞里。</td>
+		<td class="en">On and on the goat walked for some way, and then disappeared into a cave in the rocks.</td></tr>
+		<tr><td width="45%" class="zh" >老妇人跟着山羊走进山洞，然后她看见山羊居然在给一个男婴喂奶，而婴儿旁边躺着他那可怜母亲的尸体！</td>
+		<td class="en">The old woman followed the goat into the cave and then, what should she see but the animal giving her milk to a little boy-baby, whilst on the ground near by lay the sad remains of the baby’s dead mother!</td></tr>
+		<tr><td width="45%" class="zh" >老妇人虽然有些害怕，但也十分惊喜，认为自己最终能老来得子，并心想这个孩子长大后可以成为自己的安慰和依靠。</td>
+		<td class="en">Wondering and frightened, the old woman thought at last that this little baby might be a son to her in her old age, and that he would grow up and in time to come be her comfort and support.</td></tr>
+		<tr><td width="45%" class="zh" >于是她把婴儿带回了自己的小屋，第二天她拿了把铁锹来到山洞，挖了个坟墓安葬了那位可怜的母亲。</td>
+		<td class="en">So she carried home the baby to her hut, and next day she took a spade to the cave and dug a grave where she buried the poor mother.</td></tr>
+		<tr><td width="45%" class="zh" >十几年过去了，婴儿长成了一个英俊善良、勤劳勇敢的小伙子。</td>
+		<td class="en">Years passed by, and the baby grew up into a find handsome lad, as daring as he was beautiful, and as industrious as he was brave.</td></tr>
+		<tr><td width="45%" class="zh" >老妇人给男孩取名叫努尔·穆罕默德。一天，快到十七岁的穆罕默德从田里干活回来时，看见一头陌生的驴子在吃他们小屋周围菜园里的卷心菜。</td>
+		<td class="en">One day, when the boy, whom the old woman had named Nur Mahomed, was about seventeen years old, he was coming from his day’s work in the fields, when he saw a strange donkey eating the cabbages in the garden which surround their little cottage.</td></tr>
+		<tr><td width="45%" class="zh" >他抓起一根大棍子，开始猛打这个闯入者，把它赶出了菜园。</td>
+		<td class="en">Seizing a big stick, he began to beat the intruder and to drive him out of his garden.</td></tr>
+		<tr><td width="45%" class="zh" >一个路过的邻居冲他喊道：“嗨！</td>
+		<td class="en">A neighbour passing by called out to him—‘Hi!</td></tr>
+		<tr><td width="45%" class="zh" >我说！你为什么这样打人家商贩的驴子？”</td>
+		<td class="en">I say! why are you beating the pedlar’s donkey like that?’</td></tr>
+		<tr><td width="45%" class="zh" >“那商贩应该阻止他的驴子吃我的卷心菜，”努尔·穆罕默德说，“如果它晚上再来，我就把它的尾巴切掉！”</td>
+		<td class="en">‘The pedlar should keep him from eating my cabbages,’ said Nur Mahomed; ‘if he comes this evening here again I’ll cut off his tail for him!’</td></tr>
+		<tr><td width="45%" class="zh" >说完他便开心地吹着口哨，走进了屋里。</td>
+		<td class="en">Whereupon he went off indoors, whistling cheerfully.</td></tr>
+		<tr><td width="45%" class="zh" >碰巧这个邻居总是多嘴，爱搬弄是非。于是，那天晚上，当他在不知是“客店”还是客栈的地方遇见那个商贩时，他把发生的事情都告诉了商贩，还添油加醋地说：“是的，那个脾气暴躁的年轻人说如果打驴子不管用的话，他就要打你了，他还骂你是贼，扬言要把你的鼻子砍下来！”</td>
+		<td class="en">It happened that this neighbour was one of those people who make mischief by talking too much; so, meeting the pedlar in the ‘serai,’ or inn, that evening, he told him what had occurred, and added: ‘Yes; and the young spitfire said that if beating the donkey would not do, he would beat you also, and cut your nose off for a thief!’</td></tr>
+		<tr><td width="45%" class="zh" >几天后，那个商贩继续赶路走了，接着有两个男人出现在村庄里，到处询问是谁威胁要痛打和杀害一个无辜的商贩。</td>
+		<td class="en">A few days later, the pedlar having moved on, two men appeared in the village inquiring who it was who had threatened to ill-treat and to murder an innocent pedlar.</td></tr>
+		<tr><td width="45%" class="zh" >他们说那个商贩害怕自己会丧命，便在国王面前告了状，他们就是国王派来的，奉命把那个说出这些话的目无王法的家伙带到国王面前。</td>
+		<td class="en">They declared that the pedlar, in fear of his life, had complained to the king; and that they had been sent to bring the lawless person who had said these things before the king himself.</td></tr>
+		<tr><td width="45%" class="zh" >当然，他们很快就查明了驴子吃的是努尔·穆罕默德家的卷心菜，那些气话也是这个年轻人说的。尽管小伙子向他们保证，他从来没有说过要杀了谁，他们还是说要奉命逮捕他，让国王亲自审理。</td>
+		<td class="en">Of course they soon found out about the donkey eating Nur Mahomed’s cabbages, and about the young man’s hot words; but although the lad assured them that he had never said anything about murdering anyone, they replied they were ordered to arrest him, and bring him to take his trial before the king.</td></tr>
+		<tr><td width="45%" class="zh" >所以，尽管小伙子极力反抗，他的母亲也放声痛哭，他还是被带走了，很快就被带到了国王面前。</td>
+		<td class="en">So, in spite of his protests, and the wails of his mother, he was carried off, and in due time brought before the king.</td></tr>
+		<tr><td width="45%" class="zh" >当然，努尔·穆罕默德从没有想到那个商贩就是国王本人，也没有人知道这一点。</td>
+		<td class="en">Of course Nur Mahomed never guessed that the supposed pedlar happened to have been the king himself, although nobody knew it.</td></tr>
+		<tr><td width="45%" class="zh" >当别人告诉他年轻人说的话时，国王非常生气，说要教训教训这个年轻人，以儆戒他人，告诉他即使是贫穷的旅行商人也能在他的国家得到正义，不会让无法无天的人任意欺负。</td>
+		<td class="en">But as he was very angry at what he had been told, he declared that he was going to make an example of this young man, and intended to teach him that even poor travelling pedlars could get justice in HIS country, and be protected from such lawlessness.</td></tr>
+		<tr><td width="45%" class="zh" >然而，正当他要判年轻人重刑时，法庭上一阵骚动，原来是努尔·穆罕默德的老母亲哭着走上来，恳请国王听她说几句。</td>
+		<td class="en">However, just as he was going to pronounce some very heavy sentence, there was a stir in the court, and up came Nur Mahomed’s old mother, weeping and lamenting, and begging to be heard.</td></tr>
+		<tr><td width="45%" class="zh" >国王命令她讲，她便开始为男孩求情，说他心地善良，是她年老后的依靠，如果他被关进监狱，那她也活不成了。</td>
+		<td class="en">The king ordered her to speak, and she began to plead for the boy, declaring how good he was, and how he was the support of her old age, and if he were put in prison she would die.</td></tr>
+		<tr><td width="45%" class="zh" >国王问她是谁。</td>
+		<td class="en">The king asked her who she was.</td></tr>
+		<tr><td width="45%" class="zh" >她回答说是年轻人的母亲。</td>
+		<td class="en">She replied that she was his mother.</td></tr>
+		<tr><td width="45%" class="zh" >“他的母亲？”国王说，“你那么老，不可能有这么年轻的儿子！”</td>
+		<td class="en">‘His mother?’ said the king; ‘you are too old, surely, to have so young a son!’</td></tr>
+		<tr><td width="45%" class="zh" >老妇人这才在恐惧和悲痛之下坦白了自己是如何发现男孩，救了他并把他抚养长大的。最后，她请求国王开恩，放过年轻人。</td>
+		<td class="en">Then the old woman, in her fright and distress, confessed the whole story of how she found the baby, and how she rescued and brought him up, and ended by beseeching the king for mercy.</td></tr>
+		<tr><td width="45%" class="zh" >不难想象，当老妇人说出这个故事时，国王的脸色越来越难看，也越来越阴沉，最后他既恼火又诧异，差点儿晕了过去。</td>
+		<td class="en">It is easy to guess how, as the story came out, the king looked blacker and blacker, and more and more grim, until at last he was half fainting with rage and astonishment.</td></tr>
+		<tr><td width="45%" class="zh" >这就是那个婴儿，当年国王残忍地杀害了他的母亲，又把他丢在山洞里，不管他的死活！</td>
+		<td class="en">This, then, was the baby he had left to die, after cruelly murdering his mother!</td></tr>
+		<tr><td width="45%" class="zh" >想必是命运让他逃过此劫！</td>
+		<td class="en">Surely fate might have spared him this!</td></tr>
+		<tr><td width="45%" class="zh" >国王希望自己有充分的理由来处死男孩，因为老隐士的预言又强烈地出现在他的脑海中，但是年轻人犯的罪还不至于被判死刑。</td>
+		<td class="en">He wished he had sufficient excuse to put the boy to death, for the old hermit’s prophecy came back to him as strongly as ever; and yet the young man had done nothing bad enough to deserve such a punishment.</td></tr>
+		<tr><td width="45%" class="zh" >如果他判年轻人死刑，人人都会说他是暴君——事实上，他也不敢这么做！</td>
+		<td class="en">Everyone would call him a tyrant if he were to give such an order—in fact, he dared not try it!</td></tr>
+		<tr><td width="45%" class="zh" >最后，国王定了定神，说道：“如果这个年轻人能加入我的军队，我就让他走。</td>
+		<td class="en">At length he collected himself enough to say:—‘If this young man will enlist in my army I will let him off.</td></tr>
+		<tr><td width="45%" class="zh" >我们需要像他这样的年轻人，遵守点儿纪律对他也有好处。”</td>
+		<td class="en">We have need of such as him, and a little discipline will do him good.’</td></tr>
+		<tr><td width="45%" class="zh" >老妇人仍在哀求说她不能没有儿子，在她心里，让儿子当兵和让他坐牢没什么两样，都会让她感到害怕。</td>
+		<td class="en"> Still the old woman pleaded that she could not live without her son, and was nearly as terrified at the idea of his becoming a soldier as she was at the thought of his being put in prison.</td></tr>
+		<tr><td width="45%" class="zh" >但是最终国王——下定决心要让这个年轻人在他的掌控之中——为了安抚老妇人，他答应给她一大笔抚恤金，足以让她过得很舒服，而努尔·穆罕默德自己则高兴地加入了国王的军队。</td>
+		<td class="en">But at length the king—determined to get the youth into his clutches—pacified her by promising her a pension large enough to keep her in comfort; and Nur Mahomed, to his own great delight, was duly enrolled in the king’s army.</td></tr>
+		<tr><td width="45%" class="zh" >当兵之后，努尔·穆罕默德似乎总是很走运。</td>
+		<td class="en">As a soldier Nur Mahomed seemed to be in luck.</td></tr>
+		<tr><td width="45%" class="zh" >他自己也感到很诧异，但也很高兴总能选去完成一些艰难或危险的任务。尽管有几次，他都是死里逃生，他仍发现自己有机会在绝境中展现勇气。</td>
+		<td class="en">He was rather surprised, but much pleased, to find that he was always one of those chosen when any difficult or dangerous enterprise was afoot; and, although he had the narrowest escapes on some occasions, still, the very desperateness of the situations in which he found himself gave him special chances of displaying his courage.</td></tr>
+		<tr><td width="45%" class="zh" >同时，他也很谦虚慷慨，深得他的长官和战友的喜爱。</td>
+		<td class="en">And as he was also modest and generous, he became a favourite with his officers and his comrades.</td></tr>
+		<tr><td width="45%" class="zh" >因此，他很快就被选为国王贴身侍卫中的一名也就不奇怪了。</td>
+		<td class="en">Thus it was not very surprising that, before very long, he became enrolled amongst the picked men of the king’s bodyguard.</td></tr>
+		<tr><td width="45%" class="zh" >事实上，国王原本希望年轻人能死在战场上，而事与愿违，他竟在困难中渐渐成长起来。于是国王决心要用一些更直接、更致命的办法。</td>
+		<td class="en">The fact is, that the king had hoped to have got him killed in some fight or another; but, seeing that, on the contrary, he throve on hard knocks, he was now determined to try more direct and desperate methods.</td></tr>
+		<tr><td width="45%" class="zh" >在努尔·穆罕默德成为贴身侍卫不久后的一天，他被抽选去护卫在城市中巡游的国王。</td>
+		<td class="en">One day, soon after Nur Mahomed had entered the bodyguard, he was selected to be one of the soldiers told off to escort the king through the city.</td></tr>
+		<tr><td width="45%" class="zh" >游行队伍本来行进得很顺利，突然，从小巷里冲出来一个人，他手持匕首，径直向国王冲了过去。</td>
+		<td class="en">The procession was marching on quite smoothly, when a man, armed with a dagger, rushed out of an alley straight towards the king.</td></tr>
+		<tr><td width="45%" class="zh" >努尔·穆罕默德是贴身侍卫中离国王最近的一个，他立刻扑了过去，挡住了本该是刺向国王的一剑。</td>
+		<td class="en">Nur Mahomed, who was the nearest of the guards, threw himself in the way, and received the stab that had been apparently intended for the king.</td></tr>
+		<tr><td width="45%" class="zh" >幸运的是，这一剑刺得很匆忙，匕首只是刺中他的胸骨，所以即使他伤势严重，但是因为他年轻力壮，很快就康复了。</td>
+		<td class="en">Luckily the blow was a hurried one, and the dagger glanced on is breastbone, so that, although he received a severe wound, his youth and strength quickly got the better of it.</td></tr>
+		<tr><td width="45%" class="zh" >国王当然应该注意到这英勇的行为，于是国王任命他为自己的随从作为嘉奖。</td>
+		<td class="en">The king was, of course, obliged to take some notice of this brave deed, and as a reward made him one of his own attendants.</td></tr>
+		<tr><td width="45%" class="zh" >这件事之后，年轻人又遭遇了无数次奇怪的经历。</td>
+		<td class="en">After this the strange adventures the young man passed through were endless.</td></tr>
+		<tr><td width="45%" class="zh" >贴身侍卫的长官们总是被派去完成各种秘密、困难的差事，而当努尔·穆罕默德执勤时，这种差事总是莫名其妙地落到他头上。</td>
+		<td class="en">Officers of the bodyguard were often sent on all sorts of secret and difficult errands, and such errands had a curious way of becoming necessary when Nur Mahomed was on duty.</td></tr>
+		<tr><td width="45%" class="zh" >有一次，他正在赶路，脚底下的人行桥突然坍陷；另一次，他遭到一群武装强盗的攻击；还有一次，他途经山口时，一块石头从他上方滚了下来；就连走在市里的一个窄巷子里，也会有很重的石盖顶从屋顶上掉下来，砸在他的脚边。</td>
+		<td class="en">Once, while he was taking a journey, a foot-bridge gave way under him; once he was attacked by armed robbers; a rock rolled down upon him in a mountain pass; a heavy stone coping fell from a roof at his feet in a narrow city alley.</td></tr>
+		<tr><td width="45%" class="zh" >总之，努尔·穆罕默德开始觉得有个敌人暗藏在身边，但是他是一个无忧无虑的人，所以这个想法并没有对他造成很大的困扰。</td>
+		<td class="en">Altogether, Nur Mahomed began to think that, somewhere or other, he had made an enemy; but he was light-hearted, and the thought did not much trouble him.</td></tr>
+		<tr><td width="45%" class="zh" >他每次都能摆脱险境，而且对接下来的冒险兴致勃勃，一点儿都不焦虑。</td>
+		<td class="en">He escaped somehow every time, and felt amused rather than anxious about the next adventure.</td></tr>
+		<tr><td width="45%" class="zh" >这座城市有一个习惯，那就是当天执勤的宫殿侍卫的长官能直接从国王的厨房里领取食物。</td>
+		<td class="en">It was the custom of that city that the officer for the day of the palace guards should receive all his food direct from the king’s kitchen.</td></tr>
+		<tr><td width="45%" class="zh" >一天，轮到努尔·穆罕默德值班了。他刚要坐下享用从宫殿送来的美味炖肉，就有一只瘦削饥饿的狗从东边穿过大街跑过来。它的头伸进了警卫室，嘴角淌着口水，鼻子还闻来闻去的，眼巴巴地看着努尔·穆罕默德。</td>
+		<td class="en">One day, when Nur Mahomed’s turn came to be on duty, he was just sitting down to a delicious stew that had been sent in from the palace, when one of those gaunt, hungry dogs, which, in eastern countries, run about the streets, poked his nose in at the open guard-room door, and looked at Nur Mahomed with mouth watering and nostrils working.</td></tr>
+		<tr><td width="45%" class="zh" >好心的年轻人拿出一块肉来到门口，把肉扔在了门外给狗吃。</td>
+		<td class="en">The kind-hearted young man picked out a lump of meat, went to the door, and threw it outside to him.</td></tr>
+		<tr><td width="45%" class="zh" >那只狗猛扑上去，贪婪地一口就把肉吞了下去。它刚要转身离开时，摇晃着走了几步便倒在地上，来回打了几个滚，就断气了。</td>
+		<td class="en">The dog pounced upon it, and gulped it down greedily, and was just turning to go, when it staggered, fell, rolled over, and died.</td></tr>
+		<tr><td width="45%" class="zh" >努尔·穆罕默德本来懒洋洋地看着它，看到这一幕后呆呆地站了一会儿，然后轻声地吹着口哨回到了屋里。</td>
+		<td class="en">Nur Mahomed, who had been lazily watching him, stood still for a moment, then he came back whistling softly.</td></tr>
+		<tr><td width="45%" class="zh" >他把剩下的饭菜收在一起，小心翼翼地包好，然后带走埋了起来，接着把空盘子送了回去。</td>
+		<td class="en">He gathered up the rest of his dinner and carefully wrapped it up to carry away and bury somewhere; and then he sent back the empty plates.</td></tr>
+		<tr><td width="45%" class="zh" >第二天早上，努尔·穆罕默德精神饱满地出现在宫廷，像往常一样机智敏锐、面带微笑，这可把国王给气坏了。</td>
+		<td class="en">How furious the king was when, at the next morning’s durbar, Nur Mahomed appeared before him fresh, alert and smiling as usual.</td></tr>
+		<tr><td width="45%" class="zh" >然而，他决定再试一次，命令年轻人当天晚上来见他，并吩咐年轻人给一个远方省份的总督送一封密函。</td>
+		<td class="en">He was determined, however, to try once more, and bidding the young man come into his presence that evening, gave orders that he was to carry a secret despatch to the governor of a distant province.</td></tr>
+		<tr><td width="45%" class="zh" >“你马上去作准备，”国王补充说，“明天一早就出发。</td>
+		<td class="en">‘Make your preparations at once,’ added he, ‘and be ready to start in the morning.</td></tr>
+		<tr><td width="45%" class="zh" >临走之前，我会亲自把信交给你。”</td>
+		<td class="en">I myself will deliver you the papers at the last moment.’</td></tr>
+		<tr><td width="45%" class="zh" >现在那个省份距离王宫有四五天的路程，而那个省的总督是国王最忠心的大臣。</td>
+		<td class="en">Now this province was four or five days’ journey from the palace, and the governor of it was the most faithful servant the king had.</td></tr>
+		<tr><td width="45%" class="zh" >他平时沉默寡言，常为自己对国王的忠心而感到自豪。</td>
+		<td class="en">He could be silent as the grave, and prided himself on his obedience.</td></tr>
+		<tr><td width="45%" class="zh" >他是国王身边一名可靠的老臣，而自王后几年前去世后，他的妻子也一直如母亲般照料公主。</td>
+		<td class="en">Whilst he was an old and tried servant of the king’s, his wife had been almost a mother to the young princess ever since the queen had died some years before.</td></tr>
+		<tr><td width="45%" class="zh" >就在几天前，公主因为健康的原因被送到另一个遥远的省份。在这期间，公主的老朋友，也就是总督的妻子，请她尽快赶来住一段时间。</td>
+		<td class="en">It happened that, a little before this time, the princess had been sent away for her health to another remote province; and whilst she was there her old friend, the governor’s wife, had begged her to come and stay with them as soon as she could.</td></tr>
+		<tr><td width="45%" class="zh" >公主愉快地接受了邀请，事实上，当国王下定决心让努尔·穆罕默德送密信给总督的时候，公主正住在总督家里。</td>
+		<td class="en">The princess accepted gladly, and was actually staying in the governor’s house at the very time when the king made up his mind to send Nur Mahomed there with the mysterious despatch.</td></tr>
+		<tr><td width="45%" class="zh" >依照吩咐，努尔·穆罕默德第二天一大早就来到国王的私人住所。</td>
+		<td class="en">According to orders Nur Mahomed presented himself early the next morning at the king’s private apartments.</td></tr>
+		<tr><td width="45%" class="zh" >他给自己最好的马装上鞍，把食物放在鞍囊中，又装了些钱在自己的腰带里，就准备出发了。</td>
+		<td class="en">His best horse was saddled, food placed in is saddle-bag, and with some money tied up in his waist-band, he was ready to start.</td></tr>
+		<tr><td width="45%" class="zh" >国王交给他一个密封的信袋，要他务必把信送到总督手里，而不能给其他任何人。</td>
+		<td class="en">The king handed over to him a sealed packet, desiring him to give it himself only into the hands of the governor, and to no one else.</td></tr>
+		<tr><td width="45%" class="zh" >努尔·穆罕默德仔细地把信藏在自己的头巾里，然后翻身上马，五分钟后就出了城门，开始了漫长的旅程。</td>
+		<td class="en">Nur Mahomed hid it carefully in his turban, swung himself into the saddle, and five minutes later rode out of the city gates, and set out on his long journey.</td></tr>
+		<tr><td width="45%" class="zh" >天气十分炎热，但是努尔·穆罕默德想把那封珍贵的信越快送到越好，于是他在夜里也不断赶路，只在白天最热的时候才休息一下。到了第三天中午，他发现自己离目的地已经很近了。</td>
+		<td class="en">The weather was very hot; but Nur Mahomed thought that the sooner his precious letter was delivered the better; so that, by dint of riding most of each night and resting only in the hottest part of the day, he found himself, by noon on the third day, approaching the town which was his final destination.</td></tr>
+		<tr><td width="45%" class="zh" >周围一个人都没有，而此时的努尔·穆罕默德已经累得身体发僵、口干舌燥。他用充满渴望的眼神望着墙那边的花园，盯着花园里的喷泉、绿草、阴凉的杏树园和巨大的桑树，他真希望自己能呆在里面。</td>
+		<td class="en">Not a soul was to be seen anywhere; and Nur Mahomed, stiff, dry, thirsty, and tired, looked longingly over the wall into the gardens, and marked the fountains, the green grass, the shady apricot orchards, and giant mulberry trees, and wished he were there.</td></tr>
+		<tr><td width="45%" class="zh" >他终于来到城堡的大门前，并马上被准许进入了，因为他穿着国王贴身侍卫的制服。</td>
+		<td class="en">At length he reached the castle gates, and was at once admitted, as he was in the uniform of the king’s bodyguard.</td></tr>
+		<tr><td width="45%" class="zh" >士兵告诉他总督现在正在休息，晚上才能接见他。</td>
+		<td class="en">The governor was resting, the soldier said, and could not see him until the evening.</td></tr>
+		<tr><td width="45%" class="zh" >于是努尔·穆罕默德把他的马交给了一个随从，自己走进了刚才从街上看到的那个美丽的花园，在阴凉处坐下来休息。</td>
+		<td class="en">So Nur Mahomed handed over his horse to an attendant, and wandered down into the lovely gardens he had seen from the road, and sat down in the shade to rest himself.</td></tr>
+		<tr><td width="45%" class="zh" >他躺了下来，看着小鸟在头顶的枝头上叽叽喳喳地鸣叫。</td>
+		<td class="en">He flung himself on his back and watched the birds twittering and chattering in the trees above him.</td></tr>
+		<tr><td width="45%" class="zh" >他透过树枝，看到了大片大片的天空，风筝在空中不断地盘旋，伴随着阵阵尖锐的笛声。</td>
+		<td class="en">Through the branches he could see great patches of sky where the kites wheeled and circled incessantly, with shrill whistling cried.</td></tr>
+		<tr><td width="45%" class="zh" >蜜蜂在花间嗡嗡地飞舞，发出催眠的声音。没过几分钟，努尔·穆罕默德就睡着了。</td>
+		<td class="en">Bees buzzed over the flowers with a soothing sound, and in a few minutes Nur Mahomed was fast asleep.</td></tr>
+		<tr><td width="45%" class="zh" >因为天气炎热，总督和他的妻子每天中午都会在自己的房间睡两三个小时。事实上，宫里的大部分人都会这么做。</td>
+		<td class="en">Every day, through the heat of the afternoon, the governor, and his wife also, used to lie down for two or three hours in their own rooms, and so, for the matter of that, did most people in the palace.</td></tr>
+		<tr><td width="45%" class="zh" >但是公主和其他女孩一样，在屋里呆不住，她喜欢在花园里散步，而不是躺在一堆软垫子里。</td>
+		<td class="en">But the princess, like many other girls, was restless, and preferred to wander about the garden, rather than rest on a pile of soft cushions.</td></tr>
+		<tr><td width="45%" class="zh" >有时，公主很让她那些年老、矮胖的仆人们伤脑筋，当仆人们都困得睁不开眼睛的时候，她总是不肯睡觉，还让仆人们在一起聊天，或者要她们做这做那的！</td>
+		<td class="en">What a torment her stout old attendants and servants sometime thought her when she insisted on staying awake, and making them chatter or do something, when they could hardly keep their eyes open!</td></tr>
+		<tr><td width="45%" class="zh" >然而，有时候公主会假装睡着，等她的仆人们也开心地都学着她的样子去睡觉后，她再起床出去，用面纱松松地包住自己。</td>
+		<td class="en">Sometimes, however, the princess would pretend to go to sleep, and then, after all her women had gladly followed her example, she would get up and go out by herself, her veil hanging loosely about her.</td></tr>
+		<tr><td width="45%" class="zh" >如果总督夫人发现了她，会严厉地训斥她一通，但是公主只会笑一笑，下一次依旧这么干。</td>
+		<td class="en">If she was discovered her old hostess scolded her severely; but the princess only laughed, and did the same thing next time.</td></tr>
+		<tr><td width="45%" class="zh" >这天中午，公主又离开了熟睡的仆人们。她一人在屋里玩了一会儿，觉得无聊，就又溜进了花园里，转了转所有喜爱的角落。这里空无一人，公主觉得十分安全。</td>
+		<td class="en">This very afternoon the princess had left all her women asleep, and, after trying in vain to amuse herself indoors, she had slipped out into the great garden, and rambled about in all her favourite nooks and corners, feeling quite safe as there was not a creature to be seen.</td></tr>
+		<tr><td width="45%" class="zh" >突然，在一拐角处，公主惊讶地停下了脚步，她面前竟躺着一个酣睡的男子！</td>
+		<td class="en">Suddenly, on turning a corner, she stopped in surprise, for before her lay a man fast asleep!</td></tr>
+		<tr><td width="45%" class="zh" >她刚才急急忙忙的，险些被他绊倒。</td>
+		<td class="en">In her hurry she had almost tripped over him.</td></tr>
+		<tr><td width="45%" class="zh" >公主发现他是一个年轻的小伙子，身上穿着国王贴身侍卫长官的制服，因为长途跋涉而满身灰尘，皮肤也被晒黑了。</td>
+		<td class="en">But there he was, a young man, tanned and dusty with travel, in the uniform of an officer of the king’s guard.</td></tr>
+		<tr><td width="45%" class="zh" >这位可爱的公主缺点不多，但其中一条就是好奇心太强。她的生活十分闲散，所以她有大量的时间来满足好奇心。</td>
+		<td class="en">One of the few faults of this lovely princess was a devouring curiosity, and she lived such an idle life that she had plenty of time to be curious.</td></tr>
+		<tr><td width="45%" class="zh" >在这个年轻人头巾的一个褶子里隐约露出了一封信的边角！</td>
+		<td class="en">Out of one of the folds of this young man’s turban there peeped the corner of a letter!</td></tr>
+		<tr><td width="45%" class="zh" >公主很想知道信上写了什么——这封信是写给谁的！</td>
+		<td class="en">She wondered what the letter was—whom it was for!</td></tr>
+		<tr><td width="45%" class="zh" >她把自己的面纱拉近了一点儿，踮着脚尖悄悄地走过去，抓住了信的一角。</td>
+		<td class="en">She drew her veil a little closer, and stole across on tip-toe and caught hold of the corner of the letter.</td></tr>
+		<tr><td width="45%" class="zh" >然后她把信抽出来一点儿，又抽出来一点儿！</td>
+		<td class="en">Then she pulled it a little, and just a little more!</td></tr>
+		<tr><td width="45%" class="zh" >她看到信上有一个大大的印章，那正是她父亲的印章，她犹豫了一分钟，为她所做的事情感到有些羞愧。</td>
+		<td class="en">A great big seal came into view, which she saw to be her father’s, and at the sight of it she paused for a minute half ashamed of what she was doing.</td></tr>
+		<tr><td width="45%" class="zh" >但是她实在无法抑制拿走一封不属于她的信所带来的乐趣，所以不一会儿，那封信就被她握在手里了。</td>
+		<td class="en">But the pleasure of taking a letter which was not meant for her was more than she could resist, and in another moment it was in her hand.</td></tr>
+		<tr><td width="45%" class="zh" >突然，她想到如果这个可怜的长官丢了信，他就会被处死，所以她还必须把信原样放回。</td>
+		<td class="en">All at once she remembered that it would be death to this poor officer if he lost the letter, and that at all hazards she must put it back again.</td></tr>
+		<tr><td width="45%" class="zh" >但这并不是件容易的事，手中的信使她心中产生强烈的欲望，她迫不及待地想要看看里面写了什么。</td>
+		<td class="en">But this was not so easy; and, moreover, the letter in her hand burnt her with longing to read it, and see what was inside.</td></tr>
+		<tr><td width="45%" class="zh" >她检查了一下印章。</td>
+		<td class="en">She examined the seal.</td></tr>
+		<tr><td width="45%" class="zh" >在太阳的暴晒下，印章已经发黏，她轻轻一用力就把印章和纸分开了。</td>
+		<td class="en">It was sticky with being exposed to the hot sun, and with a very little effort it parted from the paper.</td></tr>
+		<tr><td width="45%" class="zh" >她把信打开，并读了起来！</td>
+		<td class="en">The letter was open and she read it!</td></tr>
+		<tr><td width="45%" class="zh" >信上写道：</td>
+		<td class="en">And this was what was written:</td></tr>
+		<tr><td width="45%" class="zh" >“立即将送信来的信使秘密斩首。</td>
+		<td class="en">‘Behead the messenger who brings this letter secretly and at once.</td></tr>
+		<tr><td width="45%" class="zh" >无须多问。”</td>
+		<td class="en">Ask no questions.’</td></tr>
+		<tr><td width="45%" class="zh" >公主的脸色变得煞白。</td>
+		<td class="en">The girl grew pale.</td></tr>
+		<tr><td width="45%" class="zh" >父亲这么做是多么可耻啊！她心想。</td>
+		<td class="en">What a shame! she thought.</td></tr>
+		<tr><td width="45%" class="zh" >她绝不会让这样一个年轻英俊的小伙子被斩首，但是她一时还想不出该如何阻止这件事。</td>
+		<td class="en">SHE would not let a handsome young fellow like that be beheaded; but how to prevent it was not quite clear at the moment.</td></tr>
+		<tr><td width="45%" class="zh" >她必须想出个办法来才行，她真希望能一个人呆在不受他人打扰的地方，而在花园里，随时会有人来。</td>
+		<td class="en">Some plan must be invented, and she wished to lock herself in where no one could interrupt her, as might easily happen in the garden.</td></tr>
+		<tr><td width="45%" class="zh" >她轻轻地溜回自己的房间，拿出一张纸在上面写道：“立即将公主公开许配给送信的信使。</td>
+		<td class="en">So she crept softly to her room, and took a piece of paper and wrote upon it: ‘Marry the messenger who brings this letter to the princess openly at once.</td></tr>
+		<tr><td width="45%" class="zh" >无须多问。”</td>
+		<td class="en">Ask no questions.’</td></tr>
+		<tr><td width="45%" class="zh" >她甚至把印章从原来的信上取下来，贴到她写的信上，这样除非仔细检查，没人能看出信曾被打开过。</td>
+		<td class="en"> And even contrived to work the seals off the original letter and to fix them to this, so that no one could tell, unless they examined it closely, that it had ever been opened.</td></tr>
+		<tr><td width="45%" class="zh" >然后她又溜回到年轻长官睡觉的地方，浑身因为害怕和兴奋而发抖。她把信塞回他头巾的褶子里，又赶忙回到自己的房间。</td>
+		<td class="en">Then she slipped back, shaking with fear and excitement, to where the young officer still lay asleep, thrust the letter into the fold so his turban, and hurried back to her room.</td></tr>
+		<tr><td width="45%" class="zh" >事情就办好了！</td>
+		<td class="en">It was done!</td></tr>
+		<tr><td width="45%" class="zh" >下午晚些时候，努尔·穆罕默德醒了过来，在确保那封珍贵的信还在后，便起身准备去谒见总督。</td>
+		<td class="en">Late in the afternoon Nur Mahomed woke, and, making sure that the precious despatch was still safe, went off to get ready for his audience with the governor.</td></tr>
+		<tr><td width="45%" class="zh" >他一见到总督，就马上从头巾里拿出信件，按照吩咐交到总督的手里。</td>
+		<td class="en">As soon as he was ushered into his presence he took the letter from his turban and placed it in the governor’s hands according to orders.</td></tr>
+		<tr><td width="45%" class="zh" >总督读了信后，确实有些惊讶，但是信中说“无须多问”，他还是知道该如何服从命令的。</td>
+		<td class="en">When he had read it the governor was certainly a little astonished; but he was told in the letter to ‘ask no questions,’ and he knew how to obey orders.</td></tr>
+		<tr><td width="45%" class="zh" >于是他找来自己的妻子，要她为公主作好立即结婚的准备。</td>
+		<td class="en">He sent for his wife and told her to get the princess ready to be married at once.</td></tr>
+		<tr><td width="45%" class="zh" >“真是荒谬！”他的妻子说，“你这到底是什么意思？”</td>
+		<td class="en">‘Nonsense!’ said his wife, ‘what in the world do you mean?’</td></tr>
+		<tr><td width="45%" class="zh" >“这是国王的命令，”他回答说，“快按我的吩咐去做。</td>
+		<td class="en">‘These are the king’s commands,’ he answered; ‘go and do as I bid you.</td></tr>
+		<tr><td width="45%" class="zh" >信上说了‘立即’和‘无须多问’。</td>
+		<td class="en">The letter says “at once,” and “ask no questions.”</td></tr>
+		<tr><td width="45%" class="zh" >所以，婚礼今晚就得举行。”</td>
+		<td class="en">The marriage, therefore, must take place this evening.’</td></tr>
+		<tr><td width="45%" class="zh" >他的妻子提出各种理由来反对，但都无济于事，她越争辩，她的丈夫就越坚定。</td>
+		<td class="en">In vain did his wife urge every objection; the more she argued, the more determined was her husband.</td></tr>
+		<tr><td width="45%" class="zh" >“我知道该如何服从命令，”他说，“这再明显不过了！”</td>
+		<td class="en">‘I know how to obey orders,’ he said, ‘and these are as plain as the nose on my face!’</td></tr>
+		<tr><td width="45%" class="zh" >于是他们把公主召来，但令他们有些惊讶的是，她似乎很平静地接受了这个消息。接着，努尔·穆罕默德也被告知了这一消息，并感到十分震惊，但他也对这预料之外的巨大荣耀感到高兴，还以为这都是国王为他安排的。</td>
+		<td class="en"> So the princess was summoned, and, somewhat to their surprise, she seemed to take the news very calmly; next Nur Mahomed was informed, and he was greatly startled, but of course he could but be delighted at the great and unexpected honour which he thought the king had done him.</td></tr>
+		<tr><td width="45%" class="zh" >然后，整个城堡都忙得乱成了一团，而当消息传到镇上后，整个镇子也陷入了混乱。</td>
+		<td class="en">Then all the castle was turned upside down; and when the news spread in the town, THAT was turned upside down too.</td></tr>
+		<tr><td width="45%" class="zh" >所有人都到处奔走，都想要立马就把所有事情办好。在这期间，老总督神情紧张地四处巡视，嘴里还嘟囔着“要服从命令”什么的。</td>
+		<td class="en">Everybody ran everywhere, and tried to do everything at once; and, in the middle of it all, the old governor went about with his hair standing on end, muttering something about ‘obeying orders.’</td></tr>
+		<tr><td width="45%" class="zh" >于是，婚礼开始了，盛大的宴会分别在城堡和军营里举行，镇上和美丽的花园里也都张灯结彩。</td>
+		<td class="en">And so the marriage was celebrated, and there was a great feast in the castle, and another in the soldiers’ barracks, and illuminations all over the town and in the beautiful gardens.</td></tr>
+		<tr><td width="45%" class="zh" >所有人都说从没有见过如此盛大的景象，即使他们老了也还在对这件事津津乐道。</td>
+		<td class="en">And all the people declared that such a wonderful sight had never been seen, and talked about it to the ends of their lives.</td></tr>
+		<tr><td width="45%" class="zh" >第二天，总督派一队着装华丽的人马送公主和驸马回到国王身边。在这之前，他还派信使骑上快马给国王送信，向他描述婚礼的盛况。</td>
+		<td class="en">The next day the governor despatched the princess and her bridegroom to the king, with a troop of horsemen, splendidly dressed, and he sent a mounted messenger on before them, with a letter giving the account of the marriage to the king.</td></tr>
+		<tr><td width="45%" class="zh" >国王看过总督的信后，脸变得通红，所有人都以为他要中风了。</td>
+		<td class="en">When the king got the governor’s letter, he grew so red in the face that everyone thought he was going to have apoplexy.</td></tr>
+		<tr><td width="45%" class="zh" >他们都迫切地想知道发生了什么事情，但是国王急忙跑进房里，把自己锁了起来。他在里面暴跳如雷，还不停地咒骂，直到累得不行了才停下来。</td>
+		<td class="en">They were all very anxious to know what had happened, but he rushed off and locked himself into a room, where he ramped and raved until he was tired.</td></tr>
+		<tr><td width="45%" class="zh" >过了一会儿，国王开始想，他最好对此泰然处之，特别是老总督十分精明，把国王的信也送了回来，他便十分确信那封信上是公主的笔迹。</td>
+		<td class="en">Then, after awhile, he began to think he had better make the best of it, especially as the old governor had been clever enough to send him back his letter, and the king was pretty sure that this was in the princess’s handwriting.</td></tr>
+		<tr><td width="45%" class="zh" >他十分喜爱自己的女儿，所以即使她的行为如此恶劣，他也不想将她斩首，同时他也不希望人们知道真相，因为这会使他遭人耻笑。</td>
+		<td class="en">He was fond of his daughter, and though she had behaved badly, he did not wish to cut HER head off, and he did not want people to know the truth because it would make him look foolish.</td></tr>
+		<tr><td width="45%" class="zh" >事实上，他越想这件事，就越觉得应该保全面子，让人们以为他本来就想促成这桩亲事。</td>
+		<td class="en">In fact, the more he considered the matter, the more he felt that he would be wise to put a good face on it, and to let people suppose that he had really brought about the marriage of his own free will.</td></tr>
+		<tr><td width="45%" class="zh" >于是，当这对年轻的夫妻到达时，国王隆重地迎接了他们，还赐给他的女婿一个省去管辖。</td>
+		<td class="en">So, when the young couple arrived, the king received them with all state, and gave his son-in-law a province to govern.</td></tr>
+		<tr><td width="45%" class="zh" >努尔·穆罕默德很快就证明了自己不仅是一个英勇的士兵，还是一个能力出众、品德高尚的总督。老国王去世后，他就继承了王位。他在位好多年，人们一直过着幸福的生活。</td>
+		<td class="en">Nur Mahomed soon proved himself as able and honourable a governor as he was a brave soldier; and, when the old king died, he became king in his place, and reigned long and happily.</td></tr>
+		<tr><td width="45%" class="zh" >努尔·穆罕默德的老母亲还在“儿子”的宫殿里住了很长时间，最后安详地去世了。</td>
+		<td class="en">Nur Mahomed’s old mother lived for a long time in her ‘son’s’ palace, and died in peace.</td></tr>
+		<tr><td width="45%" class="zh" >公主发现，虽然用花招得到了现在的丈夫，却无法在他面前耍小聪明，所以她也从不去尝试，而是整日忙着教育孩子和训诫仆人。</td>
+		<td class="en">The princess, his wife, although she had got her husband by a trick, found that she could not trick HIM, and so she never tried, but busied herself in teaching her children and scolding her maids.</td></tr>
+		<tr><td width="45%" class="zh" >至于那位老隐士，再没有人见过他，但是那个山洞还在，直到今日，洞前还堆着厚厚的树叶呢。</td>
+		<td class="en">As for the old hermit, no trace of him was ever discovered; but the cave is there, and the leaves lie thick in front of it unto this day.</td></tr>
+		<tr><td width="45%" class="zh" ></td>
+		<td class="en"></td></tr>
+		<tr><td width="45%" class="zh" ></td>
+		<td class="en"></td></tr>
+	</table>
+</div>
+
+<div class="zh_en"><a href="#" class="zh_btn">中文</a> | <a href="#" class="en_btn">英文</a> | <a href="#" class="zhen_btn">中英文</a></div>
+
+<script src="jquery-1.10.1.min.js"></script>
+<script src="jquery.bookify.js"></script>
+</body>
+</html>

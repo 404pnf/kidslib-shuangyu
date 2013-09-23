@@ -1,0 +1,251 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+	<!-- link rel="stylesheet" type="text/css" href="book.css" -->
+	<style type="text/css">
+		/* IMPORTANT !!!!
+		line-height, font-size defined in jquery.bookify.js */
+
+		* {
+			/* font-size: 20px; */
+		 }
+
+		table, td, th {
+
+		  }
+
+		td {
+	    	 /* height:50px; */
+	 	     vertical-align:top;
+	 	   	 text-align:left;
+	 	 	 padding-bottom:30px;/*行高的倍数-chenjing*/
+			 padding-left:20px;
+	 	  }
+
+		  /*chenjing*/
+		  .ebook_title{ position:absolute; left:20%; top:7%; font-weight:bold; font-size:35px; width:750px;}
+		  .zh_en{ position:absolute; left:70%; bottom:10%; font-size:14px;}
+		  .pre,.next{ cursor:pointer; font-size:40px; font-weight:bold; position:absolute; top:40%}
+		  .pre{ display:none; left:7%}
+		  .next{right:7%}
+
+	</style>
+
+</head>
+<body>
+<div class="ebook_title"></div>
+<div class="pre"><<</div>
+<div class="next">>></div>
+<div class="ebook_content">
+	<table cellpadding="0" cellspacing="0">
+		<tr><td width="45%" class="zh" >跛子</td>
+		<td class="en">The Cripple</td></tr>
+		<tr><td width="45%" class="zh" >作者：莫泊桑</td>
+		<td class="en">by Guy de Maupassant</td></tr>
+		<tr><td width="45%" class="zh" >大约是在1882年，我偶然经历了下面这段奇遇。</td>
+		<td class="en">The following adventure happened to me about 1882.</td></tr>
+		<tr><td width="45%" class="zh" >为了不被打扰，我一上火车就找了一个角落里的位置坐下。我刚安顿好，车门突然又开了，然后我听到一个声音说：“小心一点儿，先生，我们正在交叉路口上，这个台阶很高。”</td>
+		<td class="en">I had just taken the train and settled down in a corner, hoping that I should be left alone, when the door suddenly opened again and I heard a voice say: “Take care, monsieur, we are just at a crossing; the step is very high.”</td></tr>
+		<tr><td width="45%" class="zh" >另一个声音回答道：“没问题的，洛朗，我牢牢地抓着扶手呢。”</td>
+		<td class="en">Another voice answered: “That’s all right, Laurent, I have a firm hold on the handle.”</td></tr>
+		<tr><td width="45%" class="zh" >然后一个脑袋出现了，那人两只手抓着挂在门两边上的皮带，慢慢地支撑起一个庞大的身躯，双脚打在台阶上的声音听起来就像是两根手杖打在地上。</td>
+		<td class="en">Then a head appeared, and two hands seized the leather straps hanging on either side of the door and slowly pulled up an enormous body, whose feet striking on the step, sounded like two canes.</td></tr>
+		<tr><td width="45%" class="zh" >当那个男人支撑着自己的身体进入车厢时，我注意到他宽松的裤脚下露出一截木腿的末端，紧跟着它的是另一截木腿。</td>
+		<td class="en">When the man had hoisted his torso into the compartment I noticed, at the loose edge of his trousers, the end of a wooden leg, which was soon followed by its mate.</td></tr>
+		<tr><td width="45%" class="zh" >这个旅客的身后冒出一个脑袋，问道：“您还好吧，先生？”</td>
+		<td class="en">A head appeared behind this traveller and asked; “Are you all right, monsieur?”</td></tr>
+		<tr><td width="45%" class="zh" >“嗯，没事的，小伙子。”</td>
+		<td class="en">“Yes, my boy.”</td></tr>
+		<tr><td width="45%" class="zh" >“那这是您的包裹和拐杖。”</td>
+		<td class="en">“Then here are your packages and crutches.”</td></tr>
+		<tr><td width="45%" class="zh" >一个看起来像退伍军人的仆人爬进了车厢，手里抱着一堆用黑色和黄色包装纸包着且被仔细捆好的包裹。他把那些包裹一个接一个地放进他主人头顶上方的网兜里。</td>
+		<td class="en">And a servant, who looked like an old soldier, climbed in, carrying in his arms a stack of bundles wrapped in black and yellow papers and carefully tied; he placed one after the other in the net over his master’s head.</td></tr>
+		<tr><td width="45%" class="zh" >然后他说：“行了，就这些了，先生。一共有五样——糖果、洋娃娃、鼓、电子枪，还有菰鹅肝酱。”</td>
+		<td class="en">Then he said: “There, monsieur, that is all. There are five of them—the candy, the doll, the drum, the gun, and the pate de foies gras.”</td></tr>
+		<tr><td width="45%" class="zh" >“干得不错，小伙子。”</td>
+		<td class="en">“Very well, my boy.”</td></tr>
+		<tr><td width="45%" class="zh" >“谢谢您，洛朗，祝您身体健康。”</td>
+		<td class="en">“Thank you, Laurent; good health!”</td></tr>
+		<tr><td width="45%" class="zh" >那个人关上门离开了，我打量着我的邻座。</td>
+		<td class="en">The man closed the door and walked away, and I looked at my neighbor.</td></tr>
+		<tr><td width="45%" class="zh" >他大约三十五岁，尽管头发近乎花白了；他佩戴着军队的荣誉勋章绶带，有着浓密的胡须，而且相当肥胖，是那种强壮又好动的人由于患病而不得不保持不动而引起的肥胖。</td>
+		<td class="en">He was about thirty-five, although his hair was almost white; he wore the ribbon of the Legion of Honor; he had a heavy mustache and was quite stout, with the stoutness of a strong and active man who is kept motionless on account of some infirmity.</td></tr>
+		<tr><td width="45%" class="zh" >他擦了擦额头，叹了口气，直视着我，问道：“介意我吸烟吗，先生？”</td>
+		<td class="en">He wiped his brow, sighed, and, looking me full in the face, he asked: “Does smoking annoy you, monsieur?”</td></tr>
+		<tr><td width="45%" class="zh" >“不介意，先生。”</td>
+		<td class="en">“No, monsieur.”</td></tr>
+		<tr><td width="45%" class="zh" >我确定我认识那眼睛、那声音以及那张脸。</td>
+		<td class="en">Surely I knew that eye, that voice, that face.</td></tr>
+		<tr><td width="45%" class="zh" >但是，是什么时候，在什么地方见过它们呢？</td>
+		<td class="en">But when and where had I seen them?</td></tr>
+		<tr><td width="45%" class="zh" >我确实遇到过这个人，跟他说过话，握过手。</td>
+		<td class="en">I had certainly met that man, spoken to him, shaken his hand.</td></tr>
+		<tr><td width="45%" class="zh" >那是很久很久以前的事了。往事已迷失在雾霭中，而在那雾霭中，思绪似乎为追寻记忆而盲目地游荡，那记忆就像是无法抓住的、消散中的幻影一样。</td>
+		<td class="en">That was a long, long time ago. It was lost in the haze wherein the mind seems to feel around blindly for memories and pursues them like fleeing phantoms without being able to seize them.</td></tr>
+		<tr><td width="45%" class="zh" >他也在观察着我，凝视着我，既觉得有些不好意思但又很固执，就像一个人稍微想起什么事却又完全想不起来那样。</td>
+		<td class="en">He, too, was observing me, staring me out of countenance, with the persistence of a man who remembers slightly but not completely.</td></tr>
+		<tr><td width="45%" class="zh" >我们的眼睛，因这样长久的互视而尴尬，转向别处；然后，过了一会儿，它们被运转着的记忆那种模糊而顽强的意志所牵引，又聚到一起。于是我说：“先生，与其在这里互相盯上个把小时，不如设法去想想我们曾在哪里见过对方，不是更好吗？”</td>
+		<td class="en">Our eyes, embarrassed by this persistent contact, turned away; then, after a few minutes, drawn together again by the obscure and tenacious will of working memory, they met once more, and I said: “Monsieur, instead of staring at each other for an hour or so, would it not be better to try to discover where we have known each other?”</td></tr>
+		<tr><td width="45%" class="zh" >我的邻座和蔼地说：“先生，您说的太对了。”</td>
+		<td class="en">My neighbor answered graciously: “You are quite right, monsieur.”</td></tr>
+		<tr><td width="45%" class="zh" >我自我介绍道：“我叫亨利·邦克莱尔，是一个地方法官。”</td>
+		<td class="en">I named myself: “I am Henri Bonclair, a magistrate.”</td></tr>
+		<tr><td width="45%" class="zh" >他踌躇了一会儿，随后带着飘忽的眼神以及情绪异常激动后声音，他说道：“哦，我完全想起来了。</td>
+		<td class="en">He hesitated for a few minutes; then, with the vague look and voice which accompany great mental tension, he said: “Oh, I remember perfectly.</td></tr>
+		<tr><td width="45%" class="zh" >十二年前，战争前夕，我在普安赛尔家见过您！”</td>
+		<td class="en">I met you twelve years ago, before the war, at the Poincels!”</td></tr>
+		<tr><td width="45%" class="zh" >“是的，先生。</td>
+		<td class="en">“Yes, monsieur.</td></tr>
+		<tr><td width="45%" class="zh" >没错！没错！</td>
+		<td class="en">Ah! Ah!</td></tr>
+		<tr><td width="45%" class="zh" >您是雷瓦利尔中尉？”</td>
+		<td class="en">You are Lieutenant Revaliere?”</td></tr>
+		<tr><td width="45%" class="zh" >“是的。</td>
+		<td class="en">“Yes.</td></tr>
+		<tr><td width="45%" class="zh" >我也是雷瓦利尔上尉，一直到我失去两条腿——一发炮弹，两条腿都没了。”</td>
+		<td class="en">I was Captain Revaliere even up to the time when I lost my feet —both of them together from one cannon ball.”</td></tr>
+		<tr><td width="45%" class="zh" >由于知道了对方的身份，我们再一次看了看对方。</td>
+		<td class="en">Now that we knew each other’s identity we looked at each other again.</td></tr>
+		<tr><td width="45%" class="zh" >我清楚地记得那个帅气、身材修长的年轻人，他领起舞来既灵活又优雅的狂热劲头，因此人们给他起了个绰号“复仇精灵”。回望模糊遥远的过去，我回想起一个我曾听过却已经遗忘的故事，那是一个让人听了就忘、只在记忆中留下一缕微弱印象的故事。</td>
+		<td class="en">I remembered perfectly the handsome, slender youth who led the cotillons with such frenzied agility and gracefulness that he had been nicknamed “the fury.” Going back into the dim, distant past, I recalled a story which I had heard and forgotten, one of those stories to which one listens but forgets, and which leave but a faint impression upon the memory.</td></tr>
+		<tr><td width="45%" class="zh" >那其中有一段爱情故事。阴影一点儿一点儿地消除，一个年轻女孩的脸浮现在我眼前。</td>
+		<td class="en">There was something about love in it. Little by little the shadows cleared up, and the face of a young girl appeared before my eyes.</td></tr>
+		<tr><td width="45%" class="zh" >然后，她的名字就一下子撞进我的脑海：德曼德尔小姐。</td>
+		<td class="en">Then her name struck me with the force of an explosion: Mademoiselle de Mandel.</td></tr>
+		<tr><td width="45%" class="zh" >此刻我记起了所有的事情。</td>
+		<td class="en">I remembered everything now.</td></tr>
+		<tr><td width="45%" class="zh" >那的确是一个爱情故事，但是再平常不过了。</td>
+		<td class="en">It was indeed a love story, but quite commonplace.</td></tr>
+		<tr><td width="45%" class="zh" >那个年轻的女孩爱着这个年轻的小伙子，而且当我见到他们的时候，他们已经谈婚论嫁了。</td>
+		<td class="en">The young girl loved this young man, and when I had met them there was already talk of the approaching wedding.</td></tr>
+		<tr><td width="45%" class="zh" >这对年轻人看起来十分相爱，非常幸福。</td>
+		<td class="en">The youth seemed to be very much in love, very happy.</td></tr>
+		<tr><td width="45%" class="zh" >我抬眼看那网兜，所有那些被仆人放进去的包裹都在随火车的运行而颤动，而那个仆人的话又萦绕在我耳边，就像是他刚刚才讲完一样。</td>
+		<td class="en">I raised my eye to the net, where all the packages which had been brought in by the servant were trembling from the motion of the train, and the voice of the servant came back to me, as if he had just finished speaking.</td></tr>
+		<tr><td width="45%" class="zh" > 他曾说：“行了，就这些了，先生。</td>
+		<td class="en">He had said: “There, monsieur, that is all.</td></tr>
+		<tr><td width="45%" class="zh" >一共有五样——糖果、洋娃娃、鼓、电子枪，还有菰鹅肝酱。”</td>
+		<td class="en">There are five of them: the candy, the doll, the drum, the gun, and the pate de foies gras.”</td></tr>
+		<tr><td width="45%" class="zh" >于是，一部完整的罗曼史瞬间展现在我脑海里。</td>
+		<td class="en">Then, in a second, a whole romance unfolded itself in my head.</td></tr>
+		<tr><td width="45%" class="zh" >它跟我读过的所有罗曼史一样。在所有那些小说里，那位年轻女孩，在遭受了肉体上的或经济上的灾难后，还是嫁给了她的未婚夫。因此，这个已经在战争中残废了的军官，在战役结束后回到了那个年轻女孩的身边。她曾向他许下的诺言，也兑现了。 </td>
+		<td class="en">It was like all those which I had already read, where the young lady married notwithstanding the catastrophe, whether physical or financial; therefore, this officer who had been maimed in the war had returned, after the campaign, to the young girl who had given him her promise, and she had kept her word.</td></tr>
+		<tr><td width="45%" class="zh" >我认为那非常美好，但却纯粹，就像一个人认为书里或剧本里的各种奉献精神和高潮情节都是纯粹的一样。</td>
+		<td class="en">I considered that very beautiful, but simple, just as one, considers simple all devotions and climaxes in books or in plays.</td></tr>
+		<tr><td width="45%" class="zh" >当我们阅读或聆听到这些高尚的故事时，我们似乎总是会能带着满腔的热情和无法抗拒的快乐做出自我牺牲。但是第二天，当一个不幸的朋友前来借一些钱的时候，我们却会有一种莫名的厌恶感。</td>
+		<td class="en">It always seems, when one reads or listens to these stories of magnanimity, that one could sacrifice one’s self with enthusiastic pleasure and overwhelming joy. But the following day, when an unfortunate friend comes to borrow some money, there is a strange revulsion of feeling.</td></tr>
+		<tr><td width="45%" class="zh" >然而，忽然之间，另一种不够诗意却更为现实的推测取代了第一个。也许在战争爆发之前，在那次可怕的意外之前他就已经结婚了；而她，绝望而无可奈何地被迫接受、照顾、鼓励和供养这个丈夫。他离开时是个帅气的男人，回来时却失去了双腿，只剩一副可怕的残躯，无奈地落到无法活动、徒劳生气和注定会发胖的境地。</td>
+		<td class="en">But, suddenly, another supposition, less poetic and more realistic, replaced the first one. Perhaps he had married before the war, before this frightful accident, and she, in despair and resignation, had been forced to receive, care for, cheer, and support this husband, who had departed, a handsome man, and had returned without his feet, a frightful wreck, forced into immobility, powerless anger, and fatal obesity.</td></tr>
+		<tr><td width="45%" class="zh" >他是幸福，还是备受煎熬呢？</td>
+		<td class="en">Was he happy or in torture?</td></tr>
+		<tr><td width="45%" class="zh" >我无法遏制地想知道他的故事，或者，至少让我知道那些重要的情节，那就足以让我推测他不能或不愿告诉我的部分。</td>
+		<td class="en">I was seized with an irresistible desire to know his story, or, at least, the principal points, which would permit me to guess that which he could not or would not tell me.</td></tr>
+		<tr><td width="45%" class="zh" >依然思考着这个问题，我开始跟他聊天。我们寒暄了几句之后，我抬眼看向那网兜，心想：“他一定有三个孩子：那糖果是给他妻子的，那洋娃娃是给他的小女儿的，那鼓和电子枪是给他的儿子们的，而这菰鹅肝酱是给他自己的。”</td>
+		<td class="en">Still thinking the matter over, I began talking to him. We had exchanged a few commonplace words; and I raised my eyes to the net, and thought: “He must have three children: the bonbons are for his wife, the doll for his little girl, the drum and the gun for his sons, and this pate de foies gras for himself.”</td></tr>
+		<tr><td width="45%" class="zh" >突然我问他：“您是一位父亲吗，先生？”</td>
+		<td class="en">Suddenly I asked him: “Are you a father, monsieur?”</td></tr>
+		<tr><td width="45%" class="zh" >他回答说：“不是的，先生。”</td>
+		<td class="en">He answered: “No, monsieur.”</td></tr>
+		<tr><td width="45%" class="zh" >我突然感到困惑了，就像是因破坏某些礼仪而深感愧疚一样，于是我继续说道：“请原谅。</td>
+		<td class="en">I suddenly felt confused, as if I had been guilty of some breach of etiquette, and I continued: “I beg your pardon.</td></tr>
+		<tr><td width="45%" class="zh" >当我听到您的仆人谈到那些玩具时，我一度以为您是一位父亲。 </td>
+		<td class="en">I had thought that you were when I heard your servant speaking about the toys.</td></tr>
+		<tr><td width="45%" class="zh" >一个人听到那样的话会不自觉地得出那样结论的。”</td>
+		<td class="en">One listens and draws conclusions unconsciously.”</td></tr>
+		<tr><td width="45%" class="zh" >他微笑了起来，然后喃喃道：“不，我连婚都没结。</td>
+		<td class="en">He smiled and then murmured: “No, I am not even married.</td></tr>
+		<tr><td width="45%" class="zh" >我仍是单身。”</td>
+		<td class="en">I am still at the preliminary stage.”</td></tr>
+		<tr><td width="45%" class="zh" >我装作突然想起来，并说：</td>
+		<td class="en">I pretended suddenly to remember, and said:</td></tr>
+		<tr><td width="45%" class="zh" >“哦！</td>
+		<td class="en">“Oh!</td></tr>
+		<tr><td width="45%" class="zh" >没错！</td>
+		<td class="en">that’s true!</td></tr>
+		<tr><td width="45%" class="zh" >我记得当我认识您的时候，您跟德曼德尔小姐了订婚了。”</td>
+		<td class="en">When I knew you, you were engaged to Mademoiselle de Mandel, I believe.”</td></tr>
+		<tr><td width="45%" class="zh" >“是的，先生，您的记忆力相当不错。”</td>
+		<td class="en">“Yes, monsieur, your memory is excellent.”</td></tr>
+		<tr><td width="45%" class="zh" >我大胆地补充说：“我好像还记得，听说德曼德尔小姐嫁给了——呃——”</td>
+		<td class="en">I grew very bold and added: “I also seem to remember hearing that Mademoiselle de Mandel married Monsieur—Monsieur—”</td></tr>
+		<tr><td width="45%" class="zh" >他平静地提及那个名字：“弗勒先生。”</td>
+		<td class="en">He calmly mentioned the name: “Monsieur de Fleurel.”</td></tr>
+		<tr><td width="45%" class="zh" >“没错，就是他！</td>
+		<td class="en">“Yes, that’s it!</td></tr>
+		<tr><td width="45%" class="zh" >我记得就是在那时我听说了您的伤势。”</td>
+		<td class="en">I remember it was on that occasion that I heard of your wound.”</td></tr>
+		<tr><td width="45%" class="zh" >我直直地盯着他的脸，他脸红了。</td>
+		<td class="en">I looked him full in the face, and he blushed.</td></tr>
+		<tr><td width="45%" class="zh" >他整张脸，原本就因血液供应过剩而发红，如今变成深红了。</td>
+		<td class="en">His full face, which was already red from the oversupply of blood, turned crimson.</td></tr>
+		<tr><td width="45%" class="zh" >当一个人为一个在精神上和心里已经败诉，却不愿承认的案件辩护时，都会带着一种突如其来的热情，他快速回答道：</td>
+		<td class="en">He answered quickly, with a sudden ardor of a man who is pleading a cause which is lost in his mind and in his heart, but which he does not wish to admit.</td></tr>
+		<tr><td width="45%" class="zh" >“先生，把我的名字和德弗勒太太的联系在一起是错的。</td>
+		<td class="en">“It is wrong, monsieur, to couple my name with that of Madame de Fleurel.</td></tr>
+		<tr><td width="45%" class="zh" >当我从战场回来时——没有了双脚，唉！</td>
+		<td class="en">When I returned from the war—without my feet, alas!</td></tr>
+		<tr><td width="45%" class="zh" >我绝不会允许她成为我的妻子。</td>
+		<td class="en">I never would have permitted her to become my wife.</td></tr>
+		<tr><td width="45%" class="zh" >那可能吗？</td>
+		<td class="en">Was it possible?</td></tr>
+		<tr><td width="45%" class="zh" >先生，一个人结婚不是为了展示自己的慷慨大方，而是为了和另一个人一起度过每一天、每一个小时、每一分、每一秒。如果那个人身体有残，就像我一样，那嫁给他就等于给自己判了死刑！</td>
+		<td class="en">When one marries, monsieur, it is not in order to parade one’s generosity; it is in order to live every day, every hour, every minute, every second beside a man; and if this man is disfigured, as I am, it is a death sentence to marry him!</td></tr>
+		<tr><td width="45%" class="zh" >唉，我明白，我也钦佩所有的牺牲和奉献，只要它们在一定的程度以内；但我不接受一个女人为了迎合旁人的赞赏而放弃她的一生、所有的快乐以及所有的梦想。</td>
+		<td class="en">Oh, I understand, I admire all sacrifices and devotions when they have a limit, but I do not admit that a woman should give up her whole life, all joy, all her dreams, in order to satisfy the admiration of the gallery.</td></tr>
+		<tr><td width="45%" class="zh" >当我听到我木制的双腿和我的拐杖在我房间的地板上发出敲击声时，我会愤怒到想要勒死我的仆人。</td>
+		<td class="en">When I hear, on the floor of my room, the tapping of my wooden legs and of my crutches, I grow angry enough to strangle my servant.</td></tr>
+		<tr><td width="45%" class="zh" >您觉得我会允许一个女人去做连我自己都无法忍受的事吗？</td>
+		<td class="en">Do you think that I would permit a woman to do what I myself am unable to tolerate?</td></tr>
+		<tr><td width="45%" class="zh" >对了，您觉得我的假肢还行吗？”</td>
+		<td class="en">And, then, do you think that my stumps are pretty?”</td></tr>
+		<tr><td width="45%" class="zh" >他沉默了。</td>
+		<td class="en">He was silent.</td></tr>
+		<tr><td width="45%" class="zh" >我能说什么呢？</td>
+		<td class="en">What could I say?</td></tr>
+		<tr><td width="45%" class="zh" >他当然是对的。</td>
+		<td class="en">He certainly was right.</td></tr>
+		<tr><td width="45%" class="zh" >我能责备她，轻视她，甚至说她错了吗？</td>
+		<td class="en">Could I blame her, hold her in contempt, even say that she was wrong?</td></tr>
+		<tr><td width="45%" class="zh" >不能。然而，这个符合规则、符合事实的结局却不能迎合我诗意的胃口。</td>
+		<td class="en">No. However, the end which conformed to the rule, to the truth, did not satisfy my poetic appetite.</td></tr>
+		<tr><td width="45%" class="zh" >这种英勇的行为似乎是缺少了它本该有的美好的牺牲，我感到很失望。</td>
+		<td class="en">These heroic deeds demand a beautiful sacrifice, which seemed to be lacking, and I felt a certain disappointment.</td></tr>
+		<tr><td width="45%" class="zh" >我突然问道：“弗勒太太有小孩吗？”</td>
+		<td class="en">I suddenly asked: “Has Madame de Fleurel any children?”</td></tr>
+		<tr><td width="45%" class="zh" >“有，一个女孩和两个男孩。</td>
+		<td class="en">“Yes, one girl and two boys.</td></tr>
+		<tr><td width="45%" class="zh" >这些玩具就是为他们带的。</td>
+		<td class="en">It is for them that I am bringing these toys.</td></tr>
+		<tr><td width="45%" class="zh" >他们夫妇都对我很友好。”</td>
+		<td class="en">She and her husband are very kind to me.”</td></tr>
+		<tr><td width="45%" class="zh" >火车越来越靠近圣日耳曼。</td>
+		<td class="en">The train was going up the incline to Saint-Germain.</td></tr>
+		<tr><td width="45%" class="zh" >它穿过隧道，进入车站，停了下来。</td>
+		<td class="en">It passed through the tunnels, entered the station, and stopped.</td></tr>
+		<tr><td width="45%" class="zh" >在我正准备伸手去帮那受伤的军官下车的时候，从打开的车门外伸进来两只手。</td>
+		<td class="en">I was about to offer my arm to the wounded officer, in order to help him descend, when two hands were stretched up to him through the open door.</td></tr>
+		<tr><td width="45%" class="zh" >“你好！</td>
+		<td class="en">“Hello!</td></tr>
+		<tr><td width="45%" class="zh" >我亲爱的雷瓦利尔！”</td>
+		<td class="en">my dear Revaliere!”</td></tr>
+		<tr><td width="45%" class="zh" >“哦!</td>
+		<td class="en">“Ah!</td></tr>
+		<tr><td width="45%" class="zh" >你好，弗勒！”</td>
+		<td class="en">Hello, Fleurel!”</td></tr>
+		<tr><td width="45%" class="zh" >站在那个男人后面的是那个依旧漂亮的女人，她微笑着向他挥手。站在她身边的是一个可爱的小女孩，正欢快地雀跃着，两个小男孩正热切地注视着那从车里递到他们爸爸手上的鼓和电子枪。</td>
+		<td class="en">Standing behind the man, the woman, still beautiful, was smiling and waving her hands to him. A little girl, standing beside her, was jumping for joy, and two young boys were eagerly watching the drum and the gun, which were passing from the car into their father’s hands.</td></tr>
+		<tr><td width="45%" class="zh" >当那个跛子下了车后，所有的孩子都去亲吻他。然后他们出发了，小女孩手握着他拐杖上涂过漆的小横档，就好像她走在一个大朋友的旁边，并牵着他的大拇指一样。</td>
+		<td class="en">When the cripple was on the ground, all the children kissed him. Then they set off, the little girl holding in her hand the small varnished rung of a crutch, just as she might walk beside her big friend and hold his thumb.</td></tr>
+		<tr><td width="45%" class="zh" ></td>
+		<td class="en"></td></tr>
+	</table>
+</div>
+
+<div class="zh_en"><a href="#" class="zh_btn">中文</a> | <a href="#" class="en_btn">英文</a> | <a href="#" class="zhen_btn">中英文</a></div>
+
+<script src="jquery-1.10.1.min.js"></script>
+<script src="jquery.bookify.js"></script>
+</body>
+</html>

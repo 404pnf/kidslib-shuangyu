@@ -1,0 +1,285 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+	<!-- link rel="stylesheet" type="text/css" href="book.css" -->
+	<style type="text/css">
+		/* IMPORTANT !!!!
+		line-height, font-size defined in jquery.bookify.js */
+
+		* {
+			/* font-size: 20px; */
+		 }
+
+		table, td, th {
+
+		  }
+
+		td {
+	    	 /* height:50px; */
+	 	     vertical-align:top;
+	 	   	 text-align:left;
+	 	 	 padding-bottom:30px;/*行高的倍数-chenjing*/
+			 padding-left:20px;
+	 	  }
+
+		  /*chenjing*/
+		  .ebook_title{ position:absolute; left:20%; top:7%; font-weight:bold; font-size:35px; width:750px;}
+		  .zh_en{ position:absolute; left:70%; bottom:10%; font-size:14px;}
+		  .pre,.next{ cursor:pointer; font-size:40px; font-weight:bold; position:absolute; top:40%}
+		  .pre{ display:none; left:7%}
+		  .next{right:7%}
+
+	</style>
+
+</head>
+<body>
+<div class="ebook_title"></div>
+<div class="pre"><<</div>
+<div class="next">>></div>
+<div class="ebook_content">
+	<table cellpadding="0" cellspacing="0">
+		<tr><td width="45%" class="zh" >城市的骄傲</td>
+		<td class="en">The Pride of the Cities</td></tr>
+		<tr><td width="45%" class="zh" >作者：欧·亨利</td>
+		<td class="en">by O. Henry</td></tr>
+		<tr><td width="45%" class="zh" >吉卜林先生曾经说过：“城市充满了骄傲，互相之间不断竞争。”</td>
+		<td class="en">Said Mr. Kipling, “The cities are full of pride, challenging each to each.”</td></tr>
+		<tr><td width="45%" class="zh" >确实如此。</td>
+		<td class="en">Even so.</td></tr>
+		<tr><td width="45%" class="zh" >纽约城空空如也。</td>
+		<td class="en">New York was empty.</td></tr>
+		<tr><td width="45%" class="zh" >城里的20万居民都外出避暑去了。</td>
+		<td class="en">Two hundred thousand of its people were away for the summer.</td></tr>
+		<tr><td width="45%" class="zh" >剩下的380万居民留守，替那些外出的人买单。</td>
+		<td class="en">Three million eight hundred thousand remained as caretakers and to pay the bills of the absentees.</td></tr>
+		<tr><td width="45%" class="zh" >可是，那20万人花销巨大。</td>
+		<td class="en">But the two hundred thousand are an expensive lot.</td></tr>
+		<tr><td width="45%" class="zh" >一个纽约人坐在屋顶花园的一张桌子旁，用一根麦秆吸着饮料聊以慰藉。</td>
+		<td class="en">The New Yorker sat at a roof-garden table, ingesting solace through a straw.</td></tr>
+		<tr><td width="45%" class="zh" >他的巴拿马草帽放在一把椅子上。</td>
+		<td class="en">His panama lay upon a chair.</td></tr>
+		<tr><td width="45%" class="zh" >七月里，席间的观众零零散散，就像棒球比赛中，一个冠军击球手踏上本垒时，外场手总是散得很开那样。</td>
+		<td class="en">The July audience was scattered among vacant seats as widely as outfielders when the champion batter steps to the plate.</td></tr>
+		<tr><td width="45%" class="zh" >中间时不时穿插着几场杂耍表演。</td>
+		<td class="en">Vaudeville happened at intervals.</td></tr>
+		<tr><td width="45%" class="zh" >海湾吹来的凉风，甚是宜人，而四周的天空中——除了舞台以外——到处都是璀璨的群星。</td>
+		<td class="en">The breeze was cool from the bay; around and above—everywhere except on the stage—were stars.</td></tr>
+		<tr><td width="45%" class="zh" >偶尔可以看见侍者的身影，然而他们就像受惊的小羚羊似的，转眼就消失了。</td>
+		<td class="en">Glimpses were to be had of waiters, always disappearing, like startled chamois.</td></tr>
+		<tr><td width="45%" class="zh" >有远见的客人早上就通过电话预定好了点心，而此时他们正在享用。</td>
+		<td class="en">Prudent visitors who had ordered refreshments by ‘phone in the morning were now being served.</td></tr>
+		<tr><td width="45%" class="zh" >这位纽约人虽然觉得没有得到十足的舒适，但是无框眼镜的后面仍然流露出满意的神情。</td>
+		<td class="en">The New Yorker was aware of certain drawbacks to his comfort, but content beamed softly from his rimless eyeglasses.</td></tr>
+		<tr><td width="45%" class="zh" >他的家人都不在城里。</td>
+		<td class="en">His family was out of town.</td></tr>
+		<tr><td width="45%" class="zh" >饮料不够冷，芭蕾舞表演的曲子选得不好，演员的化妆粉也扑得不够——但是他的家人得到九月份才能回来。</td>
+		<td class="en">The drinks were warm; the ballet was suffering from lack of both tune and talcum—but his family would not return until September.</td></tr>
+		<tr><td width="45%" class="zh" >这时，来自内华达州托珀兹城的客人，跌跌撞撞地爬上了屋顶花园。</td>
+		<td class="en">Then up into the garden stumbled the man from Topaz City, Nevada.</td></tr>
+		<tr><td width="45%" class="zh" >孤独游客的忧郁笼罩着他。</td>
+		<td class="en">The gloom of the solitary sightseer enwrapped him.</td></tr>
+		<tr><td width="45%" class="zh" >这孤独夺走了他的欢乐，他带着鳏夫似的表情穿过欢乐的大厅。</td>
+		<td class="en">Bereft of joy through loneliness, he stalked with a widower’s face through the halls of pleasure.</td></tr>
+		<tr><td width="45%" class="zh" >在大都市的气息中，他气喘吁吁，渴望着人类的友谊。</td>
+		<td class="en">Thirst for human companionship possessed him as he panted in the metropolitan draught.</td></tr>
+		<tr><td width="45%" class="zh" >他朝着纽约人坐的那张桌子径直走去。</td>
+		<td class="en">Straight to the New Yorker’s table he steered.</td></tr>
+		<tr><td width="45%" class="zh" >屋顶花园无拘无束的氛围解除了纽约人的武装，他变得毫无顾忌，决意放弃老旧的生活传统。</td>
+		<td class="en">The New Yorker, disarmed and made reckless by the lawless atmosphere of a roof garden, decided upon utter abandonment of his life’s traditions.</td></tr>
+		<tr><td width="45%" class="zh" >他不顾一切、轻率鲁莽地决心彻底粉碎迄今为止融入他生活中的那些惯例。</td>
+		<td class="en">He resolved to shatter with one rash, dare-devil, impulsive, hair-brained act the conventions that had hitherto been woven into his existence.</td></tr>
+		<tr><td width="45%" class="zh" >在这样的兴致中，他朝走上前来的这位陌生人微微地点了点头。</td>
+		<td class="en">Carrying out this radical and precipitous inspiration he nodded slightly to the stranger as he drew nearer the table.</td></tr>
+		<tr><td width="45%" class="zh" >很快，来自托珀兹城的人便成为了纽约人最亲密的朋友之一。</td>
+		<td class="en">The next moment found the man from Topaz City in the list of the New Yorker’s closest friends.</td></tr>
+		<tr><td width="45%" class="zh" >他在桌子旁的一把椅子上坐下，拉了两把椅子用来搭脚，又把他的宽檐帽子扔在了第四把椅子上，向他的新伙伴介绍起自己的身世。</td>
+		<td class="en">He took a chair at the table, he gathered two others for his feet, he tossed his broad-brimmed hat upon a fourth, and told his life’s history to his new-found pard.</td></tr>
+		<tr><td width="45%" class="zh" >纽约人感到了一丝温暖，就像感受到草莓盛季到来时公寓房间里的壁炉带来的温暖一样。</td>
+		<td class="en">The New Yorker warmed a little, as an apartment-house furnace warms when the strawberry season begins.</td></tr>
+		<tr><td width="45%" class="zh" >一位侍者一不留神走到能被召唤的距离，被他们叫住，派去到威利博士试验舞团去点节目。</td>
+		<td class="en">A waiter who came within hail in an unguarded moment was captured and paroled on an errand to the Doctor Wiley experimental station.</td></tr>
+		<tr><td width="45%" class="zh" >芭蕾舞团正在跳一支曲风变幻莫测的舞蹈，台上的演员装扮成玻利维亚的农民，身上穿的服装部分像挪威渔家女那样遮盖得严严实实，部分则如同玛丽·安托瓦尼特的侍女，根历史记载，她们衣着暴露，如同神话中的女海妖一般。整体效果如同中央公园西部的社交俱乐部的女仆在享用煎鱼一样。</td>
+		<td class="en">The ballet was now in the midst of a musical vagary, and danced upon the stage programmed as Bolivian peasants, clothed in some portions of its anatomy as Norwegian fisher maidens, in others as ladies-in-waiting of Marie Antoinette, historically denuded in other portions so as to represent sea nymphs, and presenting the tout ensemble of a social club of Central Park West housemaids at a fish fry.</td></tr>
+		<tr><td width="45%" class="zh" >“来城里很久了吗？”纽约人一边问，一边准备小额的零钱付给侍者小费，以防找回来的零钱总是一些大票。</td>
+		<td class="en">“Been in the city long?” inquired the New Yorker, getting ready the exact tip against the waiter’s coming with large change from the bill.</td></tr>
+		<tr><td width="45%" class="zh" >“我吗？”来自托珀兹城的人说，</td>
+		<td class="en">“Me?” said the man from Topaz City.</td></tr>
+		<tr><td width="45%" class="zh" >“四天。</td>
+		<td class="en">“Four days.</td></tr>
+		<tr><td width="45%" class="zh" >你没有到过托珀兹城，是吧？”</td>
+		<td class="en">Never in Topaz City, was you?”</td></tr>
+		<tr><td width="45%" class="zh" >“我！”纽约人说，</td>
+		<td class="en">“I!” said the New Yorker.</td></tr>
+		<tr><td width="45%" class="zh" >“我往西走最远到过第八大街。</td>
+		<td class="en">“I was never farther west than Eighth Avenue.</td></tr>
+		<tr><td width="45%" class="zh" >我有一个哥哥死在第九大街，但是我是在第八大街和送葬队伍汇合的。</td>
+		<td class="en">I had a brother who died on Ninth, but I met the cortege at Eighth.</td></tr>
+		<tr><td width="45%" class="zh" >送葬者为避免我走错，特意在灵车上放了一束紫罗兰。</td>
+		<td class="en">There was a bunch of violets on the hearse, and the undertaker mentioned the incident to avoid mistake.</td></tr>
+		<tr><td width="45%" class="zh" >我对西部算不上熟悉。”</td>
+		<td class="en">I cannot say that I am familiar with the West.”</td></tr>
+		<tr><td width="45%" class="zh" >“托珀兹城，”那个占了四把椅子的人说，“可以说是世上最好的城市之一。”</td>
+		<td class="en">“Topaz City,” said the man who occupied four chairs, “is one of the finest towns in the world.”</td></tr>
+		<tr><td width="45%" class="zh" >“我想你在纽约这座大都市里大概已经游览了一些地方了吧，”纽约人说，“四天时间不够参观我们最出名的景点，但是应该能有一个大致的印象。</td>
+		<td class="en">“I presume that you have seen the sights of the metropolis,” said the New Yorker, “Four days is not a sufficient length of time in which to view even our most salient points of interest, but one can possibly form a general impression.</td></tr>
+		<tr><td width="45%" class="zh" >我们建筑的宏伟，通常是最令游客震撼的地方。</td>
+		<td class="en">Our architectural supremacy is what generally strikes visitors to our city most forcibly.</td></tr>
+		<tr><td width="45%" class="zh" >当然，你应该已经见过了我们的熨斗大楼。</td>
+		<td class="en">Of course you have seen our Flatiron Building.</td></tr>
+		<tr><td width="45%" class="zh" >据说它是——”</td>
+		<td class="en">It is considered—”</td></tr>
+		<tr><td width="45%" class="zh" >“见过了，”来自托珀兹城的人说，</td>
+		<td class="en">“Saw it,” said the man from Topaz City.</td></tr>
+		<tr><td width="45%" class="zh" >“不过，你真应该去我们那里看看。</td>
+		<td class="en">“But you ought to come out our way.</td></tr>
+		<tr><td width="45%" class="zh" >你知道，我们那里有很多山，女人们都穿短裙，便于登山——”</td>
+		<td class="en">It’s mountainous, you know, and the ladies all wear short skirts for climbing and—”</td></tr>
+		<tr><td width="45%" class="zh" >“对不起，”纽约人说，“我不是单指建筑这一方面。</td>
+		<td class="en">“Excuse me,” said the New Yorker, “but that isn’t exactly the point.</td></tr>
+		<tr><td width="45%" class="zh" >对于西部来的客人来说，来到纽约肯定会有奇妙的新发现。</td>
+		<td class="en">New York must be a wonderful revelation to a visitor from the West.</td></tr>
+		<tr><td width="45%" class="zh" >就拿我们的饭店来说——”</td>
+		<td class="en">Now, as to our hotels—”</td></tr>
+		<tr><td width="45%" class="zh" >“嘿，”来自托珀兹的人说，“那使我想起，去年我们那里方圆20英里内有16个抢劫驿站的强盗被枪杀——”</td>
+		<td class="en">“Say,” said the man from Topaz City, “that reminds me—there were sixteen stage robbers shot last year within twenty miles of—”</td></tr>
+		<tr><td width="45%" class="zh" >“我说的是饭店，”纽约人说，</td>
+		<td class="en">“I was speaking of hotels,” said the New Yorker.</td></tr>
+		<tr><td width="45%" class="zh" >“我们在这方面比欧洲先进。</td>
+		<td class="en">“We lead Europe in that respect.</td></tr>
+		<tr><td width="45%" class="zh" >对我们有闲阶级而言，我们远比——”</td>
+		<td class="en">And as far as our leisure class is concerned we are far—”</td></tr>
+		<tr><td width="45%" class="zh" >“哦，那我就不知道了。”来自托珀兹城的人打断了他的话，</td>
+		<td class="en">“Oh, I don’t know,” interrupted the man from Topaz City.</td></tr>
+		<tr><td width="45%" class="zh" >“我出来的时候，我们那里的监狱关着12个流浪汉。</td>
+		<td class="en">“There were twelve tramps in our jail when I left home.</td></tr>
+		<tr><td width="45%" class="zh" >我猜纽约不至于——”</td>
+		<td class="en">I guess New York isn’t so—”</td></tr>
+		<tr><td width="45%" class="zh" >“请原谅，你可能误解了我的意思。</td>
+		<td class="en">“Beg pardon, you seem to misapprehend the idea.</td></tr>
+		<tr><td width="45%" class="zh" >当然，你参观了证券交易所和华尔街，那是——”</td>
+		<td class="en">Of course, you visited the Stock Exchange and Wall Street, where the—”</td></tr>
+		<tr><td width="45%" class="zh" >“哦，是的，”来自托珀兹城的人点燃了一支宾夕法尼亚雪茄，说道，“我想告诉你的是，我们小镇的警长是落基山脉以西最棒的。</td>
+		<td class="en">“Oh, yes,” said the man from Topaz City, as he lighted a Pennsylvania stogie, “and I want to tell you that we’ve got the finest town marshal west of the Rockies.</td></tr>
+		<tr><td width="45%" class="zh" >‘红鼻子’汤普森为他的新酒馆举行奠基典礼时，比尔·雷纳警长从人群中抓到了五个小偷。</td>
+		<td class="en">Bill Rainer he took in five pickpockets out of the crowd when Red Nose Thompson laid the cornerstone of his new saloon.</td></tr>
+		<tr><td width="45%" class="zh" >托珀兹城绝不允许——”</td>
+		<td class="en">Topaz City don’t allow—”</td></tr>
+		<tr><td width="45%" class="zh" >“再来一杯白葡萄酒和矿泉水吧，”纽约人建议说，</td>
+		<td class="en">“Have another Rhine wine and seltzer,” suggested the New Yorker.</td></tr>
+		<tr><td width="45%" class="zh" >“我说过，我没有去过西部，但那里不会有什么能同纽约媲美的地方。</td>
+		<td class="en">“I’ve never been West, as I said; but there can’t be any place out there to compare with New York.</td></tr>
+		<tr><td width="45%" class="zh" >至于芝加哥，我——”</td>
+		<td class="en">As to the claims of Chicago I—”</td></tr>
+		<tr><td width="45%" class="zh" >“只有一个人，”托珀兹城的人说，“最近三年中，托珀兹城只有一个人因遭抢劫而丧命——”</td>
+		<td class="en">“One man,” said the Topazite—“one man only has been murdered and robbed in Topaz City in the last three—”</td></tr>
+		<tr><td width="45%" class="zh" >“哦，我知道芝加哥是怎么样的，”纽约人插嘴说,</td>
+		<td class="en">“Oh, I know what Chicago is,” interposed the New Yorker.</td></tr>
+		<tr><td width="45%" class="zh" >“你有没有去第五大道看看百万富翁的豪宅——”</td>
+		<td class="en">“Have you been up Fifth Avenue to see the magnificent residences of our mil—”</td></tr>
+		<tr><td width="45%" class="zh" >“都看过了。</td>
+		<td class="en">“Seen ’em all.</td></tr>
+		<tr><td width="45%" class="zh" >你应该认识一下托珀兹城的估税员鲁勃·史提格尔。</td>
+		<td class="en">You ought to know Reub Stegall, the assessor of Topaz.</td></tr>
+		<tr><td width="45%" class="zh" >当时蒂尔伯里老头盖了城里唯一一栋二层楼房，他报税时想从600美元压缩到450美元75五美分，鲁勃带了他的四五口径手枪去看个究竟——”</td>
+		<td class="en">When old man Tilbury, that owns the only two-story house in town, tried to swear his taxes from $6,000 down to $450.75, Reub buckled on his forty-five and went down to see—”</td></tr>
+		<tr><td width="45%" class="zh" >“是的，是的，但是谈到我们这座伟大的城市——最大的特点之一就是我们一流的警察局。</td>
+		<td class="en">“Yes, yes, but speaking of our great city—one of its greatest features is our superb police department.</td></tr>
+		<tr><td width="45%" class="zh" >世界上没有哪支队伍能和它相比——”</td>
+		<td class="en">There is no body of men in the world that can equal it for—”</td></tr>
+		<tr><td width="45%" class="zh" >“那个侍者跑来跑去，像是兰利发明的飞行器一样打转，”来自托珀兹城的人急切地说，</td>
+		<td class="en">“That waiter gets around like a Langley flying machine,” remarked the man from Topaz City, thirstily.</td></tr>
+		<tr><td width="45%" class="zh" >“我们那里也有身价40万美元的人。</td>
+		<td class="en">“We’ve got men in our town, too, worth $400,000.</td></tr>
+		<tr><td width="45%" class="zh" >比方说老比尔·威瑟斯、梅特卡夫上校，还有——”</td>
+		<td class="en">There’s old Bill Withers and Colonel Metcalf and—”</td></tr>
+		<tr><td width="45%" class="zh" >“你有没有在晚上去过百老汇？”纽约人亲切地问道，</td>
+		<td class="en">“Have you seen Broadway at night?” asked the New Yorker, courteously.</td></tr>
+		<tr><td width="45%" class="zh" >“世界上没有几条马路能比得上它。</td>
+		<td class="en">“There are few streets in the world that can compare with it.</td></tr>
+		<tr><td width="45%" class="zh" >华灯初上的时候，路上行人川流不息。男人们穿着文雅，女人们美丽动人，衣着华贵，进进出出于迷宫一样的、昂贵的——”</td>
+		<td class="en">When the electrics are shining and the pavements are alive with two hurrying streams of elegantly clothed men and beautiful women attired in the costliest costumes that wind in and out in a close maze of expensively—”</td></tr>
+		<tr><td width="45%" class="zh" >“托珀兹城只发生过一件抢劫案，”来自西部的人说，</td>
+		<td class="en">“Never knew but one case in Topaz City,” said the man from the West.</td></tr>
+		<tr><td width="45%" class="zh" >“我们的市长吉姆·贝利交出了他口袋里的表、表链，还有235美元——”</td>
+		<td class="en">“Jim Bailey, our mayor, had his watch and chain and $235 in cash taken from his pocket while—”</td></tr>
+		<tr><td width="45%" class="zh" >“那是另一码事，”纽约人说,</td>
+		<td class="en">“That’s another matter,” said the New Yorker.</td></tr>
+		<tr><td width="45%" class="zh" >“你来到我们纽约，就应该利用所有机会多看看这里的奇观。</td>
+		<td class="en">“While you are in our city you should avail yourself of every opportunity to see its wonders.</td></tr>
+		<tr><td width="45%" class="zh" >我们快捷的交通系统——”</td>
+		<td class="en">Our rapid transit system—”</td></tr>
+		<tr><td width="45%" class="zh" >“如果你去托珀兹城，”从那里来的人插嘴道，“我可以带你去看一个公墓，埋的全是死于非命的人。</td>
+		<td class="en">“If you was out in Topaz,” broke in the man from there, “I could show you a whole cemetery full of people that got killed accidentally.</td></tr>
+		<tr><td width="45%" class="zh" >谈到生灵涂炭，哼，当贝利·罗杰斯朝着人群扣动了那只装满子弹的老双管散弹枪的扳机——”</td>
+		<td class="en">Talking about mangling folks up! why, when Berry Rogers turned loose that old double-barrelled shot-gun of his loaded with slugs at anybody—”</td></tr>
+		<tr><td width="45%" class="zh" >“喂，服务员！”纽约人招呼道,</td>
+		<td class="en">“Here, waiter!” called the New Yorker.</td></tr>
+		<tr><td width="45%" class="zh" >“再来两杯同样的酒。</td>
+		<td class="en">“Two more of the same.</td></tr>
+		<tr><td width="45%" class="zh" >谁都承认，我们的城市是文学艺术和学术中心。</td>
+		<td class="en">It is acknowledged by every one that our city is the centre of art, and literature, and learning.</td></tr>
+		<tr><td width="45%" class="zh" >就拿我们的餐后演说家为例。</td>
+		<td class="en">Take, for instance, our after-dinner speakers.</td></tr>
+		<tr><td width="45%" class="zh" >国内什么地方还能找到像迪普和福特那样机智雄辩的人？”</td>
+		<td class="en">Where else in the country would you find such wit and eloquence as emanate from Depew and Ford, and—”</td></tr>
+		<tr><td width="45%" class="zh" >“如果你看报纸，”西部人打断了他的话，“一定会看到有关皮特·韦伯斯特的女儿的报道。</td>
+		<td class="en">“If you take the papers,” interrupted the Westerner, “you must have read of Pete Webster’s daughter.</td></tr>
+		<tr><td width="45%" class="zh" >韦伯斯特家住在托珀兹市政厅以北两个街口的地方。</td>
+		<td class="en">The Websters live two blocks north of the court-house in Topaz City.</td></tr>
+		<tr><td width="45%" class="zh" >蒂莉·韦伯斯特小姐昏睡了40个日夜，没有醒过。</td>
+		<td class="en">Miss Tillie Webster, she slept forty days and nights without waking up.</td></tr>
+		<tr><td width="45%" class="zh" >医生们说——”</td>
+		<td class="en">The doctors said that—”</td></tr>
+		<tr><td width="45%" class="zh" >“请把火柴递给我，”纽约人说，</td>
+		<td class="en">“Pass the matches, please,” said the New Yorker.</td></tr>
+		<tr><td width="45%" class="zh" >“你有没有注意到纽约新建房屋的速度之快？</td>
+		<td class="en">“Have you observed the expedition with which new buildings are being run up in New York?</td></tr>
+		<tr><td width="45%" class="zh" >钢结构的发明和改进——”</td>
+		<td class="en">Improved inventions in steel framework and—”</td></tr>
+		<tr><td width="45%" class="zh" >“我注意到，”内华达人说，“托珀兹城统计显示，去年只有一个伐木工人被倒下来的原木压死，而且他是被龙卷风卷了进去。”</td>
+		<td class="en">“I noticed,” said the Nevadian, “that the statistics of Topaz City showed only one carpenter crushed by falling timbers last year and he was caught in a cyclone.”</td></tr>
+		<tr><td width="45%" class="zh" >“它们破坏了我们的天际线，”纽约人继续自己的话题，“我们建筑物的艺术性可能还不够高。</td>
+		<td class="en">“They abuse our sky line,” continued the New Yorker, “and it is likely that we are not yet artistic in the construction of our buildings.</td></tr>
+		<tr><td width="45%" class="zh" >但是我可以有把握地说，我们的绘画和装饰艺术是首屈一指的。</td>
+		<td class="en">But I can safely assert that we lead in pictorial and decorative art.</td></tr>
+		<tr><td width="45%" class="zh" >有些人家里拥有绘画和雕刻的精品。</td>
+		<td class="en">In some of our houses can be found masterpieces in the way of paintings and sculpture.</td></tr>
+		<tr><td width="45%" class="zh" >如果参观我们最好的画廊，你会发现——”</td>
+		<td class="en">One who has the entree to our best galleries will find—”</td></tr>
+		<tr><td width="45%" class="zh" >“前不久，”来自托珀兹的人说道，</td>
+		<td class="en">“Back up,” exclaimed the man from Topaz City.</td></tr>
+		<tr><td width="45%" class="zh" >“就在上个月，我们那里有一场比赛，一出手就有9000美元一对——”</td>
+		<td class="en">“There was a game last month in our town in which $90,000 changed hands on a pair of—”</td></tr>
+		<tr><td width="45%" class="zh" >乐队吹奏完了最后几个音符。</td>
+		<td class="en">“Ta-romt-tara!” went the orchestra.</td></tr>
+		<tr><td width="45%" class="zh" >写着“石棉”大字的粉红色幕布带着仲夏的慵懒徐徐落下。</td>
+		<td class="en">The stage curtain, blushing pink at the name “Asbestos” inscribed upon it, came down with a slow midsummer movement.</td></tr>
+		<tr><td width="45%" class="zh" >观众们有的乘着电梯，有的从楼梯，悠闲地退场下楼。</td>
+		<td class="en">The audience trickled leisurely down the elevator and stairs.</td></tr>
+		<tr><td width="45%" class="zh" >到了楼下的人行道上，纽约人和来自托珀兹城的人带着醉意郑重地握了握手。</td>
+		<td class="en">On the sidewalk below, the New Yorker and the man from Topaz City shook hands with alcoholic gravity.</td></tr>
+		<tr><td width="45%" class="zh" >高架铁路的隆隆声、地面上车辆的轰鸣声、出租车司机的咒骂声、报童的叫喊声和车轮驶过的巨大声响，震得人耳朵生疼。</td>
+		<td class="en">The elevated crashed raucously, surface cars hummed and clanged, cabmen swore, newsboys shrieked, wheels clattered ear-piercingly.</td></tr>
+		<tr><td width="45%" class="zh" >纽约人高兴地想到一点，他的城市有一点可以压倒所有别的城市。</td>
+		<td class="en">The New Yorker conceived a happy thought, with which he aspired to clinch the pre-eminence of his city.</td></tr>
+		<tr><td width="45%" class="zh" >“你必须承认，”他说，“在噪声方面，纽约远远超过任何别的城市——”</td>
+		<td class="en">“You must admit,” said he, “that in the way of noise New York is far ahead of any other—”</td></tr>
+		<tr><td width="45%" class="zh" >“在我们的沼泽地！”托珀兹的人说，</td>
+		<td class="en">“Back to the everglades!” said the man from Topaz City.</td></tr>
+		<tr><td width="45%" class="zh" >“早在1900年，当苏泽的乐队替竞选拉票宣传在我们那里演出时，你根本不能——”</td>
+		<td class="en">“In 1900, when Sousa’s band and the repeating candidate were in our town you couldn’t—”</td></tr>
+		<tr><td width="45%" class="zh" >快递公司车辆的轰鸣淹没了其余的话。</td>
+		<td class="en">The rattle of an express wagon drowned the rest of the words.</td></tr>
+		<tr><td width="45%" class="zh" ></td>
+		<td class="en"></td></tr>
+	</table>
+</div>
+
+<div class="zh_en"><a href="#" class="zh_btn">中文</a> | <a href="#" class="en_btn">英文</a> | <a href="#" class="zhen_btn">中英文</a></div>
+
+<script src="jquery-1.10.1.min.js"></script>
+<script src="jquery.bookify.js"></script>
+</body>
+</html>

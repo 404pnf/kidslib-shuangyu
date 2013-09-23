@@ -1,0 +1,243 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+	<!-- link rel="stylesheet" type="text/css" href="book.css" -->
+	<style type="text/css">
+		/* IMPORTANT !!!!
+		line-height, font-size defined in jquery.bookify.js */
+
+		* {
+			/* font-size: 20px; */
+		 }
+
+		table, td, th {
+
+		  }
+
+		td {
+	    	 /* height:50px; */
+	 	     vertical-align:top;
+	 	   	 text-align:left;
+	 	 	 padding-bottom:30px;/*行高的倍数-chenjing*/
+			 padding-left:20px;
+	 	  }
+
+		  /*chenjing*/
+		  .ebook_title{ position:absolute; left:20%; top:7%; font-weight:bold; font-size:35px; width:750px;}
+		  .zh_en{ position:absolute; left:70%; bottom:10%; font-size:14px;}
+		  .pre,.next{ cursor:pointer; font-size:40px; font-weight:bold; position:absolute; top:40%}
+		  .pre{ display:none; left:7%}
+		  .next{right:7%}
+
+	</style>
+
+</head>
+<body>
+<div class="ebook_title"></div>
+<div class="pre"><<</div>
+<div class="next">>></div>
+<div class="ebook_content">
+	<table cellpadding="0" cellspacing="0">
+		<tr><td width="45%" class="zh" >天气寒暄冠军</td>
+		<td class="en">The Champion of the Weather</td></tr>
+		<tr><td width="45%" class="zh" >作者：欧·亨利</td>
+		<td class="en">by O. Henry</td></tr>
+		<tr><td width="45%" class="zh" >要是你跟普通的纽约人说起基奥瓦保留地，他或许不知道你指的是奥尔巴尼的一个新的政治诡计呢，还是《帕西法尔》里的一个主题。</td>
+		<td class="en">If you should speak of the Kiowa Reservation to the average New Yorker he probably wouldn’t know whether you were referring to a new political dodge at Albany or a leitmotif from “Parsifal.”</td></tr>
+		<tr><td width="45%" class="zh" >但是，基奥瓦保留地那里的人却得到了与纽约人相处的忠告。</td>
+		<td class="en">But out in the Kiowa Reservation advices have been received concerning the existence of New York.</td></tr>
+		<tr><td width="45%" class="zh" >我们一行人在保留地打猎旅行。</td>
+		<td class="en">A party of us were on a hunting trip in the Reservation.</td></tr>
+		<tr><td width="45%" class="zh" >一天晚上，我们的向导、哲学家和朋友巴德·金斯伯里在营地里烤羚羊肉排。</td>
+		<td class="en">Bud Kingsbury, our guide, philosopher, and friend, was broiling antelope steaks in camp one night.</td></tr>
+		<tr><td width="45%" class="zh" >同行的人中一个穿着正规猎装，长着淡红色头发的小伙子漫步到篝火旁，点了一支烟，漫不经心地对巴德说：</td>
+		<td class="en">One of the party, a pinkish-haired young man in a correct hunting costume, sauntered over to the fire to light a cigarette, and remarked carelessly to Bud:</td></tr>
+		<tr><td width="45%" class="zh" >“今晚天气不错！”</td>
+		<td class="en">“Nice night!”</td></tr>
+		<tr><td width="45%" class="zh" >“啊，是啊，”巴德回应道，“像纽约不需要百老汇批准的任何一晚一样美好。”</td>
+		<td class="en">“Why, yes,” said Bud, “as nice as any night could be that ain’t received the Broadway stamp of approval.”</td></tr>
+		<tr><td width="45%" class="zh" >这小伙子的确是纽约人，只是我们纳闷巴德怎么会猜到的。</td>
+		<td class="en">Now, the young man was from New York, but the rest of us wondered how Bud guessed it.</td></tr>
+		<tr><td width="45%" class="zh" >羚羊肉排烤好后，我们就恳求他说说他的推理方法。</td>
+		<td class="en">So, when the steaks were done, we besought him to lay bare his system of ratiocination.</td></tr>
+		<tr><td width="45%" class="zh" >巴德算得上是准州地区的话匣子，他讲了如下一番话：</td>
+		<td class="en">And as Bud was something of a Territorial talking machine he made oration as follows:</td></tr>
+		<tr><td width="45%" class="zh" >“我怎么知道他是纽约人？</td>
+		<td class="en">“How did I know he was from New York?</td></tr>
+		<tr><td width="45%" class="zh" >其实，他一开口跟我搭讪，我就知道了。</td>
+		<td class="en">Well, I figured it out as soon as he sprung them two words on me.</td></tr>
+		<tr><td width="45%" class="zh" >几年前我在纽约呆过，我能辨认出曼哈顿牧场出来牲畜的耳记和蹄印。”</td>
+		<td class="en">I was in New York myself a couple of years ago, and I noticed some of the earmarks and hoof tracks of the Rancho Manhattan.”</td></tr>
+		<tr><td width="45%" class="zh" >一个猎人问道：“巴德，你是不是发现纽约和锅柄地带大不一样？”</td>
+		<td class="en">“Found New York rather different from the Panhandle, didn’t you, Bud?” asked one of the hunters.</td></tr>
+		<tr><td width="45%" class="zh" >“不能说完全了解，”巴德回答说，“多少有些了解。</td>
+		<td class="en">“Can’t say that I did,” answered Bud; “anyways, not more than some.</td></tr>
+		<tr><td width="45%" class="zh" >那条他们称为百老汇的大街上，来往行人很多，不过和夏延和阿马里洛的两足动物的种类相差无几。一开始，熙熙攘攘的人头攒动使我有些慌张，但是后来我对自己说：‘嘿，巴德，他们无非是些普通人，跟你自己、杰罗尼莫、格罗弗·克利夫兰和沃森兄弟一样，没必要惊慌失措。’这样一来，我踏实多了，仿佛又回到了保留地，正在参加印第安人的鬼神舞和庆祝玉米丰收的狂欢活动。”</td>
+		<td class="en">The main trail in that town which they call Broadway is plenty travelled, but they’re about the same brand of bipeds that tramp around in Cheyenne and Amarillo, At first I was sort of rattled by the crowds, but I soon says to myself, ‘Here, now, Bud; they’re just plain folks like you and Geronimo and Grover Cleveland and the Watson boys, so don’t get all flustered up with consternation under your saddle blanket,’ and then I feels calm and peaceful, like I was back in the Nation again at a ghost dance or a green corn pow-wow.</td></tr>
+		<tr><td width="45%" class="zh" >“那时，我攒了一年钱，准备到纽约来一个短暂旅行。</td>
+		<td class="en">“I’d been saving up for a year to give this New York a whirl.</td></tr>
+		<tr><td width="45%" class="zh" >我有一个叫萨默斯的朋友住在那里，可是我没能找到他，所以我只好独自享受那个喧嚣大都会的醉人的快乐。</td>
+		<td class="en">I knew a man named Summers that lived there, but I couldn’t find him; so I played a lone hand at enjoying the intoxicating pleasures of the corn-fed metropolis.</td></tr>
+		<tr><td width="45%" class="zh" >“五光十色的电灯、留声机里传出的音乐和高架铁路的轰响一度让我烦躁到发疯，都忘了作为西部人本性中的一个迫切需要。</td>
+		<td class="en">“For a while I was so frivolous and locoed by the electric lights and the noises of the phonographs and the second-story railroads that I forgot one of the crying needs of my Western system of natural requirements.</td></tr>
+		<tr><td width="45%" class="zh" >我一向喜欢和朋友和陌生人进行语言交流。</td>
+		<td class="en">I never was no hand to deny myself the pleasures of sociable vocal intercourse with friends and strangers.</td></tr>
+		<tr><td width="45%" class="zh" >如果我在准州地区遇上一个从未见过面的人，九分钟之内，我就可以知道他的收入、宗教信仰、衣领尺寸、他妻子的脾气，和他在添置衣服、维持生计跟买嚼烟方面的花费有多少。</td>
+		<td class="en">Out in the Territories when I meet a man I never saw before, inside of nine minutes I know his income, religion, size of collar, and his wife’s temper, and how much he pays for clothes, alimony, and chewing tobacco.</td></tr>
+		<tr><td width="45%" class="zh" >不吝啬与对方的谈话是我的一个天赋。</td>
+		<td class="en">It’s a gift with me not to be penurious with my conversation.</td></tr>
+		<tr><td width="45%" class="zh" >“但是纽约这里似乎崇尚言简意赅的原则。</td>
+		<td class="en">“But this here New York was inaugurated on the idea of abstemiousness in regard to the parts of speech.</td></tr>
+		<tr><td width="45%" class="zh" >我呆了将近三个星期，除了我就餐的那家饭馆的侍者之外，没有其他人跟我说过话。</td>
+		<td class="en">At the end of three weeks nobody in the city had fired even a blank syllable in my direction except the waiter in the grub emporium where I fed.</td></tr>
+		<tr><td width="45%" class="zh" >那侍者说的话也都是照搬菜单，根本无法满足我想要找人一吐为快的欲望。</td>
+		<td class="en">And as his outpourings of syntax wasn’t nothing but plagiarisms from the bill of fare, he never satisfied my yearnings, which was to have somebody hit.</td></tr>
+		<tr><td width="45%" class="zh" >假使我在酒吧前一站，旁边的人就会挪开一点儿，一副避之不及的样子，好像我身上藏着整个北极似的。</td>
+		<td class="en">If I stood next to a man at a bar he’d edge off and give a Baldwin-Ziegler look as if he suspected me of having the North Pole concealed on my person.</td></tr>
+		<tr><td width="45%" class="zh" >我倒希望当初是去阿比林或者韦科玩，因为那些地方的市长都会陪你喝酒，你遇到的第一个居民会把他的中间的名字告诉你，还会让你抽奖碰碰运气，没准能得到一个音乐盒。</td>
+		<td class="en">I began to wish that I’d gone to Abilene or Waco for my paseado; for the mayor of them places will drink with you, and the first citizen you meet will tell you his middle name and ask you to take a chance in a raffle for a music box.</td></tr>
+		<tr><td width="45%" class="zh" >“有一天，我特别想找一个比电线杆健谈的对象说说话。酒馆里一个伙计招呼我说：</td>
+		<td class="en">“Well, one day when I was particular hankering for to be gregarious with something more loquacious than a lamp post, a fellow in a caffy says to me, says he:</td></tr>
+		<tr><td width="45%" class="zh" >“‘天气不错！’</td>
+		<td class="en">“‘Nice day!’</td></tr>
+		<tr><td width="45%" class="zh" >“那人应该是酒馆的经理，我估计他见过我这个熟客多次。</td>
+		<td class="en">“He was a kind of a manager of the place, and I reckon he’d seen me in there a good many times.</td></tr>
+		<tr><td width="45%" class="zh" >他长了一张鱼脸和一双犹大的眼睛，但我马上起身，搂住他的脖子。</td>
+		<td class="en">He had a face like a fish and an eye like Judas, but I got up and put one arm around his neck.</td></tr>
+		<tr><td width="45%" class="zh" >“‘嘿，伙计，’我说，‘天气确实不赖。</td>
+		<td class="en">“‘Pardner,’ I says, ‘sure it’s a nice day.</td></tr>
+		<tr><td width="45%" class="zh" >你是全纽约第一个注意到人类错综复杂的语言在威廉·金斯伯里身上不会白白浪费的人。</td>
+		<td class="en">You’re the first gentleman in all New York to observe that the intricacies of human speech might not be altogether wasted on William Kingsbury.</td></tr>
+		<tr><td width="45%" class="zh" >但是，你觉不觉得，’我继续说道，‘清晨稍微有些凉，今晚的空气里有点儿要下雨的意思？</td>
+		<td class="en">But don’t you think,’ says I, ‘that ’twas a little cool early in the morning; and ain’t there a feeling of rain in the air to-night?</td></tr>
+		<tr><td width="45%" class="zh" >不过中午时候的天气确实好极了。</td>
+		<td class="en">But along about noon it sure was gallupsious weather.</td></tr>
+		<tr><td width="45%" class="zh" >你家里一切平安吗？</td>
+		<td class="en">How’s all up to the house?</td></tr>
+		<tr><td width="45%" class="zh" >酒馆这阵子买卖如何？’</td>
+		<td class="en">You doing right well with the caffy, now?’</td></tr>
+		<tr><td width="45%" class="zh" >“可是，你们看，尽管我使出浑身解数想迎合那傻瓜，他却一句话也没说，转身讪讪地走开了！</td>
+		<td class="en">“Well, sir, that galoot just turns his back and walks off stiff, without a word, after all my trying to be agreeable!</td></tr>
+		<tr><td width="45%" class="zh" >我真搞不懂该怎么办才好。</td>
+		<td class="en">I didn’t know what to make of it.</td></tr>
+		<tr><td width="45%" class="zh" >那天晚上，我收到萨默斯的来信，说是之前到城外野营去了。</td>
+		<td class="en">That night I finds a note from Summers, who’d been away from town, giving the address of his camp.</td></tr>
+		<tr><td width="45%" class="zh" >我便到他家里，同他一家痛快地聊了起来。</td>
+		<td class="en">I goes up to his house and has a good, old-time talk with his folks.</td></tr>
+		<tr><td width="45%" class="zh" >我把酒馆里那个野蛮人的事告诉萨默斯，希望他给我解释一下。</td>
+		<td class="en">And I tells Summers about the actions of this coyote in the caffy, and desires interpretation.</td></tr>
+		<tr><td width="45%" class="zh" >“‘哦，’萨默斯说，‘他并不想跟你攀谈。</td>
+		<td class="en">“‘Oh,’ says Summers, ‘he wasn’t intending to strike up a conversation with you.</td></tr>
+		<tr><td width="45%" class="zh" >那只是纽约式的寒暄。</td>
+		<td class="en">That’s just the New York style.</td></tr>
+		<tr><td width="45%" class="zh" >他知道你是常客，说一两句话对你光顾他的生意表示感谢。</td>
+		<td class="en">He’d seen you was a regular customer and he spoke a word or two just to show you he appreciated your custom.</td></tr>
+		<tr><td width="45%" class="zh" >你当时不必接他的话。</td>
+		<td class="en">You oughtn’t to have followed it up.</td></tr>
+		<tr><td width="45%" class="zh" >就当是对待陌生人一样。</td>
+		<td class="en">That’s about as far as we care to go with a stranger.</td></tr>
+		<tr><td width="45%" class="zh" >可以说一两句关于天气的话，但我们不把那当作交朋友的基础。’</td>
+		<td class="en">A word or so about the weather may be ventured, but we don’t generally make it the basis of an acquaintance.’</td></tr>
+		<tr><td width="45%" class="zh" >“‘比利，’我说，‘对我来说，天气和与天气有关的都是严肃的话题。</td>
+		<td class="en">“‘Billy,’ says I, ‘the weather and its ramifications is a solemn subject with me.</td></tr>
+		<tr><td width="45%" class="zh" >气象学是我的痛处之一。</td>
+		<td class="en">Meteorology is one of my sore points.</td></tr>
+		<tr><td width="45%" class="zh" >无论谁跟我提起温度、湿度或者灿烂的阳光，不继续说气压下降，扭头就走，那可不行。</td>
+		<td class="en">No man can open up the question of temperature or humidity or the glad sunshine with me, and then turn tail on it without its leading to a falling barometer.</td></tr>
+		<tr><td width="45%" class="zh" >我会再去找那个人，给他上一课，讲讲使谈话继续下去的艺术。</td>
+		<td class="en">I’m going down to see that man again and give him a lesson in the art of continuous conversation.</td></tr>
+		<tr><td width="45%" class="zh" >你说纽约规矩允许他甩出一两句话不必等回应。</td>
+		<td class="en">You say New York etiquette allows him two words and no answer.</td></tr>
+		<tr><td width="45%" class="zh" >哼，对我可不行。我要把他变成气象局，非让他把先挑起的话题说完不可，并且要接着尽情聊聊其他有关的话题。’</td>
+		<td class="en">Well, he’s going to turn himself into a weather bureau and finish what he begun with me, besides indulging in neighbourly remarks on other subjects.’</td></tr>
+		<tr><td width="45%" class="zh" >“萨默斯不赞同我的做法，但我心里头有气，就乘上电车回到了那家酒馆。</td>
+		<td class="en">“Summers talked agin it, but I was irritated some and I went on the street car back to that caffy.</td></tr>
+		<tr><td width="45%" class="zh" >“那个人还在那个有桌椅的畜栏似的地方走来走去。</td>
+		<td class="en">“The same fellow was there yet, walking round in a sort of back corral where there was tables and chairs.</td></tr>
+		<tr><td width="45%" class="zh" >房间里散坐着一些喝酒的顾客，他们正在互相抬杠。</td>
+		<td class="en">A few people was sitting around having drinks and sneering at one another.</td></tr>
+		<tr><td width="45%" class="zh" >“我把那人叫到一边，带他到一个角落。</td>
+		<td class="en">“I called that man to one side and herded him into a corner.</td></tr>
+		<tr><td width="45%" class="zh" >我解开衣扣，露出插在坎肩里面的三八口径手枪。</td>
+		<td class="en">I unbuttoned enough to show him a thirty-eight I carried stuck under my vest.</td></tr>
+		<tr><td width="45%" class="zh" >“‘伙计，’我说，‘不久前，我在这里时，你乘机跟我说天气不错。</td>
+		<td class="en">“‘Pardner,’ I says, ‘a brief space ago I was in here and you seized the opportunity to say it was a nice day.</td></tr>
+		<tr><td width="45%" class="zh" >我正要证实你的天气预报，你却转身走开了。</td>
+		<td class="en">When I attempted to corroborate your weather signal, you turned your back and walked off.</td></tr>
+		<tr><td width="45%" class="zh" >你听好，’我接着说，‘你这个长着青蛙心、寡言少语、倔头倔脑的新水手和闭嘴牡蛎的杂交品种，现在把你没说完的天气话题接着说完。’</td>
+		<td class="en">Now,’ says I, ‘you frog-hearted, language-shy, stiff-necked cross between a Spitzbergen sea cook and a muzzled oyster, you resume where you left off in your discourse on the weather.’</td></tr>
+		<tr><td width="45%" class="zh" >“那家伙瞅着我，咧嘴想笑，但看到我并没有笑意，便也收起笑容，严肃起来。</td>
+		<td class="en">“The fellow looks at me and tries to grin, but he sees I don’t and he comes around serious.</td></tr>
+		<tr><td width="45%" class="zh" >“‘嗯，’他瞥着我的枪把说，‘天气相当好，就是有些热。’</td>
+		<td class="en">“‘Well,’ says he, eyeing the handle of my gun, ‘it was rather a nice day; some warmish, though.’</td></tr>
+		<tr><td width="45%" class="zh" >“‘说详细些，你这个油嘴滑舌的懒鬼，’我说，‘我们要听些具体情况——扩展一下——补充细节。</td>
+		<td class="en">“‘Particulars, you mealy-mouthed snoozer,’ I says—‘let’s have the specifications—expatiate—fill in the outlines.</td></tr>
+		<tr><td width="45%" class="zh" >你要是拿简报糊弄我，我保证那会变成暴风雨警报。’</td>
+		<td class="en">When you start anything with me in short-hand it’s bound to turn out a storm signal.’</td></tr>
+		<tr><td width="45%" class="zh" >“‘昨天有下雨的迹象，’他说，‘但午前云开日出。</td>
+		<td class="en">“‘Looked like rain yesterday,’ says the man, ‘but it cleared off fine in the forenoon.</td></tr>
+		<tr><td width="45%" class="zh" >我听说，北部农民迫切盼望下雨。’</td>
+		<td class="en">I hear the farmers are needing rain right badly up-State.’</td></tr>
+		<tr><td width="45%" class="zh" >“‘你这只是在慢跑，’我说，</td>
+		<td class="en">“‘That’s the kind of a canter,’ says I.</td></tr>
+		<tr><td width="45%" class="zh" >‘甩掉你蹄子上的纽约尘土，像个真正的半人半马兽一样跑利索些。</td>
+		<td class="en">‘Shake the New York dust off your hoofs and be a real agreeable kind of a centaur.</td></tr>
+		<tr><td width="45%" class="zh" >你知道的，你已经打破了沉闷，我们越来越熟了。</td>
+		<td class="en">You broke the ice, you know, and we’re getting better acquainted every minute.</td></tr>
+		<tr><td width="45%" class="zh" >我当时好像还问过你的家人来着？’</td>
+		<td class="en">Seems to me I asked you about your family?’</td></tr>
+		<tr><td width="45%" class="zh" >“‘他们都好，谢谢，’他说，</td>
+		<td class="en">“‘They’re all well, thanks,’ says he.</td></tr>
+		<tr><td width="45%" class="zh" >‘我们——我们新买了一架钢琴。’</td>
+		<td class="en">‘We—we have a new piano.’</td></tr>
+		<tr><td width="45%" class="zh" >“‘现在你说到点子上了，’我说，</td>
+		<td class="en">“‘Now you’re coming it,’ I says.</td></tr>
+		<tr><td width="45%" class="zh" >‘沉默的坚冰终于被打破了。</td>
+		<td class="en">‘This cold reserve is breaking up at last.</td></tr>
+		<tr><td width="45%" class="zh" >你一说到钢琴，我们就像兄弟那样亲密了。</td>
+		<td class="en">That little touch about the piano almost makes us brothers.</td></tr>
+		<tr><td width="45%" class="zh" >你家里最小的孩子叫什么？’我继续问。</td>
+		<td class="en">What’s the youngest kid’s name?’ I asks him.</td></tr>
+		<tr><td width="45%" class="zh" >“‘托马斯，’他说，</td>
+		<td class="en">“‘Thomas,’ says he.</td></tr>
+		<tr><td width="45%" class="zh" >‘他刚得过麻疹，正在康复。’</td>
+		<td class="en">‘He’s just getting well from the measles.’</td></tr>
+		<tr><td width="45%" class="zh" >“‘我觉得我们一见如故，’我说，</td>
+		<td class="en">“‘I feel like I’d known you always,’ says I.</td></tr>
+		<tr><td width="45%" class="zh" >‘现在就剩一个问题了——酒馆生意如何？’</td>
+		<td class="en">‘Now there was just one more—are you doing right well with the caffy, now?’</td></tr>
+		<tr><td width="45%" class="zh" >“‘相当不错，’他答道，</td>
+		<td class="en">“‘Pretty well,’ he says.</td></tr>
+		<tr><td width="45%" class="zh" >‘现在可以攒些钱了。’</td>
+		<td class="en">‘I’m putting away a little money.’</td></tr>
+		<tr><td width="45%" class="zh" >“‘我听了很高兴，’我说，</td>
+		<td class="en">“‘Glad to hear it,’ says I.</td></tr>
+		<tr><td width="45%" class="zh" >‘现在回去工作吧，以后文明点儿。</td>
+		<td class="en">‘Now go back to your work and get civilized.</td></tr>
+		<tr><td width="45%" class="zh" >如果不准备以个人的方式把天气谈个透，就别碰天气这个话题。这个话题属于交际和结识新朋友的范畴，我不喜欢在这样的大城市里看到这个话题变成简单的寒暄。’</td>
+		<td class="en">Keep your hands off the weather unless you’re ready to follow it up in a personal manner, It’s a subject that naturally belongs to sociability and the forming of new ties, and I hate to see it handed out in small change in a town like this.’</td></tr>
+		<tr><td width="45%" class="zh" >“第二天，我卷起毯子，离开了纽约。”</td>
+		<td class="en">“So the next day I rolls up my blankets and hits the trail away from New York City.”</td></tr>
+		<tr><td width="45%" class="zh" >巴德说完后，我们围在火堆旁又呆了一会儿，最后大家分散准备睡觉。</td>
+		<td class="en">For many minutes after Bud ceased talking we lingered around the fire, and then all hands began to disperse for bed.</td></tr>
+		<tr><td width="45%" class="zh" >我摊开被褥时，听到那个淡红色头发的小伙子忧心忡忡地对巴德说：</td>
+		<td class="en">As I was unrolling my bedding I heard the pinkish-haired young man saying to Bud, with something like anxiety in his voice:</td></tr>
+		<tr><td width="45%" class="zh" >“金斯伯里先生，正如我刚才所说，今晚天气确实不坏。</td>
+		<td class="en">“As I say, Mr. Kingsbury, there is something really beautiful about this night.</td></tr>
+		<tr><td width="45%" class="zh" >微风徐徐、星光灿烂、空气清新，这一切都使今晚格外迷人。”</td>
+		<td class="en">The delightful breeze and the bright stars and the clear air unite in making it wonderfully attractive.”</td></tr>
+		<tr><td width="45%" class="zh" >“没错，”巴德说，“今晚天气不错。”</td>
+		<td class="en">“Yes,” said Bud, “it’s a nice night.”</td></tr>
+		<tr><td width="45%" class="zh" ></td>
+		<td class="en"></td></tr>
+	</table>
+</div>
+
+<div class="zh_en"><a href="#" class="zh_btn">中文</a> | <a href="#" class="en_btn">英文</a> | <a href="#" class="zhen_btn">中英文</a></div>
+
+<script src="jquery-1.10.1.min.js"></script>
+<script src="jquery.bookify.js"></script>
+</body>
+</html>

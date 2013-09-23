@@ -1,0 +1,137 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+	<!-- link rel="stylesheet" type="text/css" href="book.css" -->
+	<style type="text/css">
+		/* IMPORTANT !!!!
+		line-height, font-size defined in jquery.bookify.js */
+
+		* {
+			/* font-size: 20px; */
+		 }
+
+		table, td, th {
+
+		  }
+
+		td {
+	    	 /* height:50px; */
+	 	     vertical-align:top;
+	 	   	 text-align:left;
+	 	 	 padding-bottom:30px;/*行高的倍数-chenjing*/
+			 padding-left:20px;
+	 	  }
+
+		  /*chenjing*/
+		  .ebook_title{ position:absolute; left:20%; top:7%; font-weight:bold; font-size:35px; width:750px;}
+		  .zh_en{ position:absolute; left:70%; bottom:10%; font-size:14px;}
+		  .pre,.next{ cursor:pointer; font-size:40px; font-weight:bold; position:absolute; top:40%}
+		  .pre{ display:none; left:7%}
+		  .next{right:7%}
+
+	</style>
+
+</head>
+<body>
+<div class="ebook_title"></div>
+<div class="pre"><<</div>
+<div class="next">>></div>
+<div class="ebook_content">
+	<table cellpadding="0" cellspacing="0">
+		<tr><td width="45%" class="zh" >乔治·华盛顿外传</td>
+		<td class="en">Brief Biographical Sketch of George Washington</td></tr>
+		<tr><td width="45%" class="zh" >作者：马克·吐温</td>
+		<td class="en">by Mark Twain</td></tr>
+		<tr><td width="45%" class="zh" >许多年前的今天，乔治·华盛顿诞生了。</td>
+		<td class="en">This day, many years ago precisely, George Washington was born.</td></tr>
+		<tr><td width="45%" class="zh" >认识到这一点，意义重大！</td>
+		<td class="en">How full of significance the thought!</td></tr>
+		<tr><td width="45%" class="zh" >对于我们之中那些与华盛顿有着相似经历的人来说，尤其如此，尽管他们所处时代不同；对于年轻人来说，更是如此。年轻人应该将华盛顿奉为楷模，诚心诚意地去效仿他，不要因为前辈做同样的事情频繁失败的经历而失去尝试的勇气。</td>
+		<td class="en">Especially to those among us who have had a similar experience, though subsequently; and still more especially to the young, who should take him for a model, and faithfully try to be like him, undeterred by the frequency with which the same thing has been attempted by American youths before them and not satisfactorily accomplished.</td></tr>
+		<tr><td width="45%" class="zh" >乔治·华盛顿是他们家族九个孩子中年龄最小的，其他八个是他叔叔和婶婶的孩子。</td>
+		<td class="en">George Washington was the youngest of nine children, eight of whom were the offspring of his uncle and his aunt.</td></tr>
+		<tr><td width="45%" class="zh" >那时，作为一个普通的小男孩，华盛顿没有任何迹象显示他将来会成为伟人。</td>
+		<td class="en">As a boy, he gave no promise of the greatness he was one day to achieve.</td></tr>
+		<tr><td width="45%" class="zh" >青少年最基本的技能他都不会。</td>
+		<td class="en">He was ignorant of the commonest accomplishments of youth.</td></tr>
+		<tr><td width="45%" class="zh" >甚至连撒谎他都不会。</td>
+		<td class="en">He could not even lie.</td></tr>
+		<tr><td width="45%" class="zh" >然而在那时，他绝没有现在那些最低劣的男孩子生来就具有的优势。</td>
+		<td class="en">But then he never had any of those precious advantages which are within the reach of the humblest of the boys of the present day.</td></tr>
+		<tr><td width="45%" class="zh" >现在的男孩子个个都会撒谎。</td>
+		<td class="en">Any boy can lie now.</td></tr>
+		<tr><td width="45%" class="zh" >还不会站立的时候，我就学会了撒谎——这种机灵在我们家族里太普遍了，没有人去理会。</td>
+		<td class="en">I could lie before I could stand—yet this sort of sprightliness was so common in our family that little notice was taken of it.</td></tr>
+		<tr><td width="45%" class="zh" >而小乔治看上去一点儿也不精明。</td>
+		<td class="en">Young George appears to have had no sagacity whatever.</td></tr>
+		<tr><td width="45%" class="zh" >据说有一次，他砍倒了父亲最爱的樱桃树，后来却不知道怎样去隐瞒。</td>
+		<td class="en">It is related of him that he once chopped down his father’s favorite cherry-tree, and then didn’t know enough to keep dark about it.</td></tr>
+		<tr><td width="45%" class="zh" >他曾经差点儿出海，当了见习海员。但他母亲向他抱怨说，他离家之后，肯定是杳无音讯，不知道什么时候才能把他给盼回来。这个令人伤感的事实深深地打动了华盛顿，于是，他叫人把衣箱从船上拿上岸，平静而坚定地拒绝了参加海军，拒绝为国王打仗。他这样做就是为了让母亲不再烦恼和担忧。</td>
+		<td class="en">He came near going to sea once, as a midshipman; but when his mother represented to him that he must necessarily be absent when he was away from home, and that this must continue to be the case until he got back, the sad truth struck him so forcibly that he ordered his trunk ashore, and quietly but firmly refused to serve in the navy and fight the battles of his king so long as the effect of it would be to discommode his mother.</td></tr>
+		<tr><td width="45%" class="zh" >他的人生准则是：拖延就是浪费时间，凡事替他人着想。</td>
+		<td class="en">The great rule of his life was, that procrastination was the thief of time, and that we should always do unto others somehow.</td></tr>
+		<tr><td width="45%" class="zh" >这是他的金科玉律。</td>
+		<td class="en">This is the golden rule.</td></tr>
+		<tr><td width="45%" class="zh" >因此，他绝不会让他母亲烦恼和担忧。</td>
+		<td class="en">Therefore, he would never discommode his mother.</td></tr>
+		<tr><td width="45%" class="zh" >乔治·华盛顿从小被鼓励做一切事情都要符合最崇高、最纯洁的道德、公正和正义。</td>
+		<td class="en">Young George Washington was actuated in all things by the highest and purest principles of morality, justice, and right.</td></tr>
+		<tr><td width="45%" class="zh" >他是个楷模，各个方面都值得年轻人去效仿。</td>
+		<td class="en">He was a model in every way worthy of the emulation of youth.</td></tr>
+		<tr><td width="45%" class="zh" >乔治·华盛顿办事总是雷厉风行、忠实可靠。</td>
+		<td class="en">Young George was always prompt and faithful in the discharge of every duty.</td></tr>
+		<tr><td width="45%" class="zh" >据历史学家记载：他总是随叫随到，就像“一千块砖头”一样精力充沛，值得信赖。</td>
+		<td class="en">It has been said of him, by the historian, that he was always on hand, like a thousand of brick.</td></tr>
+		<tr><td width="45%" class="zh" >这样的称赞，他是当之无愧的。</td>
+		<td class="en">And well deserved was this compliment.</td></tr>
+		<tr><td width="45%" class="zh" >但是，就算那砖头的数量大大增加——甚至再增加一倍——也不足以完全地体现出华盛顿本人的高贵品质。</td>
+		<td class="en">The aggregate of the building material specified might have been largely increased—might have been doubled, even—without doing full justice to these high qualities in the subject of this sketch.</td></tr>
+		<tr><td width="45%" class="zh" >确实，想用砖头就体现出小乔治·华盛顿的雷厉风行和忠实可靠，那几乎是不可能的。</td>
+		<td class="en">Indeed, it would hardly be possible to express in bricks the exceeding promptness and fidelity of young George Washington.</td></tr>
+		<tr><td width="45%" class="zh" >他在许多方面的美德都超乎常人的想象，无法用数字计算。像他这样拥有全面、高尚又纯洁的美德的人，要想用砖头来体现，无论如何，都是远远不够的。</td>
+		<td class="en">His was a soul whose manifold excellencies were beyond the ken and computation of mathematics, and bricks are, at the least, but an inadequate vehicle for the conveyance of a comprehension of the moral sublimity of a nature so pure as his.</td></tr>
+		<tr><td width="45%" class="zh" >早年，小乔治·华盛顿当过勘测员（在一个内陆港口和某个县）；后来，他奉丁威迪州长之命去劝说法军释放一批英国战俘。他长途跋涉四百英里，一路勘探，穿越了没有道路，却遍布着印第安人的森林。</td>
+		<td class="en">Young George W. was a surveyor in early life—a surveyor of an inland port—a sort of county surveyor; and under a commission from Governor Dinwiddie, he set out to survey his way four hundred miles through trackless forests, infested with Indians, to procure the liberation of some English prisoners.</td></tr>
+		<tr><td width="45%" class="zh" >据历史学家说，那批印第安人是同类中最堕落邪恶的。他们专门伏击白人，图财害命。</td>
+		<td class="en">The historian says the Indians were the most depraved of their species, and did nothing but lay for white men, whom they killed for the sake of robbing them.</td></tr>
+		<tr><td width="45%" class="zh" >考虑到白人一年只经过那块地区一次，他们很可能做不成他们行内所谓的大买卖。</td>
+		<td class="en">Considering that white men only traveled through the country at the rate of one a year, they were probably unable to do what might be termed a land-office business in their line.</td></tr>
+		<tr><td width="45%" class="zh" >他们没有抢劫小乔治·华盛顿；一个野蛮人尝试过，可是失败了。他藏在一棵树后面朝本文主人公开火，可是本文主人公出其不意，将他从树后一把抓了出来，抓了个现行。</td>
+		<td class="en">They did not rob young G. W.; one savage made the attempt, but failed; he fired at the subject of this sketch from behind a tree, but the subject of this sketch immediately snaked him out from behind the tree and took him prisoner.</td></tr>
+		<tr><td width="45%" class="zh" >此次远征以失败告终，法军拒绝释放战俘。华盛顿沮丧而归。</td>
+		<td class="en">The long journey failed of success; the French would not give up the prisoners, and Wash went sadly back home again.</td></tr>
+		<tr><td width="45%" class="zh" >后来，他指挥招募来一个大批人马，前往营救战俘。</td>
+		<td class="en">A regiment was raised to go and make a rescue, and he took command of it.</td></tr>
+		<tr><td width="45%" class="zh" >他趁着下雨之时，突袭了法军，极其勇敢地同手下的人攻击法军。</td>
+		<td class="en">He caught the French out in the rain and tackled them with great intrepidity.</td></tr>
+		<tr><td width="45%" class="zh" >他只用了十分钟就将法军击败，他们的指挥官也一命呜呼了。</td>
+		<td class="en">He defeated them in ten minutes, and their commander handed in his checks.</td></tr>
+		<tr><td width="45%" class="zh" >这就是大草原之战。</td>
+		<td class="en">This was the battle of Great Meadows.</td></tr>
+		<tr><td width="45%" class="zh" >在此之后很久，乔治·华盛顿成为了北美大陆军总司令。在整个独立战争时期，他军务极其繁忙。</td>
+		<td class="en">After this, a good while, George Washington became Commander-in-Chief of the American armies, and had an exceedingly dusty time of it all through the Revolution.</td></tr>
+		<tr><td width="45%" class="zh" >但是他时常突袭敌军，出奇制胜。</td>
+		<td class="en">But every now and then he turned a Jack from the bottom and surprised the enemy.</td></tr>
+		<tr><td width="45%" class="zh" >他坚持抗战长达七年之久，最后终于把英军从哈里斯堡驱逐到了哈利法克斯——美国解放了！</td>
+		<td class="en">He kept up his lick for seven long years, and hazed the British from Harrisburg to Halifax—and America was free!</td></tr>
+		<tr><td width="45%" class="zh" >他连任了两届美国总统，如果他还活着，还能当总统——尽管他不是总统了，美国人民仍然将他尊为国父。</td>
+		<td class="en">He served two terms as President, and would have been President yet if he had lived—even so did the people honor the Father of his Country.</td></tr>
+		<tr><td width="45%" class="zh" >让美国的年轻人以他为楷模，学习他那无与伦比的美德，不管怎样，都应该试一试。</td>
+		<td class="en">Let the youth of America take his incomparable character for a model, and try it one jolt, any how.</td></tr>
+		<tr><td width="45%" class="zh" >成功是有可能的——让他们谨记这一点——尽管有困难，成功还是有可能成功的。</td>
+		<td class="en">Success is possible—let them remember that—success is possible, though there are chances against it.</td></tr>
+		<tr><td width="45%" class="zh" >为了下一代，我可以继续将这传记一直写下去，可是我现在有别的事情要做，所以，只能就此打住了。</td>
+		<td class="en">I could continue this biography with profit to the rising generation, but I shall have to drop the subject at present, because of other matters which must be attended to.</td></tr>
+		<tr><td width="45%" class="zh" ></td>
+		<td class="en"></td></tr>
+	</table>
+</div>
+
+<div class="zh_en"><a href="#" class="zh_btn">中文</a> | <a href="#" class="en_btn">英文</a> | <a href="#" class="zhen_btn">中英文</a></div>
+
+<script src="jquery-1.10.1.min.js"></script>
+<script src="jquery.bookify.js"></script>
+</body>
+</html>

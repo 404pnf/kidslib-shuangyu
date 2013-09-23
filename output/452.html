@@ -1,0 +1,329 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+	<!-- link rel="stylesheet" type="text/css" href="book.css" -->
+	<style type="text/css">
+		/* IMPORTANT !!!!
+		line-height, font-size defined in jquery.bookify.js */
+
+		* {
+			/* font-size: 20px; */
+		 }
+
+		table, td, th {
+
+		  }
+
+		td {
+	    	 /* height:50px; */
+	 	     vertical-align:top;
+	 	   	 text-align:left;
+	 	 	 padding-bottom:30px;/*行高的倍数-chenjing*/
+			 padding-left:20px;
+	 	  }
+
+		  /*chenjing*/
+		  .ebook_title{ position:absolute; left:20%; top:7%; font-weight:bold; font-size:35px; width:750px;}
+		  .zh_en{ position:absolute; left:70%; bottom:10%; font-size:14px;}
+		  .pre,.next{ cursor:pointer; font-size:40px; font-weight:bold; position:absolute; top:40%}
+		  .pre{ display:none; left:7%}
+		  .next{right:7%}
+
+	</style>
+
+</head>
+<body>
+<div class="ebook_title"></div>
+<div class="pre"><<</div>
+<div class="next">>></div>
+<div class="ebook_content">
+	<table cellpadding="0" cellspacing="0">
+		<tr><td width="45%" class="zh" >迦梨女神的钻石</td>
+		<td class="en">The Diamond of Kali</td></tr>
+		<tr><td width="45%" class="zh" >作者：欧·亨利</td>
+		<td class="en">by O. Henry</td></tr>
+		<tr><td width="45%" class="zh" >那篇报道迦梨女神钻石的原始新闻稿被提交给了本市新闻版的编辑。</td>
+		<td class="en">The original news item concerning the diamond of the goddess Kali was handed in to the city editor.</td></tr>
+		<tr><td width="45%" class="zh" >他笑了笑，本想把它扔进废纸篓里。</td>
+		<td class="en">He smiled and held it for a moment above the wastebasket.</td></tr>
+		<tr><td width="45%" class="zh" >但他略微迟疑了一下，又放回到桌子上说：“给周日版的编辑看看，也许他们能弄点儿名堂出来。”</td>
+		<td class="en">Then he laid it back on his desk and said: “Try the Sunday people; they might work something out of it.”</td></tr>
+		<tr><td width="45%" class="zh" >周日版的编辑扫了一眼稿件后，哼了一声。</td>
+		<td class="en">The Sunday editor glanced the item over and said: “H’m!”</td></tr>
+		<tr><td width="45%" class="zh" >随后他叫来一名记者，谈了谈他自己的看法。</td>
+		<td class="en">Afterward he sent for a reporter and expanded his comment.</td></tr>
+		<tr><td width="45%" class="zh" >“你不妨去拜访一下勒德洛将军，”他说，“看看能否在现有材料的基础上，写一篇稿子出来。</td>
+		<td class="en">“You might see General Ludlow,” he said, “and make a story out of this if you can.</td></tr>
+		<tr><td width="45%" class="zh" >有关钻石的报道现在已经无人问津，不过这颗钻石很大，即使包在报纸里藏在门厅的地毯底下，也会被清洁女工找到。</td>
+		<td class="en">Diamond stories are a drug; but this one is big enough to be found by a scrubwoman wrapped up in a piece of newspaper and tucked under the corner of the hall linoleum.</td></tr>
+		<tr><td width="45%" class="zh" >先搞清楚将军有没有一个想要当演员的女儿。</td>
+		<td class="en">Find out first if the General has a daughter who intends to go on the stage.</td></tr>
+		<tr><td width="45%" class="zh" >如果没有的话，那你就只管去写稿子吧。</td>
+		<td class="en">If not, you can go ahead with the story.</td></tr>
+		<tr><td width="45%" class="zh" >查阅一些关于柯伊诺尔钻石以及J. P. 摩根收藏品的剪报，再找几张南非金伯利钻石矿和巴尼·巴尔纳托的照片来。</td>
+		<td class="en">Run cuts of the Kohinoor and J. P. Morgan’s collection, and work in pictures of the Kimberley mines and Barney Barnato.</td></tr>
+		<tr><td width="45%" class="zh" >绘制一个表格，把钻石、镭锭以及屠宰场罢工后小牛排的价格进行比较，让这些内容占满半个版面。”</td>
+		<td class="en">Fill in with a tabulated comparison of the values of diamonds, radium, and veal cutlets since the meat strike; and let it run to a half page.”</td></tr>
+		<tr><td width="45%" class="zh" >第二天，记者交上了他的稿子。</td>
+		<td class="en">On the following day the reporter turned in his story.</td></tr>
+		<tr><td width="45%" class="zh" >周日版编辑扫了一眼后，又哼了一声。</td>
+		<td class="en">The Sunday editor let his eye sprint along its lines. “H’m!” he said again.</td></tr>
+		<tr><td width="45%" class="zh" >这回，稿子被毫不犹豫地丢进了废纸篓里。</td>
+		<td class="en">This time the copy went into the waste-basket with scarcely a flutter.</td></tr>
+		<tr><td width="45%" class="zh" >记者抿了抿嘴，但是过了大约一个小时后，当我过去找他谈这件事时，他却在志得意满地轻声吹着口哨。</td>
+		<td class="en">The reporter stiffened a little around the lips; but he was whistling softly and contentedly between his teeth when I went over to talk with him about it an hour later.</td></tr>
+		<tr><td width="45%" class="zh" >“我一点儿都不埋怨那个‘老男人’毙了我的稿子，”他宽宏大量地说，</td>
+		<td class="en">“I don’t blame the ‘old man’,” said he, magnanimously, “for cutting it out.</td></tr>
+		<tr><td width="45%" class="zh" >“这件事听起来确实有点儿蹊跷，但我写的完全是事实呀。</td>
+		<td class="en">It did sound like funny business; but it happened exactly as I wrote it.</td></tr>
+		<tr><td width="45%" class="zh" >喂，你为什么不从废纸篓里把它翻出来用呢？</td>
+		<td class="en">Say, why don’t you fish that story out of the wastebasket and use it?</td></tr>
+		<tr><td width="45%" class="zh" >我觉得它并不比你写的其他那些无聊的东西差多少。”</td>
+		<td class="en">Seems to me it’s as good as the tommyrot you write.”</td></tr>
+		<tr><td width="45%" class="zh" >我接受了他的这个提议。读者如果继续看下去的话，就会看到关于迦梨女神钻石的真相，它是由我们编辑部最可靠的一个记者报道的。</td>
+		<td class="en">I accepted the tip, and if you read further you will learn the facts about the diamond of the goddess Kali as vouched for by one of the most reliable reporters on the staff.</td></tr>
+		<tr><td width="45%" class="zh" >马塞勒斯·B. 勒德洛将军住在西区二十几街一座虽然破旧但不失庄严的红砖老房子里。</td>
+		<td class="en">Gen. Marcellus B. Ludlow lives in one of those decaying but venerated old red-brick mansions in the West Twenties.</td></tr>
+		<tr><td width="45%" class="zh" >将军出身于一个低调古老的纽约家族。</td>
+		<td class="en">The General is a member of an old New York family that does not advertise.</td></tr>
+		<tr><td width="45%" class="zh" >他生性喜欢周游世界，绅士派头十足，蒙上天恩宠而坐拥百万家财，职业是宝石鉴赏家。</td>
+		<td class="en">He is a globe-trotter by birth, a gentleman by predilection, a millionaire by the mercy of Heaven, and a connoisseur of precious stones by occupation.</td></tr>
+		<tr><td width="45%" class="zh" >记者在接到任务后，当天晚上八点半左右就到了将军家，表明身份后，随即就被请了进去。</td>
+		<td class="en">The reporter was admitted promptly when he made himself known at the General’s residence at about eight thirty on the evening that he received the assignment.</td></tr>
+		<tr><td width="45%" class="zh" >他在华丽的书房里见到了这位著名的旅行家和宝石鉴赏家，他年过半百，身材高大，身板硬朗，胡子几乎全白了，行为举止很有军人风范，国民警卫队队员的风采依稀可见。</td>
+		<td class="en">In the magnificent library he was greeted by the distinguished traveller and connoisseur, a tall, erect gentleman in the early fifties, with a nearly white moustache, and a bearing so soldierly that one perceived in him scarcely a trace of the National Guardsman.</td></tr>
+		<tr><td width="45%" class="zh" >当记者表明来意后，将军那饱经风霜的脸上露出了颇感兴趣的笑容。</td>
+		<td class="en">His weather-beaten countenance lit up with a charming smile of interest when the reporter made known his errand.</td></tr>
+		<tr><td width="45%" class="zh" >“哦，你已经听说我最新的发现了。</td>
+		<td class="en">“Ah, you have heard of my latest find.</td></tr>
+		<tr><td width="45%" class="zh" >我很乐意向你展示一下我认为现存最宝贵的六颗蓝色钻石之一。”</td>
+		<td class="en">I shall be glad to show you what I conceive to be one of the six most valuable blue diamonds in existence.”</td></tr>
+		<tr><td width="45%" class="zh" >将军打开书房角落里的一个小保险箱，取出了一个长毛绒面的盒子。</td>
+		<td class="en">The General opened a small safe in a corner of the library and brought forth a plush-covered box.</td></tr>
+		<tr><td width="45%" class="zh" >盒盖一打开，记者就惊奇地看到了一颗光芒四射的硕大钻石——几乎有一粒冰雹那么大。</td>
+		<td class="en">Opening this, he exposed to the reporter’s bewildered gaze a huge and brilliant diamond—nearly as large as a hailstone.</td></tr>
+		<tr><td width="45%" class="zh" >“这颗钻石，”将军说，“已经不单单是一颗宝石这么简单了。</td>
+		<td class="en">“This stone,” said the General, “is something more than a mere jewel.</td></tr>
+		<tr><td width="45%" class="zh" >它曾经镶在三眼女神迦梨额头中间的那只眼睛上。迦梨是印度最凶残、最狂热的部落所崇拜的女神。</td>
+		<td class="en">It once formed the central eye of the three-eyed goddess Kali, who is worshipped by one of the fiercest and most fanatical tribes of India.</td></tr>
+		<tr><td width="45%" class="zh" >坐舒服一些，我给你简要介绍一下它的历史，供你的稿子使用。”</td>
+		<td class="en">If you will arrange yourself comfortably I will give you a brief history of it for your paper.”</td></tr>
+		<tr><td width="45%" class="zh" >勒德洛将军从柜子里取出一瓶威士忌和几个酒杯，让这个幸运的记者坐到一张舒适的扶手椅上。</td>
+		<td class="en">General Ludlow brought a decanter of whiskey and glasses from a cabinet, and set a comfortable armchair for the lucky scribe.</td></tr>
+		<tr><td width="45%" class="zh" >“印度暴徒，或者称为宗教暗杀集团成员，”将军开始讲了起来，“是印度北部最危险、最可怕的部落。</td>
+		<td class="en">“The Phansigars, or Thugs, of India,” began the General, “are the most dangerous and dreaded of the tribes of North India.</td></tr>
+		<tr><td width="45%" class="zh" >他们是宗教极端分子，崇拜恐怖的迦梨女神并供奉她的塑像。</td>
+		<td class="en">They are extremists in religion, and worship the horrid goddess Kali in the form of images.</td></tr>
+		<tr><td width="45%" class="zh" >他们的宗教仪式有趣但非常血腥。</td>
+		<td class="en">Their rites are interesting and bloody.</td></tr>
+		<tr><td width="45%" class="zh" >他们奇怪的宗教法典认为抢劫和杀害旅行者不仅是令人尊敬的行为，而且是义不容辞的事。</td>
+		<td class="en">The robbing and murdering of travellers are taught as a worthy and obligatory deed by their strange religious code.</td></tr>
+		<tr><td width="45%" class="zh" >他们祭祀三眼女神迦梨的仪式十分隐秘，迄今为止，没有任何一个外人得以有幸一见。</td>
+		<td class="en">Their worship of the three-eyed goddess Kali is conducted so secretly that no traveller has ever heretofore had the honour of witnessing the ceremonies.</td></tr>
+		<tr><td width="45%" class="zh" >但我却有幸能获此殊荣。</td>
+		<td class="en">That distinction was reserved for myself.</td></tr>
+		<tr><td width="45%" class="zh" >“在德里和克拉特之间的萨卡兰布尔镇上逗留期间，我常常在附近的丛林里四处探索，希望了解这些神秘的暗杀部落。</td>
+		<td class="en">“While at Sakaranpur, between Delhi and Khelat, I used to explore the jungle in every direction in the hope of learning something new about these mysterious Phansigars.</td></tr>
+		<tr><td width="45%" class="zh" >“一天傍晚，我借着暮色穿过一片柚木林时，发现林中有一片空旷的圆形洼地，中央有一座简陋的石头庙宇。</td>
+		<td class="en">“One evening at twilight I was making my way through a teakwood forest, when I came upon a deep circular depression in an open space, in the centre of which was a rude stone temple.</td></tr>
+		<tr><td width="45%" class="zh" >我确定这就是暗杀部落的庙宇之一，于是我就藏在草丛中继续观察。</td>
+		<td class="en">I was sure that this was one of the temples of the Thugs, so I concealed myself in the undergrowth to watch.</td></tr>
+		<tr><td width="45%" class="zh" >“当月亮升起时，洼地里突然出现了几百个影影绰绰、移动敏捷的人形。</td>
+		<td class="en">“When the moon rose the depression in the clearing was suddenly filled with hundreds of shadowy, swiftly gliding forms.</td></tr>
+		<tr><td width="45%" class="zh" >接着，庙宇的门开了，露出一尊被灯光照得很亮的迦梨女神塑像，塑像前的一个白衣祭司念起原始的咒语，所有的教徒们都匍匐在地。</td>
+		<td class="en">Then a door opened in the temple, exposing a brightly illuminated image of the goddess Kali, before which a white-robed priest began a barbarous incantation, while the tribe of worshippers prostrated themselves upon the earth.</td></tr>
+		<tr><td width="45%" class="zh" >“但是，我最感兴趣的是那尊巨大的木质三眼女神雕塑中间的那颗眼睛。</td>
+		<td class="en">“But what interested me most was the central eye of the huge wooden idol.</td></tr>
+		<tr><td width="45%" class="zh" >根据它的闪亮光泽，我判断出它是一颗巨大的、纯度极高的钻石。</td>
+		<td class="en">I could see by its flashing brilliancy that it was an immense diamond of the purest water.</td></tr>
+		<tr><td width="45%" class="zh" >“仪式结束后，暗杀部落的信徒们同来时一样悄悄散去了。</td>
+		<td class="en">“After the rites were concluded the Thugs slipped away into the forest as silently as they had come.</td></tr>
+		<tr><td width="45%" class="zh" >在回到闷热的庙里，关上庙门之前，祭司在门口又呆了几分钟，享受了一下夜晚凉爽的空气。</td>
+		<td class="en">The priest stood for a few minutes in the door of the temple enjoying the cool of the night before closing his rather warm quarters.</td></tr>
+		<tr><td width="45%" class="zh" >突然，一个黑影敏捷地窜入空地，手持一把明晃晃的刀子扑向祭司，祭司随即中刀倒地。</td>
+		<td class="en">Suddenly a dark, lithe shadow slipped down into the hollow, leaped upon the priest; and struck him down with a glittering knife.</td></tr>
+		<tr><td width="45%" class="zh" >接着，凶手像猫一样跳到女神像上，用刀将迦梨额头中间那颗闪亮的眼睛撬了出来。</td>
+		<td class="en">Then the murderer sprang at the image of the goddess like a cat and pried out the glowing central eye of Kali with his weapon.</td></tr>
+		<tr><td width="45%" class="zh" >拿到宝物后，他径直向我藏身的这个方向跑了过来。</td>
+		<td class="en">Straight toward me he ran with his royal prize.</td></tr>
+		<tr><td width="45%" class="zh" >当他跑到离我只有两步远的时候，我站起身来，用尽全力朝他眉心打了一拳。</td>
+		<td class="en">When he was within two paces I rose to my feet and struck him with all my force between the eyes.</td></tr>
+		<tr><td width="45%" class="zh" >他当时就失去知觉，倒在地上，手里攥着的那颗巨大的宝石也掉了出来。</td>
+		<td class="en">He rolled over senseless and the magnificent jewel fell from his hand.</td></tr>
+		<tr><td width="45%" class="zh" >这就是你刚才看到的那颗了不起的蓝色钻石——一颗价值足以和君主皇冠相媲美的宝石。”</td>
+		<td class="en">That is the splendid blue diamond you have just seen—a stone worthy of a monarch’s crown.”</td></tr>
+		<tr><td width="45%" class="zh" >“这个故事太妙了，”记者说道，</td>
+		<td class="en">“That’s a corking story,” said the reporter.</td></tr>
+		<tr><td width="45%" class="zh" >“那个酒瓶和约翰·W. 盖茨会见客人时常常拿出来的一模一样。”</td>
+		<td class="en">“That decanter is exactly like the one that John W. Gates always sets out during an interview.”</td></tr>
+		<tr><td width="45%" class="zh" >“实在抱歉，”勒德洛将军说，“我只顾着讲故事，忘记招待你喝酒了。</td>
+		<td class="en">“Pardon me,” said General Ludlow, “for forgetting hospitality in the excitement of my narrative.</td></tr>
+		<tr><td width="45%" class="zh" >你自己来吧。”</td>
+		<td class="en">Help yourself.”</td></tr>
+		<tr><td width="45%" class="zh" >“敬您。”记者举杯说。</td>
+		<td class="en">“Here’s looking at you,” said the reporter.</td></tr>
+		<tr><td width="45%" class="zh" >“现在我担心的是，”将军压低声音说道，“有人要抢我的钻石。</td>
+		<td class="en">“What I am afraid of now,” said the General, lowering his voice, “is that I may be robbed of the diamond.</td></tr>
+		<tr><td width="45%" class="zh" >这颗宝石是他们女神的一只眼睛，是他们最神圣的标志。</td>
+		<td class="en">The jewel that formed an eye of their goddess is their most sacred symbol.</td></tr>
+		<tr><td width="45%" class="zh" >可不知怎么，那个部落怀疑宝石在我手里；部落成员也跟踪我走了半个地球。</td>
+		<td class="en">Somehow the tribe suspected me of having it; and members of the band have followed me half around the earth.</td></tr>
+		<tr><td width="45%" class="zh" >他们是世界上最狡猾、最残忍的狂热分子，而他们许下的宗教誓言迫使他们非要把亵渎神圣宝物的异教徒杀掉不可。</td>
+		<td class="en">They are the most cunning and cruel fanatics in the world, and their religious vows would compel them to assassinate the unbeliever who has desecrated their sacred treasure.</td></tr>
+		<tr><td width="45%" class="zh" >“有一次在勒克瑙，他们的三个特工伪装成酒店的服务员，企图用绞紧的布条勒死我。</td>
+		<td class="en">“Once in Lucknow three of their agents, disguised as servants in a hotel, endeavoured to strangle me with a twisted cloth.</td></tr>
+		<tr><td width="45%" class="zh" >还有一次在伦敦，两个乔装成街头艺人的暗杀部落成员夜里从窗户爬进来袭击我。</td>
+		<td class="en">Again, in London, two Thugs, made up as street musicians, climbed into my window at night and attacked me.</td></tr>
+		<tr><td width="45%" class="zh" >他们一直跟踪我到了这个国家。</td>
+		<td class="en">They have even tracked me to this country.</td></tr>
+		<tr><td width="45%" class="zh" >我的生命一直都危在旦夕。</td>
+		<td class="en">My life is never safe.</td></tr>
+		<tr><td width="45%" class="zh" >一个月前，我住在伯克郡的一家酒店，有三个他们派来的人从路边的草丛里窜出来，向我扑来。</td>
+		<td class="en">A month ago, while I was at a hotel in the Berkshires, three of them sprang upon me from the roadside weeds.</td></tr>
+		<tr><td width="45%" class="zh" >那次，我凭借对他们习俗的了解才幸免于难。</td>
+		<td class="en">I saved myself then by my knowledge of their customs.”</td></tr>
+		<tr><td width="45%" class="zh" >“将军，那是怎么回事？”记者问道。</td>
+		<td class="en">“How was that, General?” asked the reporter.</td></tr>
+		<tr><td width="45%" class="zh" >“当时有一头牛在附近吃草，”勒德洛将军回答说，“是一头温顺的泽西牛。</td>
+		<td class="en">“There was a cow grazing near by,” said General Ludlow, “a gentle Jersey cow.</td></tr>
+		<tr><td width="45%" class="zh" >我跑过去站在牛的旁边。</td>
+		<td class="en">I ran to her side and stood.</td></tr>
+		<tr><td width="45%" class="zh" >三个暴徒停止了攻击，跪在地上，磕了三个头。</td>
+		<td class="en">The three Thugs ceased their attack, knelt and struck the ground thrice with their foreheads.</td></tr>
+		<tr><td width="45%" class="zh" >然后，又毕恭毕敬行了许多额手礼便离开了。”</td>
+		<td class="en">Then, after many respectful salaams, they departed.”</td></tr>
+		<tr><td width="45%" class="zh" >“怕牛会用角攻击他们吗？”记者问。</td>
+		<td class="en">“Afraid the cow would hook?” asked the reporter.</td></tr>
+		<tr><td width="45%" class="zh" >“不是，对暴徒部落来说，牛是一种神圣的动物。</td>
+		<td class="en">“No; the cow is a sacred animal to the Phansigars.</td></tr>
+		<tr><td width="45%" class="zh" >他们对牛的崇拜仅次于迦梨女神。</td>
+		<td class="en">Next to their goddess they worship the cow.</td></tr>
+		<tr><td width="45%" class="zh" >他们从未在他们敬畏的动物面前有过任何暴力行为。”</td>
+		<td class="en">They have never been known to commit any deed of violence in the presence of the animal they reverence.”</td></tr>
+		<tr><td width="45%" class="zh" >“太有意思了，”记者说道，</td>
+		<td class="en">“It’s a mighty interesting story,” said the reporter.</td></tr>
+		<tr><td width="45%" class="zh" >“如果您不介意的话，我想再喝一杯，然后做些记录。”</td>
+		<td class="en">“If you don’t mind I’ll take another drink, and then a few notes.”</td></tr>
+		<tr><td width="45%" class="zh" >“我陪你喝。”勒德洛将军客气地挥了挥手说道。</td>
+		<td class="en">“I will join you,” said General Ludlow, with a courteous wave of his hand.</td></tr>
+		<tr><td width="45%" class="zh" >“如果我是您的话，”记者出主意说，“我就带着那颗钻石去德克萨斯。</td>
+		<td class="en">“If I were you,” advised the reporter, “I’d take that sparkler to Texas.</td></tr>
+		<tr><td width="45%" class="zh" >经营一个养牛场，这样，那些法利赛人——”</td>
+		<td class="en">Get on a cow ranch there, and the Pharisees—”</td></tr>
+		<tr><td width="45%" class="zh" >“是暴徒。”将军纠正道。</td>
+		<td class="en">“Phansigars,” corrected the General.</td></tr>
+		<tr><td width="45%" class="zh" >“哦，对，这样的话，那些人如果试图闯进去的话，就会遇到长长的牛角。”</td>
+		<td class="en">“Oh, yes; the fancy guys would run up against a long horn every time they made a break.”</td></tr>
+		<tr><td width="45%" class="zh" >勒德洛将军盖好钻石的盒子，塞进胸前的口袋里。</td>
+		<td class="en">General Ludlow closed the diamond case and thrust it into his bosom.</td></tr>
+		<tr><td width="45%" class="zh" >“那个部落的间谍已经查明了我在纽约的住处，”他直了一下腰说，</td>
+		<td class="en">“The spies of the tribe have found me out in New York,” he said, straightening his tall figure.</td></tr>
+		<tr><td width="45%" class="zh" >“我熟悉东印度人的面貌特征，我知道我的一举一动都被监视了。</td>
+		<td class="en">“I’m familiar with the East Indian cast of countenance, and I know that my every movement is watched.</td></tr>
+		<tr><td width="45%" class="zh" >他们肯定会找到这里来抢走宝石，然后把我杀掉。”</td>
+		<td class="en">They will undoubtedly attempt to rob and murder me here.”</td></tr>
+		<tr><td width="45%" class="zh" >“这儿？”记者惊呼，抓起酒瓶又倒了许多酒。</td>
+		<td class="en">“Here?” exclaimed the reporter, seizing the decanter and pouring out a liberal amount of its contents.</td></tr>
+		<tr><td width="45%" class="zh" >“随时都可能，”将军说，</td>
+		<td class="en">“At any moment,” said the General.</td></tr>
+		<tr><td width="45%" class="zh" >“但是作为一名军人和鉴赏家，要取走我的性命和钻石是要付出很高的代价的。”</td>
+		<td class="en">“But as a soldier and a connoisseur I shall sell my life and my diamond as dearly as I can.”</td></tr>
+		<tr><td width="45%" class="zh" >记者的稿子对此处的描述有点儿含混不清，但是可以猜测到，他们当时所在的那座房屋后面传出了一声巨响。</td>
+		<td class="en">At this point of the reporter’s story there is a certain vagueness, but it can be gathered that there was a loud crashing noise at the rear of the house they were in.</td></tr>
+		<tr><td width="45%" class="zh" >勒德洛将军扣好上衣，朝房门冲去。</td>
+		<td class="en">General Ludlow buttoned his coat closely and sprang for the door.</td></tr>
+		<tr><td width="45%" class="zh" >但是记者一只手紧紧抓住他，另一只手还攥着酒瓶子。</td>
+		<td class="en">But the reporter clutched him firmly with one hand, while he held the decanter with the other.</td></tr>
+		<tr><td width="45%" class="zh" >“在我们逃跑之前，”他焦急地追问道，声音由于内心的紧张而有点儿沙哑，“告诉我您有女儿想要进演艺圈吗？”</td>
+		<td class="en">“Tell me before we fly,” he urged, in a voice thick with some inward turmoil, “do any of your daughters contemplate going on the stage?”</td></tr>
+		<tr><td width="45%" class="zh" >“我没有女儿——你快逃命去吧——暴徒来找我们了！”将军嚷道。</td>
+		<td class="en">“I have no daughters—fly for your life—the Phansigars are upon us!” cried the General.</td></tr>
+		<tr><td width="45%" class="zh" >两个人从屋子的前门飞奔了出去。</td>
+		<td class="en">The two men dashed out of the front door of the house.</td></tr>
+		<tr><td width="45%" class="zh" >天色已经很晚了。</td>
+		<td class="en">The hour was late.</td></tr>
+		<tr><td width="45%" class="zh" >他们刚踏上人行道，几个皮肤黝黑、面目狰狞的陌生人仿佛从地底下突然冒出来一般，围住了他们。</td>
+		<td class="en">As their feet struck the side-walk strange men of dark and forbidding appearance seemed to rise up out of the earth and encompass them.</td></tr>
+		<tr><td width="45%" class="zh" >一个长着亚洲面貌的人逼近将军，用低沉而又恐怖的声音说：</td>
+		<td class="en">One with Asiatic features pressed close to the General and droned in a terrible voice:</td></tr>
+		<tr><td width="45%" class="zh" >“行个好吧！”</td>
+		<td class="en">“Buy cast clo’!”</td></tr>
+		<tr><td width="45%" class="zh" >另一个凶相毕露、长着黑胡子的人快步上前，带着哭腔说：</td>
+		<td class="en">Another, dark-whiskered and sinister, sped lithely to his side and began in a whining voice:</td></tr>
+		<tr><td width="45%" class="zh" >“先生，给穷人一点儿小钱吧——”</td>
+		<td class="en">“Say, mister, have yer got a dime fer a poor feller what—”</td></tr>
+		<tr><td width="45%" class="zh" >他们继续往前跑，却和一个黑眼睛、黑眉毛的人撞了个满怀。那个人把帽子伸到他们鼻子底下，附近则是一个有着东方肤色的同伙在摇手风琴的把手。</td>
+		<td class="en">They hurried on, but only into the arms of a black-eyed, dusky-browed being, who held out his hat under their noses, while a confederate of Oriental hue turned the handle of a street organ near by.</td></tr>
+		<tr><td width="45%" class="zh" >勒德洛将军和记者又往前跑了二十步，然后就落入了五六个胡子拉碴、敞胸露怀的恶棍似的人的包围中。</td>
+		<td class="en">Twenty steps farther on General Ludlow and the reporter found themselves in the midst of half a dozen villainous-looking men with high-turned coat collars and faces bristling with unshaven beards.</td></tr>
+		<tr><td width="45%" class="zh" >“逃命吧！”将军嘘声说，</td>
+		<td class="en">“Run for it!” hissed the General.</td></tr>
+		<tr><td width="45%" class="zh" >“他们已经发现迦梨女神的钻石在谁手里了。”</td>
+		<td class="en">“They have discovered the possessor of the diamond of the goddess Kali.”</td></tr>
+		<tr><td width="45%" class="zh" >两人拔腿又跑。</td>
+		<td class="en">The two men took to their heels.</td></tr>
+		<tr><td width="45%" class="zh" >替女神复仇的人紧追不舍。</td>
+		<td class="en">The avengers of the goddess pursued.</td></tr>
+		<tr><td width="45%" class="zh" >“哦，天哪！”记者抱怨道，“布鲁克林这一带没有牛。</td>
+		<td class="en">“Oh, Lordy!” groaned the reporter, “there isn’t a cow this side of Brooklyn.</td></tr>
+		<tr><td width="45%" class="zh" >我们死定了。”</td>
+		<td class="en">We’re lost!”</td></tr>
+		<tr><td width="45%" class="zh" >两人在街角撞到了人行道阴沟旁的一个铁家伙。</td>
+		<td class="en">When near the corner they both fell over an iron object that rose from the sidewalk close to the gutter.</td></tr>
+		<tr><td width="45%" class="zh" >他们绝望地抱着那个东西，等待命运的安排。</td>
+		<td class="en">Clinging to it desperately, they awaited their fate.</td></tr>
+		<tr><td width="45%" class="zh" >“我要是有一头牛就好了！”记者咕哝道，“或者让我再喝一口瓶子里的酒，将军！”</td>
+		<td class="en">“If I only had a cow!” moaned the reporter—“or another nip from that decanter, General!”</td></tr>
+		<tr><td width="45%" class="zh" >追赶他们的人一看到他们避难的地方，突然都收住了脚步，退回到相当远的地方。</td>
+		<td class="en">As soon as the pursuers observed where their victims had found refuge they suddenly fell back and retreated to a considerable distance.</td></tr>
+		<tr><td width="45%" class="zh" >“他们在等援兵，然后再来攻击我们。”勒德洛将军说。</td>
+		<td class="en">“They are waiting for reinforcements in order to attack us,” said General Ludlow.</td></tr>
+		<tr><td width="45%" class="zh" >但是记者放声大笑，庆祝胜利似地把帽子抛向了空中。</td>
+		<td class="en">But the reporter emitted a ringing laugh, and hurled his hat triumphantly into the air.</td></tr>
+		<tr><td width="45%" class="zh" >“您再猜猜，”他紧靠在那个铁家伙身上嚷道，</td>
+		<td class="en">“Guess again,” he shouted, and leaned heavily upon the iron object.</td></tr>
+		<tr><td width="45%" class="zh" >“您的那些野蛮人或者暗杀部落，不管您怎么称呼他们，已经跟上了时代的发展。</td>
+		<td class="en">“Your old fancy guys or thugs, whatever you call ’em, are up to date.</td></tr>
+		<tr><td width="45%" class="zh" >亲爱的将军，我们靠着的是个水泵，长得就像纽约城里的牛一样，”记者打了个酒嗝，“明白了吗？</td>
+		<td class="en">Dear General, this is a pump we’ve stranded upon—same as a cow in New York (hic!) see?</td></tr>
+		<tr><td width="45%" class="zh" >这就是为什么那些黑乎乎的家伙没有袭击我们的原因——明白了吗？</td>
+		<td class="en">Thas’h why the ’nfuriated smoked guys don’t attack us—see?</td></tr>
+		<tr><td width="45%" class="zh" >神圣的动物，纽约的水泵，我亲爱的将军！”</td>
+		<td class="en">Sacred an’mal, the pump in N’ York, my dear General!”</td></tr>
+		<tr><td width="45%" class="zh" >但是在远处第二十八街阴暗的角落里，劫匪们还在商量着。</td>
+		<td class="en">But further down in the shadows of Twenty-eighth Street the marauders were holding a parley.</td></tr>
+		<tr><td width="45%" class="zh" >“喂，红毛，”一个劫匪说，</td>
+		<td class="en">“Come on, Reddy,” said one.</td></tr>
+		<tr><td width="45%" class="zh" >“我们去抢那老家伙。</td>
+		<td class="en">“Let’s go frisk the old ’un.</td></tr>
+		<tr><td width="45%" class="zh" >这两个星期，他老在第八大街到处炫耀说自己有一颗鸡蛋那么大的钻石。”</td>
+		<td class="en">He’s been showin’ a sparkler as big as a hen egg all around Eighth Avenue for two weeks past.”</td></tr>
+		<tr><td width="45%" class="zh" >“想也甭想，”红毛说，</td>
+		<td class="en">“Not on your silhouette,” decided Reddy.</td></tr>
+		<tr><td width="45%" class="zh" >“你看到他们呆在压水泵那儿吗？</td>
+		<td class="en">“You see ’em rallyin’ round The Pump?</td></tr>
+		<tr><td width="45%" class="zh" >他们是比尔的朋友。</td>
+		<td class="en">They’re friends of Bill’s.</td></tr>
+		<tr><td width="45%" class="zh" >他绝不会容忍在他掌权后，在他的地盘内发生这样的事情。”</td>
+		<td class="en">Bill won’t stand for nothin’ of this kind in his district since he got that bid to Esopus.”</td></tr>
+		<tr><td width="45%" class="zh" >有关迦梨钻石的故事到此结束。</td>
+		<td class="en">This exhausts the facts concerning the Kali diamond.</td></tr>
+		<tr><td width="45%" class="zh" >但是两天之后早报登出一条（有偿的）短讯，用它来作为这个故事的结尾并非不合逻辑。</td>
+		<td class="en">But it is deemed not inconsequent to close with the following brief (paid) item that appeared two days later in a morning paper.</td></tr>
+		<tr><td width="45%" class="zh" >“据传，纽约市马塞勒斯·B. 勒德洛将军的侄女将在下一演出季中登台献艺。”</td>
+		<td class="en">“It is rumored that a niece of Gen. Marcellus B. Ludlow, of New York City, will appear on the stage next season.</td></tr>
+		<tr><td width="45%" class="zh" >“据悉，她佩戴的钻石饰物价值不菲，具有极大的历史意义。”</td>
+		<td class="en">“Her diamonds are said to be extremely valuable and of much historic interest.”</td></tr>
+		<tr><td width="45%" class="zh" ></td>
+		<td class="en"></td></tr>
+	</table>
+</div>
+
+<div class="zh_en"><a href="#" class="zh_btn">中文</a> | <a href="#" class="en_btn">英文</a> | <a href="#" class="zhen_btn">中英文</a></div>
+
+<script src="jquery-1.10.1.min.js"></script>
+<script src="jquery.bookify.js"></script>
+</body>
+</html>

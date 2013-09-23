@@ -1,0 +1,809 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+	<!-- link rel="stylesheet" type="text/css" href="book.css" -->
+	<style type="text/css">
+		/* IMPORTANT !!!!
+		line-height, font-size defined in jquery.bookify.js */
+
+		* {
+			/* font-size: 20px; */
+		 }
+
+		table, td, th {
+
+		  }
+
+		td {
+	    	 /* height:50px; */
+	 	     vertical-align:top;
+	 	   	 text-align:left;
+	 	 	 padding-bottom:30px;/*行高的倍数-chenjing*/
+			 padding-left:20px;
+	 	  }
+
+		  /*chenjing*/
+		  .ebook_title{ position:absolute; left:20%; top:7%; font-weight:bold; font-size:35px; width:750px;}
+		  .zh_en{ position:absolute; left:70%; bottom:10%; font-size:14px;}
+		  .pre,.next{ cursor:pointer; font-size:40px; font-weight:bold; position:absolute; top:40%}
+		  .pre{ display:none; left:7%}
+		  .next{right:7%}
+
+	</style>
+
+</head>
+<body>
+<div class="ebook_title"></div>
+<div class="pre"><<</div>
+<div class="next">>></div>
+<div class="ebook_content">
+	<table cellpadding="0" cellspacing="0">
+		<tr><td width="45%" class="zh" >博妻欢心</td>
+		<td class="en">To Please His Wife</td></tr>
+		<tr><td width="45%" class="zh" >作者：托马斯·哈代</td>
+		<td class="en">by Thomas Hardy</td></tr>
+		<tr><td width="45%" class="zh" >目录</td>
+		<td class="en">Content</td></tr>
+		<tr><td width="45%" class="zh" >第一章</td>
+		<td class="en">Chapter I</td></tr>
+		<tr><td width="45%" class="zh" >第二章</td>
+		<td class="en">Chapter II</td></tr>
+		<tr><td width="45%" class="zh" >第三章</td>
+		<td class="en">Chapter III</td></tr>
+		<tr><td width="45%" class="zh" ></td>
+		<td class="en"></td></tr>
+		<tr><td width="45%" class="zh" >第一章</td>
+		<td class="en">Chapter I</td></tr>
+		<tr><td width="45%" class="zh" >一个冬日的下午，阴云密布，黑文普尔镇上圣詹姆斯教堂的室内慢慢暗了下来。</td>
+		<td class="en">The interior of St. James’s Church, in Havenpool Town, was slowly darkening under the close clouds of a winter afternoon.</td></tr>
+		<tr><td width="45%" class="zh" >那是个星期天。祷告仪式刚刚结束，布道坛上的牧师双手捂着脸，会众们发出一声解脱后的愉悦叹息，站起身准备离开。</td>
+		<td class="en">It was Sunday: service had just ended, the face of the parson in the pulpit was buried in his hands, and the congregation, with a cheerful sigh of release, were rising from their knees to depart.</td></tr>
+		<tr><td width="45%" class="zh" >此时，教堂内一片寂静，甚至海港沙洲外汹涌的浪涛声都能听到。</td>
+		<td class="en">For the moment the stillness was so complete that the surging of the sea could be heard outside the harbour-bar.</td></tr>
+		<tr><td width="45%" class="zh" >接着，教堂执事的脚步声打破了沉寂。他像往常一样走向西门，准备打开门让众人离开。</td>
+		<td class="en">Then it was broken by the footsteps of the clerk going towards the west door to open it in the usual manner for the exit of the assembly.</td></tr>
+		<tr><td width="45%" class="zh" >然而，他还没走到门口，门闩就被人从外面打开了。一个水手装束的黑色人影出现在光亮下。</td>
+		<td class="en">Before, however, he had reached the doorway, the latch was lifted from without, and the dark figure of a man in a sailor’s garb appeared against the light.</td></tr>
+		<tr><td width="45%" class="zh" >教堂执事让开路，水手轻轻关上门，穿过教堂中殿，一直走到高坛的台阶上站定。</td>
+		<td class="en">The clerk stepped aside, the sailor closed the door gently behind him, and advanced up the nave till he stood at the chancel-step.</td></tr>
+		<tr><td width="45%" class="zh" >牧师本来正默默为自己作简短的祷告。他为教区的人们作了那么多祷告，为自己作一次也是合情合理。此时，他抬起头，站起身，盯着这位不速之客。</td>
+		<td class="en">The parson looked up from the private little prayer which, after so many for the parish, he quite fairly took for himself; rose to his feet, and stared at the intruder.</td></tr>
+		<tr><td width="45%" class="zh" >“打扰了，先生，”水手说道。他虽是和牧师说话，声音却很响亮，所有的会众都听得见，</td>
+		<td class="en">‘I beg your pardon, sir,’ said the sailor, addressing the minister in a voice distinctly audible to all the congregation.</td></tr>
+		<tr><td width="45%" class="zh" >“我来这里，是为了表达我的感恩之情，因为我侥幸从海难中生还。</td>
+		<td class="en">‘I have come here to offer thanks for my narrow escape from shipwreck.</td></tr>
+		<tr><td width="45%" class="zh" >我一向认为我应该这样做，如果您不反对的话。”</td>
+		<td class="en">I am given to understand that it is a proper thing to do, if you have no objection?’</td></tr>
+		<tr><td width="45%" class="zh" >牧师沉默了片刻，迟疑地说道：“我当然不反对。</td>
+		<td class="en">The parson, after a moment’s pause, said hesitatingly, ‘I have no objection; certainly.</td></tr>
+		<tr><td width="45%" class="zh" >这种感恩的意愿通常要在祷告仪式之前提出，这样我为大家统一感恩祈祷时便能选择合适的话语。</td>
+		<td class="en">It is usual to mention any such wish before service, so that the proper words may be used in the General Thanksgiving.</td></tr>
+		<tr><td width="45%" class="zh" >不过，如果你愿意，我们也可以诵读海上风暴过后常用的现成祷文。”</td>
+		<td class="en">But, if you wish, we can read from the form for use after a storm at sea.’</td></tr>
+		<tr><td width="45%" class="zh" >“嗯，没问题，我不介意。”水手说道。</td>
+		<td class="en">‘Ay, sure; I ain’t particular,’ said the sailor.</td></tr>
+		<tr><td width="45%" class="zh" >于是，教堂执事让水手翻到祷告书上收录了这种感恩祷文的那一页，牧师开始诵读祷文。水手跪在他原先站着的地方，跟着牧师一字一句地大声念。</td>
+		<td class="en">The clerk thereupon directed the sailor to the page in the prayer-book where the collect of thanksgiving would be found, and the rector began reading it, the sailor kneeling where he stood, and repeating it after him word by word in a distinct voice.</td></tr>
+		<tr><td width="45%" class="zh" >整个过程中，教堂的会众一直目瞪口呆，一动不动。现在，他们也机械地跟着跪了下来，但眼睛仍注视着水手孤零零的轮廓。他面朝东跪在高坛台阶的正中央，帽子放在身旁，双手紧握，完全没有意识到自己在众人眼中的形象。</td>
+		<td class="en">The people, who had remained agape and motionless at the proceeding, mechanically knelt down likewise; but they continued to regard the isolated form of the sailor who, in the precise middle of the chancel-step, remained fixed on his knees, facing the east, his hat beside him, his hands joined, and he quite unconscious of his appearance in their regard.</td></tr>
+		<tr><td width="45%" class="zh" >水手作完感恩祈祷后，站了起来。其他人也站起身，一同走出教堂。</td>
+		<td class="en">When his thanksgiving had come to an end he rose; the people rose also, and all went out of church together.</td></tr>
+		<tr><td width="45%" class="zh" >水手一走出去，夕阳的余晖照到他脸上，常年居住在这里的人们便渐渐认出，他就是谢德拉克·乔利夫。这个年轻人已经好些年没在黑文普尔露面了。</td>
+		<td class="en">As soon as the sailor emerged, so that the remaining daylight fell upon his face, old inhabitants began to recognize him as no other than Shadrach Jolliffe, a young man who had not been seen at Havenpool for several years.</td></tr>
+		<tr><td width="45%" class="zh" >乔利夫出生在黑文普尔镇，很小的时候便失去了双亲。因此，他很早就成了水手，到纽芬兰做生意。</td>
+		<td class="en">A son of the town, his parents had died when he was quite young, on which account he had early gone to sea, in the Newfoundland trade.</td></tr>
+		<tr><td width="45%" class="zh" >他一边走，一边和镇上的人左一句右一句地交谈。他告诉他们，几年前离开家乡后，他成了船长，拥有了一艘沿岸航行的小双桅纵帆船。多亏上帝保佑，他自己还有他的船才从大风暴中获救。</td>
+		<td class="en">He talked with this and that townsman as he walked, informing them that, since leaving his native place years before, he had become captain and owner of a small coasting-ketch, which had providentially been saved from the gale as well as himself.</td></tr>
+		<tr><td width="45%" class="zh" >不一会儿，他靠近两个姑娘。这两个姑娘在他前面，正要走出教堂的院子。他进入教堂时，她们正坐在中殿里，饶有兴味地观察了他的一举一动。之后她们一起走出教堂，便聊起了他。</td>
+		<td class="en">Presently he drew near to two girls who were going out of the churchyard in front of him; they had been sitting in the nave at his entry, and had watched his doings with deep interest, afterwards discussing him as they moved out of church together.</td></tr>
+		<tr><td width="45%" class="zh" >其中一个姑娘身材纤细，温和文雅，另外一个则身材高大，体格健壮，做事很慎重。</td>
+		<td class="en">One was a slight and gentle creature, the other a tall, large-framed, deliberative girl.</td></tr>
+		<tr><td width="45%" class="zh" >乔利夫船长注视了她们好一会儿，从松松的发卷、后背、肩膀，一直打量到脚后跟。</td>
+		<td class="en">Captain Jolliffe regarded the loose curls of their hair, their backs and shoulders, down to their heels, for some time.</td></tr>
+		<tr><td width="45%" class="zh" >“这两位姑娘是？”他轻声问周围的乡邻。</td>
+		<td class="en">‘Who may them two maids be?’ he whispered to his neighbour.</td></tr>
+		<tr><td width="45%" class="zh" >“小个子的是埃米莉·汉宁，高个子的是乔安娜·菲帕德。”</td>
+		<td class="en">‘The little one is Emily Hanning; the tall one Joanna Phippard.’</td></tr>
+		<tr><td width="45%" class="zh" >“噢！</td>
+		<td class="en">‘Ah!</td></tr>
+		<tr><td width="45%" class="zh" >我现在想起来了，是她俩。”</td>
+		<td class="en">I recollect ’em now, to be sure.’</td></tr>
+		<tr><td width="45%" class="zh" >他赶上她们，快活地偷偷瞅了她们一眼。</td>
+		<td class="en">He advanced to their elbow, and genially stole a gaze at them.</td></tr>
+		<tr><td width="45%" class="zh" >“埃米莉，你不认识我了吗？”水手用含着笑意的棕色眼睛看着她，说道。</td>
+		<td class="en">‘Emily, you don’t know me?’ said the sailor, turning his beaming brown eyes on her.</td></tr>
+		<tr><td width="45%" class="zh" >“我想我还记得你，乔利夫先生。”埃米莉羞怯地回答。</td>
+		<td class="en">‘I think I do, Mr. Jolliffe,’ said Emily shyly.</td></tr>
+		<tr><td width="45%" class="zh" >另外一个姑娘则用她那黑亮的眼睛直直地看着他。</td>
+		<td class="en">The other girl looked straight at him with her dark eyes.</td></tr>
+		<tr><td width="45%" class="zh" >“我对乔安娜小姐的长相记不太清了，”他继续说，</td>
+		<td class="en">‘The face of Miss Joanna I don’t call to mind so well,’ he continued.</td></tr>
+		<tr><td width="45%" class="zh" >“不过我见过她小的时候，也认识她的亲戚。”</td>
+		<td class="en">‘But I know her beginnings and kindred.’</td></tr>
+		<tr><td width="45%" class="zh" >他们边走边聊。乔利夫细细讲述着他不久前那次九死一生的经历，直到他们走到单桅船巷的拐角。埃米莉·汉宁就住在那里。她点了点头，微微一笑，先回了家。</td>
+		<td class="en">They walked and talked together, Jolliffe narrating particulars of his late narrow escape, till they reached the corner of Sloop Lane, in which Emily Hanning dwelt, when, with a nod and smile, she left them.</td></tr>
+		<tr><td width="45%" class="zh" >很快，水手和乔安娜也告了别。由于没有什么事要做，也没有约，他便回转身，朝埃米莉家走去。</td>
+		<td class="en">Soon the sailor parted also from Joanna, and, having no especial errand or appointment, turned back towards Emily’s house.</td></tr>
+		<tr><td width="45%" class="zh" >埃米莉和父亲一起住。她父亲自称是个会计师，但埃米莉却开了一个小小的文具店，以贴补父亲那那时好时坏的生意。</td>
+		<td class="en">She lived with her father, who called himself an accountant, the daughter, however, keeping a little stationery-shop as a supplemental provision for the gaps of his somewhat uncertain business.</td></tr>
+		<tr><td width="45%" class="zh" >一进门，乔利夫就看到父女俩正准备开始喝茶。</td>
+		<td class="en">On entering Jolliffe found father and daughter about to begin tea.</td></tr>
+		<tr><td width="45%" class="zh" >“哦，没想到是下午茶时间了，”他说，</td>
+		<td class="en">‘O, I didn’t know it was tea-time,’ he said.</td></tr>
+		<tr><td width="45%" class="zh" >“嗯，我很乐意喝一杯。”</td>
+		<td class="en">‘Ay, I’ll have a cup with much pleasure.’</td></tr>
+		<tr><td width="45%" class="zh" >他喝了茶，又呆了很久，讲述了更多他航海生活中的故事。</td>
+		<td class="en">He remained to tea and long afterwards, telling more tales of his seafaring life.</td></tr>
+		<tr><td width="45%" class="zh" >几个邻居过来串门，应邀加入聊天。</td>
+		<td class="en">Several neighbours called to listen, and were asked to come in.</td></tr>
+		<tr><td width="45%" class="zh" >那个周日的晚上，埃米莉·汉宁不知怎的对水手动了心。不出一两周，两人之间便暗生情愫。</td>
+		<td class="en">Somehow Emily Hanning lost her heart to the sailor that Sunday night, and in the course of a week or two there was a tender understanding between them.</td></tr>
+		<tr><td width="45%" class="zh" >次月，一个月光皎洁的晚上，谢德拉克顺着一条长长的笔直大路朝东走出黑文普尔镇，一直走到郊区。那里地势较高，聚集了比较气派的房子——如果这个古老港口附近有称得上气派的东西的话——这时，他看到前方有一个身影，从那人回头张望的姿势来看，他觉得是埃米莉。</td>
+		<td class="en">One moonlight evening in the next month Shadrach was ascending out of the town by the long straight road eastward, to an elevated suburb where the more fashionable houses stood—if anything near this ancient port could be called fashionable—when he saw a figure before him whom, from her manner of glancing back, he took to be Emily.</td></tr>
+		<tr><td width="45%" class="zh" >不过，走近后他才发现，那是乔安娜·菲帕德。</td>
+		<td class="en">But, on coming up, he found she was Joanna Phippard.</td></tr>
+		<tr><td width="45%" class="zh" >他殷勤地打了个招呼，和她并肩行走。</td>
+		<td class="en">He gave a gallant greeting, and walked beside her.</td></tr>
+		<tr><td width="45%" class="zh" >“你快走吧，”她说，“不然埃米莉会吃醋的！”</td>
+		<td class="en">‘Go along,’ she said, ‘or Emily will be jealous!’</td></tr>
+		<tr><td width="45%" class="zh" >他似乎不喜欢这个提议，依然走在她旁边。</td>
+		<td class="en">He seemed not to like the suggestion, and remained.</td></tr>
+		<tr><td width="45%" class="zh" >那次散步途中说的话、做的事，谢德拉克怎么也记不清了；而乔安娜则想尽办法，试图让谢德拉克疏远那位比她更年轻、更温柔的情敌。</td>
+		<td class="en">What was said and what was done on that walk never could be clearly recollected by Shadrach; but in some way or other Joanna contrived to wean him away from her gentler and younger rival.</td></tr>
+		<tr><td width="45%" class="zh" >从那一周起，人们越来越频繁地看到乔利夫和乔安娜·菲帕德在一起，而他和埃米莉相处的时间则越来越少。不久，整个港口都风传老乔利夫的儿子，也就是那个刚刚出海回来的水手，要和前者结婚，让后者大失所望。</td>
+		<td class="en">From that week onwards, Jolliffe was seen more and more in the wake of Joanna Phippard and less in the company of Emily; and it was soon rumoured about the quay that old Jolliffe’s son, who had come home from sea, was going to be married to the former young woman, to the great disappointment of the latter.</td></tr>
+		<tr><td width="45%" class="zh" >就在谣言传开之后的一个早上，乔安娜收拾妥当，准备去小街上的埃米莉家走一遭。</td>
+		<td class="en">Just after this report had gone about, Joanna dressed herself for a walk one morning, and started for Emily’s house in the little cross-street.</td></tr>
+		<tr><td width="45%" class="zh" >她也听说了她的朋友由于失去谢德拉克而伤心欲绝的消息。她为自己的横刀夺爱，受到良心上的谴责。</td>
+		<td class="en">Intelligence of the deep sorrow of her friend on account of the loss of Shadrach had reached her ears also, and her conscience reproached her for winning him away.</td></tr>
+		<tr><td width="45%" class="zh" >乔安娜对水手并非十分满意。</td>
+		<td class="en">Joanna was not altogether satisfied with the sailor.</td></tr>
+		<tr><td width="45%" class="zh" >她喜欢他的殷勤照顾，也向往体面的婚姻生活，但她从未深深爱上乔利夫。</td>
+		<td class="en">She liked his attentions, and she coveted the dignity of matrimony; but she had never been deeply in love with Jolliffe.</td></tr>
+		<tr><td width="45%" class="zh" >首先，她有更高的追求，而他的社会地位却还不及她自己。漂亮的女人总是有机会嫁给地位比自己高得多的男士。</td>
+		<td class="en">For one thing, she was ambitious, and socially his position was hardly so good as her own, and there was always the chance of an attractive woman mating considerably above her.</td></tr>
+		<tr><td width="45%" class="zh" >她反复思考，觉得如果埃米莉确实对乔利夫爱得死心塌地，那她倒也不怎么介意将他拱手还给她的朋友。</td>
+		<td class="en">It had long been in her mind that she would not strongly object to give him back again to Emily if her friend felt so very badly about him.</td></tr>
+		<tr><td width="45%" class="zh" >为此，她写了一封给谢德拉克的绝交信。她把信攥在手里，打算如果经过亲自观察，确定埃米莉饱受煎熬，那她就把信寄出去。</td>
+		<td class="en">To this end she had written a letter of renunciation to Shadrach, which letter she carried in her hand, intending to send it if personal observation of Emily convinced her that her friend was suffering.</td></tr>
+		<tr><td width="45%" class="zh" >乔安娜走进单桅船巷，向下迈进低于人行道的文具店。</td>
+		<td class="en">Joanna entered Sloop Lane and stepped down into the stationery-shop, which was below the pavement level.</td></tr>
+		<tr><td width="45%" class="zh" >这个时间，埃米莉的父亲向来不在家，埃米莉这天似乎也不在，因为没人回应登门拜访的乔安娜。</td>
+		<td class="en">Emily’s father was never at home at this hour of the day, and it seemed as though Emily were not at home either, for the visitor could make nobody hear.</td></tr>
+		<tr><td width="45%" class="zh" >小店门可罗雀，不常有顾客光临，因此店主出去五分钟，也不打紧。</td>
+		<td class="en">Customers came so seldom hither that a five minutes’ absence of the proprietor counted for little.</td></tr>
+		<tr><td width="45%" class="zh" >埃米莉充分发挥女性的天赋，精心摆放了店里那些本身不甚值钱的商品，尽量掩盖东西本身的寒酸。乔安娜在小店里等着，突然看到一个人停在窗外，看上去正全神贯注地打量着六便士一本的廉价书籍、小捆纸和悬挂在细绳上的画片。</td>
+		<td class="en">Joanna waited in the little shop, where Emily had tastefully set out—as women can—articles in themselves of slight value, so as to obscure the meagreness of the stock-in-trade; till she saw a figure pausing without the window apparently absorbed in the contemplation of the sixpenny books, packets of paper, and prints hung on a string.</td></tr>
+		<tr><td width="45%" class="zh" >来人正是谢德拉克·乔利夫船长。他正透过窗子观察店里，以确定是否只有埃米莉一个人在。</td>
+		<td class="en">It was Captain Shadrach Jolliffe, peering in to ascertain if Emily were there alone.</td></tr>
+		<tr><td width="45%" class="zh" >乔安娜突然觉得她不愿在一个散发着埃米莉气息的地方见到乔利夫，于是她悄悄溜进通往后面会客室的门。</td>
+		<td class="en">Moved by an impulse of reluctance to meet him in a spot which breathed of Emily, Joanna slipped through the door that communicated with the parlour at the back.</td></tr>
+		<tr><td width="45%" class="zh" >她以前经常这么干，因为凭着她和埃米莉的交情，她在这个家里可以自由自在，不需客气。</td>
+		<td class="en">She had frequently done so before, for in her friendship with Emily she had the freedom of the house without ceremony.</td></tr>
+		<tr><td width="45%" class="zh" >乔利夫走进小店。</td>
+		<td class="en">Jolliffe entered the shop.</td></tr>
+		<tr><td width="45%" class="zh" >透过遮住玻璃隔墙的薄百叶窗，乔安娜能看出，乔利夫发现埃米莉不在家后，很是失望。</td>
+		<td class="en">Through the thin blind which screened the glass partition she could see that he was disappointed at not finding Emily there.</td></tr>
+		<tr><td width="45%" class="zh" >他刚要离开时，埃米莉的身影出现在门口。她因为一些事匆匆赶回来。</td>
+		<td class="en">He was about to go out again, when Emily’s form darkened the doorway, hastening home from some errand.</td></tr>
+		<tr><td width="45%" class="zh" >一看到乔利夫，她吃惊地倒退一步，仿佛要再次离开。</td>
+		<td class="en">At sight of Jolliffe she started back as if she would have gone out again.</td></tr>
+		<tr><td width="45%" class="zh" >“不要走，埃米莉。别走！”他说，</td>
+		<td class="en">‘Don’t run away, Emily; don’t!’ said he.</td></tr>
+		<tr><td width="45%" class="zh" >“你怕什么呢？”</td>
+		<td class="en">‘What can make ye afraid?’</td></tr>
+		<tr><td width="45%" class="zh" >“我不怕，乔利夫船长。</td>
+		<td class="en">‘I’m not afraid, Captain Jolliffe.</td></tr>
+		<tr><td width="45%" class="zh" >只是——只是我突然看到你，吓了一跳！”</td>
+		<td class="en">Only—only I saw you all of a sudden, and—it made me jump!’</td></tr>
+		<tr><td width="45%" class="zh" >从她的声音可以听出，她内心的反应比她表现出来的还要强烈。</td>
+		<td class="en">Her voice showed that her heart had jumped even more than the rest of her.</td></tr>
+		<tr><td width="45%" class="zh" >“我路过，正好进来看看。”他说。</td>
+		<td class="en">‘I just called as I was passing,’ he said.</td></tr>
+		<tr><td width="45%" class="zh" >“要买纸吗？”</td>
+		<td class="en">‘For some paper?’</td></tr>
+		<tr><td width="45%" class="zh" >她匆匆走到柜台后面。</td>
+		<td class="en">She hastened behind the counter.</td></tr>
+		<tr><td width="45%" class="zh" >“不，不用，埃米莉。你为什么站到柜台后面？</td>
+		<td class="en">‘No, no, Emily; why do ye get behind there?</td></tr>
+		<tr><td width="45%" class="zh" >干吗不和我站在一起？</td>
+		<td class="en">Why not stay by me?</td></tr>
+		<tr><td width="45%" class="zh" >你似乎讨厌我。”</td>
+		<td class="en">You seem to hate me.’</td></tr>
+		<tr><td width="45%" class="zh" >“我不讨厌你。</td>
+		<td class="en">‘I don’t hate you.</td></tr>
+		<tr><td width="45%" class="zh" >我怎么会讨厌你呢？”</td>
+		<td class="en">How can I?’</td></tr>
+		<tr><td width="45%" class="zh" >“那你出来，这样我们就能正经聊聊天。”</td>
+		<td class="en">‘Then come out, so that we can talk like Christians.’</td></tr>
+		<tr><td width="45%" class="zh" >埃米莉呵呵地笑了一声，顺从地走了出去，走到店里的空处，再次站在乔利夫身边。</td>
+		<td class="en">Emily obeyed with a fitful laugh, till she stood again beside him in the open part of the shop.</td></tr>
+		<tr><td width="45%" class="zh" >“真是个可人儿。”他说。</td>
+		<td class="en">‘There’s a dear,’ he said.</td></tr>
+		<tr><td width="45%" class="zh" >“别这么说，乔利夫船长。这些话属于另外一个人。”</td>
+		<td class="en">‘You mustn’t say that, Captain Jolliffe; because the words belong to somebody else.’</td></tr>
+		<tr><td width="45%" class="zh" >“唉！</td>
+		<td class="en">‘Ah!</td></tr>
+		<tr><td width="45%" class="zh" >我明白你的意思。</td>
+		<td class="en">I know what you mean.</td></tr>
+		<tr><td width="45%" class="zh" >可是，埃米莉，我以生命担保，直到今天早上，我才意识到你心里是有我的，否则我绝不会那样做。</td>
+		<td class="en">But, Emily, upon my life I didn’t know till this morning that you cared one bit about me, or I should not have done as I have done.</td></tr>
+		<tr><td width="45%" class="zh" >我对乔安娜非常中意，可我知道，从一开始她对我就只能算是朋友关系。我现在想清楚了到底该向哪一位求婚。</td>
+		<td class="en">I have the best of feelings for Joanna, but I know that from the beginning she hasn’t cared for me more than in a friendly way; and I see now the one I ought to have asked to be my wife.</td></tr>
+		<tr><td width="45%" class="zh" >埃米莉，你知道，经过长途航行出海归来的男人就像只蝙蝠，是个睁眼瞎，分辨不清女人。</td>
+		<td class="en">You know, Emily, when a man comes home from sea after a long voyage he’s as blind as a bat—he can’t see who’s who in women.</td></tr>
+		<tr><td width="45%" class="zh" >女人对他而言都是一样的，是一种美丽的生物。他会追求容易接近的女人，不管她是否爱自己，也不管他自己是否不久会爱上更胜于她的另一个。</td>
+		<td class="en">They are all alike to him, beautiful creatures, and he takes the first that comes easy, without thinking if she loves him, or if he might not soon love another better than her.</td></tr>
+		<tr><td width="45%" class="zh" >最开始我更中意你，可你总是忸怩害羞，我以为你不希望我打扰你，于是就开始追求乔安娜。”</td>
+		<td class="en">From the first I inclined to you most, but you were so backward and shy that I thought you didn’t want me to bother ’ee, and so I went to Joanna.’</td></tr>
+		<tr><td width="45%" class="zh" >“别说了，乔利夫先生，别说了！”她哽咽着说道，</td>
+		<td class="en">‘Don’t say any more, Mr. Jolliffe, don’t!’ said she, choking.</td></tr>
+		<tr><td width="45%" class="zh" >“你下个月就要和乔安娜结婚了，不——不应该——”</td>
+		<td class="en">‘You are going to marry Joanna next month, and it is wrong to—to—’</td></tr>
+		<tr><td width="45%" class="zh" >“唉，我亲爱的埃米莉！”他喊了一声。她还没有反应过来，他就紧紧拥住了她那弱小的身子。</td>
+		<td class="en">‘O, Emily, my darling!’ he cried, and clasped her little figure in his arms before she was aware.</td></tr>
+		<tr><td width="45%" class="zh" >乔安娜躲在帘子后，脸色变得苍白，她努力想移开视线，却做不到。</td>
+		<td class="en">Joanna, behind the curtain, turned pale, tried to withdraw her eyes, but could not.</td></tr>
+		<tr><td width="45%" class="zh" >“只有你，让我像男人爱自己要娶的女人那样去爱。我从乔安娜的话中明白了这一点，并且明白了她很愿意放开我！</td>
+		<td class="en">‘It is only you I love as a man ought to love the woman he is going to marry; and I know this from what Joanna has said, that she will willingly let me off!</td></tr>
+		<tr><td width="45%" class="zh" >我知道她希望嫁给更体面的人。她答应我的求婚，不过是出于善意。</td>
+		<td class="en">She wants to marry higher I know, and only said “Yes” to me out of kindness.</td></tr>
+		<tr><td width="45%" class="zh" >像她那样漂亮高挑的女孩子，本不适合做平凡水手的妻子，你才是最适合的。”</td>
+		<td class="en">A fine, tall girl like her isn’t the sort for a plain sailor’s wife: you be the best suited for that.’</td></tr>
+		<tr><td width="45%" class="zh" >他一遍遍吻着她，她柔软的身子在他的拥抱中激动得发抖。</td>
+		<td class="en">He kissed her and kissed her again, her flexible form quivering in the agitation of his embrace.</td></tr>
+		<tr><td width="45%" class="zh" >“我不知道——你确定——乔安娜会和你分手吗？</td>
+		<td class="en">‘I wonder—are you sure—Joanna is going to break off with you?</td></tr>
+		<tr><td width="45%" class="zh" >唉，你真的确定吗？</td>
+		<td class="en">O, are you sure?</td></tr>
+		<tr><td width="45%" class="zh" >因为——”</td>
+		<td class="en">Because—’</td></tr>
+		<tr><td width="45%" class="zh" >“我相信她不希望让我们俩痛苦。</td>
+		<td class="en">‘I know she would not wish to make us miserable.</td></tr>
+		<tr><td width="45%" class="zh" >她会让我解脱的。”</td>
+		<td class="en">She will release me.’</td></tr>
+		<tr><td width="45%" class="zh" >“唉，我希望——我希望如此！</td>
+		<td class="en">‘O, I hope—I hope she will!</td></tr>
+		<tr><td width="45%" class="zh" >你现在走吧，乔利夫船长！”</td>
+		<td class="en">Don’t stay any longer, Captain Jolliffe!’</td></tr>
+		<tr><td width="45%" class="zh" >然而他一直呆着，直到一个顾客来买一便士的封口蜡时，他才恋恋不舍地离去。</td>
+		<td class="en">He lingered, however, till a customer came for a penny stick of sealing-wax, and then he withdrew.</td></tr>
+		<tr><td width="45%" class="zh" >看到此情此景，乔安娜妒火中烧。</td>
+		<td class="en">Green envy had overspread Joanna at the scene.</td></tr>
+		<tr><td width="45%" class="zh" >她环顾四周，寻找逃脱的路。</td>
+		<td class="en">She looked about for a way of escape.</td></tr>
+		<tr><td width="45%" class="zh" >她必须在不惊动埃米莉的情况下，离开她家。</td>
+		<td class="en">To get out without Emily’s knowledge of her visit was indispensable.</td></tr>
+		<tr><td width="45%" class="zh" >她从会客室慢慢挪到走廊，又潜行到房子前门，然后悄无声息地离开埃米莉家，走上街道。</td>
+		<td class="en">She crept from the parlour into the passage, and thence to the front door of the house, where she let herself noiselessly into the street.</td></tr>
+		<tr><td width="45%" class="zh" >看到那两人拥抱后，她的决定完全改变了。</td>
+		<td class="en">The sight of that caress had reversed all her resolutions.</td></tr>
+		<tr><td width="45%" class="zh" >她不会放手谢德拉克。</td>
+		<td class="en">She could not let Shadrach go.</td></tr>
+		<tr><td width="45%" class="zh" >她一到家就烧了信，并且告诉母亲，如果乔利夫船长来访，就说她身体很不舒服，不能见他。</td>
+		<td class="en">Reaching home she burnt the letter, and told her mother that if Captain Jolliffe called she was too unwell to see him.</td></tr>
+		<tr><td width="45%" class="zh" >然而，谢德拉克并没有来访。</td>
+		<td class="en">Shadrach, however, did not call.</td></tr>
+		<tr><td width="45%" class="zh" >他寄给她一封短信，简单地表明了他现在的情感状态。他还希望她允许自己根据她给的暗示（即她对他的感情仅限于友情），解除婚约。</td>
+		<td class="en">He sent her a note expressing in simple language the state of his feelings; and asked to be allowed to take advantage of the hints she had given him that her affection, too, was little more than friendly, by cancelling the engagement.</td></tr>
+		<tr><td width="45%" class="zh" >他在房间里一边看着外面的海港及远方的岛屿，一边等啊等，然而始终没有等到回信。</td>
+		<td class="en">Looking out upon the harbour and the island beyond he waited and waited in his lodgings for an answer that did not come.</td></tr>
+		<tr><td width="45%" class="zh" >他越来越焦虑，最终忍不住在天黑后去了镇子的主街。</td>
+		<td class="en">The suspense grew to be so intolerable that after dark he went up the High Street.</td></tr>
+		<tr><td width="45%" class="zh" >他忍不住要去拜访乔安娜，看看自己命运如何。</td>
+		<td class="en">He could not resist calling at Joanna’s to learn his fate.</td></tr>
+		<tr><td width="45%" class="zh" >乔安娜的母亲说她女儿身体很不舒服，无法见他。在他的追问之下，她承认这都是因为收到了他的一封信，那封信让她女儿伤心欲绝。</td>
+		<td class="en">Her mother said her daughter was too unwell to see him, and to his questioning admitted that it was in consequence of a letter received from himself; which had distressed her deeply.</td></tr>
+		<tr><td width="45%" class="zh" >“您大概知道信的内容吧，菲帕德太太？”他问。</td>
+		<td class="en">‘You know what it was about, perhaps, Mrs. Phippard?’ he said.</td></tr>
+		<tr><td width="45%" class="zh" >菲帕德太太承认她知道，还说那封信让她们非常难过。</td>
+		<td class="en">Mrs. Phippard owned that she did, adding that it put them in a very painful position.</td></tr>
+		<tr><td width="45%" class="zh" >这样一来，谢德拉克很惶恐，觉得自己犯下了滔天罪行。于是他解释说，如果那封信让乔安娜这么伤心，那肯定是产生了误会，因为他本以为那封信会让她感到解脱。</td>
+		<td class="en">Thereupon Shadrach, fearing that he had been guilty of an enormity, explained that if his letter had pained Joanna it must be owing to a misunderstanding, since he had thought it would be a relief to her.</td></tr>
+		<tr><td width="45%" class="zh" >如果并非如此，那他会让自己遵守诺言，而她可以当从来没有看到过那封信。</td>
+		<td class="en">If otherwise, he would hold himself bound by his word, and she was to think of the letter as never having been written.</td></tr>
+		<tr><td width="45%" class="zh" >第二天一早，他收到乔安娜的口信，说当天晚上有个聚会，让他去接她回家。</td>
+		<td class="en">Next morning he received an oral message from the young woman, asking him to fetch her home from a meeting that evening.</td></tr>
+		<tr><td width="45%" class="zh" >他去了，乔安娜挽着他的胳膊，两人从镇公所走到她家门口时，她说道：</td>
+		<td class="en">This he did, and while walking from the Town Hall to her door, with her hand in his arm, she said:</td></tr>
+		<tr><td width="45%" class="zh" >“谢德拉克，我们俩还一如从前，是不是？</td>
+		<td class="en">‘It is all the same as before between us, isn’t it, Shadrach?</td></tr>
+		<tr><td width="45%" class="zh" >你那封信是寄错了吧？”</td>
+		<td class="en">Your letter was sent in mistake?’</td></tr>
+		<tr><td width="45%" class="zh" >“是一如从前，”他答道，“如果你认为必须这样的话。”</td>
+		<td class="en">‘It is all the same as before,’ he answered, ‘if you say it must be.’</td></tr>
+		<tr><td width="45%" class="zh" >“我希望这样。”她低声说道。想到埃米莉，她的脸色顿时凝重起来。</td>
+		<td class="en">‘I wish it to be,’ she murmured, with hard lineaments, as she thought of Emily.</td></tr>
+		<tr><td width="45%" class="zh" >谢德拉克信奉宗教，又小心谨慎，他信守诺言，如同敬重生命一样。</td>
+		<td class="en">Shadrach was a religious and scrupulous man, who respected his word as his life.</td></tr>
+		<tr><td width="45%" class="zh" >不久，二人举行了婚礼。在那之前，乔利夫尽可能温和地向埃米莉解释了他犯的错误，他以为乔安娜对他并不在乎。</td>
+		<td class="en">Shortly afterwards the wedding took place, Jolliffe having conveyed to Emily as gently as possible the error he had fallen into when estimating Joanna’s mood as one of indifference.</td></tr>
+		<tr><td width="45%" class="zh" ></td>
+		<td class="en"></td></tr>
+		<tr><td width="45%" class="zh" >第二章</td>
+		<td class="en">Chapter II</td></tr>
+		<tr><td width="45%" class="zh" >婚后一个月，乔安娜的母亲去世了。于是夫妻俩不得不转而关注非常实际的问题。</td>
+		<td class="en">A month after the marriage Joanna’s mother died, and the couple were obliged to turn their attention to very practical matters.</td></tr>
+		<tr><td width="45%" class="zh" >乔安娜现在已失去双亲，她不能接受丈夫再次出海的想法。可问题是，他在家能干什么呢？</td>
+		<td class="en">Now that she was left without a parent, Joanna could not bear the notion of her husband going to sea again, but the question was, What could he do at home?</td></tr>
+		<tr><td width="45%" class="zh" >他们最终决定盘下主街上的一家杂货店。那家店当时正好准备转让店面和存货。</td>
+		<td class="en">They finally decided to take on a grocer’s shop in High Street, the goodwill and stock of which were waiting to be disposed of at that time.</td></tr>
+		<tr><td width="45%" class="zh" >谢德拉克对开店一窍不通，乔安娜也知之甚少，不过两人希望能慢慢学习。</td>
+		<td class="en">Shadrach knew nothing of shopkeeping, and Joanna very little, but they hoped to learn.</td></tr>
+		<tr><td width="45%" class="zh" >他们现在把全部精力都放在杂货店的生意上，之后的许多年里也是如此，不过生意始终没有红火起来。</td>
+		<td class="en">To the management of this grocery business they now devoted all their energies, and continued to conduct it for many succeeding years, without great success.</td></tr>
+		<tr><td width="45%" class="zh" >他们的两个儿子相继出世，乔安娜尽管从未热烈地爱过丈夫，却将儿子为视为珍宝，她把所有的希望和关爱都寄托在孩子身上。</td>
+		<td class="en">Two sons were born to them, whom their mother loved to idolatry, although she had never passionately loved her husband; and she lavished upon them all her forethought and care.</td></tr>
+		<tr><td width="45%" class="zh" >可是店铺生意平平，乔安娜原本想为儿子们提供良好教育和工作的远大梦想，也在现实面前逐渐缩水了。</td>
+		<td class="en">But the shop did not thrive, and the large dreams she had entertained of her sons’ education and career became attenuated in the face of realities.</td></tr>
+		<tr><td width="45%" class="zh" >两个儿子在最为普通的学校里接受教育，不过，由于生活在海边，他们熟谙所有航海技巧和海上贸易，这一切对他们那个年龄的人来说很有诱惑力。</td>
+		<td class="en">Their schooling was of the plainest, but, being by the sea, they grew alert in all such nautical arts and enterprises as were attractive to their age.</td></tr>
+		<tr><td width="45%" class="zh" >乔利夫和乔安娜结婚后，除了自己的小家庭外，最关心的就是埃米莉的婚姻问题。</td>
+		<td class="en">The great interest of the Jolliffes’ married life, outside their own immediate household, had lain in the marriage of Emily.</td></tr>
+		<tr><td width="45%" class="zh" >有一些显而易见的机会从身旁溜过，还有一些机会蛰伏在意想不到的角落，等着被人发现。由于这样一个偶然的机会，这个温柔的姑娘被镇上一个家业兴盛的商人看中了，这个商人曾经丧妻，比埃米莉长了几岁，不过依然正当壮年。</td>
+		<td class="en">By one of those odd chances which lead those that lurk in unexpected corners to be discovered, while the obvious are passed by, the gentle girl had been seen and loved by a thriving merchant of the town, a widower, some years older than herself, though still in the prime of life.</td></tr>
+		<tr><td width="45%" class="zh" >起初埃米莉宣布，她绝不会嫁给任何人。可是莱斯特先生仍默默地坚持着，最终埃米莉不情愿地同意了。</td>
+		<td class="en">At first Emily had declared that she never, never could marry any one; but Mr. Lester had quietly persevered, and had at last won her reluctant assent.</td></tr>
+		<tr><td width="45%" class="zh" >这二人的结合也带来了两个孩子。随着孩子健康地成长，埃米莉称她从没想到自己会生活得如此幸福。</td>
+		<td class="en">Two children also were the fruits of this union, and, as they grew and prospered, Emily declared that she had never supposed that she could live to be so happy.</td></tr>
+		<tr><td width="45%" class="zh" >这位可敬的商人拥有一栋结实的砖砌大宅子。在这个古老的小镇上，这种宅子鳞次栉比。商人家的房子正对着主街，几乎和乔利夫家的杂货店隔街相望。现在，乔安娜一看到埃米莉从她那相对优越的位置俯视自己家寒酸的商店，望着商店橱窗里沾满灰尘的棒棒糖、成堆的葡萄干，还有茶叶筒，她就暗自难过。是她自己纯粹出于贪婪，强夺了埃米莉本来的归属。</td>
+		<td class="en">The worthy merchant’s home, one of those large, substantial brick mansions frequently jammed up in old-fashioned towns, faced directly on the High Street, nearly opposite to the grocery shop of the Jolliffes, and it now became the pain of Joanna to behold the woman whose place she had usurped out of pure covetousness, looking down from her position of comparative wealth upon the humble shop-window with its dusty sugar-loaves, heaps of raisins, and canisters of tea, over which it was her own lot to preside.</td></tr>
+		<tr><td width="45%" class="zh" >杂货店的生意每况愈下，乔安娜不得不亲自去店里帮忙。令她感到羞辱和窘迫的是，埃米莉·莱斯特坐在街对面的大会客室里，便能看到那些既穷酸又讨人烦的顾客向她招手或者大声叫喊，而她不得不强颜欢笑迎接这些人的光顾，并在柜台后来回忙碌。她在街上遇到这些人时不得不以礼相待，而埃米莉则和孩子、家庭女教师呆在一起，只和镇上、街坊里最有教养的人聊天。</td>
+		<td class="en">The business having so dwindled, Joanna was obliged to serve in the shop herself; and it galled and mortified her that Emily Lester, sitting in her large drawing-room over the way, could witness her own dancings up and down behind the counter at the beck and call of wretched twopenny customers, whose patronage she was driven to welcome gladly: persons to whom she was compelled to be civil in the street, while Emily was bounding along with her children and her governess, and conversing with the genteelest people of the town and neighbourhood.</td></tr>
+		<tr><td width="45%" class="zh" >这正是乔安娜不肯让谢德拉克·乔利夫移情别恋而造成的结果，而她自己对乔利夫的爱不过是淡如白水。</td>
+		<td class="en">This was what she had gained by not letting Shadrach Jolliffe, whom she had so faintly loved, carry his affection elsewhere.</td></tr>
+		<tr><td width="45%" class="zh" >谢德拉克是个诚实的好人，无论是在内心还是在行为上，都对乔安娜非常忠实。</td>
+		<td class="en">Shadrach was a good and honest man, and he had been faithful to her in heart and in deed.</td></tr>
+		<tr><td width="45%" class="zh" >时间抹平了他对埃米莉的爱，他现在全心爱着孩子们的母亲，他已经忘记了早先那情不自禁的爱恋，对他而言，埃米莉不过是个朋友。</td>
+		<td class="en">Time had clipped the wings of his love for Emily in his devotion to the mother of his boys: he had quite lived down that impulsive earlier fancy, and Emily had become in his regard nothing more than a friend.</td></tr>
+		<tr><td width="45%" class="zh" >埃米莉对他的感情亦是如此。</td>
+		<td class="en">It was the same with Emily’s feelings for him.</td></tr>
+		<tr><td width="45%" class="zh" >或许，哪怕能找到一丁点儿值得嫉妒的原因，乔安娜也会好受些。</td>
+		<td class="en">Possibly, had she found the least cause for jealousy, Joanna would almost have been better satisfied.</td></tr>
+		<tr><td width="45%" class="zh" >而正是由于埃米莉和谢德拉克完全默认她自己谋划的结果，她才愈发感到不满。</td>
+		<td class="en">It was in the absolute acquiescence of Emily and Shadrach in the results she herself had contrived that her discontent found nourishment.</td></tr>
+		<tr><td width="45%" class="zh" >谢德拉克天生缺乏在众多竞争者当中经营零售业所必需的细致精明劲。</td>
+		<td class="en">Shadrach was not endowed with the narrow shrewdness necessary for developing a retail business in the face of many competitors.</td></tr>
+		<tr><td width="45%" class="zh" >如果有顾客问他，是否会真的推荐某些锲而不舍的推销员强行卖给他的“神奇的”鸡蛋替代品，他会说：“布丁里要是不放鸡蛋，就很难尝出鸡蛋味儿。”若有人问他，店里的“纯正摩卡咖啡”是否是真的摩卡，他会冷淡地说：“小商店里的东西，你懂的”。</td>
+		<td class="en">Did a customer inquire if the grocer could really recommend the wondrous substitute for eggs which a persevering bagman had forced into his stock, he would answer that ‘when you did not put eggs into a pudding it was difficult to taste them there’; and when he was asked if his ‘real Mocha coffee’ was real Mocha, he would say grimly, ‘as understood in small shops.’</td></tr>
+		<tr><td width="45%" class="zh" >一个夏日，街对面砖砌大房子反射到杂货店里的暑热令人难以忍受。除了夫妻二人外，杂货店里空无一人，乔安娜看着埃米莉家的门，一个阔气的访客正把马车停在门口。</td>
+		<td class="en">One summer day, when the big brick house opposite was reflecting the oppressive sun’s heat into the shop, and nobody was present but husband and wife, Joanna looked across at Emily’s door, where a wealthy visitor’s carriage had drawn up.</td></tr>
+		<tr><td width="45%" class="zh" >埃米莉近来的言行举止流露出恩主的派头。</td>
+		<td class="en">Traces of patronage had been visible in Emily’s manner of late.</td></tr>
+		<tr><td width="45%" class="zh" >“谢德拉克，你实在不适合经商，”他妻子难过地低声说道，</td>
+		<td class="en">‘Shadrach, the truth is, you are not a business-man,’ his wife sadly murmured.</td></tr>
+		<tr><td width="45%" class="zh" >“你不是自小开店的，一个半路出家的人不可能赚大钱，你就是这样。”</td>
+		<td class="en">‘You were not brought up to shopkeeping, and it is impossible for a man to make a fortune at an occupation he has jumped into, as you did into this.’</td></tr>
+		<tr><td width="45%" class="zh" >乔利夫表示同意。他一向对乔安娜言听计从。</td>
+		<td class="en">Jolliffe agreed with her, in this as in everything else.</td></tr>
+		<tr><td width="45%" class="zh" >“我对赚大钱没什么热情，”他乐呵呵地说，</td>
+		<td class="en">‘Not that I care a rope’s end about making a fortune,’ he said cheerfully.</td></tr>
+		<tr><td width="45%" class="zh" >“我现在非常开心。不管怎样，我们总能填饱肚子。”</td>
+		<td class="en">‘I am happy enough, and we can rub on somehow.’</td></tr>
+		<tr><td width="45%" class="zh" >乔安娜透过成排的瓶装泡菜，又看了一眼对面的大房子。</td>
+		<td class="en">She looked again at the great house through the screen of bottled pickles.</td></tr>
+		<tr><td width="45%" class="zh" >“填饱肚子——是的，”她苦涩地说，</td>
+		<td class="en">‘Rub on—yes,’ she said bitterly.</td></tr>
+		<tr><td width="45%" class="zh" >“可你看看埃米莉·莱斯特，她以前那么穷，现在多富裕！</td>
+		<td class="en">‘But see how well off Emmy Lester is, who used to be so poor!</td></tr>
+		<tr><td width="45%" class="zh" >她的儿子，毫无疑问会上大学，再想想你儿子，他们只能去教区学校！”</td>
+		<td class="en">Her boys will go to College, no doubt; and think of yours—obliged to go to the Parish School!’</td></tr>
+		<tr><td width="45%" class="zh" >谢德拉克的思绪飘到了埃米莉身上。</td>
+		<td class="en">Shadrach’s thoughts had flown to Emily.</td></tr>
+		<tr><td width="45%" class="zh" >“没有人像你那样，”他好脾气地说道，“给埃米莉帮过那么大的忙，乔安娜，你劝诫她，让她离开我，结束了我们俩之间傻傻的小暧昧，这样莱斯特出现时，她才能答应他。”</td>
+		<td class="en">‘Nobody,’ he said good-humouredly, ‘ever did Emily a better turn than you did, Joanna, when you warned her off me and put an end to that little simpering nonsense between us, so as to leave it in her power to say “Aye” to Lester when he came along.’</td></tr>
+		<tr><td width="45%" class="zh" >这话差点儿激怒了乔安娜。</td>
+		<td class="en">This almost maddened her.</td></tr>
+		<tr><td width="45%" class="zh" >“别再提以前的事了！”她严厉而悲伤地恳求他，</td>
+		<td class="en">‘Don’t speak of bygones!’ she implored, in stern sadness.</td></tr>
+		<tr><td width="45%" class="zh" >“即使不为了你自己，也为了孩子们，还有我，想一想我们怎样才能赚到钱？”</td>
+		<td class="en">‘But think, for the boys’ and my sake, if not for your own, what are we to do to get richer?’</td></tr>
+		<tr><td width="45%" class="zh" >“好吧，”他语气也严肃起来，说道，“老实说，我一直觉得自己不适合做生意，尽管我总是不愿意承认。</td>
+		<td class="en">‘Well,’ he said, becoming serious, ‘to tell the truth, I have always felt myself unfit for this business, though I’ve never liked to say so.</td></tr>
+		<tr><td width="45%" class="zh" >我感觉自己需要更多的空间来施展身手，需要一个更开阔的地方大展拳脚，而不是在这里被朋友邻居包围。</td>
+		<td class="en">I seem to want more room for sprawling; a more open space to strike out in than here among friends and neighbours.</td></tr>
+		<tr><td width="45%" class="zh" >我可以像任何男人一样赚到钱，只要我按照自己的方式去做。”</td>
+		<td class="en">I could get rich as well as any man, if I tried my own way.’</td></tr>
+		<tr><td width="45%" class="zh" >“我希望你能！</td>
+		<td class="en">‘I wish you would!</td></tr>
+		<tr><td width="45%" class="zh" >你要怎么做？”</td>
+		<td class="en">What is your way?’</td></tr>
+		<tr><td width="45%" class="zh" >“继续出海。”</td>
+		<td class="en">‘To go to sea again.’</td></tr>
+		<tr><td width="45%" class="zh" >而那个把他留在家里的人正是她，因为她讨厌水手妻子那种守活寡的生活。</td>
+		<td class="en">She had been the very one to keep him at home, hating the semi-widowed existence of sailors’ wives.</td></tr>
+		<tr><td width="45%" class="zh" >但是现在，她的野心抑制住了本能。她说：“你真的觉得那样能成功吗？”</td>
+		<td class="en">But her ambition checked her instincts now, and she said: ‘Do you think success really lies that way?’</td></tr>
+		<tr><td width="45%" class="zh" >“我相信除此之外，别无他法。”</td>
+		<td class="en">‘I am sure it lies in no other.’</td></tr>
+		<tr><td width="45%" class="zh" >“你想去吗，谢德拉克？”</td>
+		<td class="en">‘Do you want to go, Shadrach?’</td></tr>
+		<tr><td width="45%" class="zh" >“老实说，我并不是因为好玩才要去的。</td>
+		<td class="en">‘Not for the pleasure of it, I can tell ’ee.</td></tr>
+		<tr><td width="45%" class="zh" >乔安娜，出海一点儿都不好玩，远远不及我在家里的后客厅这么好玩。</td>
+		<td class="en">There’s no such pleasure at sea, Joanna, as I can find in my back parlour here.</td></tr>
+		<tr><td width="45%" class="zh" >说实话，我完全不喜欢大海。</td>
+		<td class="en">To speak honest, I have no love for the brine.</td></tr>
+		<tr><td width="45%" class="zh" >从来都不怎么爱。</td>
+		<td class="en">I never had much.</td></tr>
+		<tr><td width="45%" class="zh" >可如果是为了给你和儿子们赚钱，那就是另外一回事了。</td>
+		<td class="en">But if it comes to a question of a fortune for you and the lads, it is another thing.</td></tr>
+		<tr><td width="45%" class="zh" >对我这样生来就当水手的人来说，出海是赚钱的唯一途径。”</td>
+		<td class="en">That’s the only way to it for one born and bred a seafarer as I.’</td></tr>
+		<tr><td width="45%" class="zh" >“赚钱会需要很长时间吗？”</td>
+		<td class="en">‘Would it take long to earn?’</td></tr>
+		<tr><td width="45%" class="zh" >“嗯，说不准。或许不用。”</td>
+		<td class="en">‘Well, that depends; perhaps not.’</td></tr>
+		<tr><td width="45%" class="zh" >第二天早上，谢德拉克从五斗橱里取出一件水手穿的夹克，他刚回来的头几个月里，一直穿着这件衣服。他清理了衣服上的蛾子，穿上衣服，然后去了码头。</td>
+		<td class="en">The next morning Shadrach pulled from a chest of drawers the nautical jacket he had worn during the first months of his return, brushed out the moths, donned it, and walked down to the quay.</td></tr>
+		<tr><td width="45%" class="zh" >港口依然有人去纽芬兰做生意，不过规模已不如从前。</td>
+		<td class="en">The port still did a fair business in the Newfoundland trade, though not so much as formerly.</td></tr>
+		<tr><td width="45%" class="zh" >此后不久，谢德拉克倾其所有，与人合买了一艘双桅横帆船，他被指定为船长。</td>
+		<td class="en">It was not long after this that he invested all he possessed in purchasing a part-ownership in a brig, of which he was appointed captain.</td></tr>
+		<tr><td width="45%" class="zh" >随后数月里，谢德拉克一边进行海岸贸易，一边趁间歇温习他在开杂货店期间丢掉的航海技术。春季，他驾驶着那艘横帆船，向纽芬兰出发了。</td>
+		<td class="en">A few months were passed in coast-trading, during which interval Shadrach wore off the land-rust that had accumulated upon him in his grocery phase; and in the spring the brig sailed for Newfoundland.</td></tr>
+		<tr><td width="45%" class="zh" >乔安娜和儿子们留在家里。两个儿子现在都长成了壮实的小伙子，忙活着海港和码头的各种事情。</td>
+		<td class="en">Joanna lived on at home with her sons, who were now growing up into strong lads, and occupying themselves in various ways about the harbour and quay.</td></tr>
+		<tr><td width="45%" class="zh" >“不要紧，让他们先干点儿活吧，”他们慈爱的母亲自言自语道，</td>
+		<td class="en">‘Never mind, let them work a little,’ their fond mother said to herself.</td></tr>
+		<tr><td width="45%" class="zh" >“我们现在为生计所迫，不过等谢德拉克回家后，他们也才十七八岁。到时他们就离开港口，会有家庭教师全面负责他们的学习。只要有钱，他们就可以学习代数和拉丁语，或许还会和埃米·莱斯特的两个宝贝儿子一样，像绅士一样！”</td>
+		<td class="en">‘Our necessities compel it now, but when Shadrach comes home they will be only seventeen and eighteen, and they shall be removed from the port, and their education thoroughly taken in hand by a tutor; and with the money they’ll have they will perhaps be as near to gentlemen as Emmy Lester’s precious two, with their algebra and their Latin!’</td></tr>
+		<tr><td width="45%" class="zh" >谢德拉克回来的日期越来越近，终于到了，他却没有出现。</td>
+		<td class="en">The date for Shadrach’s return drew near and arrived, and he did not appear.</td></tr>
+		<tr><td width="45%" class="zh" >乔安娜觉得无须担心，因为帆船的归期总是难以确定。她是对的，因为据预计回来的时间过了大约一个月后，在一个潮湿的深夜，帆船据说马上要靠岸了。很快，走廊上响起水手谢德拉克啪嗒啪嗒的脚步声，他进了门。</td>
+		<td class="en">Joanna was assured that there was no cause for anxiety, sailing-ships being so uncertain in their coming; which assurance proved to be well grounded, for late one wet evening, about a month after the calculated time, the ship was announced as at hand, and presently the slip-slop step of Shadrach as the sailor sounded in the passage, and he entered.</td></tr>
+		<tr><td width="45%" class="zh" >孩子们出去了，所以没有见到他，乔安娜一个人独自坐着。</td>
+		<td class="en">The boys had gone out and had missed him, and Joanna was sitting alone.</td></tr>
+		<tr><td width="45%" class="zh" >夫妻俩团圆的激动刚过，乔利夫就解释了推迟回家的原因。原来是因为一小桩投机买卖，不过却带来了一些甜头。</td>
+		<td class="en">As soon as the first emotion of reunion between the couple had passed, Jolliffe explained the delay as owing to a small speculative contract, which had produced good results.</td></tr>
+		<tr><td width="45%" class="zh" >“我决心不让你失望，”他说，“我想你会承认，我确实没有！”</td>
+		<td class="en">‘I was determined not to disappoint ’ee,’ he said; ‘and I think you’ll own that I haven’t!’</td></tr>
+		<tr><td width="45%" class="zh" >他一边说着，一边抽出一只硕大的帆布包，鼓鼓的，仿佛杰克杀死的那个巨人的钱袋子。谢德拉克解开袋子，将里面的东西倒在乔安娜膝上，那时她正坐在炉火边的矮椅子上。</td>
+		<td class="en">With this he pulled out an enormous canvas bag, full and rotund as the money-bag of the giant whom Jack slew, untied it, and shook the contents out into her lap as she sat in her low chair by the fire.</td></tr>
+		<tr><td width="45%" class="zh" >随着哗啦一声巨响，一大堆金镑和几尼（那时候几尼还在流通）落到乔安娜的膝头，把她的裙子压得都垂到了地上。</td>
+		<td class="en">A mass of sovereigns and guineas (there were guineas on the earth in those days) fell into her lap with a sudden thud, weighing down her gown to the floor.</td></tr>
+		<tr><td width="45%" class="zh" >“瞧！”谢德拉克得意地说，</td>
+		<td class="en">‘There!’ said Shadrach complacently.</td></tr>
+		<tr><td width="45%" class="zh" >“我说过，老婆，我会成功的。我是不是成功了？”</td>
+		<td class="en">‘I told ’ee, dear, I’d do it; and have I done it or no?’</td></tr>
+		<tr><td width="45%" class="zh" >不知怎的，乔安娜的脸上闪过一阵发财的喜悦后，很快就失去了光彩。</td>
+		<td class="en">Somehow her face, after the first excitement of possession, did not retain its glory.</td></tr>
+		<tr><td width="45%" class="zh" >“确实是好多金币，”她说，</td>
+		<td class="en">‘It is a lot of gold, indeed,’ she said.</td></tr>
+		<tr><td width="45%" class="zh" >“不过，就这些了吗？”</td>
+		<td class="en">‘And—is this all?’</td></tr>
+		<tr><td width="45%" class="zh" >“就这些？</td>
+		<td class="en">‘All?</td></tr>
+		<tr><td width="45%" class="zh" >嘿，亲爱的乔安娜，你知道那堆金币足足有300个吗？</td>
+		<td class="en">Why, dear Joanna, do you know you can count to three hundred in that heap?</td></tr>
+		<tr><td width="45%" class="zh" >那可不是小数目！”</td>
+		<td class="en">It is a fortune!’</td></tr>
+		<tr><td width="45%" class="zh" >“唔——是的。</td>
+		<td class="en">‘Yes—yes.</td></tr>
+		<tr><td width="45%" class="zh" >就海上来说，不是小数目。不过在陆地上……”</td>
+		<td class="en">A fortune—judged by sea; but judged by land—’</td></tr>
+		<tr><td width="45%" class="zh" >不过，她暂时打消了对钱的念想。</td>
+		<td class="en">However, she banished considerations of the money for the nonce.</td></tr>
+		<tr><td width="45%" class="zh" >很快，孩子们就进来了，之后的周日到来时，谢德拉克去向上帝谢恩。这一次用了更平常的方式，诵读总感恩祷文中的斜体字部分。</td>
+		<td class="en">Soon the boys came in, and next Sunday Shadrach returned thanks to God—this time by the more ordinary channel of the italics in the General Thanksgiving.</td></tr>
+		<tr><td width="45%" class="zh" >不过，几天后，当夫妻俩谈到如何投资那笔钱的问题时，他说乔安娜似乎不像他期望的那么满意。</td>
+		<td class="en">But a few days after, when the question of investing the money arose, he remarked that she did not seem so satisfied as he had hoped.</td></tr>
+		<tr><td width="45%" class="zh" >“你看，谢德拉克，”她回答说，“我们拥有几百金币，他们却有数千金币”（她冲着街道对面扭扭头），</td>
+		<td class="en">‘Well you see, Shadrach,’ she answered, ‘we count by hundreds; they count by thousands’ (nodding towards the other side of the Street).</td></tr>
+		<tr><td width="45%" class="zh" >“你走后，他们家添置了一辆双驾马车。”</td>
+		<td class="en">‘They have set up a carriage and pair since you left.’</td></tr>
+		<tr><td width="45%" class="zh" >“哦，有这回事？”</td>
+		<td class="en">‘O, have they?’</td></tr>
+		<tr><td width="45%" class="zh" >“亲爱的谢德拉克，你根本不知道如今的世道。</td>
+		<td class="en">‘My dear Shadrach, you don’t know how the world moves.</td></tr>
+		<tr><td width="45%" class="zh" >不过，我们也会尽力而为。</td>
+		<td class="en">However, we’ll do the best we can with it.</td></tr>
+		<tr><td width="45%" class="zh" >可他们富得流油，而我们还是一贫如洗！”</td>
+		<td class="en">But they are rich, and we are poor still!’</td></tr>
+		<tr><td width="45%" class="zh" >大半年时间在不经意间就过去了。</td>
+		<td class="en">The greater part of a year was desultorily spent.</td></tr>
+		<tr><td width="45%" class="zh" >乔安娜在家里和店里难过地转来转去。孩子们依然在海港做着各种工作。</td>
+		<td class="en">She moved sadly about the house and shop, and the boys were still occupying themselves in and around the harbour.</td></tr>
+		<tr><td width="45%" class="zh" >“乔安娜，”有一天谢德拉克说道，“你的一举一动告诉我，那些钱还不够。”</td>
+		<td class="en">‘Joanna,’ he said, one day, ‘I see by your movements that it is not enough.’</td></tr>
+		<tr><td width="45%" class="zh" >“是不够，”她说，</td>
+		<td class="en">‘It is not enough,’ said she.</td></tr>
+		<tr><td width="45%" class="zh" >“我儿子要靠给莱斯特家开船谋生，而我曾经过着比她优越的生活！”</td>
+		<td class="en">‘My boys will have to live by steering the ships that the Lesters own; and I was once above her!’</td></tr>
+		<tr><td width="45%" class="zh" >乔利夫不善争论，他只是低声说，他想再出一次海。</td>
+		<td class="en">Jolliffe was not an argumentative man, and he only murmured that he thought he would make another voyage.</td></tr>
+		<tr><td width="45%" class="zh" >谢德拉克思索了好几天，一天下午，他从码头回来，突然说：</td>
+		<td class="en">He meditated for several days, and coming home from the quay one afternoon said suddenly:</td></tr>
+		<tr><td width="45%" class="zh" >“亲爱的，我再为你出一次海，就肯定能干成，只要——只要——”</td>
+		<td class="en">‘I could do it for ’ee, dear, in one more trip, for certain, if—if—’</td></tr>
+		<tr><td width="45%" class="zh" >“干成什么，谢德拉克？”</td>
+		<td class="en">‘Do what, Shadrach?’</td></tr>
+		<tr><td width="45%" class="zh" >“让你数到几千个金币，而不是几百个。”</td>
+		<td class="en">‘Enable ’ee to count by thousands instead of hundreds.’</td></tr>
+		<tr><td width="45%" class="zh" >“只要怎样？”</td>
+		<td class="en">‘If what?’</td></tr>
+		<tr><td width="45%" class="zh" >“只要我能带上孩子们。”</td>
+		<td class="en">‘If I might take the boys.’</td></tr>
+		<tr><td width="45%" class="zh" >乔安娜的脸色变得煞白。</td>
+		<td class="en">She turned pale.</td></tr>
+		<tr><td width="45%" class="zh" >“别说了，谢德拉克。”她慌忙回答道。</td>
+		<td class="en">‘Don’t say that, Shadrach,’ she answered hastily.</td></tr>
+		<tr><td width="45%" class="zh" >“怎么了？”</td>
+		<td class="en">‘Why?’</td></tr>
+		<tr><td width="45%" class="zh" >“我不想听！</td>
+		<td class="en">‘I don’t like to hear it!</td></tr>
+		<tr><td width="45%" class="zh" >出海太危险了。</td>
+		<td class="en">There’s danger at sea.</td></tr>
+		<tr><td width="45%" class="zh" >我希望他们成为绅士，不想他们有危险。</td>
+		<td class="en">I want them to be something genteel, and no danger to them.</td></tr>
+		<tr><td width="45%" class="zh" >我不能让他们冒着生命危险出海。</td>
+		<td class="en">I couldn’t let them risk their lives at sea.</td></tr>
+		<tr><td width="45%" class="zh" >唉，我怎么能呢，怎么能呢！”</td>
+		<td class="en">O, I couldn’t ever, ever!’</td></tr>
+		<tr><td width="45%" class="zh" >“那好，亲爱的，不带他们就是了。”</td>
+		<td class="en">‘Very well, dear, it shan’t be done.’</td></tr>
+		<tr><td width="45%" class="zh" >次日，乔安娜沉默了一阵，终于问道：</td>
+		<td class="en">Next day, after a silence, she asked a question:</td></tr>
+		<tr><td width="45%" class="zh" >“我想，如果孩子们跟你一起去，赚到的钱会大不一样，是吗？”</td>
+		<td class="en">‘If they were to go with you it would make a great deal of difference, I suppose, to the profit?’</td></tr>
+		<tr><td width="45%" class="zh" >“那会是我一个人去所赚钱的三倍。</td>
+		<td class="en">‘’Twould treble what I should get from the venture single-handed.</td></tr>
+		<tr><td width="45%" class="zh" >有我照看，他们会像我自己一样毫发无损的。”</td>
+		<td class="en">Under my eye they would be as good as two more of myself.’</td></tr>
+		<tr><td width="45%" class="zh" >过了一阵，她又说：“再给我说说出海的事吧。”</td>
+		<td class="en">Later on she said: ‘Tell me more about this.’</td></tr>
+		<tr><td width="45%" class="zh" >“唔，我敢担保，孩子们几乎和熟练的水手一样善于驾驶船！</td>
+		<td class="en">‘Well, the boys are almost as clever as master-mariners in handling a craft, upon my life!</td></tr>
+		<tr><td width="45%" class="zh" >北海那边没有比咱们这个海港的沙洲更蜿蜒曲折的地方了，而孩子们从小就在这里练手。</td>
+		<td class="en">There isn’t a more cranky place in the Northern Seas than about the sandbanks of this harbour, and they’ve practised here from their infancy.</td></tr>
+		<tr><td width="45%" class="zh" >而且他们很沉稳。</td>
+		<td class="en">And they are so steady.</td></tr>
+		<tr><td width="45%" class="zh" >比他们年长一倍的人里，半打人中也挑不出一个像他们这样沉稳可靠的。”</td>
+		<td class="en">I couldn’t get their steadiness and their trustworthiness in half a dozen men twice their age.’</td></tr>
+		<tr><td width="45%" class="zh" >“出海不是很危险吗？再说，不是还有传言说要打仗了？”她不安地问道。</td>
+		<td class="en">‘And is it very dangerous at sea; now, too, there are rumours of war?’ she asked uneasily.</td></tr>
+		<tr><td width="45%" class="zh" >“唔，这个嘛，会有风险的。</td>
+		<td class="en">‘O, well, there be risks.</td></tr>
+		<tr><td width="45%" class="zh" >不过……”</td>
+		<td class="en">Still...’</td></tr>
+		<tr><td width="45%" class="zh" >这个不断膨胀的想法充斥了乔安娜的心，压得她喘不过气。</td>
+		<td class="en">The idea grew and magnified, and the mother’s heart was crushed and stifled by it.</td></tr>
+		<tr><td width="45%" class="zh" >埃米莉越来越显得高人一等，实在让人无法忍受。</td>
+		<td class="en">Emmy was growing too patronizing; it could not be borne.</td></tr>
+		<tr><td width="45%" class="zh" >谢德拉克的妻子总是不停地向他抱怨自家比埃米莉家穷。</td>
+		<td class="en">Shadrach’s wife could not help nagging him about their comparative poverty.</td></tr>
+		<tr><td width="45%" class="zh" >年轻的孩子们像他们父亲一样随和。当父母跟他们提起出海做生意的事时，他们非常乐意参与，尽管他们也和父亲一样，并不是很热爱航海，但随着这个计划的细节确定下来，他们的兴致也高了很多。</td>
+		<td class="en">The young men, amiable as their father, when spoken to on the subject of a voyage of enterprise, were quite willing to embark; and though they, like their father, had no great love for the sea, they became quite enthusiastic when the proposal was detailed.</td></tr>
+		<tr><td width="45%" class="zh" >现在，一切都等乔安娜点头了。</td>
+		<td class="en">Everything now hung upon their mother’s assent.</td></tr>
+		<tr><td width="45%" class="zh" >她克制了很久，最后还是开口了：孩子们可以陪着他们父亲一起去。</td>
+		<td class="en">She withheld it long, but at last gave the word: the young men might accompany their father.</td></tr>
+		<tr><td width="45%" class="zh" >谢德拉克对此显得格外开心，迄今为止，上帝一直在保佑他，他也表达了对上帝的感恩。</td>
+		<td class="en">Shadrach was unusually cheerful about it: Heaven had preserved him hitherto, and he had uttered his thanks.</td></tr>
+		<tr><td width="45%" class="zh" >上帝不会遗弃那些忠于他的子民的。</td>
+		<td class="en">God would not forsake those who were faithful to him.</td></tr>
+		<tr><td width="45%" class="zh" >乔利夫变卖了所有家产，都投进了这次生意。</td>
+		<td class="en">All that the Jolliffes possessed in the world was put into the enterprise.</td></tr>
+		<tr><td width="45%" class="zh" >杂货店的存货尽量削减，只留下出海期间够乔安娜维持基本生计的部分。而出海通常持续整整一个“纽芬兰季”。</td>
+		<td class="en">The grocery stock was pared down to the least that possibly could afford a bare sustenance to Joanna during the absence, which was to last through the usual ‘New-f’nland spell.’</td></tr>
+		<tr><td width="45%" class="zh" >乔安娜不知道要怎样消磨漫漫长日。之前还有孩子们陪着她，不过她还是鼓起勇气，准备接受考验。</td>
+		<td class="en">How she would endure the weary time she hardly knew, for the boys had been with her formerly; but she nerved herself for the trial.</td></tr>
+		<tr><td width="45%" class="zh" >船上装满靴子、鞋子、成衣、捕鱼用具、黄油、奶酪、绳索、帆布以及其他各种货物；回来时，船上会载着石油、毛皮、兽皮、鱼、蔓越橘，以及其他任何能弄到手的东西。</td>
+		<td class="en">The ship was laden with boots and shoes, ready-made clothing, fishing-tackle, butter, cheese, cordage, sailcloth, and many other commodities; and was to bring back oil, furs, skins, fish, cranberries, and what else came to hand.</td></tr>
+		<tr><td width="45%" class="zh" >出海和回来的路上，他们还要在其他港口进行许多交易，因此会赚到大钱。</td>
+		<td class="en">But much trading to other ports was to be undertaken between the voyages out and homeward, and thereby much money made.</td></tr>
+		<tr><td width="45%" class="zh" ></td>
+		<td class="en"></td></tr>
+		<tr><td width="45%" class="zh" >第三章</td>
+		<td class="en">Chapter III</td></tr>
+		<tr><td width="45%" class="zh" >春季的一个星期一早上，横帆船起航了，不过乔安娜没有去送行。</td>
+		<td class="en">The brig sailed on a Monday morning in spring; but Joanna did not witness its departure.</td></tr>
+		<tr><td width="45%" class="zh" >她不忍面对自己一手促成的分离场景。</td>
+		<td class="en">She could not bear the sight that she had been the means of bringing about.</td></tr>
+		<tr><td width="45%" class="zh" >谢德拉克知道这些，因此离开的前一夜告诉她，他们大约在第二天中午之前出发。因此，第二天早上5点钟乔安娜醒来时，她听到他们在楼下来回忙碌，却没有急着下楼，而是躺着，试图鼓起勇气面对离别，她想着他们大约会在9点钟离开，就像她丈夫上一次出海时那样。</td>
+		<td class="en">Knowing this, her husband told her overnight that they were to sail some time before noon next day hence when, awakening at five the next morning, she heard them bustling about downstairs, she did not hasten to descend, but lay trying to nerve herself for the parting, imagining they would leave about nine, as her husband had done on his previous voyage.</td></tr>
+		<tr><td width="45%" class="zh" >后来，她终于下了楼，看到写字台的斜面上有粉笔写的字，可她丈夫和儿子们都不在了。</td>
+		<td class="en">When she did descend she beheld words chalked upon the sloping face of the bureau; but no husband or sons.</td></tr>
+		<tr><td width="45%" class="zh" >谢德拉克匆匆地写了几句，说他们为了不让她因为告别难过，已经出发了，孩子们在谢德拉克的字下面写着：“再见，妈妈！”</td>
+		<td class="en">In the hastily-scrawled lines Shadrach said they had gone off thus not to pain her by a leave-taking; and the sons had chalked under his words: ‘Good-bye, mother!’</td></tr>
+		<tr><td width="45%" class="zh" >乔安娜匆匆赶到码头，站在港口俯视着蔚蓝的海面，可是除了“乔安娜号”的桅杆和鼓起的船帆，她什么也看不到，一个人影也没有。</td>
+		<td class="en">She rushed to the quay, and looked down the harbour towards the blue rim of the sea, but she could only see the masts and bulging sails of the Joanna; no human figures.</td></tr>
+		<tr><td width="45%" class="zh" >“我就这样送走他们了！”她发狂般地说着，眼泪哗哗地流了出来。</td>
+		<td class="en">‘’Tis I have sent them!’ she said wildly, and burst into tears.</td></tr>
+		<tr><td width="45%" class="zh" >房间里用粉笔写的“再见”几乎让她的心都碎了。</td>
+		<td class="en">In the house the chalked ‘Good-bye’ nearly broke her heart.</td></tr>
+		<tr><td width="45%" class="zh" >可是再次进入前屋后，她看着对面埃米莉家，想到要从低人一等的境况中解脱出来了，瘦削的脸庞上也流露出了一丝胜利的表情。</td>
+		<td class="en">But when she had re-entered the front room, and looked across at Emily’s, a gleam of triumph lit her thin face at her anticipated release from the thraldom of subservience.</td></tr>
+		<tr><td width="45%" class="zh" >为了对埃米莉·莱斯特公平起见，我们必须指出，乔安娜认为埃米莉高高在上的想法，基本上都是她自己的臆想。</td>
+		<td class="en">To do Emily Lester justice, her assumption of superiority was mainly a figment of Joanna’s brain.</td></tr>
+		<tr><td width="45%" class="zh" >埃米莉身为商人的妻子，生活条件比乔安娜优越，这是她无法隐藏的事实。然而，二人无论什么时候碰面（事实上现在她们也不常碰面了），埃米莉都尽力缩小两人之间的差距。</td>
+		<td class="en">That the circumstances of the merchant’s wife were more luxurious than Joanna’s, the former could not conceal; though whenever the two met, which was not very often now, Emily endeavoured to subdue the difference by every means in her power.</td></tr>
+		<tr><td width="45%" class="zh" >第一个夏季无声无息地过去了，乔安娜靠着杂货店勉强维持生计，店里现在除了窗户和柜台外，几乎没有其他东西了。</td>
+		<td class="en">The first summer lapsed away; and Joanna meagrely maintained herself by the shop, which now consisted of little more than a window and a counter.</td></tr>
+		<tr><td width="45%" class="zh" >事实上，埃米莉是她唯一的大主顾。莱斯特太太不问质量，欣然购买任何东西，这种善意本身却带着一种令人心酸的刺痛，因为这种毫不挑剔的态度显示出她是个恩主，甚至可以说是个施舍者。</td>
+		<td class="en">Emily was, in truth, her only large customer; and Mrs. Lester’s kindly readiness to buy anything and everything without questioning the quality had a sting of bitterness in it, for it was the uncritical attitude of a patron, and almost of a donor.</td></tr>
+		<tr><td width="45%" class="zh" >漫长而凄凉的冬季姗姗来临，写字台的正面现在朝着墙，以保护粉笔写的告别语，因为乔安娜怎么也不忍心把那些字擦掉。她常常看着那些字，眼里便蓄满了泪水。</td>
+		<td class="en">The long dreary winter moved on; the face of the bureau had been turned to the wall to protect the chalked words of farewell, for Joanna could never bring herself to rub them out; and she often glanced at them with wet eyes.</td></tr>
+		<tr><td width="45%" class="zh" >埃米莉家一表人才的男孩子们回来过圣诞节了，他们常常聊起上大学的事，而乔安娜依然小心翼翼地生活着，连呼吸都谨慎得仿佛一个溺水的人。</td>
+		<td class="en">Emily’s handsome boys came home for the Christmas holidays; the University was talked of for them; and still Joanna subsisted as it were with held breath, like a person submerged.</td></tr>
+		<tr><td width="45%" class="zh" >再过一个夏天，“纽芬兰季”就要结束了。</td>
+		<td class="en">Only one summer more, and the ‘spell’ would end.</td></tr>
+		<tr><td width="45%" class="zh" >归期快到时，埃米莉去拜访了她旧时的朋友。</td>
+		<td class="en">Towards the close of the time Emily called on her quondam friend.</td></tr>
+		<tr><td width="45%" class="zh" >埃米莉听说乔安娜开始感到焦虑了，她有几个月都没有收到丈夫和儿子们的信了。</td>
+		<td class="en">She had heard that Joanna began to feel anxious; she had received no letter from husband or sons for some months.</td></tr>
+		<tr><td width="45%" class="zh" >埃米莉一边回应乔安娜几近麻木的邀请，一边挤过柜台的开口，进入商店后面的客厅。她的丝绸衣服沙沙响着，显得颇为傲慢。</td>
+		<td class="en">Emily’s silks rustled arrogantly when, in response to Joanna’s almost dumb invitation, she squeezed through the opening of the counter and into the parlour behind the shop.</td></tr>
+		<tr><td width="45%" class="zh" >“你什么都顺顺当当，而我却什么都不如意！”乔安娜说。</td>
+		<td class="en">‘You are all success, and I am all the other way!’ said Joanna.</td></tr>
+		<tr><td width="45%" class="zh" >“你怎么会这样想呢？”埃米莉说，</td>
+		<td class="en">‘But why do you think so?’ said Emily.</td></tr>
+		<tr><td width="45%" class="zh" >“我听说他们会赚大钱回来的。”</td>
+		<td class="en">‘They are to bring back a fortune, I hear.’</td></tr>
+		<tr><td width="45%" class="zh" >“呵，他们会回来吗？</td>
+		<td class="en">‘Ah! will they come?</td></tr>
+		<tr><td width="45%" class="zh" >这种担惊受怕可不是一个女人能承受的。</td>
+		<td class="en">The doubt is more than a woman can bear.</td></tr>
+		<tr><td width="45%" class="zh" >三个人在一条船上——想想吧！</td>
+		<td class="en">All three in one ship—think of that!</td></tr>
+		<tr><td width="45%" class="zh" >更别提我好几个月没有收到他们的消息了！”</td>
+		<td class="en">And I have not heard of them for months!’</td></tr>
+		<tr><td width="45%" class="zh" >“可是还不到他们回来的时间。</td>
+		<td class="en">‘But the time is not up.</td></tr>
+		<tr><td width="45%" class="zh" >你不会中途遭到厄运的。”</td>
+		<td class="en">You should not meet misfortune half-way.’</td></tr>
+		<tr><td width="45%" class="zh" >“如果他们回不来了，那什么也不能弥补我的难过！”</td>
+		<td class="en">‘Nothing will repay me for the grief of their absence!’</td></tr>
+		<tr><td width="45%" class="zh" >“那你为什么还放他们去呢？</td>
+		<td class="en">‘Then why did you let them go?</td></tr>
+		<tr><td width="45%" class="zh" >你们家日子本来也不错。”</td>
+		<td class="en">You were doing fairly well.’</td></tr>
+		<tr><td width="45%" class="zh" >“是我让他们去的！”她说着，猛地向埃米莉发作了，</td>
+		<td class="en">‘I made them go!’ she said, turning vehemently upon Emily.</td></tr>
+		<tr><td width="45%" class="zh" >“让我告诉你为什么！</td>
+		<td class="en">‘And I’ll tell you why!</td></tr>
+		<tr><td width="45%" class="zh" >我受不了我们只是勉强度日，而你们家却过得红红火火！</td>
+		<td class="en">I could not bear that we should be only muddling on, and you so rich and thriving!</td></tr>
+		<tr><td width="45%" class="zh" >我现在都告诉你了，你想讨厌我，随你便吧！”</td>
+		<td class="en">Now I have told you, and you may hate me if you will!’</td></tr>
+		<tr><td width="45%" class="zh" >“我永远都不会讨厌你的，乔安娜。”</td>
+		<td class="en">‘I shall never hate you, Joanna.’</td></tr>
+		<tr><td width="45%" class="zh" >埃米莉后来证明了自己的话。</td>
+		<td class="en">And she proved the truth of her words afterwards.</td></tr>
+		<tr><td width="45%" class="zh" >秋季过去，帆船应该回港口了，可是沙洲间的水道里却看不到“乔安娜号”的影子。</td>
+		<td class="en">The end of autumn came, and the brig should have been in port; but nothing like the Joanna appeared in the channel between the sands.</td></tr>
+		<tr><td width="45%" class="zh" >现在，乔安娜真的坐立不安了。</td>
+		<td class="en">It was now really time to be uneasy.</td></tr>
+		<tr><td width="45%" class="zh" >她坐在炉火边，每一阵寒风吹过，都会打个寒战。</td>
+		<td class="en">Joanna Jolliffe sat by the fire, and every gust of wind caused her a cold thrill.</td></tr>
+		<tr><td width="45%" class="zh" >乔安娜素来畏惧大海，厌恶大海，她觉得大海是个凶险、虚伪而永不满足的怪物，以给女人带来悲伤为荣。</td>
+		<td class="en">She had always feared and detested the sea; to her it was a treacherous, restless, slimy creature, glorying in the griefs of women.</td></tr>
+		<tr><td width="45%" class="zh" >“不过，”她说，“他们肯定会回来！”</td>
+		<td class="en">‘Still,’ she said, ‘they must come!’</td></tr>
+		<tr><td width="45%" class="zh" >她记得谢德拉克出发前说过，如果他们平安归来，并且是满载而归，他要像那次船只失事后那样去教堂，和孩子们跪在那里，为得救而虔诚地感谢上帝。</td>
+		<td class="en">She recalled to her mind that Shadrach had said before starting that if they returned safe and sound, with success crowning their enterprise, he would go as he had gone after his shipwreck, and kneel with his sons in the church, and offer sincere thanks for their deliverance.</td></tr>
+		<tr><td width="45%" class="zh" >乔安娜每天上下午都按时去教堂，她总是坐在第一排靠背长凳上，那里离高坛的台阶最近。</td>
+		<td class="en">She went to church regularly morning and afternoon, and sat in the most forward pew, nearest the chancel-step.</td></tr>
+		<tr><td width="45%" class="zh" >她总是盯着那级台阶，那是当年风华正茂的谢德拉克跪过的台阶，乔安娜非常清楚地记得20年前谢德拉克双膝跪下的地方，记得他跪着时的轮廓，他的帽子就放在身旁的台阶上。</td>
+		<td class="en">Her eyes were mostly fixed on that step, where Shadrach had knelt in the bloom of his young manhood: she knew to an inch the spot which his knees had pressed twenty winters before; his outline as he had knelt, his hat on the step beside him.</td></tr>
+		<tr><td width="45%" class="zh" >上帝是仁慈的。</td>
+		<td class="en">God was good.</td></tr>
+		<tr><td width="45%" class="zh" >她丈夫肯定还会再次跪在那里，像他说过的那样，两个儿子跪在他身边，一边是乔治，另一边是吉姆。</td>
+		<td class="en">Surely her husband must kneel there again: a son on each side as he had said; George just here, Jim just there.</td></tr>
+		<tr><td width="45%" class="zh" >乔安娜做礼拜时长时间盯着那级台阶，她仿佛看到父子三人已经回来，正跪在那里：两个修长的身躯是她的儿子，还有中间那更为粗壮的身影，三人的手紧紧握着，头部的轮廓映在东边的墙上。</td>
+		<td class="en">By long watching the spot as she worshipped it became as if she saw the three returned ones there kneeling; the two slim outlines of her boys, the more bulky form between them; their hands clasped, their heads shaped against the eastern wall.</td></tr>
+		<tr><td width="45%" class="zh" >这个想法简直成了幻觉，她疲倦的眼神一落到那级台阶，就总会看到父子三人跪在那里。</td>
+		<td class="en">The fancy grew almost to an hallucination: she could never turn her worn eyes to the step without seeing them there.</td></tr>
+		<tr><td width="45%" class="zh" >然而，他们并没有回来。</td>
+		<td class="en">Nevertheless they did not come.</td></tr>
+		<tr><td width="45%" class="zh" >上天是仁慈的，可它却不愿让乔安娜的灵魂得到解脱。</td>
+		<td class="en">Heaven was merciful, but it was not yet pleased to relieve her soul.</td></tr>
+		<tr><td width="45%" class="zh" >她把父子三人变成她自己野心的奴隶，这是她应得的报应。</td>
+		<td class="en">This was her purgation for the sin of making them the slaves of her ambition.</td></tr>
+		<tr><td width="45%" class="zh" >可这很快就不只是报应了，乔安娜的情绪接近崩溃了。</td>
+		<td class="en">But it became more than purgation soon, and her mood approached despair.</td></tr>
+		<tr><td width="45%" class="zh" >帆船的归期过了好几个月，船却依然没有回来。</td>
+		<td class="en">Months had passed since the brig had been due, but it had not returned.</td></tr>
+		<tr><td width="45%" class="zh" >乔安娜总觉得自己听到或者看到了什么，证明他们回来了。</td>
+		<td class="en">Joanna was always hearing or seeing evidences of their arrival.</td></tr>
+		<tr><td width="45%" class="zh" >有时她在港口后面的小山上，从那里看着开阔的海峡，她确信地平线上有个小点打破了永远平静的南流之水，她觉得那是“乔安娜号”主桅的桅杆帽。</td>
+		<td class="en">When on the hill behind the port, whence a view of the open Channel could be obtained, she felt sure that a little speck on the horizon, breaking the eternally level waste of waters southward, was the truck of the Joana’s mainmast.</td></tr>
+		<tr><td width="45%" class="zh" >有时候她在家，只要听到主街与码头相接之处的镇酒窖拐角传来大叫声或者喧闹声，就会匆匆站起，高喊道：“是他们！”</td>
+		<td class="en">Or when indoors, a shout or excitement of any kind at the corner of the Town Cellar, where the High Street joined the Quay, caused her to spring to her feet and cry: ‘’Tis they!’</td></tr>
+		<tr><td width="45%" class="zh" >然而却不是。</td>
+		<td class="en">But it was not.</td></tr>
+		<tr><td width="45%" class="zh" >每周日下午，她都幻想着他们跪在高坛的台阶上，事实上他们却是无迹可寻。</td>
+		<td class="en">The visionary forms knelt every Sunday afternoon on the chancel-step, but not the real.</td></tr>
+		<tr><td width="45%" class="zh" >她的杂货店可以说是已经坐吃山空了。</td>
+		<td class="en">Her shop had, as it were, eaten itself hollow.</td></tr>
+		<tr><td width="45%" class="zh" >由于寂寞与悲伤，她对开店已经漠不关心，一点儿货也不再进，于是最后一个客人也不来了。</td>
+		<td class="en">In the apathy which had resulted from her loneliness and grief she had ceased to take in the smallest supplies, and thus had sent away her last customer.</td></tr>
+		<tr><td width="45%" class="zh" >在这种情况下，埃米莉·莱斯特竭尽全力接济这个孤苦的女人，可每次都被断然拒绝。</td>
+		<td class="en">In this strait Emily Lester tried by every means in her power to aid the afflicted woman; but she met with constant repulses.</td></tr>
+		<tr><td width="45%" class="zh" >“我讨厌你！</td>
+		<td class="en">‘I don’t like you!</td></tr>
+		<tr><td width="45%" class="zh" >我不能忍受看到你！”</td>
+		<td class="en">I can’t bear to see you!’</td></tr>
+		<tr><td width="45%" class="zh" >埃米莉来看望乔安娜的时候，乔安娜总是这么嘶哑着嗓子，低声朝她怒吼。</td>
+		<td class="en">Joanna would whisper hoarsely when Emily came to her and made advances.</td></tr>
+		<tr><td width="45%" class="zh" >“可我想帮助你，安慰你，乔安娜。”埃米莉总是这样回答。</td>
+		<td class="en">‘But I want to help and soothe you, Joanna,’ Emily would say.</td></tr>
+		<tr><td width="45%" class="zh" >“你是个阔太太，你丈夫有钱，你儿子有出息！</td>
+		<td class="en">‘You are a lady, with a rich husband and fine sons!</td></tr>
+		<tr><td width="45%" class="zh" >你想从我这个失去亲人的老女人这里得到什么！”</td>
+		<td class="en">What can you want with a bereaved crone like me!’</td></tr>
+		<tr><td width="45%" class="zh" >“乔安娜，我想这样：我想让你住到我家去，不要再一个人住在这个凄凉的地方了。”</td>
+		<td class="en">‘Joanna, I want this: I want you to come and live in my house, and not stay alone in this dismal place any longer.’</td></tr>
+		<tr><td width="45%" class="zh" >“万一他们回来了找不到我怎么办？</td>
+		<td class="en">‘And suppose they come and don’t find me at home?</td></tr>
+		<tr><td width="45%" class="zh" >你想把我和我的家人分开！</td>
+		<td class="en">You wish to separate me and mine!</td></tr>
+		<tr><td width="45%" class="zh" >不，我要留在这里。</td>
+		<td class="en">No, I’ll stay here.</td></tr>
+		<tr><td width="45%" class="zh" >我讨厌你，不管你怎么帮我，我都不会感谢你的！”</td>
+		<td class="en">I don’t like you, and I can’t thank you, whatever kindness you do me!’</td></tr>
+		<tr><td width="45%" class="zh" >然而，随着时间的流逝，乔安娜因为没有收入，付不起商店和房子的租金了。</td>
+		<td class="en">However, as time went on Joanna could not afford to pay the rent of the shop and house without an income.</td></tr>
+		<tr><td width="45%" class="zh" >她已经认命了，知道谢德拉克和孩子们回来的希望很渺茫，最终不情愿地接受帮助，同意住到莱斯特家去。</td>
+		<td class="en">She was assured that all hope of the return of Shadrach and his sons was vain, and she reluctantly consented to accept the asylum of the Lesters’ house.</td></tr>
+		<tr><td width="45%" class="zh" >她在三楼得到一间属于她自己的房间，来去自如，也不和莱斯特家的人来往。</td>
+		<td class="en">Here she was allotted a room of her own on the second floor, and went and came as she chose, without contact with the family.</td></tr>
+		<tr><td width="45%" class="zh" >她的头发渐渐变成花白，最终全白了，额头上皱纹横生，身体也变得骨瘦如柴，驼背得厉害。</td>
+		<td class="en">Her hair greyed and whitened, deep lines channeled her forehead, and her form grew gaunt and stooping.</td></tr>
+		<tr><td width="45%" class="zh" >可她依然期盼着父子三人回来，有时在楼梯上遇到埃米莉，她就会愠怒地说：“我知道你为什么让我住在这儿！</td>
+		<td class="en">But she still expected the lost ones, and when she met Emily on the staircase she would say morosely: ‘I know why you’ve got me here!</td></tr>
+		<tr><td width="45%" class="zh" >他们回到家里找不到我，会很失望，或许会再次离开，那样你就报了我把谢德拉克从你手中抢走的仇了！”</td>
+		<td class="en">They’ll come, and be disappointed at not finding me at home, and perhaps go away again; and then you’ll be revenged for my taking Shadrach away from ’ee!’</td></tr>
+		<tr><td width="45%" class="zh" >埃米莉·莱斯特总是默默承受着这个悲痛欲绝的人发出的指责。</td>
+		<td class="en">Emily Lester bore these reproaches from the grief-stricken soul.</td></tr>
+		<tr><td width="45%" class="zh" >她确信——实际上黑文普尔镇的所有人都确信——谢德拉克和他的儿子们不可能回来了。</td>
+		<td class="en">She was sure—all the people of Havenpool were sure—that Shadrach and his sons could not return.</td></tr>
+		<tr><td width="45%" class="zh" >好几年过去了，人们已经对那艘失踪的船不抱希望了。</td>
+		<td class="en">For years the vessel had been given up as lost.</td></tr>
+		<tr><td width="45%" class="zh" >然而，每当夜里被一丁点儿响动吵醒，乔安娜总会从床上跳起来，借着忽明忽暗的灯光看一眼对面的杂货店，以确定是不是那父子三人。</td>
+		<td class="en">Nevertheless, when awakened at night by any noise, Joanna would rise from bed and glance at the shop opposite by the light from the flickering lamp, to make sure it was not they.</td></tr>
+		<tr><td width="45%" class="zh" >那是一个12月的夜里，潮湿漆黑，距“乔安娜号”帆船出海已经有六年了。</td>
+		<td class="en">It was a damp and dark December night, six years after the departure of the brig Joanna.</td></tr>
+		<tr><td width="45%" class="zh" >风从海上吹来，带来一阵薄雾，散发着鱼腥味，拂到脸上就像湿润的法兰绒。</td>
+		<td class="en">The wind was from the sea, and brought up a fishy mist which mopped the face like moist flannel.</td></tr>
+		<tr><td width="45%" class="zh" >乔安娜像往常一样为久别未归的三人做了祈祷，不过这次带着数月来都没有过的虔诚和信心，11点左右，她就睡着了。</td>
+		<td class="en">Joanna had prayed her usual prayer for the absent ones with more fervour and confidence than she had felt for months, and had fallen asleep about eleven.</td></tr>
+		<tr><td width="45%" class="zh" >不到2点钟的时候，乔安娜突然惊醒了。</td>
+		<td class="en">It must have been between one and two when she suddenly started up.</td></tr>
+		<tr><td width="45%" class="zh" >她确信自己听到了街上的脚步声，还有谢德拉克和孩子们在杂货店门口叫门的声音。</td>
+		<td class="en">She had certainly heard steps in the street, and the voices of Shadrach and her sons calling at the door of the grocery shop.</td></tr>
+		<tr><td width="45%" class="zh" >她从床上一跃而起，来不及披好衣服，就匆匆下了埃米莉家宽敞的、铺着地毯的楼梯。她把蜡烛放在大厅的桌子上，打开门闩和门链，走到街上。</td>
+		<td class="en">She sprang out of bed, and, hardly knowing what clothing she dragged on herself; hastened down Emily’s large and carpeted staircase, put the candle on the hall-table, unfastened the bolts and chain, and stepped into the street.</td></tr>
+		<tr><td width="45%" class="zh" >从码头方向蔓延而来的薄雾笼罩在街道上，虽然杂货店近在眼前，乔安娜却看不清楚。不过她很快就穿过街道，向杂货店走过去。</td>
+		<td class="en">The mist, blowing up the street from the Quay, hindered her seeing the shop, although it was so near; but she had crossed to it in a moment.</td></tr>
+		<tr><td width="45%" class="zh" >怎么样呢？</td>
+		<td class="en">How was it?</td></tr>
+		<tr><td width="45%" class="zh" >空无一人。</td>
+		<td class="en">Nobody stood there.</td></tr>
+		<tr><td width="45%" class="zh" >这个可怜的女人光着脚，发疯般地走来走去，却一个人影也没有。</td>
+		<td class="en">The wretched woman walked wildly up and down with her bare feet—there was not a soul.</td></tr>
+		<tr><td width="45%" class="zh" >她回到曾经属于她的杂货店门口，用尽力气敲着门——或许他们不愿意夜里打扰她，获准在店里过夜，要到第二天早上才告诉她。</td>
+		<td class="en">She returned and knocked with all her might at the door which had once been her own—they might have been admitted for the night, unwilling to disturb her till the morning.</td></tr>
+		<tr><td width="45%" class="zh" >不一会儿，如今拥有杂货店的年轻人从楼上的窗户里探出头来。他看到一个衣衫不整的瘦削人影站在下面。</td>
+		<td class="en">It was not till several minutes had elapsed that the young man who now kept the shop looked out of an upper window, and saw the skeleton of something human standing below half-dressed.</td></tr>
+		<tr><td width="45%" class="zh" >“有人来吗？”那身影问道。</td>
+		<td class="en">‘Has anybody come?’ asked the form.</td></tr>
+		<tr><td width="45%" class="zh" >“哦，乔利夫太太，我不知道是你，”年轻人和蔼地说道，因为他知道乔安娜是被虚幻的期待驱使着，</td>
+		<td class="en">‘O, Mrs. Jolliffe, I didn’t know it was you,’ said the young man kindly, for he was aware how her baseless expectations moved her.</td></tr>
+		<tr><td width="45%" class="zh" >“没有，没有人来。”</td>
+		<td class="en">‘No; nobody has come.’</td></tr>
+		<tr><td width="45%" class="zh" >1891年6月</td>
+		<td class="en">June 1891.</td></tr>
+		<tr><td width="45%" class="zh" ></td>
+		<td class="en"></td></tr>
+	</table>
+</div>
+
+<div class="zh_en"><a href="#" class="zh_btn">中文</a> | <a href="#" class="en_btn">英文</a> | <a href="#" class="zhen_btn">中英文</a></div>
+
+<script src="jquery-1.10.1.min.js"></script>
+<script src="jquery.bookify.js"></script>
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+	<!-- link rel="stylesheet" type="text/css" href="book.css" -->
+	<style type="text/css">
+		/* IMPORTANT !!!!
+		line-height, font-size defined in jquery.bookify.js */
+
+		* {
+			/* font-size: 20px; */
+		 }
+
+		table, td, th {
+
+		  }
+
+		td {
+	    	 /* height:50px; */
+	 	     vertical-align:top;
+	 	   	 text-align:left;
+	 	 	 padding-bottom:30px;/*行高的倍数-chenjing*/
+			 padding-left:20px;
+	 	  }
+
+		  /*chenjing*/
+		  .ebook_title{ position:absolute; left:20%; top:7%; font-weight:bold; font-size:35px; width:750px;}
+		  .zh_en{ position:absolute; left:70%; bottom:10%; font-size:14px;}
+		  .pre,.next{ cursor:pointer; font-size:40px; font-weight:bold; position:absolute; top:40%}
+		  .pre{ display:none; left:7%}
+		  .next{right:7%}
+
+	</style>
+
+</head>
+<body>
+<div class="ebook_title"></div>
+<div class="pre"><<</div>
+<div class="next">>></div>
+<div class="ebook_content">
+	<table cellpadding="0" cellspacing="0">
+		<tr><td width="45%" class="zh" >汽车等待的时候</td>
+		<td class="en">While the Auto Waits</td></tr>
+		<tr><td width="45%" class="zh" >作者：欧·亨利</td>
+		<td class="en">by O. Henry</td></tr>
+		<tr><td width="45%" class="zh" >黄昏刚刚来临，穿灰衣服的女孩又来到了那个安静的小公园的那个安静的角落。</td>
+		<td class="en">Promptly at the beginning of twilight, came again to that quiet corner of that quiet, small park the girl in gray.</td></tr>
+		<tr><td width="45%" class="zh" >她坐在长椅上看着书，再过半个小时，书上的字就看不清了。</td>
+		<td class="en">She sat upon a bench and read a book, for there was yet to come a half hour in which print could be accomplished.</td></tr>
+		<tr><td width="45%" class="zh" >重申一遍：她的衣服是灰色的，而且非常普通，使得其完美的风格和剪裁完全不能得以彰显。</td>
+		<td class="en">To repeat: Her dress was gray, and plain enough to mask its impeccancy of style and fit.</td></tr>
+		<tr><td width="45%" class="zh" >一块大网眼的面纱罩住了她的头巾帽，面纱后那张充满平静和自然之美的脸庞也被遮住了。</td>
+		<td class="en">A large-meshed veil imprisoned her turban hat and a face that shone through it with a calm and unconscious beauty.</td></tr>
+		<tr><td width="45%" class="zh" >昨天的同一时间，她也来到这里，前天也是如此；有个人知道这个情况。</td>
+		<td class="en">She had come there at the same hour on the day previous, and on the day before that; and there was one who knew it.</td></tr>
+		<tr><td width="45%" class="zh" >那个知晓这个情况的年轻人在附近徘徊着，寄希望于幸运之神的眷顾。</td>
+		<td class="en">The young man who knew it hovered near, relying upon burnt sacrifices to the great joss, Luck.</td></tr>
+		<tr><td width="45%" class="zh" >他的虔诚得到了回报，因为女孩翻书时，书从她的指尖滑落，又在长椅上一磕，落到了足足一码以外的地方。</td>
+		<td class="en">His piety was rewarded, for, in turning a page, her book slipped from her fingers and bounded from the bench a full yard away.</td></tr>
+		<tr><td width="45%" class="zh" >年轻人急不可待地扑过去捡起书来，然后还给了它的主人，脸上带着那种公园和公共场所司空见惯的神情——那神情既殷勤又充满希望，还间杂着对巡逻警察的那种忌惮。</td>
+		<td class="en">The young man pounced upon it with instant avidity, returning it to its owner with that air that seems to flourish in parks and public places—a compound of gallantry and hope, tempered with respect for the policeman on the beat.</td></tr>
+		<tr><td width="45%" class="zh" >他用悦耳的声音冒险说了句有关天气的毫不搭界的话——那种造成了人间诸多不幸的开场白——他镇定地站了一会儿，等待着命运对他的安排。</td>
+		<td class="en">In a pleasant voice, he risked an inconsequent remark upon the weather—that introductory topic responsible for so much of the world’s unhappiness—and stood poised for a moment, awaiting his fate.</td></tr>
+		<tr><td width="45%" class="zh" >女孩不慌不忙地打量着他，瞅了瞅那普通而又整洁的衣服和没有任何特别表情的容貌。</td>
+		<td class="en">The girl looked him over leisurely; at his ordinary, neat dress and his features distinguished by nothing particular in the way of expression.</td></tr>
+		<tr><td width="45%" class="zh" >“如果你愿意的话，不妨坐下来吧，”她从容地说道，声音低沉而圆润，</td>
+		<td class="en">“You may sit down, if you like,” she said, in a full, deliberate contralto.</td></tr>
+		<tr><td width="45%" class="zh" >“其实，我倒想你坐下来。</td>
+		<td class="en">“Really, I would like to have you do so.</td></tr>
+		<tr><td width="45%" class="zh" >光线太暗了，看不了书了。</td>
+		<td class="en">The light is too bad for reading.</td></tr>
+		<tr><td width="45%" class="zh" >我更喜欢说说话。”</td>
+		<td class="en">I would prefer to talk.”</td></tr>
+		<tr><td width="45%" class="zh" >被幸运眷顾的人彬彬有礼地悄悄坐在了她的旁边。</td>
+		<td class="en">The vassal of Luck slid upon the seat by her side with complaisance.</td></tr>
+		<tr><td width="45%" class="zh" >“你知道吗？”他把公园里主持会议的主席们惯用的开场白搬了出来，说道，“你是我这么长时间以来见过的最令人惊艳的女孩。</td>
+		<td class="en">“Do you know,” he said, speaking the formula with which park chairmen open their meetings, “that you are quite the stunningest girl I have seen in a long time?</td></tr>
+		<tr><td width="45%" class="zh" >我昨天就注意到你了。</td>
+		<td class="en">I had my eye on you yesterday.</td></tr>
+		<tr><td width="45%" class="zh" >小妞儿，你难道不知道有人已经被你那双美丽的眼睛迷住了吗？”</td>
+		<td class="en">Didn’t know somebody was bowled over by those pretty lamps of yours, did you, honeysuckle?”</td></tr>
+		<tr><td width="45%" class="zh" >“不管你是谁，”女孩冷冷地说道，“你必须记住，我是位淑女。</td>
+		<td class="en">“Whoever you are,” said the girl, in icy tones, “you must remember that I am a lady.</td></tr>
+		<tr><td width="45%" class="zh" >我会原谅你刚才的话，因为毫无疑问，这种误会是再寻常不过的了——在你的圈子里。</td>
+		<td class="en">I will excuse the remark you have just made because the mistake was, doubtless, not an unnatural one—in your circle.</td></tr>
+		<tr><td width="45%" class="zh" >我请你坐下来，可是如果这一请却招来你的一声‘小妞儿’的话，那我就收回刚才的邀请。”</td>
+		<td class="en">I asked you to sit down; if the invitation must constitute me your honeysuckle, consider it withdrawn.”</td></tr>
+		<tr><td width="45%" class="zh" >“我恳请你的原谅。”年轻人央求道。</td>
+		<td class="en">“I earnestly beg your pardon,” pleaded the young ran.</td></tr>
+		<tr><td width="45%" class="zh" >他那洋洋得意的神情变成了后悔和谦卑。</td>
+		<td class="en">His expression of satisfaction had changed to one of penitence and humility.</td></tr>
+		<tr><td width="45%" class="zh" >“我真的错了，你知道——我是说，公园里的一些女孩，你知道的——当然，你不明白，但是——”</td>
+		<td class="en">“It was my fault, you know—I mean, there are girls in parks, you know—that is, of course, you don’t know, but—”</td></tr>
+		<tr><td width="45%" class="zh" >“请别谈这个了。</td>
+		<td class="en">“Abandon the subject, if you please.</td></tr>
+		<tr><td width="45%" class="zh" >我当然知道。</td>
+		<td class="en">Of course I know.</td></tr>
+		<tr><td width="45%" class="zh" >好了，和我谈谈这几条路上熙熙攘攘、来往不绝的人们吧。</td>
+		<td class="en">Now, tell me about these people passing and crowding, each way, along these paths.</td></tr>
+		<tr><td width="45%" class="zh" >他们要去哪儿？</td>
+		<td class="en">Where are they going?</td></tr>
+		<tr><td width="45%" class="zh" >为什么这样匆匆忙忙？</td>
+		<td class="en">Why do they hurry so?</td></tr>
+		<tr><td width="45%" class="zh" >他们幸福吗？”</td>
+		<td class="en">Are they happy?”</td></tr>
+		<tr><td width="45%" class="zh" >年轻人立刻抛开刚才那种轻浮的神情。</td>
+		<td class="en">The young man had promptly abandoned his air of coquetry.</td></tr>
+		<tr><td width="45%" class="zh" >他现在只有干等的份，因为他搞不清楚自己应该扮演哪种角色。</td>
+		<td class="en">His cue was now for a waiting part; he could not guess the role he would be expected to play.</td></tr>
+		<tr><td width="45%" class="zh" >“看看他们的确挺有意思的，”他边说边揣测着她的心思，</td>
+		<td class="en">“It is interesting to watch them,” he replied, postulating her mood.</td></tr>
+		<tr><td width="45%" class="zh" >“这是一部美妙的生活戏剧。</td>
+		<td class="en">“It is the wonderful drama of life.</td></tr>
+		<tr><td width="45%" class="zh" >有些人去吃晚饭，有的——呃——去别的地方。</td>
+		<td class="en">Some are going to supper and some to—er—other places.</td></tr>
+		<tr><td width="45%" class="zh" >猜不透他们的来历。”</td>
+		<td class="en">One wonders what their histories are.”</td></tr>
+		<tr><td width="45%" class="zh" >“我也不猜，”女孩说，“我没那么好奇。</td>
+		<td class="en">“I do not,” said the girl; “I am not so inquisitive.</td></tr>
+		<tr><td width="45%" class="zh" >我来这儿坐，是因为只有在这儿我才能靠近人类的那颗伟大的、共同的、跳动着的心脏。</td>
+		<td class="en">I come here to sit because here, only, can I be near the great, common, throbbing heart of humanity.</td></tr>
+		<tr><td width="45%" class="zh" >我在生活中所扮演的角色使我永远不能感受到这种搏动。</td>
+		<td class="en">My part in life is cast where its beats are never felt.</td></tr>
+		<tr><td width="45%" class="zh" >你猜得出我为什么找你聊天吗？你贵姓？”</td>
+		<td class="en">Can you surmise why I spoke to you, Mr.—?”</td></tr>
+		<tr><td width="45%" class="zh" >“帕肯斯塔格。”年轻人应道。</td>
+		<td class="en">“Parkenstacker,” supplied the young man.</td></tr>
+		<tr><td width="45%" class="zh" >接着，他显得急切而又满怀希望她自报姓名。</td>
+		<td class="en">Then he looked eager and hopeful.</td></tr>
+		<tr><td width="45%" class="zh" >“不行，我不能告诉你，”女孩举起一只纤细的手指，微微一笑说道，</td>
+		<td class="en">“No,” said the girl, holding up a slender finger, and smiling slightly.</td></tr>
+		<tr><td width="45%" class="zh" >“你马上就会知道的。</td>
+		<td class="en">“You would recognize it immediately.</td></tr>
+		<tr><td width="45%" class="zh" >要让自己的名字不在报刊上出现简直不可能。</td>
+		<td class="en">It is impossible to keep one’s name out of print.</td></tr>
+		<tr><td width="45%" class="zh" >甚至连照片也如此。</td>
+		<td class="en">Or even one’s portrait.</td></tr>
+		<tr><td width="45%" class="zh" >只有戴着这面纱和我女仆的帽子才能让我隐姓埋名。</td>
+		<td class="en">This veil and this hat of my maid furnish me with an incog.</td></tr>
+		<tr><td width="45%" class="zh" >你可能注意到了，我的司机总是在他自以为我不注意的时候往这儿看看。</td>
+		<td class="en">You should have seen the chauffeur stare at it when he thought I did not see.</td></tr>
+		<tr><td width="45%" class="zh" >坦白说，有五六个名门望族，我由于出身的原因，也属于其中之一。</td>
+		<td class="en">Candidly, there are five or six names that belong in the holy of holies, and mine, by the accident of birth, is one of them.</td></tr>
+		<tr><td width="45%" class="zh" >我之所以同你讲话，斯塔肯帕特先生——”</td>
+		<td class="en">I spoke to you, Mr. Stackenpot—”</td></tr>
+		<tr><td width="45%" class="zh" >“帕肯斯塔格。”年轻人谦虚地更正道。</td>
+		<td class="en">“Parkenstacker,” corrected the young man, modestly.</td></tr>
+		<tr><td width="45%" class="zh" >“——帕肯斯塔格先生，因为我想同一个普普通通的人谈话，哪怕只有一次也好，跟一个没有被可恶的财富和虚伪的社会优越感的虚假表象所玷污的人交谈。”</td>
+		<td class="en">“—Mr. Parkenstacker, because I wanted to talk, for once, with a natural man—one unspoiled by the despicable gloss of wealth and supposed social superiority.</td></tr>
+		<tr><td width="45%" class="zh" >哦！你简直不知道我是多么厌恶这一套——钱！钱！钱！</td>
+		<td class="en">Oh! you do not know how weary I am of it—money, money, money!</td></tr>
+		<tr><td width="45%" class="zh" >还有那些总是围着我的男人们，他们跳起舞来简直像同一个模子倒出来的提线木偶一样。</td>
+		<td class="en">And of the men who surround me, dancing like little marionettes all cut by the same pattern.</td></tr>
+		<tr><td width="45%" class="zh" >我已厌倦了那些消遣、珠宝、旅行、社交以及各种各样的奢侈品。”</td>
+		<td class="en">I am sick of pleasure, of jewels, of travel, of society, of luxuries of all kinds.”</td></tr>
+		<tr><td width="45%" class="zh" >“我总以为，”年轻人迟疑地试探道，“金钱一定是个好东西。”</td>
+		<td class="en">“I always had an idea,” ventured the young man, hesitatingly, “that money must be a pretty good thing.”</td></tr>
+		<tr><td width="45%" class="zh" >“足以为生就够了。</td>
+		<td class="en">“A competence is to be desired.</td></tr>
+		<tr><td width="45%" class="zh" >但当你有了成百上千万时——！”</td>
+		<td class="en">But when you have so many millions that—!”</td></tr>
+		<tr><td width="45%" class="zh" >她以一个绝望的手势结束了这句话。</td>
+		<td class="en">She concluded the sentence with a gesture of despair.</td></tr>
+		<tr><td width="45%" class="zh" >“简直无聊至极，”她接着说道，“令人乏味。</td>
+		<td class="en">“It is the monotony of it,” she continued, “that palls.</td></tr>
+		<tr><td width="45%" class="zh" >豪车、宴会、戏剧、舞会、晚，以及镀在所有这一切外面的多余的财富。</td>
+		<td class="en">Drives, dinners, theatres, balls, suppers, with the gilding of superfluous wealth over it all.</td></tr>
+		<tr><td width="45%" class="zh" >有时，我香槟酒杯里冰块的叮当声几乎使我发疯。”</td>
+		<td class="en">Sometimes the very tinkle of the ice in my champagne glass nearly drives me mad.”</td></tr>
+		<tr><td width="45%" class="zh" >帕肯斯塔格先生显得很感兴趣。</td>
+		<td class="en">Mr. Parkenstacker looked ingenuously interested.</td></tr>
+		<tr><td width="45%" class="zh" >“我总是很喜欢，”他说，“看报上写的，或是听别人说那些时尚阔绰的人们的生活方式。</td>
+		<td class="en">“I have always liked,” he said, “to read and hear about the ways of wealthy and fashionable folks.</td></tr>
+		<tr><td width="45%" class="zh" >我觉得我可能有点儿自命不凡。</td>
+		<td class="en">I suppose I am a bit of a snob.</td></tr>
+		<tr><td width="45%" class="zh" >但我希望我了解的是准确的。</td>
+		<td class="en">But I like to have my information accurate.</td></tr>
+		<tr><td width="45%" class="zh" >我一直以为香槟是连瓶冷镇的，而不是把冰块放在酒杯里。”</td>
+		<td class="en">Now, I had formed the opinion that champagne is cooled in the bottle and not by placing ice in the glass.”</td></tr>
+		<tr><td width="45%" class="zh" >女孩觉得真的很开心，发出银铃般的笑声。</td>
+		<td class="en">The girl gave a musical laugh of genuine amusement.</td></tr>
+		<tr><td width="45%" class="zh" >“你应该知道，”她以一种宽容的口吻解释道，“我们这种一无是处的人总是靠着与众不同来找乐子。</td>
+		<td class="en">“You should know,” she explained, in an indulgent tone, “that we of the non-useful class depend for our amusement upon departure from precedent.</td></tr>
+		<tr><td width="45%" class="zh" >现在，把冰块放进香槟里是一种时尚。</td>
+		<td class="en">Just now it is a fad to put ice in champagne.</td></tr>
+		<tr><td width="45%" class="zh" >这个主意是一位来访的鞑靼王子在沃尔多夫饭店吃饭时发明的。</td>
+		<td class="en">The idea was originated by a visiting Prince of Tartary while dining at the Waldorf.</td></tr>
+		<tr><td width="45%" class="zh" >用不了多久，它就会被其他怪念头取代。</td>
+		<td class="en">It will soon give way to some other whim.</td></tr>
+		<tr><td width="45%" class="zh" >就像这周在麦迪逊大街举办的宴会上，每位客人的盘子旁边都放着一只绿色的小山羊皮手套，是吃橄榄时戴的。”</td>
+		<td class="en">Just as at a dinner party this week on Madison Avenue a green kid glove was laid by the plate of each guest to be put on and used while eating olives.”</td></tr>
+		<tr><td width="45%" class="zh" >“我明白了，”年轻人谦虚地承认说，</td>
+		<td class="en">“I see,” admitted the young man, humbly.</td></tr>
+		<tr><td width="45%" class="zh" >“对这些小圈子里的特殊消遣方式，普通人是不熟悉的。”</td>
+		<td class="en">“These special diversions of the inner circle do not become familiar to the common public.”</td></tr>
+		<tr><td width="45%" class="zh" >“有时候，”姑娘微微欠了一下身表示接受他的认错，继续说道，“我也曾想过，如果我要爱一个人的话，他一定是出身卑微的。</td>
+		<td class="en">“Sometimes,” continued the girl, acknowledging his confession of error by a slight bow, “I have thought that if I ever should love a man it would be one of lowly station.</td></tr>
+		<tr><td width="45%" class="zh" >一个劳动的人，而不是一个寄生虫。</td>
+		<td class="en">One who is a worker and not a drone.</td></tr>
+		<tr><td width="45%" class="zh" >不过，毫无疑问，对于地位和财富的考虑可能要超过我原本的意图。</td>
+		<td class="en">But, doubtless, the claims of caste and wealth will prove stronger than my inclination.</td></tr>
+		<tr><td width="45%" class="zh" >现在就有两个人在追求我。</td>
+		<td class="en">Just now I am besieged by two.</td></tr>
+		<tr><td width="45%" class="zh" >一个是个日耳曼公国的大公爵。</td>
+		<td class="en">One is a Grand Duke of a German principality.</td></tr>
+		<tr><td width="45%" class="zh" >我猜他现在或者曾经，不定在哪儿，有个被他的放纵和暴戾逼疯了的妻子。</td>
+		<td class="en">I think he has, or has had, a wife, somewhere, driven mad by his intemperance and cruelty.</td></tr>
+		<tr><td width="45%" class="zh" >另一个是位英国侯爵，他非常冷漠，而且贪财，相比之下，我更宁愿选那个魔鬼大公爵。</td>
+		<td class="en">The other is an English Marquis, so cold and mercenary that I even prefer the diabolism of the Duke.</td></tr>
+		<tr><td width="45%" class="zh" >我怎么会跟你说这些事情呢，派肯斯塔格先生？”</td>
+		<td class="en">What is it that impels me to tell you these things, Mr. Packenstacker?</td></tr>
+		<tr><td width="45%" class="zh" >“是帕肯斯塔格，”年轻人轻声说道，</td>
+		<td class="en">“Parkenstacker,” breathed the young man.</td></tr>
+		<tr><td width="45%" class="zh" >“说实话，你真不知道我多感激你的真心话。”</td>
+		<td class="en">“Indeed, you cannot know how much I appreciate your confidences.”</td></tr>
+		<tr><td width="45%" class="zh" >女孩用平静冷淡的眼神凝视着他，而这和他们地位的差别很相称。</td>
+		<td class="en">The girl contemplated him with the calm, impersonal regard that befitted the difference in their stations.</td></tr>
+		<tr><td width="45%" class="zh" >“你是做哪一行的，帕肯斯塔格先生？”她问。</td>
+		<td class="en">“What is your line of business, Mr. Parkenstacker?” she asked.</td></tr>
+		<tr><td width="45%" class="zh" >“一份不值一提的工作。</td>
+		<td class="en">“A very humble one.</td></tr>
+		<tr><td width="45%" class="zh" >但我希望能够飞黄腾达。</td>
+		<td class="en">But I hope to rise in the world.</td></tr>
+		<tr><td width="45%" class="zh" >你说你会爱上一个地位卑微的人，你是认真的吗？”</td>
+		<td class="en">Were you really in earnest when you said that you could love a man of lowly position?”</td></tr>
+		<tr><td width="45%" class="zh" >“我确实说过。</td>
+		<td class="en">“Indeed I was.</td></tr>
+		<tr><td width="45%" class="zh" >但我说的是‘有可能’。</td>
+		<td class="en">But I said ‘might.’</td></tr>
+		<tr><td width="45%" class="zh" >你知道，还有大公爵和侯爵呢。</td>
+		<td class="en">There is the Grand Duke and the Marquis, you know.</td></tr>
+		<tr><td width="45%" class="zh" >是啊，如果一个男人合我心意，工作卑微也不是大问题。”</td>
+		<td class="en">Yes; no calling could be too humble were the man what I would wish him to be.”</td></tr>
+		<tr><td width="45%" class="zh" >“我，”帕肯斯塔格先生说道，“在一家饭馆工作。”</td>
+		<td class="en">“I work,” declared Mr. Parkenstacker, “in a restaurant.”</td></tr>
+		<tr><td width="45%" class="zh" >姑娘有些退缩。</td>
+		<td class="en">The girl shrank slightly.</td></tr>
+		<tr><td width="45%" class="zh" >“不是侍者吧？”她带着些许哀求的口气说道，</td>
+		<td class="en">“Not as a waiter?” she said, a little imploringly.</td></tr>
+		<tr><td width="45%" class="zh" >“劳动最光荣，不过私人助手，你明白——贴身男仆和——”</td>
+		<td class="en">“Labor is noble, but personal attendance, you know—valets and—”</td></tr>
+		<tr><td width="45%" class="zh" >“我不是侍者。</td>
+		<td class="en">“I am not a waiter.</td></tr>
+		<tr><td width="45%" class="zh" >我是出纳员，就在——”他们正对着的公园的街上有一块耀眼的灯光招牌，上面写着“饭店”——“你看那家饭馆，我就是那儿的出纳员。”</td>
+		<td class="en">I am cashier in”—on the street they faced that bounded the opposite side of the park was the brilliant electric sign “RESTAURANT”—“I am cashier in that restaurant you see there.”</td></tr>
+		<tr><td width="45%" class="zh" >姑娘看了看左腕镶在手镯上的精致小表，匆忙站了起来。</td>
+		<td class="en">The girl consulted a tiny watch set in a bracelet of rich design upon her left wrist, and rose, hurriedly.</td></tr>
+		<tr><td width="45%" class="zh" >她急急忙忙把书塞进悬在腰部的一只闪闪发亮的手提袋里，但是，比起包来，书显然太大了。</td>
+		<td class="en">She thrust her book into a glittering reticule suspended from her waist, for which, however, the book was too large.</td></tr>
+		<tr><td width="45%" class="zh" >“你为什么没上班呢？”她问道。</td>
+		<td class="en">“Why are you not at work?” she asked.</td></tr>
+		<tr><td width="45%" class="zh" >“我值夜班，”年轻人说，“还有一个小时才轮到我当班。</td>
+		<td class="en">“I am on the night turn,” said the young man; “it is yet an hour before my period begins.</td></tr>
+		<tr><td width="45%" class="zh" >我还能和你见面吗？”</td>
+		<td class="en">May I not hope to see you again?”</td></tr>
+		<tr><td width="45%" class="zh" >“我不知道。</td>
+		<td class="en">“I do not know.</td></tr>
+		<tr><td width="45%" class="zh" >也许吧——但我也许不会再有这样的异想天开的念头了。</td>
+		<td class="en">Perhaps—but the whim may not seize me again.</td></tr>
+		<tr><td width="45%" class="zh" >现在，我得赶紧走了。</td>
+		<td class="en">I must go quickly now.</td></tr>
+		<tr><td width="45%" class="zh" >有个晚宴，之后还得上剧院的包厢——还有，哦！老一套了。</td>
+		<td class="en">There is a dinner, and a box at the play—and, oh! the same old round.</td></tr>
+		<tr><td width="45%" class="zh" >你来的时候也许注意到在公园前面的拐角有一辆汽车吧。</td>
+		<td class="en">Perhaps you noticed an automobile at the upper corner of the park as you came.</td></tr>
+		<tr><td width="45%" class="zh" >白色车身的汽车。”</td>
+		<td class="en">One with a white body.”</td></tr>
+		<tr><td width="45%" class="zh" >“红色轮子的那辆吗？”年轻人若有所思地皱着眉头。</td>
+		<td class="en">“And red running gear?” asked the young man, knitting his brows reflectively.</td></tr>
+		<tr><td width="45%" class="zh" >“没错。</td>
+		<td class="en">“Yes.</td></tr>
+		<tr><td width="45%" class="zh" >我总是坐那辆车到这儿来。</td>
+		<td class="en">I always come in that.</td></tr>
+		<tr><td width="45%" class="zh" >皮埃尔在那儿等我。</td>
+		<td class="en">Pierre waits for me there.</td></tr>
+		<tr><td width="45%" class="zh" >他还以为我在广场对面的百货商店里买东西呢。</td>
+		<td class="en">He supposes me to be shopping in the department store across the square.</td></tr>
+		<tr><td width="45%" class="zh" >想想看，这种生活是多么束缚人，就连对自己的司机都要隐瞒。</td>
+		<td class="en">Conceive of the bondage of the life wherein we must deceive even our chauffeurs.</td></tr>
+		<tr><td width="45%" class="zh" >再见吧。”</td>
+		<td class="en">Good-night.”</td></tr>
+		<tr><td width="45%" class="zh" >“但是现在天黑啦，”帕肯斯塔格说，“公园里都是野蛮人。</td>
+		<td class="en">“But it is dark now,” said Mr. Parkenstacker, “and the park is full of rude men.</td></tr>
+		<tr><td width="45%" class="zh" >我能不能陪你——”</td>
+		<td class="en">May I not walk—”</td></tr>
+		<tr><td width="45%" class="zh" >“要是你尊重我的意愿的话，”女孩坚定地说，“我走后，你就在这里再坐十分钟。</td>
+		<td class="en">“If you have the slightest regard for my wishes,” said the girl, firmly, “you will remain at this bench for ten minutes after I have left.</td></tr>
+		<tr><td width="45%" class="zh" >我并不想责备你什么，但你可能知道，汽车上往往都有主人姓名的字母装饰。</td>
+		<td class="en">I do not mean to accuse you, but you are probably aware that autos generally bear the monogram of their owner.</td></tr>
+		<tr><td width="45%" class="zh" >再见了。”</td>
+		<td class="en">Again, good-night.”</td></tr>
+		<tr><td width="45%" class="zh" >她端庄地迅速消失在夜幕里。</td>
+		<td class="en">Swift and stately she moved away through the dusk.</td></tr>
+		<tr><td width="45%" class="zh" >年轻人一直目送她优雅的身影走到公园尽头的人行道上。接着，女孩沿路朝着停靠汽车的角落里走了过去。</td>
+		<td class="en">The young man watched her graceful form as she reached the pavement at the park’s edge, and turned up along it toward the corner where stood the automobile.</td></tr>
+		<tr><td width="45%" class="zh" >然后，他不守信用而又毫不犹豫地借着公园里树木的掩护，沿着与她平行的方向，一直牢牢地盯着她。</td>
+		<td class="en">Then he treacherously and unhesitatingly began to dodge and skim among the park trees and shrubbery in a course parallel to her route, keeping her well in sight.</td></tr>
+		<tr><td width="45%" class="zh" >她走到拐角处时，转过头来朝汽车瞥了一眼，然后从车子旁经过，继续往马路对面走去。</td>
+		<td class="en">When she reached the corner she turned her head to glance at the motor car, and then passed it, continuing on across the street.</td></tr>
+		<tr><td width="45%" class="zh" >年轻人躲在一辆停着的出租车后面，双眼密切注视着她的一举一动。</td>
+		<td class="en">Sheltered behind a convenient standing cab, the young man followed her movements closely with his eyes.</td></tr>
+		<tr><td width="45%" class="zh" >她沿着公园对面马路上的人行道走进那家有灯光招牌的饭店。</td>
+		<td class="en">Passing down the sidewalk of the street opposite the park, she entered the restaurant with the blazing sign.</td></tr>
+		<tr><td width="45%" class="zh" >这家饭店是由白漆和玻璃装修的，从外看看，里面一览无遗，人们在那个没遮没拦的地方吃着廉价的饭菜。</td>
+		<td class="en">The place was one of those frankly glaring establishments, all white paint and glass, where one may dine cheaply and conspicuously.</td></tr>
+		<tr><td width="45%" class="zh" >女孩穿过饭厅径直走到后面一处僻静的地方，很快又出来时，她已经取下了帽子和面纱。</td>
+		<td class="en">The girl penetrated the restaurant to some retreat at its rear, whence she quickly emerged without her hat and veil.</td></tr>
+		<tr><td width="45%" class="zh" >出纳员的柜台在正前面。</td>
+		<td class="en">The cashier’s desk was well to the front.</td></tr>
+		<tr><td width="45%" class="zh" >一个红发女孩从凳子上爬下来，故意瞅了瞅时钟。</td>
+		<td class="en">A red-haired girl an the stool climbed down, glancing pointedly at the clock as she did so.</td></tr>
+		<tr><td width="45%" class="zh" >穿灰衣的女孩爬上了她的位置。</td>
+		<td class="en">The girl in gray mounted in her place.</td></tr>
+		<tr><td width="45%" class="zh" >年轻人两手往口袋里一插，慢慢地沿着人行道往回走。</td>
+		<td class="en">The young man thrust his hands into his pockets and walked slowly back along the sidewalk.</td></tr>
+		<tr><td width="45%" class="zh" >在拐角处，他的脚碰到一本小小的平装书，他把它踢到草坪边上。</td>
+		<td class="en">At the corner his foot struck a small, paper-covered volume lying there, sending it sliding to the edge of the turf.</td></tr>
+		<tr><td width="45%" class="zh" >根据那别致的封面，他认出那就是那个女孩刚才看的书。</td>
+		<td class="en">By its picturesque cover he recognized it as the book the girl had been reading.</td></tr>
+		<tr><td width="45%" class="zh" >他漫不经心地捡起书，看到书名是《新天方夜谭》，作者是斯蒂文森。</td>
+		<td class="en">He picked it up carelessly, and saw that its title was “New Arabian Nights,” the author being of the name of Stevenson.</td></tr>
+		<tr><td width="45%" class="zh" >他把它又扔回了草坪上，迟疑地逗留了片刻。</td>
+		<td class="en">He dropped it again upon the grass, and lounged, irresolute, for a minute.</td></tr>
+		<tr><td width="45%" class="zh" >然后，他迈步走进那部汽车，靠在座垫上，简短地对司机说了几个字：</td>
+		<td class="en">Then he stepped into the automobile, reclined upon the cushions, and said two words to the chauffeur:</td></tr>
+		<tr><td width="45%" class="zh" >“俱乐部，亨利。”</td>
+		<td class="en">“Club, Henri.”</td></tr>
+		<tr><td width="45%" class="zh" ></td>
+		<td class="en"></td></tr>
+	</table>
+</div>
+
+<div class="zh_en"><a href="#" class="zh_btn">中文</a> | <a href="#" class="en_btn">英文</a> | <a href="#" class="zhen_btn">中英文</a></div>
+
+<script src="jquery-1.10.1.min.js"></script>
+<script src="jquery.bookify.js"></script>
+</body>
+</html>

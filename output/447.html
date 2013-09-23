@@ -1,0 +1,399 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+	<!-- link rel="stylesheet" type="text/css" href="book.css" -->
+	<style type="text/css">
+		/* IMPORTANT !!!!
+		line-height, font-size defined in jquery.bookify.js */
+
+		* {
+			/* font-size: 20px; */
+		 }
+
+		table, td, th {
+
+		  }
+
+		td {
+	    	 /* height:50px; */
+	 	     vertical-align:top;
+	 	   	 text-align:left;
+	 	 	 padding-bottom:30px;/*行高的倍数-chenjing*/
+			 padding-left:20px;
+	 	  }
+
+		  /*chenjing*/
+		  .ebook_title{ position:absolute; left:20%; top:7%; font-weight:bold; font-size:35px; width:750px;}
+		  .zh_en{ position:absolute; left:70%; bottom:10%; font-size:14px;}
+		  .pre,.next{ cursor:pointer; font-size:40px; font-weight:bold; position:absolute; top:40%}
+		  .pre{ display:none; left:7%}
+		  .next{right:7%}
+
+	</style>
+
+</head>
+<body>
+<div class="ebook_title"></div>
+<div class="pre"><<</div>
+<div class="next">>></div>
+<div class="ebook_content">
+	<table cellpadding="0" cellspacing="0">
+		<tr><td width="45%" class="zh" >鲁贝察尔</td>
+		<td class="en">Rubezahl</td></tr>
+		<tr><td width="45%" class="zh" >作者：安德鲁·朗格</td>
+		<td class="en">by Andrew Lang</td></tr>
+		<tr><td width="45%" class="zh" >在广阔的地下世界里，地精王鲁贝察尔是这里的国王。为了照料他的领土，他总是忙得团团转。</td>
+		<td class="en">Over all the vast under-world the mountain Gnome Rubezahl was lord; and busy enough the care of his dominions kept him.</td></tr>
+		<tr><td width="45%" class="zh" >这里有数不清的宝库需要清点，他还要确保地精们各尽其职。</td>
+		<td class="en">There were the endless treasure chambers to be gone through, and the hosts of gnomes to be kept to their tasks.</td></tr>
+		<tr><td width="45%" class="zh" >有的地精负责建造坚固的炼炉来挡住炽热的水蒸气，将普通的石头炼造成珍贵的金属，有的则辛勤地把墙上的每条裂缝都填满钻石和红宝石，因为鲁贝察尔喜欢一切美丽的东西。</td>
+		<td class="en">Some built strong barriers to hold back the fiery vapours to change dull stones to precious metal, or were hard at work filling every cranny of the rocks with diamonds and rubies; for Rubezahl loved all pretty things.</td></tr>
+		<tr><td width="45%" class="zh" >有时，他也会突发奇想，离开幽暗的地下世界，到绿色的大地上呆一会儿，沐浴阳光，聆听小鸟的歌唱。</td>
+		<td class="en">Sometimes the fancy would take him to leave those gloomy regions, and come out upon the green earth for a while, and bask in the sunshine and hear the birds sing.</td></tr>
+		<tr><td width="45%" class="zh" >因为地精能活数百年，所以他看到过许多奇怪的事情。</td>
+		<td class="en">And as gnomes live many hundreds of years he saw strange things.</td></tr>
+		<tr><td width="45%" class="zh" >当他第一次来到地面上时，他发现大山被茂密的森林覆盖着，还有野兽在林间漫步。鲁贝察尔观察过熊和野牛之间的激烈搏斗，追逐过灰狼，还为了听巨石滚落时山间传来的雷鸣般回音而将几块巨石推进荒无人烟的山谷里，并以此取乐。</td>
+		<td class="en">For, the first time he came up, the great hills were covered with thick forests, in which wild animals roamed, and Rubezahl watched the fierce fights between bear and bison, or chased the grey wolves, or amused himself by rolling great rocks down into the desolate valleys, to hear the thunder of their fall echoing among the hills.</td></tr>
+		<tr><td width="45%" class="zh" >但当他再次来到地面上时，他却惊奇地发现一切都变了！</td>
+		<td class="en">But the next time he ventured above ground, what was his surprise to find everything changed!</td></tr>
+		<tr><td width="45%" class="zh" >漆黑的森林被砍伐一空，在它们原来位置上的是一些看起来温暖舒适的茅舍，茅舍周围还遍布着鲜花盛开的果园；蓝色的烟雾盘绕着每一个烟囱，静静地飘向空中；牛羊在开满鲜花的草地上吃草；树篱的暗影里传来了牧羊人吹奏的悠扬笛声。</td>
+		<td class="en">The dark woods were hewn down, and in their place appeared blossoming orchards surrounding cosy-looking thatched cottages; for every chimney the blue smoke curled peacefully into the air, sheep and oxen fed in the flowery meadows, while from the shade of the hedges came the music of the shepherd’s pipe.</td></tr>
+		<tr><td width="45%" class="zh" >这景象虽有些陌生，但却令人心情愉悦，这也让地精王感到十分高兴，根本没有想过憎恶这些不速之客的到来，尽管这些不速之客连一声“请原谅”或“对不起”都没有说，就自作主张在这里安了家。他并不想去打扰他们的生活，而是让他们占有这块土地，宁静地过日子，就像一个善良的房主允许燕子在他的屋檐下筑巢一样。</td>
+		<td class="en">The strangeness and pleasantness of the sight so delighted the gnome that he never thought of resenting the intrusion of these unexpected guests, who, without saying ‘by your leave’ or ‘with your leave,’ had made themselves so very much at home upon is hills; nor did he wish to interfere with their doings, but left them in quiet possession of their homes, as a good householder leaves in peace the swallows who have built their nests under his eaves.</td></tr>
+		<tr><td width="45%" class="zh" >他很想和这种叫做“人类”的生物做朋友，于是他装扮成一名老农，给一个农场主干活。</td>
+		<td class="en">He was indeed greatly minded to make friends with this being called ‘man,’ so, taking the form of an old field labourer, he entered the service of a farmer.</td></tr>
+		<tr><td width="45%" class="zh" >在他的照料下，庄稼长得非常好，但农场主不但挥霍浪费，还不知感激，于是鲁贝察尔很快就离开了他，成了农场主邻居的牧羊人。</td>
+		<td class="en">Under his care all the crops flourished exceedingly, but the master proved to be wasteful and ungrateful, and Rubezahl soon left him, and went to be shepherd to his next neighbour.</td></tr>
+		<tr><td width="45%" class="zh" >他辛勤地照料畜群，知道把羊群赶到哪里才能吃到最甘甜的牧草，他也十分清楚在山中什么地方能找到走失的羊，所以羊在他的照顾下又肥又壮，从没有一只走失或者被狼叼走。可是，他的新主人十分冷酷无情，连他应得的工资都舍不得给他。</td>
+		<td class="en">He tended the flock so diligently, and knew so well where to lead the sheep to the sweetest pastures, and where among the hills to look for any who strayed away, that they too prospered under his care, and not one was lost or torn by wolves; but this new master was a hard man, and begrudged him his well-earned wages.</td></tr>
+		<tr><td width="45%" class="zh" >于是他再次离开，跑去为法官工作了。</td>
+		<td class="en">So he ran away and went to serve the judge.</td></tr>
+		<tr><td width="45%" class="zh" >在这里，他竭尽全力来维护法律，窃贼和恶人都十分畏惧他。但是法官却是一个坏人，不但受贿，还藐视法律。</td>
+		<td class="en">Here he upheld the law with might and main, and was a terror to thieves and evildoers; but the judge was a bad man, who took bribes, and despised the law.</td></tr>
+		<tr><td width="45%" class="zh" >鲁贝察尔不愿做坏人的工具，于是和法官起了矛盾，继而被关进了监狱。</td>
+		<td class="en">Rubezahl would not be the tool of an unjust man, and so he told his master, who thereupon ordered him to be thrown in prison.</td></tr>
+		<tr><td width="45%" class="zh" >当然这根本就难不倒地精王，他轻而易举地就从锁眼里逃了出来，然后回到他的地下宫殿，对自己第一次同人类打交道的经历感到十分失望。</td>
+		<td class="en">Of course that did not trouble the gnome at all, he simply got out through the keyhole, and went away down to his underground palace, very much disappointed by his first experience of mankind.</td></tr>
+		<tr><td width="45%" class="zh" >但随着时间的推移，他淡忘了那些令人不快的经历，想要再去瞧瞧上面的世界。</td>
+		<td class="en">But, as time went on, he forgot the disagreeable things that had happened to him, and thought he would take another look at the upper world.</td></tr>
+		<tr><td width="45%" class="zh" >于是他悄悄地溜进山谷，小心翼翼地藏在矮树丛或灌木树篱里，很快就经历了一次奇遇。他透过树叶的缝隙向外窥探，看到他前面的绿地上站着一位迷人的少女，她像春天一样清新，越看越美丽。</td>
+		<td class="en">So he stole into the valley, keeping himself carefully hidden in copse or hedgerow, and very soon met with an adventure; for, peeping through a screen of leaves, he saw before him a green lawn where stood a charming maiden, fresh as the spring, and beautiful to look upon.</td></tr>
+		<tr><td width="45%" class="zh" >她年轻的同伴们躺在她身边的草地上，她们好像刚做完欢乐的游戏，正在草坪上休息。</td>
+		<td class="en">Around her upon the grass lay her young companions, as if they had thrown themselves down to rest after some merry game.</td></tr>
+		<tr><td width="45%" class="zh" >在她们的旁边，有一条瀑布从高高的岩石上飞流下来，汇成了一条小溪；它的声音悦耳动听，即使在闷热的正午也能带来一丝凉爽。</td>
+		<td class="en">Beyond them flowed a little brook, into which a waterfall leapt from a high rock, filling the air with its pleasant sound, and making a coolness even in the sultry noontide.</td></tr>
+		<tr><td width="45%" class="zh" >眼前的少女使地精王怦然心动，他平生第一次希望自己是个凡人。于是他变成了一只乌鸦，栖息在俯视着小溪的橡树上，渴望能更好地端详快乐的姑娘们。</td>
+		<td class="en">The sight of the maiden so pleased the gnome that, for the first time, he wished himself a mortal; and, longing for a better view of the gay company, he changed himself into a raven and perched upon an oaktree which overhung the brook.</td></tr>
+		<tr><td width="45%" class="zh" >但他很快发现，这根本不是一个好主意。</td>
+		<td class="en">But he soon found that this was not at all a good plan.</td></tr>
+		<tr><td width="45%" class="zh" >他只能用乌鸦的眼睛去观察，用乌鸦的方式去感觉。这样一来，与玩游戏的少女们相比，树脚下的田鼠穴反而更能吸引他的注意力了。</td>
+		<td class="en">He could only see with a raven’s eyes, and feel as a raven feels; and a nest of field-mice at the foot of the tree interested him far more than the sport of the maidens.</td></tr>
+		<tr><td width="45%" class="zh" >他一意识到这一点，就急忙再次飞回灌木丛，变身成了一名英俊的青年——这是最好的方法了——他立即爱上了那位姑娘。</td>
+		<td class="en">When he understood this he flew down again in a great hurry into the thicket, and took the form of a handsome young man—that was the best way—and he fell in love with the girl then and there.</td></tr>
+		<tr><td width="45%" class="zh" >这位美丽的少女是国王的女儿，她经常和玩伴们在森林里漫步，采摘野花野果。到了炎热的正午，这一群快乐的少女就来到小溪边，在背阴的草坪上休息，或者在清凉的水中沐浴。</td>
+		<td class="en">The fair maiden was the daughter of the king of the country, and she often wandered in the forest with her play fellows gathering the wild flowers and fruits, till the midday heat drove the merry band to the shady lawn by the brook to rest, or to bathe in the cool waters.</td></tr>
+		<tr><td width="45%" class="zh" >在这个特别的早上，她们一时兴起又走进了森林。</td>
+		<td class="en">On this particular morning the fancy took them to wander off again into the wood.</td></tr>
+		<tr><td width="45%" class="zh" >地精王鲁贝察尔的机会来了。</td>
+		<td class="en">This was Master Rubezahl’s opportunity.</td></tr>
+		<tr><td width="45%" class="zh" >他走出藏身之处，站在草坪中央施展魔咒，周围的一切便慢慢地变了模样。当姑娘们在中午回到最爱的休息地时，都茫然地站在那里，惊讶极了，几乎以为自己在做梦。</td>
+		<td class="en">Stepping out of his hiding-place he stood in the midst of the little lawn, weaving his magic spells, till slowly all about him changed, and when the maidens returned at noon to their favourite resting-place they stood lost in amazement, and almost fancied that they must be dreaming.</td></tr>
+		<tr><td width="45%" class="zh" >红色的岩石变成了白色的大理石和雪花石膏。以前的小溪哗哗直响，流淌在满是岩石的河道里，如今却在平滑的水渠里安静地流淌。一股清泉从水渠中奔流而下，下落时喷出一串串钻石般的水珠；在微风掠过时，水珠时而被吹到这里，时而被吹到那里。</td>
+		<td class="en">The red rocks had become white marble and alabaster; the stream that murmured and struggled before in its rocky bed, flowed in silence now in its smooth channel, from which a clear fountain leapt, to fall again in showers of diamond drops, now on this side now on that, as the wandering breeze scattered it.</td></tr>
+		<tr><td width="45%" class="zh" >小溪边上开满了雏菊和勿忘我，还有布满玫瑰和茉莉的高大篱笆环绕在它的四周，这一切使这里成为人们能想象得到的最甜蜜芳香的乘凉地。</td>
+		<td class="en">Daisies and forget-me-nots fringed its brink, while tall hedges of roses and jasmine ringed it round, making the sweetest and daintiest bower imaginable.</td></tr>
+		<tr><td width="45%" class="zh" >在瀑布的后面有一个奇妙的洞穴，它的岩壁和拱门因装饰着五颜六色的水晶而闪闪发光，洞穴里到处都散落着珍奇的水果和蜜饯。公主看到这些，忍不住想尝尝。</td>
+		<td class="en">To the right and left of the waterfall opened out a wonderful grotto, its walls and arches glittering with many-coloured rock-crystals, while in every niche were spread out strange fruits and sweetmeats, the very sight of which made the princess long to taste them.</td></tr>
+		<tr><td width="45%" class="zh" >然而，她犹豫了一会儿，简直不敢相信自己的眼睛，不知道她是应该走进这个被施了魔法的洞穴，还是应该远离这里。</td>
+		<td class="en">She hesitated a while, however, scarcely able to believe her eyes, and not knowing if she should enter the enchanted spot or fly from it.</td></tr>
+		<tr><td width="45%" class="zh" >但是最终好奇心占了上风，她和同伴们在山洞里尽情地玩乐，尝遍了所有美味，看遍了整个洞穴，兴高采烈地互相追逐、呼喊。</td>
+		<td class="en">But at length curiosity prevailed, and she and her companions explored to their heart’s content, and tasted and examined everything, running hither and thither in high glee, and calling merrily to each other.</td></tr>
+		<tr><td width="45%" class="zh" >最后，她们都玩累了，公主却突然大声说想在那个看起来很诱人的大理石水池里沐浴。所有人都开心地接受了这项新的娱乐方式。</td>
+		<td class="en">At last, when they were quite weary, the princess cried out suddenly that nothing would content her but to bathe in the marble pool, which certainly did look very inviting; and they all went gaily to this new amusement.</td></tr>
+		<tr><td width="45%" class="zh" >公主第一个准备好了，但她一走到水池边就滑倒了，跌进了水池里，并一直下沉——下沉——下沉，渐渐地没了踪影，她的同伴们都被吓坏了，甚至来不及抓住她漂在水面上的一缕金发！</td>
+		<td class="en">The princess was ready first, but scarcely had she slipped over the rim of the pool when down—down—down she sank, and vanished in its depths before her frightened playmates could seize her by so much as a lock of her floating golden hair!</td></tr>
+		<tr><td width="45%" class="zh" >她们大声地痛哭，围着水池乱转。水池看起来不深，水也十分清澈，可是公主却在她们眼前被这个水池吞没了。</td>
+		<td class="en">Loudly did they weep and wail, running about the brink of the pool, which looked so shallow and so clear, but which had swallowed up their princess before their eyes.</td></tr>
+		<tr><td width="45%" class="zh" >她们甚至跳入水中，试着和公主一样下潜，但都是徒劳，她们只能像软木塞一样漂浮在被施了魔法的水池上，无法潜入水中一秒钟。</td>
+		<td class="en">They even sprang into the water and tried to dive after her, but in vain; they only floated like corks in the enchanted pool, and could not keep under water for a second.</td></tr>
+		<tr><td width="45%" class="zh" >她们最后明白了，唯一能做的就是把爱女失踪的噩耗告诉国王。</td>
+		<td class="en">They saw at last that there was nothing for it but to carry to the king the sad tidings of his beloved daughter’s disappearance.</td></tr>
+		<tr><td width="45%" class="zh" >听到这个可怕的消息，王宫上下悲痛欲绝，哭声一片。</td>
+		<td class="en">And what great weeping and lamentation there was in the palace when the dreadful news was told!</td></tr>
+		<tr><td width="45%" class="zh" >国王先是撕扯他的长袍，又从头上抓下金冠，猛地摔到地上，然后用紫色的披风遮住自己的脸，因失去公主而悲痛不已。</td>
+		<td class="en">The king tore his robes, dashed his golden crown from his head, and hid his face in his purple mantle for grief and anguish at the loss of the princess.</td></tr>
+		<tr><td width="45%" class="zh" >在最初的恸哭过后，他又振作起来，急忙动身，要亲眼看看怪事发生的地方。正如处于悲痛中的人们那样，国王认为这有可能不是真的。</td>
+		<td class="en">After the first outburst of wailing, however, he took heart and hurried off to see for himself the scene of this strange adventure, thinking, as people will in sorrow, that there might be some mistake after all.</td></tr>
+		<tr><td width="45%" class="zh" >但是当他赶到那里时，却发现所有的事物又变回了原样！</td>
+		<td class="en">But when he reached the spot, behold, all was changed again!</td></tr>
+		<tr><td width="45%" class="zh" >姑娘们向他描述的闪闪发光的山洞、大理石水池和茉莉花的凉亭都全部消失了，取而代之的是缠结在一起的花朵，和从前的景色一样。</td>
+		<td class="en">The glittering grotto described to him by the maidens had completely vanished, and so had the marble bath, the bower of jasmine; instead, all was a tangle of flowers, as it had been of old.</td></tr>
+		<tr><td width="45%" class="zh" >国王被弄糊涂了，于是他用各种刑罚来威胁公主的玩伴，要她们说出公主失踪的实情，但是她们只是一再重复同样的故事，国王只得把整件事归咎于精灵或是妖怪。为了从失去公主的痛苦中恢复过来，国王安排了盛大的狩猎活动，因为国王无法忍受长期受到任何一件事情的困扰。</td>
+		<td class="en">The king was so much perplexed that he threatened the princess’s playfellows with all sorts of punishments if they would not confess something about her disappearance; but as they only repeated the same story he presently put down the whole affair to the work of some sprite or goblin, and tried to console himself for his loss by ordering a grand hunt; for kings cannot bear to be troubled about anything long.</td></tr>
+		<tr><td width="45%" class="zh" >与此同时，公主在她那精灵爱慕者的宫殿里过得还不错。</td>
+		<td class="en">Meanwhile the princess was not at all unhappy in the palace of her elfish lover.</td></tr>
+		<tr><td width="45%" class="zh" >水之女神们一直藏在水里，做好了准备，没等公主来得及感到害怕就抓住了她，将她拖出了惊恐的同伴们的视线之外。</td>
+		<td class="en">When the water-nymphs, who were hiding in readiness, had caught her and dragged her out of the sight of her terrified maidens, she herself had not had time to be frightened.</td></tr>
+		<tr><td width="45%" class="zh" >她们拽着她经过了一些神奇的地下通道，飞快地游进了一座十分华丽的宫殿。与这个宫殿相比，她父亲的王宫看起来就像是一个破旧的乡村小屋。当公主从震惊中恢复过来时，她发现自己坐在一个卧榻上，穿着极好的缎子做的长袍，身上还系着丝绸制的紧身腰带。她的旁边跪着一个青年，在她的耳边悄声细语着人们能想象得到的最甜蜜的情话。</td>
+		<td class="en">They swam with her quickly by strange underground ways to a palace so splendid that her father’s seemed but a poor cottage in comparison with it, and when she recovered from her astonishment she found herself seated upon a couch, wrapped in a wonderful robe of satin fastened with a silken girdle, while beside her knelt a young man who whispered the sweetest speeches imaginable in her ear.</td></tr>
+		<tr><td width="45%" class="zh" >地精王向她讲述了关于自己和他那美丽的地下王国的一切，现在正领她参观宫殿的房间和大厅，并向她展示陈列在里面的稀奇物品，直到公主对这华丽的景象感到眼花缭乱才作罢。</td>
+		<td class="en">The gnome, for he it was, told her all about himself and his great underground kingdom, and presently led her through the many rooms and halls of the palace, and showed her the rare and wonderful things displayed in them till she was fairly dazzled at the sight of so much splendour.</td></tr>
+		<tr><td width="45%" class="zh" >一个美丽的马蹄形花园围绕着宫殿，里面开满了芬芳鲜艳的花朵，还有天鹅绒般的草坪十分凉爽阴凉，令公主感到赏心悦目。</td>
+		<td class="en">On three sides of the castle lay a lovely garden with masses of gay, sweet flowers, and velvet lawns all cool and shady, which pleased the eye of the princess.</td></tr>
+		<tr><td width="45%" class="zh" >果树上挂着金灿灿、红润润的苹果，每棵灌木上都有夜莺在歌唱。地精王和公主在树木茂密的小径上漫步，他们时而望望月亮，时而停下采一些最稀有的花朵给公主作为装饰品。</td>
+		<td class="en">The fruit trees were hung with golden and rosy apples, and nightingales sang in every bush, as the gnome and the princess wandered in the leafy alleys, sometimes gazing at the moon, sometimes pausing to gather the rarest flowers for her adornment.</td></tr>
+		<tr><td width="45%" class="zh" >而他一直在想，活了几百年了，却从没有见过如此迷人的姑娘。</td>
+		<td class="en">And all the time he was thinking to himself that never, during the hundreds of years he had lived, had he seen so charming a maiden.</td></tr>
+		<tr><td width="45%" class="zh" >但是公主却没有那么开心。尽管周围的一切都那么神奇，她仍觉得难过，但她还是尽力表现出一副心满意足的样子，生怕会惹地精王不高兴。</td>
+		<td class="en">But the princess felt no such happiness; in spite of all the magic delights around her she was sad, though she tried to seem content for fear of displeasing the gnome.</td></tr>
+		<tr><td width="45%" class="zh" >但是，他很快就察觉出了公主的悲伤，并想尽办法要驱散她的愁云，可惜都是徒劳。</td>
+		<td class="en">However, he soon perceived her melancholy, and in a thousand ways strove to dispel the cloud, but in vain.</td></tr>
+		<tr><td width="45%" class="zh" >最后他对自己说：“人类是好交际的生物，就像蜜蜂和蚂蚁一样。</td>
+		<td class="en">At last he said to himself: ‘Men are sociable creatures, like bees or ants.</td></tr>
+		<tr><td width="45%" class="zh" >毫无疑问，这位可爱的姑娘渴望能有人作伴。</td>
+		<td class="en">Doubtless this lovely mortal is pining for company.</td></tr>
+		<tr><td width="45%" class="zh" >我能找谁来陪她聊天呢？”</td>
+		<td class="en">Who is there I can find for her to talk to?’</td></tr>
+		<tr><td width="45%" class="zh" >于是，他急忙来到最近的田地，挖了十来个不同种类的萝卜——有胡萝卜、萝卜，还有小萝卜——他小心翼翼地把它们放在一个精致的篮子里，然后把篮子拿给坐在玫瑰凉亭下郁郁不乐的公主。</td>
+		<td class="en">Thereupon he hastened into the nearest field and dug up a dozen or so of different roots—carrots, turnips, and radishes—and laying them carefully in an elegant basket brought them to the princess, who sat pensive in the shade of the rose-bower.</td></tr>
+		<tr><td width="45%" class="zh" >“大地最美丽的女儿，”地精王说，“忘记所有的悲伤吧，住在这里你再也不会孤单寂寞了。</td>
+		<td class="en">‘Loveliest daughter of earth,’ said the gnome, ‘banish all sorrow; no more shall you be lonely in my dwelling.</td></tr>
+		<tr><td width="45%" class="zh" >这个篮子里有一切能让你在这里过得开心的东西。</td>
+		<td class="en">In this basket is all you need to make this spot delightful to you.</td></tr>
+		<tr><td width="45%" class="zh" >拿着这根彩色的魔杖，用它点一下萝卜，你就能得到想要的东西。”</td>
+		<td class="en">Take this little many-coloured wand, and with a touch give to each root the form you desire to see.’</td></tr>
+		<tr><td width="45%" class="zh" >说完他便离开了她。公主立即打开篮子，点着一个萝卜，急切地喊道：“布伦希尔达，我亲爱的布伦希尔达！快来到我的身边！”</td>
+		<td class="en">With this he left her, and the princess, without an instant’s delay, opened the basket, and touching a turnip, cried eagerly: ‘Brunhilda, my dear Brunhilda! come to me quickly!’</td></tr>
+		<tr><td width="45%" class="zh" >果真，布伦希尔达出现了，高兴地拥抱和亲吻她心爱的公主，两人像往日一样愉快地聊了起来。</td>
+		<td class="en">And sure enough there was Brunhilda, joyfully hugging and kissing her beloved princess, and chattering as gaily as in the old days.</td></tr>
+		<tr><td width="45%" class="zh" >这突然的一幕让公主十分开心，她简直不敢相信自己的眼睛，并且为自己喜爱的玩伴再一次陪伴在自己身边而欣喜若狂。</td>
+		<td class="en">This sudden appearance was so delightful that the princess could hardly believe her own eyes, and was quite beside herself with the joy of having her dear playfellow with her once more.</td></tr>
+		<tr><td width="45%" class="zh" >她们手牵着手在被施了魔法的花园里漫步，还从树上采摘金苹果。等她们玩累了，公主就领着她的朋友参观宫殿里所有奇异的房间，直到最后她们来到一个摆满了美丽的裙子和饰物的房间，这些都是地精王为他心目中的新娘准备的。</td>
+		<td class="en">Hand in hand they wandered about the enchanted garden, and gathered the golden apples from the trees, and when they were tired of this amusement the princess led her friend through all the wonderful rooms of the palace, until at last they came to the one in which were kept all the marvellous dresses and ornaments the gnome had given to his hoped-for bride.</td></tr>
+		<tr><td width="45%" class="zh" >她们在这里津津有味地玩着，几个小时不知不觉地就过去了。</td>
+		<td class="en">There they found so much to amuse them that the hours passed like minutes.</td></tr>
+		<tr><td width="45%" class="zh" >她们试穿上那些面纱、腰带和项链，并不断赞叹着，假冒的布伦希尔达知道如何使自己举止得体，而且她的品位不俗，没有人会怀疑她其实就是一个萝卜而已。</td>
+		<td class="en">Veils, girdles, and necklaces were tried on and admired, the imitation Brunhilda knew so well how to behave herself, and showed so much taste that nobody would ever have suspected that she was nothing but a turnip after all.</td></tr>
+		<tr><td width="45%" class="zh" >地精王一直偷偷地看着她们，对于自己能很好地了解女人的心思感到十分得意。在他眼里，公主比以前更加迷人了。</td>
+		<td class="en">The gnome, who had secretly been keeping an eye upon them, was very pleased with himself for having so well understood the heart of a woman; and the princess seemed to him even more charming than before.</td></tr>
+		<tr><td width="45%" class="zh" >她没有忘记用神奇的魔杖点一点剩下的萝卜，她所有的玩伴不一会儿就都来到她的身边。她甚至用余下的两根小萝卜变成了她最心爱的猫和一只叫贝尼的小狗。</td>
+		<td class="en">She did not forget to touch the rest of the roots with her magic wand, and soon had all her maidens about her, and even, as she had two tiny radishes to spare, her favourite cat, and her little dog whose name was Beni.</td></tr>
+		<tr><td width="45%" class="zh" >现在所有人都高兴地走进了宫殿。</td>
+		<td class="en">And now all went cheerfully in the castle.</td></tr>
+		<tr><td width="45%" class="zh" >公主给每个人都分配了任务，并得到了很好的服侍，从没有一个女主人能享受到比这更好的服侍了。</td>
+		<td class="en">The princess gave to each of the maidens her task, and never was mistress better served.</td></tr>
+		<tr><td width="45%" class="zh" >整整一个星期，公主都很享受和同伴在一起的宁静的快乐。</td>
+		<td class="en">For a whole week she enjoyed the delight of her pleasant company undisturbed.</td></tr>
+		<tr><td width="45%" class="zh" >她们唱歌跳舞，从早玩到晚。只是公主注意到同伴们年轻娇嫩的面庞正一天天地变得苍白黯淡，她从大理石大厅的镜子里看到只有自己还有红润的面庞，而布伦希尔达和其他人都明显变得憔悴了。</td>
+		<td class="en">They all sang, they danced, they played from morning to night; only the princess noticed that day by day the fresh young faces of her maidens grew pale and wan, and the mirror in the great marble hall showed her that she alone still kept her rosy bloom, while Brunhilda and the rest faded visibly.</td></tr>
+		<tr><td width="45%" class="zh" >她们向她保证，她们一切都好，但她们还是不断地变得憔悴。对她们来说，和公主一起做游戏变得一天比一天艰难。直到一个晴朗的早上，公主起床后，匆忙跑到外面去找快乐的同伴们，可眼前的景象却让她吓得一颤，不禁倒退了几步。她的眼前是一群干瘪的丑老太婆，弯腰驼背，四肢抖个不停。她们手持拐杖，走路摇摇晃晃的，还剧烈地咳嗽着。</td>
+		<td class="en">They assured her that all was well with them; but, nevertheless, they continued to waste away, and day by day it became harder to them to take part in the games of the princess, till at last, one fine morning, when the princess started from bed and hastened out to join her gay playfellows, she shuddered and started back at the sight of a group of shrivelled crones, with bent backs and trembling limbs, who supported their tottering steps with staves and crutches, and coughed dismally.</td></tr>
+		<tr><td width="45%" class="zh" >壁炉前面躺着曾经喜欢嬉戏的贝尼，现在却僵硬地伸展着四肢，而皮毛平滑的小猫已经虚弱得无法把头从天鹅绒的垫子上抬起来了。</td>
+		<td class="en">A little nearer to the hearth lay the once frolicsome Beni, with all four feet stretched stiffly out, while the sleek cat seemed too weak to raise his head from his velvet cushion.</td></tr>
+		<tr><td width="45%" class="zh" >惊恐的公主向门飞奔过去，想要逃离眼前这些可怜的同伴。她大声呼喊着地精王，地精王便马上出现了，一副谦卑的样子，很乐意听从她的吩咐。</td>
+		<td class="en">The horrified princess fled to the door to escape from the sight of this mournful company, and called loudly for the gnome, who appeared at once, humbly anxious to do her bidding.</td></tr>
+		<tr><td width="45%" class="zh" >“恶毒的精灵，”她喊道，“为什么嫉恨我的同伴——她们在我孤独的时候给了我最大的快乐。</td>
+		<td class="en">‘Malicious Sprite,’ she cried, ‘why do you begrudge me my playmates —the greatest delight of my lonely hours?</td></tr>
+		<tr><td width="45%" class="zh" >在这个如荒漠般的地方独自生活已经够糟糕了，你居然还想把宫殿变成一个老人医院？</td>
+		<td class="en">Isn’t this solitary life in such a desert bad enough without your turning the castle into a hospital for the aged?</td></tr>
+		<tr><td width="45%" class="zh" >马上把我同伴们的青春和健康还给她们，不然我永远都不会爱你！”</td>
+		<td class="en">Give my maidens back their youth and health this very minute, or I will never love you!’</td></tr>
+		<tr><td width="45%" class="zh" >“最温柔美丽的少女啊，”地精王叫道，“不要生气，只要我能做到的，我都会去做——但请别要求我去做我做不到的事情。</td>
+		<td class="en">‘Sweetest and fairest of damsels,’ cried the gnome, ‘do not be angry; everything that is in my power I will do—but do not ask the impossible.</td></tr>
+		<tr><td width="45%" class="zh" >只要萝卜的汁液是新鲜的，魔杖就能留住你想要的东西，但如果萝卜干瘪了，你的同伴们也会随之枯萎。</td>
+		<td class="en">So long as the sap was fresh in the roots the magic staff could keep them in the forms you desired, but as the sap dried up they withered away.</td></tr>
+		<tr><td width="45%" class="zh" >但是别为这个烦恼，我最亲爱的，另一篮新鲜的萝卜很快就能解决问题，你很快就又能召唤你想见的人了。</td>
+		<td class="en">But never trouble yourself about that, dearest one, a basket of fresh turnips will soon set matters right, and you can speedily call up again every form you wish to see.</td></tr>
+		<tr><td width="45%" class="zh" >花园里的绿色菜地会给你带来更加快活的同伴。”</td>
+		<td class="en">The great green patch in the garden will prove you with a more lively company.’</td></tr>
+		<tr><td width="45%" class="zh" >说完，地精王就离开了。</td>
+		<td class="en">So saying the gnome took himself off.</td></tr>
+		<tr><td width="45%" class="zh" >公主用魔杖点了点布满皱纹的老妇人们，将她们变回了干萝卜，恢复了它们的本来面目，然后把它们扔进了垃圾堆。她迈着轻松的步伐，蹦蹦跳跳地来到草地去取装满新鲜萝卜的篮子。</td>
+		<td class="en">And the princess with her magic wand touched the wrinkled old women, and left them the withered roots they really were, to be thrown upon the rubbish heap; and with light feet skipped off across to the meadow to take possession of the freshly filled basket.</td></tr>
+		<tr><td width="45%" class="zh" >但奇怪的是，她到处都找不到那个篮子。</td>
+		<td class="en">But to her surprise she could not find it anywhere.</td></tr>
+		<tr><td width="45%" class="zh" >她把花园上上下下都搜了个遍，仔细检查了每一个角落，但都没有发现篮子的踪影。</td>
+		<td class="en">Up and down the garden she searched, spying into every corner, but not a sign of it was to be found.</td></tr>
+		<tr><td width="45%" class="zh" >她在葡萄藤架旁遇见了地精王，他看起来十分尴尬，而他还在很远处时，公主就看出了他的窘迫。</td>
+		<td class="en">By the trellis of grape vines she met the gnome, who was so much embarrassed at the sight of her that she became aware of his confusion while he was still quite a long way off.</td></tr>
+		<tr><td width="45%" class="zh" >“你在戏弄我。”她一看见他就叫道，</td>
+		<td class="en">‘You are trying to tease me,’ she cried, as soon as she saw him.</td></tr>
+		<tr><td width="45%" class="zh" >“你把篮子藏哪里去了？</td>
+		<td class="en">‘Where have you hidden the basket?</td></tr>
+		<tr><td width="45%" class="zh" >我已经找了至少有一个小时了。”</td>
+		<td class="en">I have been looking for it at least an hour.’</td></tr>
+		<tr><td width="45%" class="zh" >“我心中的女王，”他答道，“我祈求你能原谅我的粗心大意。</td>
+		<td class="en">‘Dear queen of my heart,’ answered he, ‘I pray you to forgive my carelessness.</td></tr>
+		<tr><td width="45%" class="zh" >我刚才说了大话。</td>
+		<td class="en">I promised more than I could perform.</td></tr>
+		<tr><td width="45%" class="zh" >为了找到你想要的萝卜，我寻遍了整片土地，但萝卜都已经被收走，堆放在发霉的地下室里枯萎了。因为地下山谷正值冬天，田地都光秃秃的，一片荒芜，只有你在的地方才是春天，无论你走到哪里，鲜艳的花朵都会开放。</td>
+		<td class="en">I have sought all over the land for the roots you desire; but they are gathered in, and lie drying in musty cellars, and the fields are bare and desolate, for below in the valley winter reigns, only here in your presence spring is held fast, and wherever your foot is set the gay flowers bloom.</td></tr>
+		<tr><td width="45%" class="zh" >请耐心等一下，你一定可以和同伴们一起玩的。”</td>
+		<td class="en">Have patience for a little, and then without fail you shall have your puppets to play with.’</td></tr>
+		<tr><td width="45%" class="zh" >还没等地精王说完，失望的公主就转身走开了，快步回到自己的房间，根本没有理睬他。</td>
+		<td class="en">Almost before the gnome had finished, the disappointed princess turned away, and marched off to her own apartments, without deigning to answer him.</td></tr>
+		<tr><td width="45%" class="zh" >然而，地精王还是立马动身来到地面上，乔装成一个农夫，在最近的集市上买了一头驴子，让它驮着几袋萝卜、胡萝卜和小萝卜的种子回去了。</td>
+		<td class="en">The gnome, however, set off above ground as speedily as possible, and disguising himself as a farmer, bought an ass in the nearest market-town, and brought it back loaded with sacks of turnip, carrot, and radish seed.</td></tr>
+		<tr><td width="45%" class="zh" >他把种子播种在一大片田地里，并派出妖精大军去照料这块地，还令它们将地心炽热的河流引到附近来温暖发芽的种子，促进种子生长。</td>
+		<td class="en">With this he sowed a great field, and sent a vast army of his goblins to watch and tend it, and to bring up the fiery rivers from the heart of the earth near enough to warm and encourage the sprouting seeds.</td></tr>
+		<tr><td width="45%" class="zh" >因此，它们长势很好，丰收在望。</td>
+		<td class="en">Thus fostered they grew and flourished marvellously, and promised a goodly crop.</td></tr>
+		<tr><td width="45%" class="zh" >公主每天都到田地里徘徊。除了萝卜，美丽的菜园里没有任何植物或水果能取悦她，但她的眼神还是充满了不满。</td>
+		<td class="en">The princess wandered about the field day by day, no other plants or fruits in all her wonderful garden pleased her as much as these roots; but still her eyes were full of discontent.</td></tr>
+		<tr><td width="45%" class="zh" >心情好的时候，她喜欢来到冷杉林中，在树阴下消磨时光。她会坐在小溪的河岸上，把采来的花朵撒入水中，看着它们越漂越远。</td>
+		<td class="en">And, best of all, she loved to while away the hours in a shady fir-wood, seated upon the bank of a little stream, into which she would cast the flowers she had gathered and watch them float away.</td></tr>
+		<tr><td width="45%" class="zh" >地精王使出浑身解数来取悦公主，想要赢得她的爱，但他并没有猜到自己失败的真正原因。</td>
+		<td class="en">The gnome tried hard by every means in his power to please the princess and win her love, but little did he guess the real reason of his lack of success.</td></tr>
+		<tr><td width="45%" class="zh" >他以为公主还太年轻，还没经历过爱情，所以没有爱上他，但是他错了，事实是公主已经爱上了另一个人。</td>
+		<td class="en">He imagined that she was too young and inexperienced to care for him; but that was a mistake, for the truth was that another image already filled her heart.</td></tr>
+		<tr><td width="45%" class="zh" >邻国的年轻王子拉蒂博尔就是赢得公主芳心的那个人。这一对恋人原本一直盼望着婚礼那一天的到来，而就在这时公主却神秘失踪了。</td>
+		<td class="en">The young Prince Ratibor, whose lands joined her father’s, had won the heart of the princess; and the lovers had been looking forward to the coming of their wedding-day when the bride’s mysterious disappearance took place.</td></tr>
+		<tr><td width="45%" class="zh" >这个坏消息使拉蒂博尔心烦意乱，而一天天过去了，公主还是一点儿消息都没有。于是他离开了城堡和臣民，在荒山野林里消磨时间，一边四处游荡，一边对着大树和岩石大声呼喊她的名字。</td>
+		<td class="en">The sad news drove Ratibor distracted, and as the days went on, and nothing could be heard of the princess, he forsook his castle and the society of men, and spent his days in the wild forests, roaming about and crying her name aloud to the trees and rocks.</td></tr>
+		<tr><td width="45%" class="zh" >与此同时，公主则被困在金碧辉煌的牢房里，为了不引起地精王的怀疑，她只能偷偷地叹息自己的不幸。</td>
+		<td class="en">Meanwhile, the maiden, in her gorgeous prison, sighed in secret over her grief, not wishing to arouse the gnome’s suspicions.</td></tr>
+		<tr><td width="45%" class="zh" >她心想，无论如何都要逃出去。最后她突然想到了一个方法。</td>
+		<td class="en">In her own mind she was wondering if by any means she might escape from her captivity, and at last she hit upon a plan.</td></tr>
+		<tr><td width="45%" class="zh" >此时，春天又一次来到山谷，地精王便把炽热的河流送回了大地深处，因为萝卜在它们的温暖下已度过寒冬，现在已经完全成熟了。</td>
+		<td class="en">By this time spring once more reigned in the valley, and the gnome sent the fires back to their places in the deeps of the earth, for the roots which they had kept warm through all the cruel winter hand now come to their full size.</td></tr>
+		<tr><td width="45%" class="zh" >公主每天都会拔一些萝卜来做实验，有时施法把它们变成这个想见的人，有时变成那个想见的人，这仅仅是为了相见时的喜悦之情，但她实际上还另有打算。</td>
+		<td class="en">Day by day the princess pulled up some of them, and made experiments with them, conjuring up now this longed-for person, and now that, just for the pleasure of seeing them as they appeared; but she really had another purpose in view.</td></tr>
+		<tr><td width="45%" class="zh" >一天，她把一个小萝卜变成了一只蜜蜂，派它去打探情人的消息。</td>
+		<td class="en">One day she changed a tiny turnip into a bee, and sent him off to bring her some news of her lover.</td></tr>
+		<tr><td width="45%" class="zh" >“飞吧，亲爱的小蜜蜂，往东边飞，”她说，“飞到我心爱的拉蒂博尔身边，在他耳边轻轻地说我只爱他一个人，但是我现在被囚禁在地精王的地下宫殿里。</td>
+		<td class="en">‘Fly, dear little bee, towards the east,’ said she, ‘to my beloved Ratibor, and softly hum into his ear that I love him only, but that I am a captive in the gnome’s palace under the mountains.</td></tr>
+		<tr><td width="45%" class="zh" >不要漏了我说的任何一个字，也把我爱人的消息带给我。”</td>
+		<td class="en">Do not forget a single word of my greeting, and bring me back a message from my beloved.’</td></tr>
+		<tr><td width="45%" class="zh" >于是蜜蜂展开发光的双翅，飞去完成公主的命令，但还没等它飞出公主的视线，一只贪婪的燕子就一把捉住了它。公主的信使被当场吃掉了，她不禁十分痛心。</td>
+		<td class="en">So the bee spread his shining wings and flew away to do as he was bidden; but before he was out of sight a greedy swallow made a snatch at him, and to the great grief of the princess her messenger was eaten up then and there.</td></tr>
+		<tr><td width="45%" class="zh" >之后，她又借助魔杖的力量召唤来一只蟋蟀，并教它说：</td>
+		<td class="en">After that, by the power of the wonderful wand she summoned a cricket, and taught him this greeting:</td></tr>
+		<tr><td width="45%" class="zh" >“跳吧，小蟋蟀，跳到拉蒂博尔身边去，在他耳边说我只爱他一人，但是我现在被困在地精王的地下宫殿里。”</td>
+		<td class="en">‘Hop, little cricket, to Ratibor, and chirp in his ear that I love him only, but that I am held captive by the gnome in his palace under the mountains.’</td></tr>
+		<tr><td width="45%" class="zh" >于是小蟋蟀快乐地蹦走了，决心一定要拼尽全力把信带到。但是，唉！一只长腿鹤正沿着同样的道路趾高气扬地走着，它用尖利的鸟嘴咬住了蟋蟀，蟋蟀还没来得及说一个字就消失在鹤的喉咙里了。</td>
+		<td class="en">So the cricket hopped off gaily, determined to do his best to deliver his message; but, alas! a long-legged stork who was prancing along the same road caught him in her cruel beak, and before he could say a word he had disappeared down her throat.</td></tr>
+		<tr><td width="45%" class="zh" >这两次不幸的经历并没有使公主放弃再一次尝试。</td>
+		<td class="en">These two unlucky ventures did not prevent the princess from trying once more.</td></tr>
+		<tr><td width="45%" class="zh" >这一次，她把萝卜变成了一只喜鹊。</td>
+		<td class="en">This time she changed the turnip into a magpie.</td></tr>
+		<tr><td width="45%" class="zh" >“快拍动翅膀，飞过森林吧，爱说话的小鸟，”她说，“直到你遇见我的爱人拉蒂博尔。</td>
+		<td class="en">‘Flutter from tree to tree, chattering bird,’ said she, ‘till you come to Ratibor, my love.</td></tr>
+		<tr><td width="45%" class="zh" >告诉他我被囚禁了，让他从今日起的第三天带着人马到荆棘山谷的山丘来。”</td>
+		<td class="en">Tell him that I am a captive, and bid him come with horses and men, the third day from this, to the hill that rises from the Thorny Valley.’</td></tr>
+		<tr><td width="45%" class="zh" >喜鹊听罢，在树枝上跳了一会儿便飞走了。公主不安地目送它远去，直到看不见为止。</td>
+		<td class="en">The magpie listened, hopped awhile from branch to branch, and then darted away, the princess watching him anxiously as far as she could see.</td></tr>
+		<tr><td width="45%" class="zh" >现在，拉蒂博尔王子仍然在树林里闲逛，就连春天的美景也不能缓解他的悲伤。</td>
+		<td class="en">Now Prince Ratibor was still spending his life in wandering about the woods, and not even the beauty of the spring could soothe his grief.</td></tr>
+		<tr><td width="45%" class="zh" >一天，他坐在一棵橡树的树阴下，想着失踪的公主，不时地大声呼喊着她的名字。这时，他似乎听见有声音在回答他，于是他站起身，环视四周，但什么人都没看到。他刚以为是自己搞错了时，同一个声音又叫了起来。他猛地一抬头，看见一只喜鹊在树枝上跳来跳去。</td>
+		<td class="en">One day, as he sat in the shade of an oak tree, dreaming of his lost princess, and sometimes crying her name aloud, he seemed to hear another voice reply to his, and, starting up, he gazed around him, but he could see no one, and he had just made up his mind that he must be mistaken, when the same voice called again, and, looking up sharply, he saw a magpie which hopped to and fro among the twigs.</td></tr>
+		<tr><td width="45%" class="zh" >然后拉蒂博尔惊讶地听到小鸟居然在叫自己的名字。</td>
+		<td class="en">Then Ratibor heard with surprise that the bird was indeed calling him by name.</td></tr>
+		<tr><td width="45%" class="zh" >“你这多嘴的喜鹊真是可怜，”他说，“是谁教你喊我的名字的？我真是不幸，但愿大地能裂开一个口子，把我和我的记忆永远地吞没。”</td>
+		<td class="en">‘Poor chatterpie,’ said he; ‘who taught you to say that name, which belongs to an unlucky mortal who wishes the earth would open and swallow up him and his memory for ever?’</td></tr>
+		<tr><td width="45%" class="zh" >然后他拿起一块大石头，刚要向喜鹊砸去，就听见喜鹊说出了公主的名字。</td>
+		<td class="en">Thereupon he caught up a great stone, and would have hurled it at the magpie, if it had not at that moment uttered the name of the princess.</td></tr>
+		<tr><td width="45%" class="zh" >这太出人意料了，王子一听就无力地垂下了手臂，一动不动地站在那里。</td>
+		<td class="en">This was so unexpected that the prince’s arm fell helplessly to his side at the sound, and he stood motionless.</td></tr>
+		<tr><td width="45%" class="zh" >和家族里的其他喜鹊一样，树上的这只喜鹊一定要不停地讲话才高兴，于是它开始不停地重复公主教给它的口信。王子听懂了喜鹊的话，心中充满了喜悦。</td>
+		<td class="en">But the magpie in the tree, who, like all the rest of his family, was not happy unless he could be for ever chattering, began to repeat the message the princess had taught him; and as soon as he understood it, Prince Ratibor’s heart was filled with joy.</td></tr>
+		<tr><td width="45%" class="zh" >他所有的悲伤和痛苦都立刻消失了，他迫不及待地向这个令人愉悦的信使打听公主的下落。</td>
+		<td class="en">All his gloom and misery vanished in a moment, and he anxiously questioned the welcome messenger as to the fate of the princess.</td></tr>
+		<tr><td width="45%" class="zh" >但是喜鹊只会说公主教它的话，其他什么都不知道，于是它很快就飞走了，而王子急忙赶回城堡去召集人马，此时的他充满了勇气来面对可能降临的任何困难。</td>
+		<td class="en">But the magpie knew no more than the lesson he had learnt, so he soon fluttered away; while the prince hurried back to his castle to gather together a troop of horsemen, full of courage for whatever might befall.</td></tr>
+		<tr><td width="45%" class="zh" >与此同时，公主也在巧妙地实施她的逃跑计划。</td>
+		<td class="en">The princess meanwhile was craftily pursuing her plan of escape.</td></tr>
+		<tr><td width="45%" class="zh" >她不再冷落和疏远地精王了，她眼睛里的神情使地精王相信有一天她会爱上他，地精王为此而满心欢喜。</td>
+		<td class="en">She left off treating the gnome with coldness and indifference; indeed, there was a look in her eyes which encouraged him to hope that she might some day return his love, and the idea pleased him mightily.</td></tr>
+		<tr><td width="45%" class="zh" >第二天，太阳一升起来，她就打扮成新娘的样子，穿戴着深情的地精王为她准备的华丽长袍和珠宝。</td>
+		<td class="en">The next day, as soon as the sun rose, she made her appearance decked as a bride, in the wonderful robes and jewels which the fond gnome had prepared for her.</td></tr>
+		<tr><td width="45%" class="zh" >她把金色的头发编成了辫子，戴上桃金娘花做成的花冠，还有她那因镶有宝石而闪闪发光的飘逸的面纱。</td>
+		<td class="en">Her golden hair was braided and crowned with myrtle blossoms, and her flowing veil sparkled with gems.</td></tr>
+		<tr><td width="45%" class="zh" >她穿着这些美丽的装束，来到走廊去见地精王。</td>
+		<td class="en">In these magnificent garments she went to meet the gnome upon the great terrace.</td></tr>
+		<tr><td width="45%" class="zh" >“最可爱的姑娘啊，”他深鞠一躬，结结巴巴地说道，“让我看看你美丽的眼睛吧，让我从中知道你不会再拒绝我的爱，而是让我成为太阳底下最快乐的生灵。”</td>
+		<td class="en">‘Loveliest of maidens,’ he stammered, bowing low before her, ‘let me gaze into your dear eyes, and read in them that you will no longer refuse my love, but will make me the happiest being the sun shines upon.’</td></tr>
+		<tr><td width="45%" class="zh" >说着他便想轻轻地拨开她的面纱，但是公主却把面纱拉得更紧了。</td>
+		<td class="en">So saying he would have drawn aside her veil; but the princess only held it more closely about her.</td></tr>
+		<tr><td width="45%" class="zh" >“你的执著打动了我，”她说，“我不会再违背你的意愿了。</td>
+		<td class="en">‘Your constancy has overcome me,’ she said; ‘I can no longer oppose your wishes.</td></tr>
+		<tr><td width="45%" class="zh" >但请相信我，我仍要带着面纱来遮挡害羞和泪水。”</td>
+		<td class="en">But believe my words, and suffer this veil still to hide my blushes and tears.’</td></tr>
+		<tr><td width="45%" class="zh" >“亲爱的，为什么要流泪？”地精王焦急地问道，“你的每一滴眼泪都像是一粒熔融的金子，落在我的心上。</td>
+		<td class="en">‘Why tears, beloved one?’ cried the gnome anxiously; ‘every tear of yours falls upon my heart like a drop of molten gold.</td></tr>
+		<tr><td width="45%" class="zh" >我虽然十分渴望得到你的爱，但我不愿意你为此而受委屈。”</td>
+		<td class="en">Greatly as I desire your love, I do not ask a sacrifice.’</td></tr>
+		<tr><td width="45%" class="zh" >“啊！”公主假装哽咽着说，“你为什么要误解我的泪水？</td>
+		<td class="en">‘Ah!’ cried the false princess, ‘why do you misunderstand my tears?</td></tr>
+		<tr><td width="45%" class="zh" >我的心虽然已被你的温情打动，但我还是害怕。</td>
+		<td class="en">My heart answers to your tenderness, and yet I am fearful.</td></tr>
+		<tr><td width="45%" class="zh" >凡人的美貌像花朵一样会凋谢，一个妻子不可能永远都美丽迷人，但是你的容颜却永远不会改变。</td>
+		<td class="en">A wife cannot always charm, and though YOU will never alter, the beauty of mortals is as a flower that fades.</td></tr>
+		<tr><td width="45%" class="zh" >我怎么知道你会不会永远都像现在这样含情脉脉、迷人可爱呢？”</td>
+		<td class="en">How can I be sure that you will always be as loving and charming as you are now?’</td></tr>
+		<tr><td width="45%" class="zh" >“让我来证明吧，亲爱的。”他说，</td>
+		<td class="en">‘Ask some proof, sweetheart,’ said he.</td></tr>
+		<tr><td width="45%" class="zh" >“来考验我的忠诚和耐心吧，这样你就能相信我永不改变的爱了。”</td>
+		<td class="en">‘Put my obedience and my patience to some test by which you can judge of my unalterable love.’</td></tr>
+		<tr><td width="45%" class="zh" >“那好吧。”机灵的公主回答说，</td>
+		<td class="en">‘Be it so,’ answered the crafty maiden.</td></tr>
+		<tr><td width="45%" class="zh" >“那么给我一个能证明你真心的证据。</td>
+		<td class="en">‘Then give me just one proof of your goodness.</td></tr>
+		<tr><td width="45%" class="zh" >去！数数那边的草地上有多少萝卜。</td>
+		<td class="en">Go! count the turnips in yonder meadow.</td></tr>
+		<tr><td width="45%" class="zh" >我的婚宴上一定不能缺少宾客。</td>
+		<td class="en">My wedding feast must not lack guests.</td></tr>
+		<tr><td width="45%" class="zh" >它们还要充当我的伴娘。</td>
+		<td class="en">They shall provide me with bride-maidens too.</td></tr>
+		<tr><td width="45%" class="zh" >不过你千万不要骗我，一个萝卜都不要漏数。</td>
+		<td class="en">But beware lest you deceive me, and do not miss a single one.</td></tr>
+		<tr><td width="45%" class="zh" >这能检验出你对我的真诚。”</td>
+		<td class="en">That shall be the test of your truth towards me.’</td></tr>
+		<tr><td width="45%" class="zh" >虽然地精王一刻都不愿离开美丽的公主，但他还是毫不迟延地服从她的命令，急忙开始工作了。</td>
+		<td class="en">Unwilling as the gnome was to lose sight of his beautiful bride for a moment, he obeyed her commands without delay, and hurried off to begin his task.</td></tr>
+		<tr><td width="45%" class="zh" >他在萝卜地里跳来跳去的，像蚱蜢一样敏捷，很快就把萝卜都数了个遍。但是，为了确保没有数错，他觉得应该再数一遍。</td>
+		<td class="en">He skipped along among the turnips as nimble as a grasshopper, and had soon counted them all; but, to be quite certain that he had made no mistake, he thought he would just run over them again.</td></tr>
+		<tr><td width="45%" class="zh" >令他十分恼火的是，这一次数出来的数和上次的不同。于是他又数了第三遍，但是现在的结果居然和前两次的都不一样！</td>
+		<td class="en">This time, to his great annoyance, the number was different; so he reckoned them for the third time, but now the number was not the same as either of the previous ones!</td></tr>
+		<tr><td width="45%" class="zh" >但这也不奇怪，因为他现在满脑子都是公主美丽的面容和甜美的话语。</td>
+		<td class="en">And this was hardly to be wondered at, as his mind was full of the princess’s pretty looks and words.</td></tr>
+		<tr><td width="45%" class="zh" >至于公主，她一把地精王骗走就开始准备逃跑了。</td>
+		<td class="en">As for the maiden, no sooner was her deluded lover fairly out of sight than she began to prepare for flight.</td></tr>
+		<tr><td width="45%" class="zh" >她拿出藏在身边的一棵新鲜萝卜，把它变成了一匹勇猛的骏马，马鞍和笼头都安好了。公主跃上马背，一路飞奔过山丘山谷，终于来到了荆棘山谷，扑进她深爱的拉蒂博尔王子怀里。</td>
+		<td class="en">She had a fine fresh turnip hidden close at hand, which she changed into a spirited horse, all saddled and bridled, and, springing upon its back, she galloped away over hill and dale till she reached the Thorny Valley, and flung herself into the arms of her beloved Prince Ratibor.</td></tr>
+		<tr><td width="45%" class="zh" >与此同时，辛苦的地精王还在一遍又一遍地检查他的工作。最后，他已经数到后背酸痛、头晕眼花，再也数不下去了。但他勉强数出了田地里有大大小小多少个萝卜，他连忙赶回去，急着向深爱的公主证明他是一个多么温顺并惹人喜欢的丈夫。</td>
+		<td class="en">Meanwhile the toiling gnome went through his task over and over again till his back ached and his head swam, and he could no longer put two and two together; but as he felt tolerably certain of the exact number of turnips in the field, big and little together, he hurried back eager to prove to his beloved one what a delightful and submissive husband he would be.</td></tr>
+		<tr><td width="45%" class="zh" >当他穿过生了苔的草地赶去同公主分手的地点时，他对自己满意极了。但是，天啊！她已经不在那里了。</td>
+		<td class="en">He felt very well satisfied with himself as he crossed the mossy lawn to the place where he had left her; but, alas! she was no longer there.</td></tr>
+		<tr><td width="45%" class="zh" >他找遍了每一处灌木丛、每一条小径，搜查了每一棵树的后面，检查了每一个池塘，但都没有找到公主。他又急忙赶回宫殿，从一个房间冲到另一个房间，仔细检查了每一个小洞和角落，并呼喊着她的名字，但是传来的只有大理石墙壁的回音——没有任何声响和脚步声。</td>
+		<td class="en">He searched every thicket and path, he looked behind every tree, and gazed into every pond, but without success; then he hastened into the palace and rushed from room to room, peering into every hole and corner and calling her by name; but only echo answered in the marble halls—there was neither voice nor footstep.</td></tr>
+		<tr><td width="45%" class="zh" >然后他开始感觉出事了，便抛去了妨碍他的人形，飞出宫殿，升入高空，看到企图逃跑的公主在远处骑着快马逃出了他的领地。</td>
+		<td class="en">Then he began to perceive that something was amiss, and, throwing off the mortal form that encumbered him, he flew out of the palace, and soared high into the air, and saw the fugitive princess in the far distance just as the swift horse carried her across the boundary of his dominions.</td></tr>
+		<tr><td width="45%" class="zh" >被激怒的地精王把两块云愤怒地甩在了一起，猛掷了一个雷电在公主身后，把屹立了千年的岩石劈成了碎片。</td>
+		<td class="en">Furiously did the enraged gnome fling two great clouds together, and hurl a thunderbolt after the flying maiden, splintering the rocky barriers which had stood a thousand years.</td></tr>
+		<tr><td width="45%" class="zh" >但是他的怒火都是无用的，雷雨云也消散成了柔和的薄雾。地精王绝望地飞了一会儿，向四处的风哀叹自己的不幸，之后他悲伤地回到了宫中，又一次默默地穿过了每一个房间，不停地唉声叹气。</td>
+		<td class="en">But his fury was vain, the thunderclouds melted away into a soft mist, and the gnome, after flying about for a while in despair, bewailing to the four winds his unhappy fate, went sorrowfully back to the palace, and stole once more through every room, with many sighs and lamentations.</td></tr>
+		<tr><td width="45%" class="zh" >他穿过了花园，那里对他来说已经失去了魅力，而看到公主留在金色沙子路上的脚印则使他更加忧伤。</td>
+		<td class="en">He passed through the gardens which for him had lost their charm, and the sight of the princess’s footprints on the golden sand of the pathway renewed his grief.</td></tr>
+		<tr><td width="45%" class="zh" >一切都是那么孤寂、空虚和悲伤。被抛弃的地精王下定决心再也不和人类这个虚情假意的物种打交道了。</td>
+		<td class="en">All was lonely, empty, sorrowful; and the forsaken gnome resolved that he would have no more dealings with such false creatures as he had found men to be.</td></tr>
+		<tr><td width="45%" class="zh" >随后，他在地上跺了三下，那个神奇的宫殿和里面的珍宝都化为乌有了。地精王再次往地下王国的深处飞去。</td>
+		<td class="en">Thereupon he stamped three times upon the earth, and the magic palace, with all its treasures, vanished away into the nothingness out of which he had called it; and the gnome fled once more to the depths of his underground kingdom.</td></tr>
+		<tr><td width="45%" class="zh" >与此同时，拉蒂博尔王子正匆匆带着公主往安全的地方奔去。</td>
+		<td class="en">While all this was happening, Prince Ratibor was hurrying away with his prize to a place of safety.</td></tr>
+		<tr><td width="45%" class="zh" >当王子把美丽的公主送回到她父亲身边时，整个景象盛况空前，人人都享受着胜利的喜悦，于是他们当场就举行了婚礼，之后王子便把公主带回了自己的城堡。</td>
+		<td class="en">With great pomp and triumph he restored the lovely princess to her father, and was then and there married to her, and took her back with him to his own castle.</td></tr>
+		<tr><td width="45%" class="zh" >在公主和她的孩子相继离开人世后很久，村民们还会在冬夜坐着雕刻木头时，讲述她被带到地下王国的传奇故事。</td>
+		<td class="en">But long after she was dead, and her children too, the villagers would tell the tale of her imprisonment underground, as they sat carving wood in the winter nights.</td></tr>
+		<tr><td width="45%" class="zh" ></td>
+		<td class="en"></td></tr>
+	</table>
+</div>
+
+<div class="zh_en"><a href="#" class="zh_btn">中文</a> | <a href="#" class="en_btn">英文</a> | <a href="#" class="zhen_btn">中英文</a></div>
+
+<script src="jquery-1.10.1.min.js"></script>
+<script src="jquery.bookify.js"></script>
+</body>
+</html>

@@ -1,0 +1,391 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+	<!-- link rel="stylesheet" type="text/css" href="book.css" -->
+	<style type="text/css">
+		/* IMPORTANT !!!!
+		line-height, font-size defined in jquery.bookify.js */
+
+		* {
+			/* font-size: 20px; */
+		 }
+
+		table, td, th {
+
+		  }
+
+		td {
+	    	 /* height:50px; */
+	 	     vertical-align:top;
+	 	   	 text-align:left;
+	 	 	 padding-bottom:30px;/*行高的倍数-chenjing*/
+			 padding-left:20px;
+	 	  }
+
+		  /*chenjing*/
+		  .ebook_title{ position:absolute; left:20%; top:7%; font-weight:bold; font-size:35px; width:750px;}
+		  .zh_en{ position:absolute; left:70%; bottom:10%; font-size:14px;}
+		  .pre,.next{ cursor:pointer; font-size:40px; font-weight:bold; position:absolute; top:40%}
+		  .pre{ display:none; left:7%}
+		  .next{right:7%}
+
+	</style>
+
+</head>
+<body>
+<div class="ebook_title"></div>
+<div class="pre"><<</div>
+<div class="next">>></div>
+<div class="ebook_content">
+	<table cellpadding="0" cellspacing="0">
+		<tr><td width="45%" class="zh" >命运的震荡</td>
+		<td class="en">The Shocks of Doom</td></tr>
+		<tr><td width="45%" class="zh" >作者：欧·亨利</td>
+		<td class="en">by O. Henry</td></tr>
+		<tr><td width="45%" class="zh" >在公园里有贵族，而且甚至那些把公园当作私人公寓的流浪汉中间也有贵族。</td>
+		<td class="en">There is an aristocracy of the public parks and even of the vagabonds who use them for their private apartments.</td></tr>
+		<tr><td width="45%" class="zh" >与其说瓦兰斯了解这些，不如说他感觉如此。但是当他从他的世界出来，踏入混乱中时，他鬼使神差地直接走到了麦迪逊广场。</td>
+		<td class="en">Vallance felt rather than knew this, but when he stepped down out of his world into chaos his feet brought him directly to Madison Square.</td></tr>
+		<tr><td width="45%" class="zh" >在新芽吐绿的树木间，年轻的五月就像旧时的女学生一样青涩而拘谨地呼吸着。</td>
+		<td class="en">Raw and astringent as a schoolgirl—of the old order—young May breathed austerely among the budding trees.</td></tr>
+		<tr><td width="45%" class="zh" >瓦兰斯系好外套上的纽扣，点燃最后一支香烟，在一条长凳上坐了下来。</td>
+		<td class="en">Vallance buttoned his coat, lighted his last cigarette and took his seat upon a bench.</td></tr>
+		<tr><td width="45%" class="zh" >他为失去了最后一千元钱里的最后一百元后悔了有三分钟，那是他刚刚开车兜风时，被一个骑自行车的警察罚掉的。</td>
+		<td class="en">For three minutes he mildly regretted the last hundred of his last thousand that it had cost him when the bicycle cop put an end to his last automobile ride.</td></tr>
+		<tr><td width="45%" class="zh" >然后他摸遍了所有的口袋，一分钱也没找到。</td>
+		<td class="en">Then he felt in every pocket and found not a single penny.</td></tr>
+		<tr><td width="45%" class="zh" >那天早上，他退掉了公寓。</td>
+		<td class="en">He had given up his apartment that morning.</td></tr>
+		<tr><td width="45%" class="zh" >他的家具也拿去抵债了。</td>
+		<td class="en">His furniture had gone toward certain debts.</td></tr>
+		<tr><td width="45%" class="zh" >他的衣服，除了穿在身上的，都留给男佣抵了拖欠的工资。</td>
+		<td class="en">His clothes, save what were upon him, had descended to his man-servant for back wages.</td></tr>
+		<tr><td width="45%" class="zh" >此刻，他坐在那里，偌大的城市没有供他睡觉的床，没有充饥的烤龙虾，没有坐车的钱，也没有插在扣眼里的康乃馨，除非他靠朋友接济或者编个借口骗点儿钱。</td>
+		<td class="en">As he sat there was not in the whole city for him a bed or a broiled lobster or a street-car fare or a carnation for buttonhole unless he should obtain them by sponging on his friends or by false pretenses.</td></tr>
+		<tr><td width="45%" class="zh" >因此，他选择了这个公园。</td>
+		<td class="en">Therefore he had chosen the park.</td></tr>
+		<tr><td width="45%" class="zh" >这一切都是由于他叔叔剥夺了他的继承权，并把原来宽裕的零用钱削减到了零。</td>
+		<td class="en">And all this was because an uncle had disinherited him, and cut down his allowance from liberality to nothing.</td></tr>
+		<tr><td width="45%" class="zh" >而且所有的一切都因为侄子在一个女孩的事情上没有听他的话，而这个女孩不会在故事中出现，因此，提醒所有喜欢刨根问底的读者们就不必再读下去了。</td>
+		<td class="en">And all that was because his nephew had disobeyed him concerning a certain girl, who comes not into this story—therefore, all readers who brush their hair toward its roots may be warned to read no further.</td></tr>
+		<tr><td width="45%" class="zh" >在家族的另一支系里还有另外一个侄子，曾一度很有希望成为继承人，而且深得叔叔的宠爱。</td>
+		<td class="en">There was another nephew, of a different branch, who had once been the prospective heir and favorite.</td></tr>
+		<tr><td width="45%" class="zh" >因为失宠，也自觉毫无希望，所以他很久以前就音信全无了。</td>
+		<td class="en">Being without grace or hope, he had long ago disappeared in the mire.</td></tr>
+		<tr><td width="45%" class="zh" >经过拉网似的查找，现在终于找到了他，还要恢复他的继承权。</td>
+		<td class="en">Now dragnets were out for him; he was to be rehabilitated and restored.</td></tr>
+		<tr><td width="45%" class="zh" >于是，瓦兰斯像明亮之子一样重重地坠入万丈深渊，加入了小公园里那些衣衫褴褛的幽灵的行列。</td>
+		<td class="en">And so Vallance fell grandly as Lucifer to the lowest pit, joining the tattered ghosts in the little park.</td></tr>
+		<tr><td width="45%" class="zh" >他坐在那里，仰面倚靠在硬长椅上，笑着朝最低的树枝吐了一口烟雾。</td>
+		<td class="en">Sitting there, he leaned far back on the hard bench and laughed a jet of cigarette smoke up to the lowest tree branches.</td></tr>
+		<tr><td width="45%" class="zh" >生活中全部纽带的突然断裂给他带来了一种自由、激动和几乎欣喜若狂的兴奋。</td>
+		<td class="en">The sudden severing of all his life’s ties had brought him a free, thrilling, almost joyous elation.</td></tr>
+		<tr><td width="45%" class="zh" >他真切地体验到了乘坐在热气球上的人割断降落伞绳索后让气球随风飘荡的感觉。</td>
+		<td class="en">He felt precisely the sensation of the aeronaut when he cuts loose his parachute and lets his balloon drift away.</td></tr>
+		<tr><td width="45%" class="zh" >快到十点了。</td>
+		<td class="en">The hour was nearly ten.</td></tr>
+		<tr><td width="45%" class="zh" >长椅上没有几个流浪者。</td>
+		<td class="en">Not many loungers were on the benches.</td></tr>
+		<tr><td width="45%" class="zh" >公园的住客虽然能顽强地抵抗秋日的凉意，但却迟迟未能攻克料峭春寒的先头部队。</td>
+		<td class="en">The park-dweller, though a stubborn fighter against autumnal coolness, is slow to attack the advance line of spring’s chilly cohorts.</td></tr>
+		<tr><td width="45%" class="zh" >这时，有一个人从喷着水的喷泉边的座位上站起身，走过来坐在了瓦兰斯身边。</td>
+		<td class="en">Then arose one from a seat near the leaping fountain, and came and sat himself at Vallance’s side.</td></tr>
+		<tr><td width="45%" class="zh" >他既不年轻也不年长，身上带着廉价寄宿所的霉味，剃须刀和梳子也离他而去甚久，酒在他的肚子里装瓶封口。</td>
+		<td class="en">He was either young or old; cheap lodging-houses had flavoured him mustily; razors and combs had passed him by; in him drink had been bottled and sealed in the devil’s bond.</td></tr>
+		<tr><td width="45%" class="zh" >他借了个火，这是坐公园长椅的人相互认识的方式。接着，他就开口说话了。</td>
+		<td class="en">He begged a match, which is the form of introduction among park benchers, and then he began to talk.</td></tr>
+		<tr><td width="45%" class="zh" >“你不是这里的常客吧，”他对瓦兰斯说，</td>
+		<td class="en">“You’re not one of the regulars,” he said to Vallance.</td></tr>
+		<tr><td width="45%" class="zh" >“订量身做的衣服我一眼就看得出来。</td>
+		<td class="en">“I know tailored clothes when I see ’em.</td></tr>
+		<tr><td width="45%" class="zh" >你不过是在路过公园时稍稍歇会儿吧。</td>
+		<td class="en">You just stopped for a moment on your way through the park.</td></tr>
+		<tr><td width="45%" class="zh" >你不介意我和你聊一会儿吧？</td>
+		<td class="en">Don’t mind my talking to you for a while?</td></tr>
+		<tr><td width="45%" class="zh" >我必须得和别人说说话。</td>
+		<td class="en">I’ve got to be with somebody.</td></tr>
+		<tr><td width="45%" class="zh" >我害怕——我害怕。</td>
+		<td class="en">I’m afraid—I’m afraid.</td></tr>
+		<tr><td width="45%" class="zh" >我刚和那边的两三个流浪汉聊了聊。</td>
+		<td class="en">I’ve told two or three of those bummers over about it.</td></tr>
+		<tr><td width="45%" class="zh" >他们以为我疯了。</td>
+		<td class="en">They think I’m crazy.</td></tr>
+		<tr><td width="45%" class="zh" >这么说吧——我告诉你——今天我只吃了几块椒盐饼干和一个苹果。</td>
+		<td class="en">Say—let me tell you—all I’ve had to eat to-day was a couple pretzels and an apple.</td></tr>
+		<tr><td width="45%" class="zh" >明天，我就要排队等候继承三百万了。你看见那边的那家周围停着很多车的饭店了吧，明天它对我来说就太低档次了，我根本都不会在那儿吃饭。</td>
+		<td class="en">To-morrow I’ll stand in line to inherit three millions; and that restaurant you see over there with the autos around it will be too cheap for me to eat in.</td></tr>
+		<tr><td width="45%" class="zh" >你不相信我的话，对不对？”</td>
+		<td class="en">Don’t believe it, do you?</td></tr>
+		<tr><td width="45%" class="zh" >“一点儿问题都没有，”瓦兰斯笑着说，</td>
+		<td class="en">“Without the slightest trouble,” said Vallance, with a laugh.</td></tr>
+		<tr><td width="45%" class="zh" >“我昨天在那里吃的午饭。</td>
+		<td class="en">“I lunched there yesterday.</td></tr>
+		<tr><td width="45%" class="zh" >可今晚我连五分钱一杯的咖啡也买不起了。”</td>
+		<td class="en">To-night I couldn’t buy a five-cent cup of coffee.”</td></tr>
+		<tr><td width="45%" class="zh" >“你不像我们的人。</td>
+		<td class="en">“You don’t look like one of us.</td></tr>
+		<tr><td width="45%" class="zh" >嗯，我想一定是出了那种事。</td>
+		<td class="en">Well, I guess those things happen.</td></tr>
+		<tr><td width="45%" class="zh" >我自己也曾经是个大有前途的人——那是很多年以前的事了。</td>
+		<td class="en">I used to be a high-flyer myself—some years ago.</td></tr>
+		<tr><td width="45%" class="zh" >你是怎么落魄的？”</td>
+		<td class="en">What knocked you out of the game?”</td></tr>
+		<tr><td width="45%" class="zh" >“我——哦，我失业了。”瓦兰斯说道。</td>
+		<td class="en">“I—oh, I lost my job,” said Vallance.</td></tr>
+		<tr><td width="45%" class="zh" >“这个城市纯粹是个地狱，”那人接着说，</td>
+		<td class="en">“It’s undiluted Hades, this city,” went on the other.</td></tr>
+		<tr><td width="45%" class="zh" >“今天你还吃着瓷碟子里的佳肴，明天你就在中国饭馆吃饭——炒杂烩菜的中国饭馆。</td>
+		<td class="en">“One day you’re eating from china; the next you are eating in China—a chop-suey joint.</td></tr>
+		<tr><td width="45%" class="zh" >我有过倒霉的时候。</td>
+		<td class="en">I’ve had more than my share of hard luck.</td></tr>
+		<tr><td width="45%" class="zh" >这五年来，我比叫花子好不到哪儿去。</td>
+		<td class="en">For five years I’ve been little better than a panhandler.</td></tr>
+		<tr><td width="45%" class="zh" >我从小养尊处优，什么都不用干。</td>
+		<td class="en">I was raised up to live expensively and do nothing.</td></tr>
+		<tr><td width="45%" class="zh" >哎——我也不妨告诉你——我必须得和别人说话，你知道，因为我害怕——我害怕。</td>
+		<td class="en">Say—I don’t mind telling you—I’ve got to talk to somebody, you see, because I’m afraid—I’m afraid.</td></tr>
+		<tr><td width="45%" class="zh" >我叫艾德。</td>
+		<td class="en">My name’s Ide.</td></tr>
+		<tr><td width="45%" class="zh" >你绝对想不到老波尔丁，住在河滨大道的百万富翁之一，他是我叔叔，你能想到吗？</td>
+		<td class="en">You wouldn’t think that old Paulding, one of the millionaires on Riverside Drive, was my uncle, would you?</td></tr>
+		<tr><td width="45%" class="zh" >嗯，他确实是。</td>
+		<td class="en">Well, he is.</td></tr>
+		<tr><td width="45%" class="zh" >我曾经在他家住过，我想要多少钱就有多少钱。</td>
+		<td class="en">I lived in his house once, and had all the money I wanted.</td></tr>
+		<tr><td width="45%" class="zh" >哎，你身上有没有买两杯酒的钱——呃——你叫什么？”</td>
+		<td class="en">Say, haven’t you got the price of a couple of drinks about you—er—what’s your name—”</td></tr>
+		<tr><td width="45%" class="zh" >“道森，”瓦兰斯答道，</td>
+		<td class="en">“Dawson,” said Vallance.</td></tr>
+		<tr><td width="45%" class="zh" >“没有，很抱歉，我身无分文。”</td>
+		<td class="en">“No; I’m sorry to say that I’m all in, financially.”</td></tr>
+		<tr><td width="45%" class="zh" >“我在迪威臣街的一个煤窑里住了一个星期，”伊德接着说，“和一个他们称作‘眨巴眼’莫里斯的坏蛋住在一起。</td>
+		<td class="en">“I’ve been living for a week in a coal cellar on Division Street,” went on Ide, “with a crook they called ‘Blinky’ Morris.</td></tr>
+		<tr><td width="45%" class="zh" >我没有别的地方可去。</td>
+		<td class="en">I didn’t have anywhere else to go.</td></tr>
+		<tr><td width="45%" class="zh" >今天我出来的时候，一个兜里揣着文件的家伙在那儿打听我的情况。</td>
+		<td class="en">While I was out to-day a chap with some papers in his pocket was there, asking for me.</td></tr>
+		<tr><td width="45%" class="zh" >我不知道他是不是便衣警察，所以我天黑之前再没敢回那块地方。</td>
+		<td class="en">I didn’t know but what he was a fly cop, so I didn’t go around again till after dark.</td></tr>
+		<tr><td width="45%" class="zh" >他在那儿给我留了一封信。</td>
+		<td class="en">There was a letter there he had left for me.</td></tr>
+		<tr><td width="45%" class="zh" >哎呀——道森，是市中心的大律师米德给我的信。</td>
+		<td class="en">Say—Dawson, it was from a big downtown lawyer, Mead.</td></tr>
+		<tr><td width="45%" class="zh" >我在安街上见过他的招牌。</td>
+		<td class="en">I’ve seen his sign on Ann Street.</td></tr>
+		<tr><td width="45%" class="zh" >波尔丁要我去充当败家的侄子——想让我回去做他的继承人，花光他所有的钱。</td>
+		<td class="en">Paulding wants me to play the prodigal nephew—wants me to come back and be his heir again and blow in his money.</td></tr>
+		<tr><td width="45%" class="zh" >明天早上十点，我就要去律师事务所，重新过我以前的生活——三百万财产的继承人，道森，还有每年一万美金的零花钱。</td>
+		<td class="en">I’m to call at the lawyer’s office at ten to-morrow and step into my old shoes again—heir to three million, Dawson, and $10,000 a year pocket money.</td></tr>
+		<tr><td width="45%" class="zh" >但是——我害怕——我害怕。”</td>
+		<td class="en">And—I’m afraid—I’m afraid.”</td></tr>
+		<tr><td width="45%" class="zh" >这位流浪汉一跃而起，颤抖的双臂举过头顶。</td>
+		<td class="en">The vagrant leaped to his feet and raised both trembling arms above his head.</td></tr>
+		<tr><td width="45%" class="zh" >他喘了口气，接着歇斯底里地哀号起来。</td>
+		<td class="en">He caught his breath and moaned hysterically.</td></tr>
+		<tr><td width="45%" class="zh" >瓦兰斯抓住他的胳膊，把他拉回到长凳上。</td>
+		<td class="en">Vallance seized his arm and forced him back to the bench.</td></tr>
+		<tr><td width="45%" class="zh" >“安静点儿！”他带着厌恶的口气命令道，</td>
+		<td class="en">“Be quiet!” he commanded, with something like disgust in his tones.</td></tr>
+		<tr><td width="45%" class="zh" >“人家还以为你不是马上要得到一笔财产，而是马上要倾家荡产呢。</td>
+		<td class="en">“One would think you had lost a fortune, instead of being about to acquire one.</td></tr>
+		<tr><td width="45%" class="zh" >你怕什么呢？”</td>
+		<td class="en">Of what are you afraid?”</td></tr>
+		<tr><td width="45%" class="zh" >艾德颤抖着蜷缩在长凳上。</td>
+		<td class="en">Ide cowered and shivered on the bench.</td></tr>
+		<tr><td width="45%" class="zh" >他紧紧拽着瓦兰斯的袖子，即使是在百老汇路灯的昏暗灯光下，刚刚被剥夺了继承权的瓦兰斯，也能看出对方由于某种莫名的恐惧而紧锁的眉头上渗出的汗珠。</td>
+		<td class="en">He clung to Vallance’s sleeve, and even in the dim glow of the Broadway lights the latest disinherited one could see drops on the other’s brow wrung out by some strange terror.</td></tr>
+		<tr><td width="45%" class="zh" >“说不清，我害怕明天早上之前会出意外。</td>
+		<td class="en">“Why, I’m afraid something will happen to me before morning.</td></tr>
+		<tr><td width="45%" class="zh" >我也不知道是什么——反正是不让我得到那笔钱。</td>
+		<td class="en">I don’t know what—something to keep me from coming into that money.</td></tr>
+		<tr><td width="45%" class="zh" >我害怕有棵树会倒下来砸到我——我害怕有辆车把我撞倒，或者会有块石头从房顶上掉下来砸到我，或者是别的什么事情。</td>
+		<td class="en">I’m afraid a tree will fall on me—I’m afraid a cab will run over me, or a stone drop on me from a housetop, or something.</td></tr>
+		<tr><td width="45%" class="zh" >以前我从来不害怕。</td>
+		<td class="en">I never was afraid before.</td></tr>
+		<tr><td width="45%" class="zh" >我在这个公园里坐过几百个夜晚，虽然第二天的早饭都没有着落，但我照样平静自若。</td>
+		<td class="en">I’ve sat in this park a hundred nights as calm as a graven image without knowing where my breakfast was to come from.</td></tr>
+		<tr><td width="45%" class="zh" >但是现在不一样了。</td>
+		<td class="en">But now it’s different.</td></tr>
+		<tr><td width="45%" class="zh" >我爱钱，道森——当它在我的指缝间流过，人们向我鞠躬，周围到处都是音乐、鲜花和漂亮衣服时，我就会无比快乐。</td>
+		<td class="en">I love money, Dawson—I’m happy as a god when it’s trickling through my fingers, and people are bowing to me, with the music and the flowers and fine clothes all around.</td></tr>
+		<tr><td width="45%" class="zh" >当我知道这些我都没份时，我并不介意。</td>
+		<td class="en">As long as I knew I was out of the game I didn’t mind.</td></tr>
+		<tr><td width="45%" class="zh" >我衣衫褴褛、饥肠辘辘地坐在这儿，听着喷泉声，看着大街上穿梭的车辆，也照样很快乐。</td>
+		<td class="en">I was even happy sitting here ragged and hungry, listening to the fountain jump and watching the carriages go up the avenue.</td></tr>
+		<tr><td width="45%" class="zh" >但是现在这一切又触手可及了——就要实现了——我再也等不了十二个小时了，道森——我等不及了。</td>
+		<td class="en">But it’s in reach of my hand again now—almost—and I can’t stand it to wait twelve hours, Dawson—I can’t stand it.</td></tr>
+		<tr><td width="45%" class="zh" >有五十件意外可能发生在我身上——我有可能失明——我可能心脏病发作——世界末日可能到来——”</td>
+		<td class="en">There are fifty things that could happen to me—I could go blind—I might be attacked with heart disease—the world might come to an end before I could—”</td></tr>
+		<tr><td width="45%" class="zh" >艾德尖叫一声，跳了起来。</td>
+		<td class="en">Ide sprang to his feet again, with a shriek.</td></tr>
+		<tr><td width="45%" class="zh" >长凳上的人们起身，开始向这边张望。</td>
+		<td class="en">People stirred on the benches and began to look.</td></tr>
+		<tr><td width="45%" class="zh" >瓦兰斯抓住他的胳膊。</td>
+		<td class="en">Vallance took his arm.</td></tr>
+		<tr><td width="45%" class="zh" >“来走走，”瓦兰斯安抚着伊德，</td>
+		<td class="en">“Come and walk,” he said, soothingly.</td></tr>
+		<tr><td width="45%" class="zh" >“镇静点儿。</td>
+		<td class="en">“And try to calm yourself.</td></tr>
+		<tr><td width="45%" class="zh" >没有必要这么兴奋或者紧张。</td>
+		<td class="en">There is no need to become excited or alarmed.</td></tr>
+		<tr><td width="45%" class="zh" >你不会有事的。</td>
+		<td class="en">Nothing is going to happen to you.</td></tr>
+		<tr><td width="45%" class="zh" >每天晚上都是一样的。”</td>
+		<td class="en">One night is like another.”</td></tr>
+		<tr><td width="45%" class="zh" >“你说得对，”艾伊德说道，</td>
+		<td class="en">“That’s right,” said Ide.</td></tr>
+		<tr><td width="45%" class="zh" >“留下来陪陪我吧，道森——那才够朋友。</td>
+		<td class="en">“Stay with me, Dawson—that’s a good fellow.</td></tr>
+		<tr><td width="45%" class="zh" >陪我溜达一会儿。</td>
+		<td class="en">Walk around with me awhile.</td></tr>
+		<tr><td width="45%" class="zh" >我以前受过很多打击，但从来没有这么崩溃过。</td>
+		<td class="en">I never went to pieces like this before, and I’ve had a good many hard knocks.</td></tr>
+		<tr><td width="45%" class="zh" >你能弄些像样的吃的来吗，老兄？</td>
+		<td class="en">Do you think you could hustle something in the way of a little lunch, old man?</td></tr>
+		<tr><td width="45%" class="zh" >恐怕我已经崩溃到了极点，没法再乞讨了。”</td>
+		<td class="en">I’m afraid my nerve’s too far gone to try any panhandling.”</td></tr>
+		<tr><td width="45%" class="zh" >瓦兰斯领着他的同伴来到几乎空无一人的第五大道上，然后向西沿着第三十几街朝百老汇路走去。</td>
+		<td class="en">Vallance led his companion up almost deserted Fifth Avenue, and then westward along the Thirties toward Broadway.</td></tr>
+		<tr><td width="45%" class="zh" >“在这儿等会儿。”他说着，把艾德留在了一个僻静幽暗的地方。</td>
+		<td class="en">“Wait here a few minutes,” he said, leaving Ide in a quiet and shadowed spot.</td></tr>
+		<tr><td width="45%" class="zh" >他走进了一家熟悉的酒店，像以前那样自信地向吧台走去。</td>
+		<td class="en">He entered a familiar hotel, and strolled toward the bar quite in his old assured way.</td></tr>
+		<tr><td width="45%" class="zh" >“吉米，外面有个穷光蛋，”他对酒吧侍者说道，“他说他饿坏了，看起来是真的。</td>
+		<td class="en">“There’s a poor devil outside, Jimmy,” he said to the bartender, “who says he’s hungry and looks it.</td></tr>
+		<tr><td width="45%" class="zh" >你知道给了他们钱，他们会去干什么。</td>
+		<td class="en">You know what they do when you give them money.</td></tr>
+		<tr><td width="45%" class="zh" >弄一两个三明治给他吧，我觉得他不会把它扔了。”</td>
+		<td class="en">Fix up a sandwich or two for him; and I’ll see that he doesn’t throw it away.”</td></tr>
+		<tr><td width="45%" class="zh" >“好的，瓦兰斯先生，”侍者说道，</td>
+		<td class="en">“Certainly, Mr. Vallance,” said the bartender.</td></tr>
+		<tr><td width="45%" class="zh" >“他们不全都是假装的。</td>
+		<td class="en">“They ain’t all fakes.</td></tr>
+		<tr><td width="45%" class="zh" >我也不喜欢看别人挨饿。”</td>
+		<td class="en">Don’t like to see anybody go hungry.”</td></tr>
+		<tr><td width="45%" class="zh" >他把一大份免费午餐用餐巾包好。</td>
+		<td class="en">He folded a liberal supply of the free lunch into a napkin.</td></tr>
+		<tr><td width="45%" class="zh" >瓦兰斯拿着出来，找到了他的同伴。</td>
+		<td class="en">Vallance went with it and joined his companion.</td></tr>
+		<tr><td width="45%" class="zh" >艾德狼吞虎咽地吃起来。</td>
+		<td class="en">Ide pounced upon the food ravenously.</td></tr>
+		<tr><td width="45%" class="zh" >“我有一年没吃过这么好吃的免费午餐了，”他说道，</td>
+		<td class="en">“I haven’t had any free lunch as good as this in a year,” he said.</td></tr>
+		<tr><td width="45%" class="zh" >“你不来点儿吗，道森？”</td>
+		<td class="en">“Aren’t you going to eat any, Dawson?</td></tr>
+		<tr><td width="45%" class="zh" >“我不饿——谢谢。”瓦兰斯答道。</td>
+		<td class="en">“I’m not hungry—thanks,” said Vallance.</td></tr>
+		<tr><td width="45%" class="zh" >“我们回广场去吧，”艾德说，</td>
+		<td class="en">“We’ll go back to the Square,” said Ide.</td></tr>
+		<tr><td width="45%" class="zh" >“警察不会在那里找我们麻烦的。</td>
+		<td class="en">“The cops won’t bother us there.</td></tr>
+		<tr><td width="45%" class="zh" >我要把剩下的火腿和别的东西包好，当我们明天的早餐。</td>
+		<td class="en">I’ll roll up the rest of this ham and stuff for our breakfast.</td></tr>
+		<tr><td width="45%" class="zh" >不能再吃了，我害怕我会病的。</td>
+		<td class="en">I won’t eat any more; I’m afraid I’ll get sick.</td></tr>
+		<tr><td width="45%" class="zh" >假如我今晚死于胃痉挛或什么别的病的话，我就永远摸不到那笔钱了。</td>
+		<td class="en">Suppose I’d die of cramps or something to-night, and never get to touch that money again!</td></tr>
+		<tr><td width="45%" class="zh" >离见律师还有十一个小时呢。</td>
+		<td class="en">It’s eleven hours yet till time to see that lawyer.</td></tr>
+		<tr><td width="45%" class="zh" >你不会离开我的，是不是，道森？</td>
+		<td class="en">You won’t leave me, will you, Dawson?</td></tr>
+		<tr><td width="45%" class="zh" >我害怕可能出事。</td>
+		<td class="en">I’m afraid something might happen.</td></tr>
+		<tr><td width="45%" class="zh" >你也没有什么地方可去，是吧？”</td>
+		<td class="en">You haven’t any place to go, have you?”</td></tr>
+		<tr><td width="45%" class="zh" >“对，”瓦兰斯说，“我今晚哪儿也不去。</td>
+		<td class="en">“No,” said Vallance, “nowhere to-night.</td></tr>
+		<tr><td width="45%" class="zh" >我和你一样在长凳上过夜。”</td>
+		<td class="en">I’ll have a bench with you.”</td></tr>
+		<tr><td width="45%" class="zh" >“你太沉得住气了，”艾德说，“如果你对我说的是真的。</td>
+		<td class="en">“You take it cool,” said Ide, “if you’ve told it to me straight.</td></tr>
+		<tr><td width="45%" class="zh" >我还以为一个一天之内丢了好工作又沦落成流浪汉的人会痛苦得揪自己头发。”</td>
+		<td class="en">I should think a man put on the bum from a good job just in one day would be tearing his hair.”</td></tr>
+		<tr><td width="45%" class="zh" >“我想我已经说过了，”瓦兰斯笑着说，“我还以为一个第二天能得到一大笔财产的人会非常轻松平静呢。”</td>
+		<td class="en">“I believe I’ve already remarked,” said Vallance, laughing, “that I would have thought that a man who was expecting to come into a fortune on the next day would be feeling pretty easy and quiet.”</td></tr>
+		<tr><td width="45%" class="zh" >“不管怎么说，人们对待事物的态度的确是件怪事。”艾德颇有哲理地说道，</td>
+		<td class="en">“It’s funny business,” philosophized Ide, “about the way people take things, anyhow.</td></tr>
+		<tr><td width="45%" class="zh" >“这张长椅归你了，道森，挨着我。</td>
+		<td class="en">Here’s your bench, Dawson, right next to mine.</td></tr>
+		<tr><td width="45%" class="zh" >这里的灯光不刺眼。</td>
+		<td class="en">The light don’t shine in your eyes here.</td></tr>
+		<tr><td width="45%" class="zh" >喂，道森，我回家后会让老爷子给你写封信，帮你找份工作。</td>
+		<td class="en">Say, Dawson, I’ll get the old man to give you a letter to somebody about a job when I get back home.</td></tr>
+		<tr><td width="45%" class="zh" >今晚你帮了我大忙。</td>
+		<td class="en">You’ve helped me a lot to-night.</td></tr>
+		<tr><td width="45%" class="zh" >要不是遇见你，今晚我都熬不过去了。”</td>
+		<td class="en">I don’t believe I could have gone through the night if I hadn’t struck you.”</td></tr>
+		<tr><td width="45%" class="zh" >“谢谢你，”瓦兰斯说，</td>
+		<td class="en">“Thank you,” said Vallance.</td></tr>
+		<tr><td width="45%" class="zh" >“你是躺下睡，还是坐着睡？”</td>
+		<td class="en">“Do you lie down or sit up on these when you sleep?”</td></tr>
+		<tr><td width="45%" class="zh" >一连几个小时，透过树枝瓦兰斯几乎目不转睛地盯着天上的星星，听着柏油马路上向南驶去的清脆的马蹄声。</td>
+		<td class="en">For hours Vallance gazed almost without winking at the stars through the branches of the trees and listened to the sharp slapping of horses’ hoofs on the sea of asphalt to the south.</td></tr>
+		<tr><td width="45%" class="zh" >他的思想是活跃的，但感觉却是静止的。</td>
+		<td class="en">His mind was active, but his feelings were dormant.</td></tr>
+		<tr><td width="45%" class="zh" >所有的感情都好像已经荡然无存。</td>
+		<td class="en">Every emotion seemed to have been eradicated.</td></tr>
+		<tr><td width="45%" class="zh" >他没有后悔，没有害怕，没有痛苦，也没有不安。</td>
+		<td class="en">He felt no regrets, no fears, no pain or discomfort.</td></tr>
+		<tr><td width="45%" class="zh" >甚至当他想到那个姑娘时，她也仿佛成了他眺望着的遥远星球上的人。</td>
+		<td class="en">Even when he thought of the girl, it was as of an inhabitant of one of those remote stars at which he gazed.</td></tr>
+		<tr><td width="45%" class="zh" >想到同伴的荒唐行为，他不禁轻轻笑出声来，但绝不是高兴。</td>
+		<td class="en">He remembered the absurd antics of his companion and laughed softly, yet without a feeling of mirth.</td></tr>
+		<tr><td width="45%" class="zh" >不久，送牛奶的车队驶入了城市，发出轰隆轰隆的击鼓般的声音。</td>
+		<td class="en">Soon the daily army of milk wagons made of the city a roaring drum to which they marched.</td></tr>
+		<tr><td width="45%" class="zh" >瓦兰斯在很不舒服的长凳上睡着了。</td>
+		<td class="en">Vallance fell asleep on his comfortless bench.</td></tr>
+		<tr><td width="45%" class="zh" >第二天的十点钟，这两个人站在了安街米德律师事务所的门前。</td>
+		<td class="en">At ten o’clock on the next day the two stood at the door of Lawyer Mead’s office in Ann Street.</td></tr>
+		<tr><td width="45%" class="zh" >随着时间的临近，艾德变得越发地焦虑不安。瓦兰斯不忍心让他一个人面对他所害怕的危险。</td>
+		<td class="en">Ide’s nerves fluttered worse than ever when the hour approached; and Vallance could not decide to leave him a possible prey to the dangers he dreaded.</td></tr>
+		<tr><td width="45%" class="zh" >当他俩一同进到事务所时，米德律师惊讶地看着他们。</td>
+		<td class="en">When they entered the office, Lawyer Mead looked at them wonderingly.</td></tr>
+		<tr><td width="45%" class="zh" >他和瓦兰斯是老交情了。</td>
+		<td class="en">He and Vallance were old friends.</td></tr>
+		<tr><td width="45%" class="zh" >寒暄过后，他转向了艾德，此时的他站在那里，在预期的紧要关头，脸色煞白、浑身发抖。</td>
+		<td class="en">After his greeting, he turned to Ide, who stood with white face and trembling limbs before the expected crisis.</td></tr>
+		<tr><td width="45%" class="zh" >“艾德先生，昨晚我又把第二封信送到了你的住处，”他说，</td>
+		<td class="en">“I sent a second letter to your address last night, Mr. Ide,” he said.</td></tr>
+		<tr><td width="45%" class="zh" >“今天早晨我得知你没在那里，没有收到那封信。</td>
+		<td class="en">“I learned this morning that you were not there to receive it.</td></tr>
+		<tr><td width="45%" class="zh" >那封信是通知你，波尔丁先生重新考虑了恢复你继承权的想法。</td>
+		<td class="en">It will inform you that Mr. Paulding has reconsidered his offer to take you back into favor.</td></tr>
+		<tr><td width="45%" class="zh" >他已经决定不这么做，并希望你明白，你们之间的关系不会有任何改变。</td>
+		<td class="en">He has decided not to do so, and desires you to understand that no change will be made in the relations existing between you and him.”</td></tr>
+		<tr><td width="45%" class="zh" >艾德突然之间停止了颤抖。</td>
+		<td class="en">Ide’s trembling suddenly ceased.</td></tr>
+		<tr><td width="45%" class="zh" >他的脸慢慢有了血色，背也挺直了。</td>
+		<td class="en">The color came back to his face, and he straightened his back.</td></tr>
+		<tr><td width="45%" class="zh" >他的下巴扬起了半英寸，眼睛闪出光芒。</td>
+		<td class="en">His jaw went forward half an inch, and a gleam came into his eye.</td></tr>
+		<tr><td width="45%" class="zh" >他一手把他的破帽子戴回头上，一只手有力地向律师伸去。</td>
+		<td class="en">He pushed back his battered hat with one hand, and extended the other, with levelled fingers, toward the lawyer.</td></tr>
+		<tr><td width="45%" class="zh" >他长长地吸了一口气，讥讽地笑了起来。</td>
+		<td class="en">He took a long breath and then laughed sardonically.</td></tr>
+		<tr><td width="45%" class="zh" >“告诉老波尔丁，让他见鬼去吧。”他清晰地大声说道，转过身迈着轻快有力的步伐离开了事务所。</td>
+		<td class="en">“Tell old Paulding he may go to the devil,” he said, loudly and clearly, and turned and walked out of the office with a firm and lively step.</td></tr>
+		<tr><td width="45%" class="zh" >米德律师转过身，微笑地面向瓦兰斯。</td>
+		<td class="en">Lawyer Mead turned on his heel to Vallance and smiled.</td></tr>
+		<tr><td width="45%" class="zh" >“你来，我很高兴，”他亲切地说，</td>
+		<td class="en">“I am glad you came in,” he said, genially.</td></tr>
+		<tr><td width="45%" class="zh" >“你叔叔想让你马上回家。</td>
+		<td class="en">“Your uncle wants you to return home at once.</td></tr>
+		<tr><td width="45%" class="zh" >他觉得当初的决定过于仓促，有失妥当，并希望告诉你一切照旧——”</td>
+		<td class="en">He is reconciled to the situation that led to his hasty action, and desires to say that all will be as—”</td></tr>
+		<tr><td width="45%" class="zh" >“喂，亚当！”米德律师话还没说完，朝他的职员大叫道，</td>
+		<td class="en">“Hey, Adams!” cried Lawyer Mead, breaking his sentence, and calling to his clerk.</td></tr>
+		<tr><td width="45%" class="zh" >“拿杯水来——瓦兰斯先生晕过去了。”</td>
+		<td class="en">“Bring a glass of water—Mr. Vallance has fainted.”</td></tr>
+		<tr><td width="45%" class="zh" ></td>
+		<td class="en"></td></tr>
+	</table>
+</div>
+
+<div class="zh_en"><a href="#" class="zh_btn">中文</a> | <a href="#" class="en_btn">英文</a> | <a href="#" class="zhen_btn">中英文</a></div>
+
+<script src="jquery-1.10.1.min.js"></script>
+<script src="jquery.bookify.js"></script>
+</body>
+</html>

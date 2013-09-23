@@ -1,0 +1,209 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+	<!-- link rel="stylesheet" type="text/css" href="book.css" -->
+	<style type="text/css">
+		/* IMPORTANT !!!!
+		line-height, font-size defined in jquery.bookify.js */
+
+		* {
+			/* font-size: 20px; */
+		 }
+
+		table, td, th {
+
+		  }
+
+		td {
+	    	 /* height:50px; */
+	 	     vertical-align:top;
+	 	   	 text-align:left;
+	 	 	 padding-bottom:30px;/*行高的倍数-chenjing*/
+			 padding-left:20px;
+	 	  }
+
+		  /*chenjing*/
+		  .ebook_title{ position:absolute; left:20%; top:7%; font-weight:bold; font-size:35px; width:750px;}
+		  .zh_en{ position:absolute; left:70%; bottom:10%; font-size:14px;}
+		  .pre,.next{ cursor:pointer; font-size:40px; font-weight:bold; position:absolute; top:40%}
+		  .pre{ display:none; left:7%}
+		  .next{right:7%}
+
+	</style>
+
+</head>
+<body>
+<div class="ebook_title"></div>
+<div class="pre"><<</div>
+<div class="next">>></div>
+<div class="ebook_content">
+	<table cellpadding="0" cellspacing="0">
+		<tr><td width="45%" class="zh" >高高在上的女士</td>
+		<td class="en">The Lady Higher up</td></tr>
+		<tr><td width="45%" class="zh" >作者：欧·亨利</td>
+		<td class="en">by O. Henry </td></tr>
+		<tr><td width="45%" class="zh" >据说纽约市的居民都离开纽约去度假了，因此，毫无疑问，声音在夏天宁静的空气中传播得这么远。</td>
+		<td class="en">New York City, they said, was deserted; and that accounted, doubtless, for the sounds carrying so far in the tranquil summer air.</td></tr>
+		<tr><td width="45%" class="zh" >微风拂动，风向南偏西南，时间正是午夜，主题是通过无线电神话的女性闲谈。</td>
+		<td class="en">The breeze was south-by-southwest; the hour was midnight; the theme was a bit of feminine gossip by wireless mythology.</td></tr>
+		<tr><td width="45%" class="zh" >在离曼哈顿晒烫的柏油马路有365英尺高的地方，那位踮着脚的、有象征意义的女神，此时把她游移不定的弓箭对准她那在自由女神岛上高贵的姐妹。</td>
+		<td class="en">Three hundred and sixty-five feet above the heated asphalt the tiptoeing symbolic deity on Manhattan pointed her vacillating arrow straight, for the time, in the direction of her exalted sister on Liberty Island.</td></tr>
+		<tr><td width="45%" class="zh" >麦迪逊广场花园里的灯光都已熄灭，广场上的长凳睡满了人，他们的姿势千奇百怪，相比之下，多雷为《地狱篇》绘制的插图中那些扭曲的人像倒可以算是服装店里的模特了。</td>
+		<td class="en">The lights of the great Garden were out; the benches in the Square were filled with sleepers in postures so strange that beside them the writhing figures in Dore’s illustrations of the Inferno would have straightened into tailor’s dummies.</td></tr>
+		<tr><td width="45%" class="zh" >这花园塔楼上的狄安娜塑像，老是保持着把箭瞄向对面海湾的姿态——它那风信标似的模样表示其恒久不变，镀金的涂层表示其清纯无邪，那条独特的、飘逸优美的围巾表示其热衷展现个性的风格，始终张开长弓的习惯表示其率直和天真，飞奔去赶哈莱姆区火车的姿态表示其大都会生活的场景。</td>
+		<td class="en">The statue of Diana on the tower of the Garden—its constancy shown by its weathercock ways, its innocence by the coating of gold that it has acquired, its devotion to style by its single, graceful flying scarf, its candour and artlessness by its habit of ever drawing the long bow, its metropolitanism by its posture of swift flight to catch a Harlem train—remained poised with its arrow pointed across the upper bay.</td></tr>
+		<tr><td width="45%" class="zh" >假如弦上的箭径直射出，很可能在那位青铜打造的英勇女士头顶50英尺上方掠过，她的职责就是向来自世界各地受到压迫的人表示欢迎。</td>
+		<td class="en">Had that arrow sped truly and horizontally it would have passed fifty feet above the head of the heroic matron whose duty it is to offer a cast-ironical welcome to the oppressed of other lands.</td></tr>
+		<tr><td width="45%" class="zh" >这位女士凝望着海洋，互相竞争的轮船公司的船只纷纷留下航迹，开始削减票价。</td>
+		<td class="en">Seaward this lady gazed, and the furrows between steamship lines began to cut steerage rates.</td></tr>
+		<tr><td width="45%" class="zh" >翻译人员也为她增加了额外负担。</td>
+		<td class="en">The translators, too, have put an extra burden upon her.</td></tr>
+		<tr><td width="45%" class="zh" >“照耀世界的自由”（自由女神像的制造者如是称呼她）尽管体积庞大，但职责也就跟电工或者标准石油大王差不多。</td>
+		<td class="en">“Liberty Lighting the World” (as her creator christened her) would have had a no more responsible duty, except for the size of it, than that of an electrician or a Standard Oil magnate.</td></tr>
+		<tr><td width="45%" class="zh" >然而，“照耀”世界还需要更能干的品质（正如我们有学问的城市监护人用英语称呼她时所期望的那样）。</td>
+		<td class="en">But to “enlighten” the world (as our learned civic guardians “Englished” it) requires abler qualities.</td></tr>
+		<tr><td width="45%" class="zh" >于是，可怜的自由女士除了要挂名充当照耀者，还得改行当肖托夸湖畔的女教师，她的领域也从平静古典的湖面转为海洋。</td>
+		<td class="en">And so poor Liberty, instead of having a sinecure as a mere illuminator, must be converted into a Chautauqua schoolma’am, with the oceans for her field instead of the placid, classic lake.</td></tr>
+		<tr><td width="45%" class="zh" >她举着一只没有火焰的火炬，昂着空荡荡的脑袋，必须驱散这个世界的阴暗，并教它从头学起。</td>
+		<td class="en">With a fireless torch and an empty head must she dispel the shadows of the world and teach it its A, B, C’s.</td></tr>
+		<tr><td width="45%" class="zh" >“啊，自由太太！”午夜寂静的空气中传来一个清晰欢快的女高音。</td>
+		<td class="en">“Ah, there, Mrs. Liberty!” called a clear, rollicking soprano voice through the still, midnight air.</td></tr>
+		<tr><td width="45%" class="zh" >“狄安娜小姐，是你吗？</td>
+		<td class="en">“Is that you, Miss Diana?</td></tr>
+		<tr><td width="45%" class="zh" >请原谅我不能把头扭过来。</td>
+		<td class="en">Excuse my not turning my head.</td></tr>
+		<tr><td width="45%" class="zh" >我不像有些人那样轻便灵活。</td>
+		<td class="en">I’m not as flighty and whirly-whirly as some.</td></tr>
+		<tr><td width="45%" class="zh" >我嗓子哑了,几乎说不出话来了——最后一船从俄亥俄州马里塔来的游客在我喉咙里的楼梯上扔了许多花生壳。</td>
+		<td class="en">And ’tis so hoarse I am I can hardly talk on account of the peanut-hulls left on the stairs in me throat by that last boatload of tourists from Marietta, Ohio.</td></tr>
+		<tr><td width="45%" class="zh" >那天晚上本来很愉快，谁知后来竟变成这样，小姐。”</td>
+		<td class="en">’Tis after being a fine evening, miss.”</td></tr>
+		<tr><td width="45%" class="zh" >“你要是不介意的话，”金色塑像银铃般的声音说道，“我想知道，你说话怎么会带爱尔兰口音？</td>
+		<td class="en">“If you don’t mind my asking,” came the bell-like tones of the golden statue, “I’d like to know where you got that City Hall brogue.</td></tr>
+		<tr><td width="45%" class="zh" >我以前不知道自由必须和爱尔兰有关。”</td>
+		<td class="en">I didn’t know that Liberty was necessarily Irish.”</td></tr>
+		<tr><td width="45%" class="zh" >“如果你研究过艺术受外来影响的历史，就不会提这种问题了。”海边的塑像回答说，</td>
+		<td class="en">“If ye’d studied the history of art in its foreign complications ye’d not need to ask,” replied the offshore statue.</td></tr>
+		<tr><td width="45%" class="zh" >“如果你不是那么孤陋寡闻，你就该知道我是欧洲人制造的，并以法国政府的名义送给了美国人民，让他们欢迎爱尔兰移民来到纽约这座由荷兰人建立的城市。</td>
+		<td class="en">“If ye wasn’t so light-headed and giddy ye’d know that I was made by a Dago and presented to the American people on behalf of the French Government for the purpose of welcomin’ Irish immigrants into the Dutch city of New York.</td></tr>
+		<tr><td width="45%" class="zh" >自从我被立起来，日日夜夜做的就是这件事。</td>
+		<td class="en">’Tis that I’ve been doing night and day since I was erected.</td></tr>
+		<tr><td width="45%" class="zh" >你要知道，狄安娜小姐，塑像和人一样——影响他们口音的不是制造他们的人，也不是制造他们的目的——我告诉你，而是同他们交往的人。”</td>
+		<td class="en">Ye must know, Miss Diana, that ’tis with statues the same as with people—’tis not their makers nor the purposes for which they were created that influence the operations of their tongues at all—it’s the associations with which they become associated, I’m telling ye.”</td></tr>
+		<tr><td width="45%" class="zh" >“你说得太对了，”狄安娜赞同地说道，</td>
+		<td class="en">“You’re dead right,” agreed Diana.</td></tr>
+		<tr><td width="45%" class="zh" >“我自己也是这样。</td>
+		<td class="en">“I notice it on myself.</td></tr>
+		<tr><td width="45%" class="zh" >就算奥林匹斯山的那些老伙伴们跑来用古希腊语跟我说些空话，我也搞不清楚它同科尼岛的电车售票员与乘客之间的谈话有什么不一样的地方。”</td>
+		<td class="en">If any of the old guys from Olympus were to come along and hand me any hot air in the ancient Greek I couldn’t tell it from a conversation between a Coney Island car conductor and a five-cent fare.”</td></tr>
+		<tr><td width="45%" class="zh" >“你决定如此平易近人真让我感到高兴，狄安娜小姐，”自由太太说，</td>
+		<td class="en">“I’m right glad ye’ve made up your mind to be sociable, Miss Diana,” said Mrs. Liberty.</td></tr>
+		<tr><td width="45%" class="zh" >“我在这里过得太寂寞冷清了。</td>
+		<td class="en">“’Tis a lonesome life I have down here.</td></tr>
+		<tr><td width="45%" class="zh" >城里有什么好玩的吗，亲爱的狄安娜小姐？”</td>
+		<td class="en">Is there anything doin’ up in the city, Miss Diana, dear?”</td></tr>
+		<tr><td width="45%" class="zh" >“哦，啦啦啦！——没有，”狄安娜说，</td>
+		<td class="en">“Oh, la, la, la!—no,” said Diana.</td></tr>
+		<tr><td width="45%" class="zh" >“注意到我说的‘啦啦啦’吗，自由阿姨？</td>
+		<td class="en">“Notice that ‘la, la, la,’ Aunt Liberty?</td></tr>
+		<tr><td width="45%" class="zh" >我是从下面‘夜巴黎’的屋顶花园学来的。</td>
+		<td class="en">Got that from ‘Paris by Night’ on the roof garden under me.</td></tr>
+		<tr><td width="45%" class="zh" >现在你在麦卡恩酒馆里也能听到那个‘啦啦啦’和‘伙计’的称呼了。</td>
+		<td class="en">You’ll hear that ‘la, la, la’ at the Café McCann now, along with ‘garsong.’</td></tr>
+		<tr><td width="45%" class="zh" >自从侍者领班奥拉弗蒂揍了用‘伙计’称呼他的三个客人之后，那帮放荡的客人已经不再用‘伙计’这词了。</td>
+		<td class="en">The bohemian crowd there have become tired of ‘garsong’ since O’Rafferty, the head waiter, punched three of them for calling him it.</td></tr>
+		<tr><td width="45%" class="zh" >噢，不，这几天晚上，城里完全就是杂乱无章。</td>
+		<td class="en">Oh, no; the town’s strickly on the bum these nights.</td></tr>
+		<tr><td width="45%" class="zh" >所有人都离开了。</td>
+		<td class="en">Everybody’s away.</td></tr>
+		<tr><td width="45%" class="zh" >今晚我看见一个城里的商人带着他的速记员在屋顶花园。</td>
+		<td class="en">Saw a downtown merchant on a roof garden this evening with his stenographer.</td></tr>
+		<tr><td width="45%" class="zh" >节目太乏味，他都睡着了。</td>
+		<td class="en">Show was so dull he went to sleep.</td></tr>
+		<tr><td width="45%" class="zh" >一位侍者在咬一角银币小费看看其真假的时候把他吵醒了。</td>
+		<td class="en">A waiter biting on a dime tip to see if it was good half woke him up.</td></tr>
+		<tr><td width="45%" class="zh" >他向四下望了望，看到了他那写字潦草的小跟班。</td>
+		<td class="en">He looks around and sees his little pothooks perpetrator.</td></tr>
+		<tr><td width="45%" class="zh" >‘嗯，’他说，‘德圣蒙特莫伦西小姐，你可不可以写封信？’</td>
+		<td class="en">‘H’m!’ says he, ‘will you take a letter, Miss De St. Montmorency?’</td></tr>
+		<tr><td width="45%" class="zh" >‘当然，我这就写，’她答应道，‘如果要我写情书的话，当然可以。’”</td>
+		<td class="en">‘Sure, in a minute,’ says she, ‘if you’ll make it an X.’</td></tr>
+		<tr><td width="45%" class="zh" >“那便是屋顶上发生的最有趣的事。</td>
+		<td class="en">“That was the best thing happened on the roof.</td></tr>
+		<tr><td width="45%" class="zh" >现在你知道有多无聊了。</td>
+		<td class="en">So you see how dull it is.</td></tr>
+		<tr><td width="45%" class="zh" >啦啦啦！”</td>
+		<td class="en">La, la, la!”</td></tr>
+		<tr><td width="45%" class="zh" >“你那儿能看到社会上的这些真好，狄安娜小姐。</td>
+		<td class="en">“’Tis fine ye have it up there in society, Miss Diana.</td></tr>
+		<tr><td width="45%" class="zh" >你那儿有猫展、马展和军队锦标赛，士兵们个个都像将军那么神气，而将军们则像百货公司的巡视员那么威风。</td>
+		<td class="en">Ye have the cat show and the horse show and the military tournaments where the privates look grand as generals and the generals try to look grand as floor-walkers.</td></tr>
+		<tr><td width="45%" class="zh" >你那儿有运动员表演，三围是36、19、45英寸的姑娘在威尼斯大运河边桦树皮搭的棚屋里演示做早餐，由范德比尔特家族成员、伯纳德·麦克法登、道伊和迪斯神父之类的名人主持。</td>
+		<td class="en">And ye have the Sportsmen’s Show, where the girl that measures 36, 19, 45 cooks breakfast food in a birch-bark wigwam on the banks of the Grand Canal of Venice conducted by one of the Vanderbilts, Bernard McFadden, and the Reverends Dowie and Duss.</td></tr>
+		<tr><td width="45%" class="zh" >而且你那儿有法国式舞会，原居民的科恩家族成员和罗伯特·埃米特·桑格邦德协会成员一起大跳苏格兰舞。</td>
+		<td class="en">And ye have the French ball, where the original Cohens and the Robert Emmet-Sangerbund Society dance the Highland fling one with another.</td></tr>
+		<tr><td width="45%" class="zh" >你那儿还有世界上最华丽的盛会——奥赖恩舞会，法国学生和奥地利的蒂罗尔颤音歌手在舞会上比赛美国黑人的步态舞。</td>
+		<td class="en">And ye have the grand O’Ryan ball, which is the most beautiful pageant in the world, where the French students vie with the Tyrolean warblers in doin’ the cake walk.</td></tr>
+		<tr><td width="45%" class="zh" >狄安娜小姐，在全城的雕像之中，你的工作是最好的。”</td>
+		<td class="en">Ye have the best job for a statue in the whole town, Miss Diana.</td></tr>
+		<tr><td width="45%" class="zh" >“我这工作实在是枯燥无味，”岛上的雕像叹息说，“就是在纽约湾传播自由的知识。</td>
+		<td class="en">“’Tis weary work,” sighed the island statue, “disseminatin’ the science of liberty in New York Bay.</td></tr>
+		<tr><td width="45%" class="zh" >有时，我低头瞥一眼埃利斯岛，看到一帮我应该照耀的移民，往往产生吹灭煤气火炬的冲动，真想让验尸官来签发他们加入美国国籍的文件。”</td>
+		<td class="en">Sometimes when I take a peep down at Ellis Island and see the gang of immigrants I’m supposed to light up, ’tis tempted I am to blow out the gas and let the coroner write out their naturalization papers.”</td></tr>
+		<tr><td width="45%" class="zh" >“唉，让你负责这工作最糟糕的最后一个环节，实在是太不够意思了，不是吗？”那个越野赛跑的女神表示同情地说，</td>
+		<td class="en">“Say, it’s a shame, ain’t it, to give you the worst end of it?” came the sympathetic antiphony of the steeplechase goddess.</td></tr>
+		<tr><td width="45%" class="zh" >“你的周围全是水，一定非常寂寞吧。</td>
+		<td class="en">“It must be awfully lonesome down there with so much water around you.</td></tr>
+		<tr><td width="45%" class="zh" >我不明白，你是怎么保持你的卷发的。</td>
+		<td class="en">I don’t see how you ever keep your hair in curl.</td></tr>
+		<tr><td width="45%" class="zh" >你身上那件宽大的长袍也已是十年前的式样了。</td>
+		<td class="en">And that Mother Hubbard you are wearing went out ten years ago.</td></tr>
+		<tr><td width="45%" class="zh" >我觉得真应该控告那些搞雕塑的家伙们犯有伤害罪——他们给女士穿铸铁或是大理石的衣服。</td>
+		<td class="en">I think those sculptor guys ought to be held for damages for putting iron or marble clothes on a lady.</td></tr>
+		<tr><td width="45%" class="zh" >在这方面，圣高登斯先生就高明多了。</td>
+		<td class="en">That’s where Mr. St. Gaudens was wise.</td></tr>
+		<tr><td width="45%" class="zh" >我总想赶在时尚前面，只是它来得太快。</td>
+		<td class="en">I’m always a little ahead of the styles; but they’re coming my way pretty fast.</td></tr>
+		<tr><td width="45%" class="zh" >不好意思，我得转过身去——有一股北风朝我吹过来——伊索珀斯河那面肯定出了问题。</td>
+		<td class="en">Excuse my back a moment—I caught a puff of wind from the north—shouldn’t wonder if things had loosened up in Esopus.</td></tr>
+		<tr><td width="45%" class="zh" >你瞧！现在是西风了——我原以为西面的那块金板没有挡风呢。</td>
+		<td class="en">There, now! it’s in the West—I should think that gold plank would have calmed the air out in that direction.</td></tr>
+		<tr><td width="45%" class="zh" >你刚才说什么，自由太太？”</td>
+		<td class="en">What were you saying, Mrs. Liberty?”</td></tr>
+		<tr><td width="45%" class="zh" >“跟你聊天很愉快，狄安娜小姐，可是我看到一艘欧洲来的轮船驶进了纽约湾海峡，我必须履行我的职责了。</td>
+		<td class="en">“A fine chat I’ve had with ye, Miss Diana, ma’am, but I see one of them European steamers a-sailin’ up the Narrows, and I must be attendin’ to me duties.</td></tr>
+		<tr><td width="45%" class="zh" >我的工作是高举自由的火炬，欢迎所有那些登岸时没有被轮船服务员踢死的人。</td>
+		<td class="en">’Tis me job to extend aloft the torch of Liberty to welcome all them that survive the kicks that the steerage stewards give ’em while landin.’</td></tr>
+		<tr><td width="45%" class="zh" >当然，你花8.5美元就能到这个伟大的国家来，但是检疫大夫如果发现你为此而哭红眼睛的话，就会免费送你回去。”</td>
+		<td class="en">Sure ’tis a great country ye can come to for $8.50, and the doctor waitin’ to send ye back home free if he sees yer eyes red from cryin’ for it.”</td></tr>
+		<tr><td width="45%" class="zh" >镀金的塑像随着风向转变方向，用它的金箭瞄准地平线上许多方位。</td>
+		<td class="en">The golden statue veered in the changing breeze, menacing many points on the horizon with its aureate arrow.</td></tr>
+		<tr><td width="45%" class="zh" >“再见，自由阿姨，”塔楼上的狄安娜甜蜜地招呼说，</td>
+		<td class="en">“So long, Aunt Liberty,” sweetly called Diana of the Tower.</td></tr>
+		<tr><td width="45%" class="zh" >“改天，等风向适合的时候，</td>
+		<td class="en">“Some night, when the wind’s right.</td></tr>
+		<tr><td width="45%" class="zh" >我会再找你聊天的。</td>
+		<td class="en">I’ll call you up again.</td></tr>
+		<tr><td width="45%" class="zh" >可是——喂！你干这份工作以来，还没有经历过这么大的快感呢。</td>
+		<td class="en">But—say! you haven’t got such a fierce kick coming about your job.</td></tr>
+		<tr><td width="45%" class="zh" >我从竖立在这里的时候开始，就一直密切注意着曼哈顿岛。</td>
+		<td class="en">I’ve kept a pretty good watch on the island of Manhattan since I’ve been up here.</td></tr>
+		<tr><td width="45%" class="zh" >你那里卸下来的垂头丧气的追寻自由的人可不少，但他们并非一直如此。</td>
+		<td class="en">That’s a pretty sick-looking bunch of liberty chasers they dump down at your end of it; but they don’t all stay that way.</td></tr>
+		<tr><td width="45%" class="zh" >我不时也会看到，被出生在美国、一个月挣不到40美元的码头工人赶上岸的人当中，有些家伙也签签支票，投票选举，赞助艺术，每天早晨洗个澡。</td>
+		<td class="en">Every little while up here I see guys signing checks and voting the right ticket, and encouraging the arts and taking a bath every morning, that was shoved ashore by a dock labourer born in the United States who never earned over forty dollars a month.</td></tr>
+		<tr><td width="45%" class="zh" >别瞧不起你的工作，自由阿姨，你干得很好，一点儿也不坏。”</td>
+		<td class="en">Don’t run down your job, Aunt Liberty; you’re all right, all right.”</td></tr>
+		<tr><td width="45%" class="zh" ></td>
+		<td class="en"></td></tr>
+	</table>
+</div>
+
+<div class="zh_en"><a href="#" class="zh_btn">中文</a> | <a href="#" class="en_btn">英文</a> | <a href="#" class="zhen_btn">中英文</a></div>
+
+<script src="jquery-1.10.1.min.js"></script>
+<script src="jquery.bookify.js"></script>
+</body>
+</html>

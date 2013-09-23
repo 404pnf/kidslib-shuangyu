@@ -1,0 +1,489 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+	<!-- link rel="stylesheet" type="text/css" href="book.css" -->
+	<style type="text/css">
+		/* IMPORTANT !!!!
+		line-height, font-size defined in jquery.bookify.js */
+
+		* {
+			/* font-size: 20px; */
+		 }
+
+		table, td, th {
+
+		  }
+
+		td {
+	    	 /* height:50px; */
+	 	     vertical-align:top;
+	 	   	 text-align:left;
+	 	 	 padding-bottom:30px;/*行高的倍数-chenjing*/
+			 padding-left:20px;
+	 	  }
+
+		  /*chenjing*/
+		  .ebook_title{ position:absolute; left:20%; top:7%; font-weight:bold; font-size:35px; width:750px;}
+		  .zh_en{ position:absolute; left:70%; bottom:10%; font-size:14px;}
+		  .pre,.next{ cursor:pointer; font-size:40px; font-weight:bold; position:absolute; top:40%}
+		  .pre{ display:none; left:7%}
+		  .next{right:7%}
+
+	</style>
+
+</head>
+<body>
+<div class="ebook_title"></div>
+<div class="pre"><<</div>
+<div class="next">>></div>
+<div class="ebook_content">
+	<table cellpadding="0" cellspacing="0">
+		<tr><td width="45%" class="zh" >刽子手</td>
+		<td class="en">El Verdugo</td></tr>
+		<tr><td width="45%" class="zh" >作者：巴尔扎克</td>
+		<td class="en">by Honoré de Balzac</td></tr>
+		<tr><td width="45%" class="zh" >芒达小镇的钟声刚刚敲过午夜十二点。</td>
+		<td class="en">The clock of the little town of Menda had just struck midnight.</td></tr>
+		<tr><td width="45%" class="zh" >此刻，一位年轻的法国军官正倚在一座长长的露台上，凭栏而立。这露台与芒达城堡的花园毗邻。他像是陷入深深的思绪中，这和无忧无虑的军队生活很不搭调。但话又说回来，再没有任何时候、任何场景、任何夜晚比现在更适合沉思了。</td>
+		<td class="en">At that moment a young French officer, leaning on the parapet of a long terrace which bordered the gardens of the chateau de Menda, seemed buried in thoughts that were deeper than comported with the light-hearted carelessness of military life; though it must be said that never were hour, scene, or night more propitious for meditation.</td></tr>
+		<tr><td width="45%" class="zh" >西班牙的天空非常美丽，他头顶就是一片蔚蓝的苍穹。</td>
+		<td class="en">The beautiful sky of Spain spread its dome of azure above his head.</td></tr>
+		<tr><td width="45%" class="zh" >闪耀的群星和柔和的月光照亮了他脚下景色宜人的山谷。</td>
+		<td class="en">The scintillation of the stars and the soft light of the moon illumined the delightful valley that lay at his feet.</td></tr>
+		<tr><td width="45%" class="zh" >这位年轻的少校半靠在一株花开正艳的桔树上，他脚下三百英尺的是一览无余的芒达城。城堡便是以岩石为基建筑的。</td>
+		<td class="en">Resting partly against an orange-tree in bloom, the young major could see, three hundred feet below him, the town of Menda, at the base of the rock on which the castle is built.</td></tr>
+		<tr><td width="45%" class="zh" >他转过头俯视波光粼粼的海水，看着银色波涛环抱着这处美景。</td>
+		<td class="en">Turning his head, he looked down upon the sea, the sparkling waters of which encircled the landscape with a sheet of silver.</td></tr>
+		<tr><td width="45%" class="zh" >城堡灯火通明。</td>
+		<td class="en">The chateau was illuminated.</td></tr>
+		<tr><td width="45%" class="zh" >舞会上快乐的喧闹声、乐队的演奏声、舞者的笑声，混杂着远处波浪的呢喃声传入他的耳朵。</td>
+		<td class="en">The joyous uproar of a ball, the sounds of an orchestra, the laughter of the dancers came to him, mingling with the distant murmur of the waves.</td></tr>
+		<tr><td width="45%" class="zh" >炎热的白天让他的身体疲惫不堪，清凉的夜晚为身体注入了新鲜的活力。</td>
+		<td class="en">The coolness of the night gave fresh energy to his body, that was tired with the heat of the day.</td></tr>
+		<tr><td width="45%" class="zh" >此外，园中种植的树木如此芬芳，花草如此甜美，使这位青年似乎置身于芳香沐浴之中。</td>
+		<td class="en">Besides which, the gardens were planted with trees so balmy and flowers so sweet, that the young man felt as if plunged in a perfumed bath.</td></tr>
+		<tr><td width="45%" class="zh" >芒达城堡归一位西班牙贵族所有，此时他全家人都住在那里。</td>
+		<td class="en">The chateau de Menda belonged to a grandee of Spain, who was at this time living there with his family.</td></tr>
+		<tr><td width="45%" class="zh" >整场晚会的过程中，贵族的长女都在关注着这位年轻的军官，目光极为哀愁。正是这位西班牙少女含蓄流露的情意，给这位法国军官带来了无限遐想。</td>
+		<td class="en">During the whole evening, the eldest daughter had looked at the young officer with an interest expressing extreme sadness, and such implied compassion on the part of a Spaniard might well have caused the reverie of the Frenchman.</td></tr>
+		<tr><td width="45%" class="zh" >克拉拉容貌美丽，尽管她有三个兄弟和一个妹妹，但是她父亲莱加奈斯侯爵的财富似乎很是充裕，这使得维克托·马尔尚足以相信这位少女将会嫁妆丰厚。</td>
+		<td class="en">Clara was beautiful; and though she had three brothers and one sister, the wealth of the Marquis de Leganes seemed sufficient to justify Victor Marchand in believing that the young lady would be richly dowered.</td></tr>
+		<tr><td width="45%" class="zh" >可是他怎敢相信西班牙最高傲的贵族会把女儿下嫁给一个巴黎杂货商的儿子呢？</td>
+		<td class="en">But could he dare to believe that the daughter of the proudest noble in Spain would be given to the son of a Parisian grocer?</td></tr>
+		<tr><td width="45%" class="zh" >况且，西班牙人憎恨法国人。</td>
+		<td class="en">Besides, Frenchmen were hated.</td></tr>
+		<tr><td width="45%" class="zh" >统治这个省的G将军一直怀疑侯爵准备起义拥戴费迪南德七世。维克托·马尔尚指挥的一个营就驻扎在芒达小城，以便遏制邻近那些为莱加奈斯侯爵所控制的地区。</td>
+		<td class="en">The marquis having been suspected by General G—t—r, who governed the province, of preparing an insurrection in favor of Ferdinand VII., the battalion commanded by Victor Marchand was quartered in the little town of Menda, to hold in check the neighboring districts, which were under the control of the Marquis de Leganes.</td></tr>
+		<tr><td width="45%" class="zh" >奈伊元帅近来的一封急信上说，英国人可能不久就会登陆，他还指出侯爵就是暗通伦敦内阁的那个人。</td>
+		<td class="en">A recent despatch from Marechal Ney made it seem probable that the English would soon land a force upon the coast; and he mentioned the marquis as the man who was believed to be in communication with the cabinet of London.</td></tr>
+		<tr><td width="45%" class="zh" >因此，尽管这位西班牙人对维克托·马尔尚和他的属下们热情款待，可年轻的法国军官却始终保持着警惕。</td>
+		<td class="en">Thus, in spite of the cordial welcome which that Spaniard had given to Victor Marchand and his soldiers, the young officer held himself perpetually on his guard.</td></tr>
+		<tr><td width="45%" class="zh" >他从舞厅走向露台，意在观察这个城镇以及受他监管的乡村地区的动静。他心中自问：该怎么理解侯爵始终如一的示好呢？将军的忧虑是否正是被此地表象上的平安无事所证实呢？</td>
+		<td class="en">As he came from the ballroom to the terrace, intending to cast his eye upon the state of the town and the outlying districts confided to his care, he asked himself how he ought to interpret the good will which the marquis never failed to show him, and whether the fears of his general were warranted by the apparent tranquillity of the region.</td></tr>
+		<tr><td width="45%" class="zh" >但当他到达露台的那一刻，所有的这些想法就被驱散了，取而代之的是一种审慎感和油然而生的好奇心。</td>
+		<td class="en">But no sooner had he reached the terrace than these thoughts were driven from his mind by a sense of prudence, and also by natural curiosity.</td></tr>
+		<tr><td width="45%" class="zh" >他看到城里灯火通明。</td>
+		<td class="en">He saw in the town a great number of lights.</td></tr>
+		<tr><td width="45%" class="zh" >尽管是圣雅各节，可他在那个早晨已经下令必须按照部队规定的时间熄灯，只有城堡是个例外。</td>
+		<td class="en">Although it was the feast of Saint James, he had, that very morning, ordered that all lights should be put out at the hour prescribed in the army regulations, those of the chateau alone excepted.</td></tr>
+		<tr><td width="45%" class="zh" >他看见士兵们恪守其位，处处可见闪着光的刺刀，然而这种静谧中带着庄重，没有任何迹象表明西班牙人沉浸在节日的欢乐中而漠视他的命令。</td>
+		<td class="en">He saw, it is true, the bayonets of his soldiers gleaming here and there at their appointed posts; but the silence was solemn, and nothing indicated that the Spaniards were disregarding his orders in the intoxication of a fete.</td></tr>
+		<tr><td width="45%" class="zh" >对于有些居民故意违犯命令，他极力给自己寻求解释，他觉得这其中必有蹊跷，特别是他已经安排了一批军官负责夜间巡逻以加强管理，却依然出现了违犯命令的情况，这就更加难以理解了。</td>
+		<td class="en">Endeavoring to explain to himself this culpable and deliberate infraction of rules on the part of the inhabitants, it struck him as the more incomprehensible because he had left a number of officers in charge of patrols who were to make their rounds during the night, and enforce the regulations.</td></tr>
+		<tr><td width="45%" class="zh" >由于年轻气盛，他想要从露台围墙的一个缺口处跳下去，因为从岩石上走可以比走平常的路更快地到达他设在城堡另一面的城门口的小哨卡。这时，一个轻微的声音使他放慢了脚步。</td>
+		<td class="en">With the impetuosity of youth, he was about to spring through an opening in the terrace wall, and descend by the rocks more rapidly than by the usual road to a little outpost which he had placed at the entrance of the town, on the side toward the chateau, when a slight noise arrested him.</td></tr>
+		<tr><td width="45%" class="zh" >他似乎听见一个女人蹑手蹑脚地走过来，脚步在他身后的沙土路上发出沙沙的声音。</td>
+		<td class="en">He fancied he heard the light step of a woman on the gravelled path behind him.</td></tr>
+		<tr><td width="45%" class="zh" >他转过头去看，并没有人，可是他的眼睛被海上一道特别的光亮吸引住了。</td>
+		<td class="en">He turned his head and saw no one, but his eyes were caught by an extraordinary light upon the ocean.</td></tr>
+		<tr><td width="45%" class="zh" >刹那间，他所看到的凶险景象震慑得他动弹不得，以至于他竟觉得是自己产生了错觉。</td>
+		<td class="en">Suddenly he beheld a sight so alarming that he stood for a moment motionless with surprise, fancying that his senses were mistaken.</td></tr>
+		<tr><td width="45%" class="zh" >皎洁的月光使他能辨别出远处的船帆。</td>
+		<td class="en">The white rays of the moonlight enabled him to distinguish sails at some distance.</td></tr>
+		<tr><td width="45%" class="zh" >他努力地使自己相信，这只是由于月亮倒映在海波上所造成的视觉幻象。</td>
+		<td class="en">He tried to convince himself that this vision was an optical delusion caused by the caprices of the waves and the moon.</td></tr>
+		<tr><td width="45%" class="zh" >这时，有一个嘶哑的声音在喊他的名字。</td>
+		<td class="en">At that moment, a hoarse voice uttered his name.</td></tr>
+		<tr><td width="45%" class="zh" >他朝着围墙的缺口处望去，只见跟他一起来城堡的那个士兵谨慎地探出头来。</td>
+		<td class="en">He looked toward the opening in the wall, and saw the head of the orderly who had accompanied him to the chateau rising cautiously through it.</td></tr>
+		<tr><td width="45%" class="zh" >“是您吗，长官？”</td>
+		<td class="en">“Is it you, commander?”</td></tr>
+		<tr><td width="45%" class="zh" >“嗯。</td>
+		<td class="en">“Yes.</td></tr>
+		<tr><td width="45%" class="zh" >怎么了？”青年军官低声应道。一种预感警告着他行动要隐秘。</td>
+		<td class="en">What is it?” replied the young man, in a low voice, a sort of presentiment warning him to act mysteriously.</td></tr>
+		<tr><td width="45%" class="zh" >“那些恶棍像虫子一样活动，”那士兵说道，“如果您愿意听，我把自己的愚见给您汇报一下。”</td>
+		<td class="en">“Those rascals are squirming like worms,” said the man; “and I have come, if you please, to tell you my little observations.”</td></tr>
+		<tr><td width="45%" class="zh" >“说吧。”</td>
+		<td class="en">“Speak out.”</td></tr>
+		<tr><td width="45%" class="zh" >“刚才我从城堡跟踪一个人，他手提灯笼，朝这边走来。</td>
+		<td class="en">“I have just followed from the chateau a man with a lantern who is coming this way.</td></tr>
+		<tr><td width="45%" class="zh" >那灯笼非常可疑！</td>
+		<td class="en">A lantern is mightily suspicious!</td></tr>
+		<tr><td width="45%" class="zh" >我不信那个基督徒在夜里这个时候还需要去教堂点蜡烛。</td>
+		<td class="en">I don’t believe that Christian has any call to go and light the church tapers at this time of night.</td></tr>
+		<tr><td width="45%" class="zh" >他们是想干掉咱们！</td>
+		<td class="en">They want to murder us!</td></tr>
+		<tr><td width="45%" class="zh" >我心里这么想着，就跟踪了他。长官，我发现离这儿很近的地方有一方岩石，岩石上有一堆一堆的干柴——我敢保证，他要点燃上面的某个信号——”</td>
+		<td class="en">said I to myself, so I followed his heels; and I’ve discovered, commander, close by here, on a pile of rock, a great heap of fagots—he’s after lighting a beacon of some kind up here, I’ll be bound—”</td></tr>
+		<tr><td width="45%" class="zh" >突然，一声可怕的喊叫从小城传来，打断了士兵的话。</td>
+		<td class="en">A terrible cry echoing suddenly through the town stopped the soldier’s speech.</td></tr>
+		<tr><td width="45%" class="zh" >一道灿烂的光照亮了那个年轻军官。</td>
+		<td class="en">A brilliant light illuminated the young officer.</td></tr>
+		<tr><td width="45%" class="zh" >可怜的卫兵头上中弹，应声倒地。</td>
+		<td class="en">The poor orderly was shot in the head and fell.</td></tr>
+		<tr><td width="45%" class="zh" >离年轻军官不到30英尺远的地方，一堆草秸和干木柴燃烧起来，顿时火焰冲天。</td>
+		<td class="en">A fire of straw and dry wood blazed up like a conflagration not thirty feet distant from the young commander.</td></tr>
+		<tr><td width="45%" class="zh" >舞会上的音乐和笑声戛然停止。</td>
+		<td class="en">The music and the laughter ceased in the ballroom.</td></tr>
+		<tr><td width="45%" class="zh" >死一般的寂静代替了节日的喜庆喧哗，还断断续续地传来几声呻吟。</td>
+		<td class="en">The silence of death, broken only by moans, succeeded to the joyous sounds of a festival.</td></tr>
+		<tr><td width="45%" class="zh" >茫茫的海面上起了一声炮响。</td>
+		<td class="en">A single cannon-shot echoed along the plain of the ocean.</td></tr>
+		<tr><td width="45%" class="zh" >军官的额上冒出了冷汗。</td>
+		<td class="en">A cold sweat rolled from the officer’s brow.</td></tr>
+		<tr><td width="45%" class="zh" >他没有带武器。</td>
+		<td class="en">He wore no sword.</td></tr>
+		<tr><td width="45%" class="zh" >他确信他手下的士兵们都已没了性命，英国人马上就要登陆了。</td>
+		<td class="en">He was confident that his soldiers were murdered, and that the English were about to disembark.</td></tr>
+		<tr><td width="45%" class="zh" >他知道活下去只能是耻辱，只能是到军事法庭上受审，去解释他的警戒意图。于是他打量了一下山谷的深度，准备跳下。正在这时，克拉拉抓住了他的手。</td>
+		<td class="en">He saw himself dishonored if he lived, summoned before a council of war to explain his want of vigilance; then he measured with his eye the depths of the descent, and was springing towards it when Clara’s hand seized his.</td></tr>
+		<tr><td width="45%" class="zh" >“快逃！”她说道，“我的兄弟正赶过来要杀你。</td>
+		<td class="en">“Fly!” she said; “my brothers are following me to kill you.</td></tr>
+		<tr><td width="45%" class="zh" >你的手下都死了。</td>
+		<td class="en">Your soldiers are killed.</td></tr>
+		<tr><td width="45%" class="zh" >你快逃命吧。</td>
+		<td class="en">Escape yourself.</td></tr>
+		<tr><td width="45%" class="zh" >看那边！在岩石脚下，你会找到胡安尼托的马。快去，快！”</td>
+		<td class="en">At the foot of the rock, over there, see! you will find Juanito’s barb—Go, go!”</td></tr>
+		<tr><td width="45%" class="zh" >她推他走，可好一会儿，那年轻军官木木地看着她，毫无动作。</td>
+		<td class="en">She pushed him; but the stupefied young man looked at her, motionless, for a moment.</td></tr>
+		<tr><td width="45%" class="zh" >接着，他还是顺从了自我保命的本能——那本能任何一个人都具有，哪怕是最强大的人。他纵身一跃，逃进树林，朝着她指的方向跑去。他跑过层层山岩，迄今也只有山羊才来这样的地方。</td>
+		<td class="en">Then, obeying the instinct of self-preservation which never abandons any man, even the strongest, he sprang through the park in the direction indicated, running among the rocks where goats alone had hitherto made their way.</td></tr>
+		<tr><td width="45%" class="zh" >他听到克拉拉喊她的兄弟们追赶他，他听到那些要杀他的人的脚步声，他听到好几颗子弹从耳边呼啸而过，但是他到达了山谷，找到了那匹马。他一跃而上，像离弦之箭般消失不见。</td>
+		<td class="en">He heard Clara calling to her brothers to pursue him; he heard the steps of his murderers; he heard the balls of several muskets whistling about his ears; but he reached the valley, found the horse, mounted him, and disappeared with the rapidity of an arrow.</td></tr>
+		<tr><td width="45%" class="zh" >几个小时之后，那个年轻的军官到达了G将军司令部，G将军正和参谋人员用餐。</td>
+		<td class="en">A few hours later the young officer reached the headquarters of General G—t—r, whom he found at dinner with his staff.</td></tr>
+		<tr><td width="45%" class="zh" >“我把脑袋给您送来了！”成了光杆司令的军官进门便高声一叫。他面色苍白而颓废。</td>
+		<td class="en">“I bring you my head!” cried the commander of the lost battalion as he entered, pale and overcome.</td></tr>
+		<tr><td width="45%" class="zh" >他坐了下来，把惊心动魄的事件讲述了一遍。</td>
+		<td class="en">He sat down and related the horrible occurrence.</td></tr>
+		<tr><td width="45%" class="zh" >他讲完之后，则是死一般的寂静。</td>
+		<td class="en">An awful silence followed his tale.</td></tr>
+		<tr><td width="45%" class="zh" >“我认为，与其说你有罪还不如说你倒霉，”凶狠的将军听完他最后的话，说道，</td>
+		<td class="en">“I think you were more unfortunate than criminal,” replied the terrible general, when at last he spoke.</td></tr>
+		<tr><td width="45%" class="zh" >“你不必为那些西班牙人的罪行负责，除非元帅另有想法，我宣布赦免你。”</td>
+		<td class="en">“You are not responsible for the crime of those Spaniards; and, unless the marshal should think otherwise, I absolve you.”</td></tr>
+		<tr><td width="45%" class="zh" >这些话给不幸的军官带来了一丝慰藉。</td>
+		<td class="en">These words gave but a feeble consolation to the unhappy officer.</td></tr>
+		<tr><td width="45%" class="zh" >“可要是皇上知道了呢！”他叫道。</td>
+		<td class="en">“But when the emperor hears of it!” he cried.</td></tr>
+		<tr><td width="45%" class="zh" >“他会下令枪毙你，”将军说道，“但我们会处理的。</td>
+		<td class="en">“He will want to have you shot,” said the general; “but we will see about that.</td></tr>
+		<tr><td width="45%" class="zh" >现在，不要再提这件事。”他用一种很严厉的语气补充道，“我们只谈如何复仇，制造点儿恐怖事件教训教训他们，现在他们是像野蛮人一样在打仗。”</td>
+		<td class="en">Now,” he added in a stern tone, “not another word of this, except to turn it into a vengeance which shall impress with salutary terror a people who make war like savages.”</td></tr>
+		<tr><td width="45%" class="zh" >一小时后，整整一个团、一支骑兵队，还有一个炮兵连朝着芒达方向上路了。</td>
+		<td class="en">An hour later a whole regiment, a detachment of cavalry, and a battery of artillery were on their way to Menda.</td></tr>
+		<tr><td width="45%" class="zh" >将军和维克托走在队伍的前头。</td>
+		<td class="en">The general and Victor marched at the head of the column.</td></tr>
+		<tr><td width="45%" class="zh" >士兵们得知他们的战友们被残杀，都义愤填膺。</td>
+		<td class="en">The soldiers, informed of the massacre of their comrades, were possessed by fury.</td></tr>
+		<tr><td width="45%" class="zh" >士兵们用惊人的速度走完了从司令部到芒达城的这段距离。</td>
+		<td class="en">The distance which separated the town of Menda from general headquarters, was marched with marvellous rapidity.</td></tr>
+		<tr><td width="45%" class="zh" >在路上，将军发现了所有的村庄都被军队占领着。</td>
+		<td class="en">On the way, the general found all the villages under arms.</td></tr>
+		<tr><td width="45%" class="zh" >每个不幸的村落都被包围了，村民们被大批杀害。</td>
+		<td class="en">Each of the wretched hamlets was surrounded, and the inhabitants decimated.</td></tr>
+		<tr><td width="45%" class="zh" >有些宿命真是无法解释。英国军舰偏偏此时出了故障，前进不得。</td>
+		<td class="en">By one of those fatalities which are inexplicable, the British ships lay to without advancing.</td></tr>
+		<tr><td width="45%" class="zh" >后来才知道，这些军舰运送的是炮兵，先于其他运输舰而到达。</td>
+		<td class="en">It was known later that these vessels carried the artillery, and had outsailed the rest of the transports.</td></tr>
+		<tr><td width="45%" class="zh" >这样，芒达城的居民本以为近海出现的英国船只便意味着保卫者近在眼前了，可事实却是他们没了保护伞，法国军队不费一枪一弹就包围了全城。</td>
+		<td class="en">Thus the town of Menda, deprived of the support it expected, and which the appearance of the British fleet in the offing had led the inhabitants to suppose was at hand, was surrounded by French troops almost without a blow being struck.</td></tr>
+		<tr><td width="45%" class="zh" >城中居民恐慌万状，无条件地主动投降了。</td>
+		<td class="en">The people of the town, seized with terror, offered to surrender at discretion.</td></tr>
+		<tr><td width="45%" class="zh" >那些杀害法国军人的凶手们害怕那位将军要将芒达城付之一炬，让全体居民沦为刀下亡魂，因为他们素来知道这位将军的残酷。于是他们怀着伊比利亚半岛上固有的奉献精神，向将军请求自首，不要伤及无辜。</td>
+		<td class="en">With a spirit of devotion not rare in the Peninsula, the slayers of the French soldiery, fearing, from the cruelty of their commander, that Menda would be given to the flames, and the whole population put to the sword, proposed to the general to denounce themselves.</td></tr>
+		<tr><td width="45%" class="zh" >将军接受了他们的请求，条件是城堡中所有居民，上至侯爵下至奴仆，都要交付于他手中。</td>
+		<td class="en">He accepted their offer, making a condition that the inhabitants of the chateau, from the marquis to the lowest valet, should be delivered into his hands.</td></tr>
+		<tr><td width="45%" class="zh" >协议达成，将军答应宽恕其余百姓，阻止他的士兵在城中烧杀抢掠。</td>
+		<td class="en">This condition being agreed to, the general proceeded to pardon the rest of the population, and to prevent his soldiers from pillaging the town or setting fire to it.</td></tr>
+		<tr><td width="45%" class="zh" >法军征收了巨额的财物，最富的居民被监禁，以保证财物的偿付，所有赔款都要在24小时内交付。</td>
+		<td class="en">An enormous tribute was levied, and the wealthiest inhabitants held prisoner to secure payment of it, which payment was to be made within twenty-four hours.</td></tr>
+		<tr><td width="45%" class="zh" >将军采取了一切必要的防范措施以保证其部队的安全，也为了保卫这个地区免于受外部的进攻，他还禁止士兵们在民房里住宿。</td>
+		<td class="en">The general took all precautions necessary for the safety of his troops, and provided for the defence of the region from outside attack, refusing to allow his soldiers to be billeted in the houses.</td></tr>
+		<tr><td width="45%" class="zh" >他让士兵们安排好宿营之后便登上城堡，对城堡实行了军事占领。</td>
+		<td class="en">After putting them in camp, he went up to the chateau and took possession of it.</td></tr>
+		<tr><td width="45%" class="zh" >莱加奈斯家族的成员及奴仆们被捆绑起来严加看守，就在曾经举办舞会的那个大厅里。</td>
+		<td class="en">The members of the Leganes family and their servants were bound and kept under guard in the great hall where the ball had taken place.</td></tr>
+		<tr><td width="45%" class="zh" >从这个房间的窗户可以看到那座鸟瞰全城的露台。</td>
+		<td class="en">The windows of this room commanded the terrace which overhung the town.</td></tr>
+		<tr><td width="45%" class="zh" >指挥部设在一个长廊里。将军举行了一次会议，首要讨论如何采取措施阻止英国人登陆。</td>
+		<td class="en">Headquarters were established in one of the galleries, where the general held, in the first place, a council as to the measures that should be taken to prevent the landing of the British.</td></tr>
+		<tr><td width="45%" class="zh" >将军及其参谋人员派了一名副官去向奈伊元帅汇报，又下令沿海岸设立炮兵阵地，接着他们开始处理俘虏事宜。</td>
+		<td class="en">After sending an aide-de-camp to Marechal Ney, and having ordered batteries to certain points along the shore, the general and his staff turned their attention to the prisoners.</td></tr>
+		<tr><td width="45%" class="zh" >自首的两百名西班牙人被立即处以枪决。</td>
+		<td class="en">Two hundred Spaniards who had delivered themselves up were immediately shot.</td></tr>
+		<tr><td width="45%" class="zh" >执行之后，将军下令在露台上竖起绞架，绞架数目和莱加奈斯家族被俘的成员数相符，接着他派人请来了城里的刽子手。</td>
+		<td class="en">After this military execution, the general ordered as many gibbets planted on the terrace as there were members of the family of Leganes, and he sent for the executioner of the town.</td></tr>
+		<tr><td width="45%" class="zh" >维克托·马尔尚利用吃饭前的时间去看望俘虏。</td>
+		<td class="en">Victor Marchand took advantage of the hour before dinner, to go and see the prisoners.</td></tr>
+		<tr><td width="45%" class="zh" >不久之后，他回去找将军。</td>
+		<td class="en">Before long he returned to the general.</td></tr>
+		<tr><td width="45%" class="zh" >“我特地过来请求您开恩。”他非常激动地对将军说道。</td>
+		<td class="en">“I have come,” he said in a voice full of feeling, “to ask for mercy.”</td></tr>
+		<tr><td width="45%" class="zh" >“你！”将军尖刻讽刺地回应道。</td>
+		<td class="en">“You!” said the general, in a tone of bitter irony.</td></tr>
+		<tr><td width="45%" class="zh" >“唉，”维克托回答道，“只是求您的一丝怜悯。</td>
+		<td class="en">“Alas!” replied Victor, “it is only a sad mercy.</td></tr>
+		<tr><td width="45%" class="zh" >侯爵看到竖起的那些绞架，他希望您能改变这种处决方式。</td>
+		<td class="en">The marquis, who has seen those gibbets set up, hopes that you will change that mode of execution.</td></tr>
+		<tr><td width="45%" class="zh" >他恳请您对他的家族斩首，这更适合他们的贵族身份。”</td>
+		<td class="en">He asks you to behead his family, as befits nobility.”</td></tr>
+		<tr><td width="45%" class="zh" >“那好吧。”将军回答道。</td>
+		<td class="en">“So be it,” replied the general.</td></tr>
+		<tr><td width="45%" class="zh" >“他们还请求您允许他们的宗教缚礼，让他们临终时松绑，他们已经承诺绝不逃跑。”</td>
+		<td class="en">“They also ask for religious assistance, and to be released from their bonds; they promise in return to make no attempt to escape.”</td></tr>
+		<tr><td width="45%" class="zh" >“我同意。”将军说道，“但是你要为此向我负责。”</td>
+		<td class="en">“I consent,” said the general; “but I make you responsible for them.”</td></tr>
+		<tr><td width="45%" class="zh" >“侯爵说如果您能同意宽赦他的一个儿子，他将把全部家当赠送给您。”</td>
+		<td class="en">“The marquis offers you his whole fortune, if you will consent to pardon one of his sons.”</td></tr>
+		<tr><td width="45%" class="zh" >“真的吗！”将军惊呼一声，</td>
+		<td class="en">“Really!” exclaimed the general.</td></tr>
+		<tr><td width="45%" class="zh" >“他的财产已经归约瑟夫国王所有了。”</td>
+		<td class="en">“His property belongs already to King Joseph.”</td></tr>
+		<tr><td width="45%" class="zh" >他停下来。</td>
+		<td class="en">He stopped.</td></tr>
+		<tr><td width="45%" class="zh" >一个想法，一个轻蔑的想法使他蹙起眉头。不一会儿，他说道：</td>
+		<td class="en">A thought, a contemptuous thought, wrinkled his brow, and he said presently,—</td></tr>
+		<tr><td width="45%" class="zh" >“我会大大超过他的愿望。</td>
+		<td class="en">“I will surpass his wishes.</td></tr>
+		<tr><td width="45%" class="zh" >我理解他这个最后的请求有多重要。</td>
+		<td class="en">I comprehend the importance of his last request.</td></tr>
+		<tr><td width="45%" class="zh" >好吧，就让他买他的姓氏传宗接代吧，但是要让西班牙永远记住他的叛变，还有他受刑的场面。</td>
+		<td class="en">Well, he shall buy the continuance of his name and lineage, but Spain shall forever connect with it the memory of his treachery and his punishment.</td></tr>
+		<tr><td width="45%" class="zh" >只要他的一个儿子可以出来充当刽子手，杀掉他家族的其他人，那么我就饶了他的性命，并且全部财产全部归他所有。</td>
+		<td class="en">I will give life and his whole fortune to whichever of his sons will perform the office of executioner on the rest.</td></tr>
+		<tr><td width="45%" class="zh" >去吧，别再跟我提这事。”</td>
+		<td class="en">Go; not another word to me on the subject.”</td></tr>
+		<tr><td width="45%" class="zh" >晚饭开始了。</td>
+		<td class="en">Dinner was served.</td></tr>
+		<tr><td width="45%" class="zh" >军官们因为劳累而食欲大开，饱餐一顿。</td>
+		<td class="en">The officers satisfied an appetite sharpened by exertion.</td></tr>
+		<tr><td width="45%" class="zh" >只有一个人——维克托·马尔尚——没有出席。</td>
+		<td class="en">A single one of them, Victor Marchand, was not at the feast.</td></tr>
+		<tr><td width="45%" class="zh" >他犹豫了很久，最后回到了大厅。现在莱加奈斯这个豪门贵族家庭全被囚在这里。面对此情此景，他眼中闪过一丝悲凉的目光。就在两天前，他还看见这两位少女和三位青年随着华尔兹舞曲疯狂旋转着脑袋。</td>
+		<td class="en">After hesitating long, he returned to the hall where the proud family of Leganes were prisoners, casting a mournful look on the scene now presented in that apartment where, only two nights before, he had seen the heads of the two young girls and the three young men turning giddily in the waltz.</td></tr>
+		<tr><td width="45%" class="zh" >可这些头颅不一会儿就要在刽子手的刀下滚落。一想到这里，他浑身竟不寒而栗。</td>
+		<td class="en">He shuddered as he thought how soon they would fall, struck off by the sabre of the executioner.</td></tr>
+		<tr><td width="45%" class="zh" >侯爵和侯爵夫人以及他们的三个儿子、两个女儿都被绑缚在镀金的沙发椅上，他们僵直地坐着，丝毫动弹不得。</td>
+		<td class="en">Bound in their gilded chairs, the father and mother, the three sons, and the two daughters, sat rigid in a state of complete immobility.</td></tr>
+		<tr><td width="45%" class="zh" >八个奴仆站在他们旁边，手臂被缚在身后。</td>
+		<td class="en">Eight servants stood near them, their arms bound behind their backs.</td></tr>
+		<tr><td width="45%" class="zh" >十五个人彼此沉重地相望，眼神中几乎没有流露出他们灵魂深处的情感。</td>
+		<td class="en">These fifteen persons looked at one another gravely, their eyes scarcely betraying the sentiments that filled their souls.</td></tr>
+		<tr><td width="45%" class="zh" >哨兵们也同样一动不动地看守着他们，但也同情这些残酷敌人的痛苦。</td>
+		<td class="en">The sentinels, also motionless, watched them, but respected the sorrow of those cruel enemies.</td></tr>
+		<tr><td width="45%" class="zh" >维克托出现的时候，所有人都露出了询问的表情。</td>
+		<td class="en">An expression of inquiry came upon the faces of all when Victor appeared.</td></tr>
+		<tr><td width="45%" class="zh" >他下令为俘虏们松绑，并亲自为捆缚在椅子里的克拉拉解开绳索。</td>
+		<td class="en">He gave the order to unbind the prisoners, and went himself to unfasten the cords that held Clara in her chair.</td></tr>
+		<tr><td width="45%" class="zh" >她苦笑了一下。</td>
+		<td class="en">She smiled sadly.</td></tr>
+		<tr><td width="45%" class="zh" >军官情不自禁地轻抚了一下少女的臂膀，悲伤地暗自赞叹着她那美丽的秀发和婀娜的腰身。</td>
+		<td class="en">The officer could not help touching softly the arms of the young girl as he looked with sad admiration at her beautiful hair and her supple figure.</td></tr>
+		<tr><td width="45%" class="zh" >她是个地地道道的西班牙女郎。她有着西班牙人的肤色和眼睛，眼睛上有弯弯的睫毛，大大的眸子比乌鸦的羽翼还要黑。</td>
+		<td class="en">She was a true Spaniard, having the Spanish complexion, the Spanish eyes with their curved lashes, and their large pupils blacker than a raven’s wing.</td></tr>
+		<tr><td width="45%" class="zh" >“你成功啦？”她说道，同时漾出一抹凄凉的微笑，那笑容流露出少女的纯真。</td>
+		<td class="en">“Have you succeeded?” she said, with one of those funereal smiles in which something of girlhood lingers.</td></tr>
+		<tr><td width="45%" class="zh" >维克托禁不住叹息了一声。</td>
+		<td class="en">Victor could not keep himself from groaning.</td></tr>
+		<tr><td width="45%" class="zh" >他依次看了看三兄弟，然后又看看克拉拉。</td>
+		<td class="en">He looked in turn at the three brothers, and then at Clara.</td></tr>
+		<tr><td width="45%" class="zh" >长兄三十岁。</td>
+		<td class="en">One brother, the eldest, was thirty years of age.</td></tr>
+		<tr><td width="45%" class="zh" >尽管他个子矮小、其貌不扬，神色自负且傲慢，但他却不乏某种贵族气度，而且他似乎还具有柔情的一面，这种柔情曾经使西班牙骑士精神名噪一时。</td>
+		<td class="en">Though small and somewhat ill-made, with an air that was haughty and disdainful, he was not lacking in a certain nobility of manner, and he seemed to have something of that delicacy of feeling which made the Spanish chivalry of other days so famous.</td></tr>
+		<tr><td width="45%" class="zh" >他叫胡安尼托。</td>
+		<td class="en">He was named Juanito.</td></tr>
+		<tr><td width="45%" class="zh" >次子费利佩，大约二十岁，跟克拉拉长得很像。</td>
+		<td class="en">The second son, Felipe, was about twenty years of age; he resembled Clara.</td></tr>
+		<tr><td width="45%" class="zh" >幼弟年仅八岁。</td>
+		<td class="en">The youngest was eight.</td></tr>
+		<tr><td width="45%" class="zh" >大卫在他为法国大革命所作的画页中曾赋予儿童一种罗马时代坚定不移的性格。画家们从曼努埃尔的脸上就可以找到这种性格。</td>
+		<td class="en">A painter would have seen in the features of Manuelo a little of that Roman constancy that David has given to children in his republican pages.</td></tr>
+		<tr><td width="45%" class="zh" >老侯爵满头柔顺的白发，似乎刚刚从穆里略的画作中走出来。</td>
+		<td class="en">The head of the old marquis, covered with flowing white hair, seemed to have escaped from a picture of Murillo.</td></tr>
+		<tr><td width="45%" class="zh" >面对着他们，年轻的军官摇摇头。他不愿相信这四个人中会有哪个能接受将军的那笔残酷的交易。</td>
+		<td class="en">As he looked at them, the young officer shook his head, despairing that any one of those four beings would accept the dreadful bargain of the general.</td></tr>
+		<tr><td width="45%" class="zh" >不管怎样，他还是壮着胆子跟克拉拉透露了那个消息。</td>
+		<td class="en">Nevertheless, he found courage to reveal it to Clara.</td></tr>
+		<tr><td width="45%" class="zh" >少女打了个寒噤，接着她恢复了平静。她走向父亲，跪在他面前。</td>
+		<td class="en">The girl shuddered for a moment; then she recovered her calmness, and went to her father, kneeling at his feet.</td></tr>
+		<tr><td width="45%" class="zh" >“哦！”她对父亲说道，“让胡安尼托发誓，让他忠实地遵从您的命令，那样我们会死而瞑目的。”</td>
+		<td class="en">“Oh!” she said to him, “make Juanito swear that he will obey, faithfully, the orders that you will give him, and our wishes will be fulfilled.”</td></tr>
+		<tr><td width="45%" class="zh" >侯爵夫人以为有了希望，全身颤抖。</td>
+		<td class="en">The marquise quivered with hope.</td></tr>
+		<tr><td width="45%" class="zh" >她将身子靠向丈夫，听到了克拉拉说出的那个可怕的秘密，即刻晕了过去。</td>
+		<td class="en">But when, leaning against her husband, she heard the horrible confidence that Clara now made to him, the mother fainted.</td></tr>
+		<tr><td width="45%" class="zh" >胡安尼托全明白了，他像雄狮一样暴跳起来。</td>
+		<td class="en">Juanito, on hearing the offer, bounded like a lion in his cage.</td></tr>
+		<tr><td width="45%" class="zh" >维克托从侯爵那里得到了绝对就范的承诺，于是他自作主张命士兵们撤下。</td>
+		<td class="en">Victor took upon himself to send the guard away, after obtaining from the marquis a promise of absolute submission.</td></tr>
+		<tr><td width="45%" class="zh" >仆人们被押出去交付给刽子手，被一一行刑。</td>
+		<td class="en">The servants were delivered to the executioner, who hanged them.</td></tr>
+		<tr><td width="45%" class="zh" >当全家只剩下维克托看守时，老父亲站起身。</td>
+		<td class="en">When the family were alone, with no one but Victor to watch them, the old father rose.</td></tr>
+		<tr><td width="45%" class="zh" >“胡安尼托！”他说道。</td>
+		<td class="en">“Juanito!” he said.</td></tr>
+		<tr><td width="45%" class="zh" >胡安尼托没有作声，只是跌回他的椅子，用头示意拒绝，盯住他的双亲。</td>
+		<td class="en">Juanito answered only with a motion of his head that signified refusal, falling back into his chair, and looking at his parents with dry and awful eyes.</td></tr>
+		<tr><td width="45%" class="zh" >克拉拉走上前去坐在他的膝盖上，带着一种欢快神情。</td>
+		<td class="en">Clara went up to him with a cheerful air and sat upon his knee.</td></tr>
+		<tr><td width="45%" class="zh" >“亲爱的胡安尼托，”她说道，同时用双臂搂住他的脖子，亲吻着他的眼睑，“如果能死在你的手下，对我来说该有多甜蜜啊，你知道吗！</td>
+		<td class="en">“Dear Juanito,” she said, passing her arm around his neck and kissing his eyelids, “if you knew how sweet death would seem to me if given by you!</td></tr>
+		<tr><td width="45%" class="zh" >你想想看！</td>
+		<td class="en">Think!</td></tr>
+		<tr><td width="45%" class="zh" >那样我就不用忍受刽子手那可憎的接触。</td>
+		<td class="en">I should be spared the odious touch of an executioner.</td></tr>
+		<tr><td width="45%" class="zh" >你会从所有等着我的灾难中将我解救出来——亲爱的胡安尼托，你不会愿意看到我遭到任何其他人的蹂躏——那么你就——”</td>
+		<td class="en">You would save me from all the woes that await me—and, oh! dear Juanito! you would not have me belong to any one—therefore—”</td></tr>
+		<tr><td width="45%" class="zh" >她天鹅绒般柔和的眼睛燃出火焰，她瞥了维克托一眼，似乎在唤醒胡安尼托心中对法国人的憎恨。</td>
+		<td class="en">Her velvet eyes cast gleams of fire at Victor, as if to rouse in the heart of Juanito his hatred of the French.</td></tr>
+		<tr><td width="45%" class="zh" >“拿出勇气来！”他的兄弟费利佩说道，“否则我们的宗族，我们这个近似皇族的宗族就后继无人了。”</td>
+		<td class="en">“Have courage,” said his brother Felipe; “otherwise our race, our almost royal race, must die extinct.”</td></tr>
+		<tr><td width="45%" class="zh" >突然克拉拉站起身来，围在胡安尼托身边的人也分开来。这个儿子，这个理直气壮的反抗者看到老父亲笔直地站立在他面前。父亲用庄严的声音说道：</td>
+		<td class="en">Suddenly Clara rose, the group that had formed about Juanito separated, and the son, rebellious with good reason, saw before him his old father standing erect, who said in solemn tones,—</td></tr>
+		<tr><td width="45%" class="zh" >“胡安尼托，我命令你这么做。”</td>
+		<td class="en">“Juanito, I command you to obey.”</td></tr>
+		<tr><td width="45%" class="zh" >年轻的伯爵依然不动。</td>
+		<td class="en">The young count remained immovable.</td></tr>
+		<tr><td width="45%" class="zh" >这时，父亲跪在了他的脚下。</td>
+		<td class="en">Then his father knelt at his feet.</td></tr>
+		<tr><td width="45%" class="zh" >下意识地，克拉拉、费利佩还有曼努埃尔都随父亲跪了下来。</td>
+		<td class="en">Involuntarily Clara, Felipe, and Manuelo imitated his action.</td></tr>
+		<tr><td width="45%" class="zh" >他们都向他伸出手，他该拯救这个家族免于灭亡，每个人仿佛都在重复父亲的话语。</td>
+		<td class="en">They all stretched out their hands to him, who was to save the family from extinction, and each seemed to echo the words of the father.</td></tr>
+		<tr><td width="45%" class="zh" >“我的儿子，难道你没有西班牙人的刚毅和真情吗？</td>
+		<td class="en">“My son, can it be that you would fail in Spanish energy and true feeling?</td></tr>
+		<tr><td width="45%" class="zh" >难道你要让我就这样长跪不起吗？</td>
+		<td class="en">Will you leave me longer on my knees?</td></tr>
+		<tr><td width="45%" class="zh" >为什么你只想到你自己的生命和痛苦呢？</td>
+		<td class="en">Why do you consider your life, your sufferings only?</td></tr>
+		<tr><td width="45%" class="zh" >这就是我的儿子吗？”他转向侯爵夫人，补充说道。</td>
+		<td class="en">Is this my son?” he added, turning to his wife.</td></tr>
+		<tr><td width="45%" class="zh" >“他同意了！”母亲绝望地喊道。她看见胡安尼托的眼睛动了一下，只有她能够了解其中的含义。</td>
+		<td class="en">“He consents!” cried the mother, in despair, seeing a motion of Juanito’s eyelids, the meaning of which was known to her alone.</td></tr>
+		<tr><td width="45%" class="zh" >次女马利基塔跪在地上，她无力地将母亲抱在怀里，哭得像个泪人一样，招来小兄弟对她的一阵责备。</td>
+		<td class="en">Mariquita, the second daughter, was on her knees pressing her mother in her feeble arms, and as she wept hot tears her little brother scolded her.</td></tr>
+		<tr><td width="45%" class="zh" >正在此时，城堡里的牧师走了进来，全家人立即围住了他，并把他领到胡安尼托面前。</td>
+		<td class="en">At this moment the chaplain of the chateau entered the hall; the family instantly surrounded him and led him to Juanito.</td></tr>
+		<tr><td width="45%" class="zh" >维克托再也忍受不了这个场景了，他示意了一下克拉拉便匆匆离开，他想再做一次努力，向将军求情。</td>
+		<td class="en">Victor, unable to endure the scene any longer, made a sign to Clara, and went away, determined to make one more attempt upon the general.</td></tr>
+		<tr><td width="45%" class="zh" >他发现将军正心情大好地在宴会上和他的军官们喝酒，那些军官渐渐热闹起来，兴高采烈地聊着天。</td>
+		<td class="en">He found him in fine good-humour, in the midst of a banquet, drinking with his officers, who were growing hilarious.</td></tr>
+		<tr><td width="45%" class="zh" >一小时后，芒达城一百名声名显赫的居民聚集到露台上，遵照将军的命令来目睹莱加奈斯一家被满门抄斩。</td>
+		<td class="en">An hour later, one hundred of the leading inhabitants of Menda assembled on the terrace, according to the orders of the general, to witness the execution of the Leganes family.</td></tr>
+		<tr><td width="45%" class="zh" >一队士兵被安排来押送这些西班牙人站到绞刑架下，而这些绞架刚刚处决掉了侯爵家的佣人。</td>
+		<td class="en">A detachment of soldiers were posted to restrain the Spaniards, stationed beneath the gallows on which the servants had been hanged.</td></tr>
+		<tr><td width="45%" class="zh" >这些显赫市民们的脑袋几乎触及到了那些牺牲品的脚。</td>
+		<td class="en">The heads of the burghers almost touched the feet of these martyrs.</td></tr>
+		<tr><td width="45%" class="zh" >离这群人三十步远的地方有一个断头台，上面有一把闪着寒光的大铡刀。</td>
+		<td class="en">Thirty feet from this group was a block, and on it glittered a scimitar.</td></tr>
+		<tr><td width="45%" class="zh" >一个刽子手站在旁边，以防胡安尼托在最后时刻拒绝执行，刽子手便可以亲自动手。</td>
+		<td class="en">An executioner was present in case Juanito refused his obedience at the last moment.</td></tr>
+		<tr><td width="45%" class="zh" >不一会儿，西班牙人在一片静寂之中听到了很多人的脚步声，那是士兵整齐的步伐声，还有他们的装备碰击而出的轻微响声。</td>
+		<td class="en">Soon the Spaniards heard, in the midst of the deepest silence, the steps of many persons, the measured sound of the march of soldiers, and the slight rattle of their accoutrements.</td></tr>
+		<tr><td width="45%" class="zh" >这些嘈杂声与军官们放荡快乐的笑声混成一片，正如不久前这里舞会上的舞蹈掩饰着一场血腥的叛变。</td>
+		<td class="en">These noises mingled with the gay laughter of the officers, as a few nights earlier the dances of a ball had served to mask the preparations for a bloody treachery.</td></tr>
+		<tr><td width="45%" class="zh" >所有的眼睛都转向城堡，这个贵族之家以不可思议的沉着姿态走了过来。</td>
+		<td class="en">All eyes turned to the chateau and saw the noble family advancing with inconceivable composure.</td></tr>
+		<tr><td width="45%" class="zh" >他们的神色安详平和。</td>
+		<td class="en">Their faces were serene and calm.</td></tr>
+		<tr><td width="45%" class="zh" >唯有一人面色苍白、神情颓丧，牧师扶着他，倾尽他宗教的力量说着安慰他的话——这是那个唯一能活命的人。</td>
+		<td class="en">One member alone, pale, undone, leaned upon the priest, who spent his powers of religious consolation upon this man,—the only one who was to live.</td></tr>
+		<tr><td width="45%" class="zh" >刽子手明白了，大家也都明白了，胡安尼托已经同意在那一天行使刽子手的职务。</td>
+		<td class="en">The executioner knew, as did all present, that Juanito had agreed to accept his place for that one day.</td></tr>
+		<tr><td width="45%" class="zh" >老侯爵和他的妻子、克拉拉、马利基塔，还有两个年轻的儿子向前走来，跪在离断头台几步远的地方。</td>
+		<td class="en">The old marquis and his wife, Clara, Mariquita, and the two younger brothers walked forward and knelt down a few steps distant from the fatal block.</td></tr>
+		<tr><td width="45%" class="zh" >胡安尼托被牧师领上前来。</td>
+		<td class="en">Juanito was led forward by the priest.</td></tr>
+		<tr><td width="45%" class="zh" >当他到达断头台的时候，刽子手抓住他的胳膊，或许是给了他一些教导。</td>
+		<td class="en">When he reached the place the executioner touched him on the arm and gave him, probably, a few instructions.</td></tr>
+		<tr><td width="45%" class="zh" >同时忏悔师叫那些受刑者转过身去，这样他们就看不到那些受刑的惨状。</td>
+		<td class="en">The confessor, meantime, turned the victims so that they might not see the fatal blows.</td></tr>
+		<tr><td width="45%" class="zh" >但是，他们是真正的西班牙人，他们矗立着，毫无惧色。</td>
+		<td class="en">But, like true Spaniards, they stood erect without faltering.</td></tr>
+		<tr><td width="45%" class="zh" >克拉拉第一个走上前去。</td>
+		<td class="en">Clara was the first to come forward.</td></tr>
+		<tr><td width="45%" class="zh" >“胡安尼托，”她说道，“你可怜我胆子不大吧，从我开始！”</td>
+		<td class="en">“Juanito,” she said, “have pity on my want of courage; begin with me.”</td></tr>
+		<tr><td width="45%" class="zh" >正在这时，一阵急促的脚步声传来，维克托出现在刑场上。</td>
+		<td class="en">At this instant the hurried steps of a man were heard, and Victor Marchand appeared on the terrace.</td></tr>
+		<tr><td width="45%" class="zh" >克拉拉已经双膝跪地，雪白的脖颈等待着那一刀。</td>
+		<td class="en">Clara was already on her knees, her white neck bared for the scimitar.</td></tr>
+		<tr><td width="45%" class="zh" >军官面色苍白，但是他用尽了所有力量跑了过去。</td>
+		<td class="en">The officer turned pale, but he ran with all his might.</td></tr>
+		<tr><td width="45%" class="zh" >“将军答应饶你一命，如果你愿意嫁给我。”他低声地对她说道。</td>
+		<td class="en">“The general grants your life if you will marry me,” he said to her in a low voice.</td></tr>
+		<tr><td width="45%" class="zh" >这个西班牙女郎傲慢而轻蔑地向军官瞥了一眼。</td>
+		<td class="en">The Spanish girl cast upon the officer a look of pride and contempt.</td></tr>
+		<tr><td width="45%" class="zh" >“胡安尼托，动手吧！”她说道，声音低沉，随即她的头颅滚落到维克托的脚下。</td>
+		<td class="en">“Go on, Juanito!” she said, in a deep voice, and her head rolled at Victor’s feet.</td></tr>
+		<tr><td width="45%" class="zh" >听到这声音，莱加奈斯侯爵夫人身子抽搐了一下，这是她所有悲伤的表达。</td>
+		<td class="en">The Marquise de Leganes made one convulsive movement as she heard that sound; it was the only sign she gave of sorrow.</td></tr>
+		<tr><td width="45%" class="zh" >“我的好胡安尼托，我这个姿势对吗？”幼弟曼努埃尔问道。</td>
+		<td class="en">“Am I placed right this way, my good Juanito?” asked the little Manuelo of his brother.</td></tr>
+		<tr><td width="45%" class="zh" >“哦，马利基塔，你哭了！”胡安尼托对他妹妹说道。</td>
+		<td class="en">“Ah! you are weeping, Mariquita!” said Juanito to his sister.</td></tr>
+		<tr><td width="45%" class="zh" >“是，”她答道，“可怜的胡安尼托，我们都走了，剩你自己该怎样孤独啊！”</td>
+		<td class="en">“Yes,” she said, “I think of you, my poor Juanito; how lonely you will be without us.”</td></tr>
+		<tr><td width="45%" class="zh" >接着侯爵伟岸的身躯走上前来。</td>
+		<td class="en">Soon the grand figure of the marquis came forward.</td></tr>
+		<tr><td width="45%" class="zh" >他看了看孩子们的鲜血，接着转向沉默无言、呆若木鸡的观众。他向胡安尼托伸出双手，用强有力的声音说道：</td>
+		<td class="en">He looked at the blood of his children; he turned to the mute and motionless spectators, and said in a strong voice, stretching his hands toward Juanito,—</td></tr>
+		<tr><td width="45%" class="zh" >“西班牙同胞们！</td>
+		<td class="en">“Spaniards!</td></tr>
+		<tr><td width="45%" class="zh" >我给我的儿子以父亲的祝福！</td>
+		<td class="en">I give my son my fatherly blessing!</td></tr>
+		<tr><td width="45%" class="zh" >现在，侯爵，动手吧，不要害怕——没有人会指责你。”</td>
+		<td class="en">Now, Marquis, strike, without fear—you are without reproach.”</td></tr>
+		<tr><td width="45%" class="zh" >可是当胡安尼托看到母亲由忏悔师扶着走向他的时候，他大喊道：“她生的我呀！”</td>
+		<td class="en">But when Juanito saw his mother approach him, supported by the priest, he cried out: “She bore me!”</td></tr>
+		<tr><td width="45%" class="zh" >现场爆发出恐怖的喊叫声。</td>
+		<td class="en">A cry of horror broke from all present.</td></tr>
+		<tr><td width="45%" class="zh" >这可怕的喧嚣使得宴会的觥筹交错声和欢笑声戛然而止。</td>
+		<td class="en">The noise of the feast and the jovial laughter of the officers ceased at that terrible clamor.</td></tr>
+		<tr><td width="45%" class="zh" >侯爵夫人知道胡安尼托的勇气殆尽，她纵身一跃跳出栏杆，被下面的岩石撞得粉身碎骨。</td>
+		<td class="en">The marquise comprehended that Juanito’s courage was exhausted, and springing with one bound over the parapet, she was dashed to pieces on the rocks below.</td></tr>
+		<tr><td width="45%" class="zh" >全场响起了一阵钦佩之声。</td>
+		<td class="en">A sound of admiration rose.</td></tr>
+		<tr><td width="45%" class="zh" >胡安尼托早已昏倒在地。</td>
+		<td class="en">Juanito had fallen senseless.</td></tr>
+		<tr><td width="45%" class="zh" >“将军，”一个半醉的军官说道，“马尔尚刚才跟我说到这次行刑的事情。</td>
+		<td class="en">“General,” said an officer, who was half drunk, “Marchand has just told me the particulars of that execution down there.</td></tr>
+		<tr><td width="45%" class="zh" >我敢打赌，你肯定没有下令这样做。”</td>
+		<td class="en">I will bet you never ordered it.”</td></tr>
+		<tr><td width="45%" class="zh" >“先生们，你们忘了吗，”G将军喊道，“五百个法国家庭正在经历痛苦折磨，而我们现在身处西班牙？</td>
+		<td class="en">“Do you forget, messieurs,” cried General G—t—r, “that five hundred French families are plunged in affliction, and that we are now in Spain?</td></tr>
+		<tr><td width="45%" class="zh" >你们希望我们的尸骨埋在这里吗？”</td>
+		<td class="en">Do you wish to leave our bones in its soil?”</td></tr>
+		<tr><td width="45%" class="zh" >一席话之后，再没有人，甚至没有一个少尉敢举杯一饮而尽。</td>
+		<td class="en">After that allocution, no one, not even a sub-lieutenant, had the courage to empty his glass.</td></tr>
+		<tr><td width="45%" class="zh" >尽管周围的人爱戴莱加奈斯侯爵，尽管西班牙国王把El Verdugo（刽子手）作为贵族头衔封给他，他还是凄凉悲伤。他茕茕孑立，很少为人所见。</td>
+		<td class="en">In spite of the respect with which he is surrounded, in spite of the title El Verdugo (the executioner) which the King of Spain bestowed as a title of nobility on the Marquis de Leganes, he is a prey to sorrow; he lives in solitude, and is seldom seen.</td></tr>
+		<tr><td width="45%" class="zh" >他令人钦佩的罪行像重担一样压抑着他，他似乎迫不及待地等待第二个儿子的降生，那样，他就有权去与那些和他日夜相伴的阴魂团聚了。</td>
+		<td class="en">Overwhelmed with the burden of his noble crime, he seems to await with impatience the birth of a second son, which will give him the right to rejoin the Shades who ceaselessly accompany him.</td></tr>
+		<tr><td width="45%" class="zh" ></td>
+		<td class="en"></td></tr>
+	</table>
+</div>
+
+<div class="zh_en"><a href="#" class="zh_btn">中文</a> | <a href="#" class="en_btn">英文</a> | <a href="#" class="zhen_btn">中英文</a></div>
+
+<script src="jquery-1.10.1.min.js"></script>
+<script src="jquery.bookify.js"></script>
+</body>
+</html>

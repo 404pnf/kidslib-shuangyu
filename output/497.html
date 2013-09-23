@@ -1,0 +1,285 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+	<!-- link rel="stylesheet" type="text/css" href="book.css" -->
+	<style type="text/css">
+		/* IMPORTANT !!!!
+		line-height, font-size defined in jquery.bookify.js */
+
+		* {
+			/* font-size: 20px; */
+		 }
+
+		table, td, th {
+
+		  }
+
+		td {
+	    	 /* height:50px; */
+	 	     vertical-align:top;
+	 	   	 text-align:left;
+	 	 	 padding-bottom:30px;/*行高的倍数-chenjing*/
+			 padding-left:20px;
+	 	  }
+
+		  /*chenjing*/
+		  .ebook_title{ position:absolute; left:20%; top:7%; font-weight:bold; font-size:35px; width:750px;}
+		  .zh_en{ position:absolute; left:70%; bottom:10%; font-size:14px;}
+		  .pre,.next{ cursor:pointer; font-size:40px; font-weight:bold; position:absolute; top:40%}
+		  .pre{ display:none; left:7%}
+		  .next{right:7%}
+
+	</style>
+
+</head>
+<body>
+<div class="ebook_title"></div>
+<div class="pre"><<</div>
+<div class="next">>></div>
+<div class="ebook_content">
+	<table cellpadding="0" cellspacing="0">
+		<tr><td width="45%" class="zh" >牧鹅姑娘</td>
+		<td class="en">The Goose Girl</td></tr>
+		<tr><td width="45%" class="zh" >作者：安德鲁·朗格</td>
+		<td class="en">by Andrew Lang</td></tr>
+		<tr><td width="45%" class="zh" >从前，有一位老王后，她的丈夫已经去世很多年了，她有一个漂亮的女儿。</td>
+		<td class="en">Once upon a time an old queen, whose husband had been dead for many years, had a beautiful daughter.</td></tr>
+		<tr><td width="45%" class="zh" >女儿长大后，与很远的一个国家的王子订了婚。</td>
+		<td class="en">When she grew up she was betrothed to a prince who lived a great way off.</td></tr>
+		<tr><td width="45%" class="zh" >如今，当婚期将近，她快要启程去异国时，她的老母亲送给她许多非常昂贵的行李，以及许多饰品，金银、小饰品和小摆设。事实上，包括了王室嫁妆该有的所有东西。因为，她深爱着她的女儿。</td>
+		<td class="en">Now, when the time drew near for her to be married and to depart into a foreign kingdom, her old mother gave her much costly baggage, and many ornaments, gold and silver, trinkets and knicknacks, and, in fact, everything that belonged to a royal trousseau, for she loved her daughter very dearly.</td></tr>
+		<tr><td width="45%" class="zh" >她还送给女儿一个侍女，陪女儿一起骑马前往并将她亲手交给新郎，而且她为这次行程给每人配了一匹马。</td>
+		<td class="en">She gave her a waiting-maid also, who was to ride with her and hand her over to the bridegroom, and she provided each of them with a horse for the journey.</td></tr>
+		<tr><td width="45%" class="zh" >公主的马叫法拉达，可以和人讲话。</td>
+		<td class="en">Now the Princess’s horse was called Falada, and could speak.</td></tr>
+		<tr><td width="45%" class="zh" >就要启程的时候，老母亲到她的卧室里，拿起一把小刀割破了她的手指；然后，她在下面托着一块白色的布，滴了三滴血在上面，并将它交给女儿，说：“亲爱的孩子，一定要保管好这块布，它可能会在途中帮到你。”</td>
+		<td class="en">When the hour for departure drew near the old mother went to her bedroom, and taking a small knife she cut her fingers till they bled; then she held a white rag under them, and letting three drops of blood fall into it, she gave it to her daughter, and said: “Dear child, take great care of this rag: it may be of use to you on the journey.”</td></tr>
+		<tr><td width="45%" class="zh" >于是，她们伤心地告别彼此，公主把布塞在她衣服的前面，骑上马，踏上了前往新郎王国的旅程。</td>
+		<td class="en">So they took a sad farewell of each other, and the Princess stuck the rag in front of her dress, mounted her horse, and set forth on the journey to her bridegroom’s kingdom.</td></tr>
+		<tr><td width="45%" class="zh" >她们大约骑了一个小时，公主开始觉得口干舌燥，便对她的侍女说：“请下马用我的金杯从那边的小溪为我舀些水来，我想喝水了。”</td>
+		<td class="en">After they had ridden for about an hour the Princess began to feel very thirsty, and said to her waiting-maid: “Pray get down and fetch me some water in my golden cup out of yonder stream: I would like a drink.”</td></tr>
+		<tr><td width="45%" class="zh" >“如果你口渴了，”侍女道，“自己下马趴在水边喝就是了，我不愿再当你的仆人了。”</td>
+		<td class="en">“If you’re thirsty,” said the maid, “dismount yourself, and lie down by the water and drink; I don’t mean to be your servant any longer.”</td></tr>
+		<tr><td width="45%" class="zh" >公主太渴了，便下了马弯腰从小溪里喝水，因为侍女不许她用自己的金杯。</td>
+		<td class="en">The Princess was so thirsty that she got down, bent over the stream, and drank, for she wasn’t allowed to drink out of the golden goblet.</td></tr>
+		<tr><td width="45%" class="zh" >喝水的时候，她喃喃地说：“哦！天啊，我该怎么办呢？”那三滴血答道：</td>
+		<td class="en">As she drank she murmured: “Oh! heaven, what am I to do?” and the three drops of blood replied:</td></tr>
+		<tr><td width="45%" class="zh" >“要是你的母亲知道了，</td>
+		<td class="en">“If your mother only knew,</td></tr>
+		<tr><td width="45%" class="zh" >她的心肯定会碎成两半。”</td>
+		<td class="en">Her heart would surely break in two.”</td></tr>
+		<tr><td width="45%" class="zh" >但是公主很温顺，对侍女的无礼行为没有说什么，便不声不响地又上了马。</td>
+		<td class="en">But the Princess was meek, and said nothing about her maid’s rude behavior, and quietly mounted her horse again.</td></tr>
+		<tr><td width="45%" class="zh" >她们一路上骑了几英里，但天很热，阳光火辣辣地照在她们身上，所以，很快公主又渴了起来。</td>
+		<td class="en">They rode on their way for several miles, but the day was hot, and the sun’s rays smote fiercely on them, so that the Princess was soon overcome by thirst again.</td></tr>
+		<tr><td width="45%" class="zh" >当她们经过一条小溪时，公主又一次喊了她的侍女：“请下马用我的金杯给我舀些水来。”因为她早就忘记了侍女无礼的话语。</td>
+		<td class="en">And as they passed a brook she called once more to her waiting-maid: “Pray get down and give me a drink from my golden cup,” for she had long ago forgotten her maid’s rude words.</td></tr>
+		<tr><td width="45%" class="zh" >但是侍女甚至比以前更傲慢地说道：“如果你想喝水，你可以自己下马去喝，我可不愿意当你的仆人。”</td>
+		<td class="en">But the waiting-maid replied, more haughtily even than before: “If you want a drink, you can dismount and get it; I don’t mean to be your servant.”</td></tr>
+		<tr><td width="45%" class="zh" >公主因干渴被迫下了马，她弯腰在流水旁哭着说：“哦！天啊，我该怎么办？”那三滴血答道：</td>
+		<td class="en">Then the Princess was compelled by her thirst to get down, and bending over the flowing water she cried and said: “Oh! heaven, what am I to do?” and the three drops of blood replied:</td></tr>
+		<tr><td width="45%" class="zh" >“要是你的母亲知道了，</td>
+		<td class="en">“If your mother only knew,</td></tr>
+		<tr><td width="45%" class="zh" >她的心肯定会碎成两半。”</td>
+		<td class="en">Her heart would surely break in two.”</td></tr>
+		<tr><td width="45%" class="zh" >当公主就这样伏在水面上喝水时，上面有三滴血的布从怀中掉了出来，顺着溪流漂走了。公主如此忧虑，以至于没有注意到她丢失了那块布。</td>
+		<td class="en">And as she drank thus, and leaned right over the water, the rag containing the three drops of blood fell from her bosom and floated down the stream, and she in her anxiety never even noticed her loss.</td></tr>
+		<tr><td width="45%" class="zh" >但是侍女却开心地看着这一切，因为她知道这给了她凌驾于新娘之上的力量，因为失去血滴，公主已变得软弱无权。</td>
+		<td class="en">But the waiting-maid had observed it with delight, as she knew it gave her power over the bride, for in losing the drops of blood the Princess had become weak and powerless.</td></tr>
+		<tr><td width="45%" class="zh" >当公主想再跨上她的马法拉达时，侍女喊道：“我想骑法拉达，你必须上我的马。”公主这次也不得不屈服。</td>
+		<td class="en">When she wished to get on her horse Falada again, the waiting-maid called out: “I mean to ride Falada: you must mount my beast”; and this too she had to submit to.</td></tr>
+		<tr><td width="45%" class="zh" >于是侍女严厉地命令她脱去王室长袍，换上侍女的普通衣服，最后，命令她对天发誓，她们到王宫时，对这件事情不能泄露半句。如果她不发誓的话，就会马上被杀死。</td>
+		<td class="en">Then the waiting-maid commanded her harshly to take off her royal robes, and to put on her common ones, and finally she made her swear by heaven not to say a word about the matter when they reached the palace; and if she hadn’t taken this oath she would have been killed on the spot.</td></tr>
+		<tr><td width="45%" class="zh" >但是法拉达看到了这一切，并记在心上。</td>
+		<td class="en">But Falada observed everything, and laid it all to heart.</td></tr>
+		<tr><td width="45%" class="zh" >现在，侍女骑着法拉达，而真正的新娘却骑着劣马，就这样继续赶路，直到到达王宫大院。</td>
+		<td class="en">The waiting-maid now mounted Falada, and the real bride the worse horse, and so they continued their journey till at length they arrived at the palace yard.</td></tr>
+		<tr><td width="45%" class="zh" >看到她们的到来，大家都很开心，而王子欣喜若狂，跳上前去迎接她们。他把侍女当成了新娘，从马上扶下她，领着她上楼去了王宫内室。</td>
+		<td class="en">There was great rejoicing over the arrival, and the Prince sprang forward to meet them, and taking the waiting-maid for his bride, he lifted her down from her horse and led her upstairs to the royal chamber.</td></tr>
+		<tr><td width="45%" class="zh" >与此同时，真正的公主被留下，站在下面的院子里。</td>
+		<td class="en">In the meantime the real Princess was left standing below in the courtyard.</td></tr>
+		<tr><td width="45%" class="zh" >老国王此时正向窗外望，看到了身处困境的她。她看上去那么温柔甜美，那么美丽动人，他十分震撼。</td>
+		<td class="en">The old King, who was looking out of his window, beheld her in this plight, and it struck him how sweet and gentle, even beautiful, she looked.</td></tr>
+		<tr><td width="45%" class="zh" >于是，他立刻走进内室，问新娘她带来的那个被留在下面院子里站着的姑娘是谁。</td>
+		<td class="en">He went at once to the royal chamber, and asked the bride who it was she had brought with her and had left thus standing in the court below.</td></tr>
+		<tr><td width="45%" class="zh" >“哦！”新娘答道，“我带着她给我在旅途中作伴。给她一些事情做，那么她可能就不会无所事事了。”</td>
+		<td class="en">“Oh!” replied the bride, “I brought her with me to keep me company on the journey; give the girl something to do, that she may not be idle.”</td></tr>
+		<tr><td width="45%" class="zh" >但是老国王没有什么工作让她做，也想不出来有什么事情可做，于是他说：“有一个小孩子帮我照管鹅群，让她去帮他吧。”</td>
+		<td class="en">But the old King had no work for her, and couldn’t think of anything; so he said, “I’ve a small boy who looks after the geese, she’d better help him.”</td></tr>
+		<tr><td width="45%" class="zh" >年轻人的名字叫柯德金，于是真正的新娘就被派去帮他牧鹅了。</td>
+		<td class="en">The youth’s name was Curdken, and the real bride was made to assist him in herding geese.</td></tr>
+		<tr><td width="45%" class="zh" >不久，假新娘告诉王子：“最亲爱的丈夫，我祈求你帮我一个忙。”</td>
+		<td class="en">Soon after this the false bride said to the Prince: “Dearest husband, I pray you grant me a favor.”</td></tr>
+		<tr><td width="45%" class="zh" >他回答道：“我很乐意效劳。”</td>
+		<td class="en">He answered: “That I will.”</td></tr>
+		<tr><td width="45%" class="zh" >“那么，让屠夫砍下我骑到这儿的那匹马的头，因为在旅程中，它表现得很不好。”</td>
+		<td class="en">“Then let the slaughterer cut off the head of the horse I rode here upon, because it behaved very badly on the journey.”</td></tr>
+		<tr><td width="45%" class="zh" >但事实是她害怕那匹马讲话，并把她怎样对待公主的事情说出来。</td>
+		<td class="en">But the truth was she was afraid lest the horse should speak and tell how she had treated the Princess.</td></tr>
+		<tr><td width="45%" class="zh" >她达到了目的，忠诚的法拉达被宣判了死刑。</td>
+		<td class="en">She carried her point, and the faithful Falada was doomed to die.</td></tr>
+		<tr><td width="45%" class="zh" >当消息传到真正的公主耳朵里，她去找了屠夫，并偷偷允诺，如果帮她忙的话，便给他一块金子。</td>
+		<td class="en">When the news came to the ears of the real Princess she went to the slaughterer, and secretly promised him a piece of gold if he would do something for her.</td></tr>
+		<tr><td width="45%" class="zh" >镇上有一个大黑门，公主每天早晚和鹅群必经那里。他会“发慈悲把法拉达的头挂在那里，这样她就可以再次看到它吗？”</td>
+		<td class="en">There was in the town a large dark gate, through which she had to pass night and morning with the geese; would he “kindly hang up Falada’s head there, that she might see it once again?”</td></tr>
+		<tr><td width="45%" class="zh" >屠夫说他会按照她希望的去做，砍下马头，并将它紧紧钉在城门上方。</td>
+		<td class="en">The slaughterer said he would do as she desired, chopped off the head, and nailed it firmly over the gateway.</td></tr>
+		<tr><td width="45%" class="zh" >次日清晨，当她和柯德金赶着鹅群穿过大门，经过门下时她说：</td>
+		<td class="en">Early next morning, as she and Curdken were driving their flock through the gate, she said as she passed under:</td></tr>
+		<tr><td width="45%" class="zh" >“哦！</td>
+		<td class="en">“Oh!</td></tr>
+		<tr><td width="45%" class="zh" >法拉达，是你挂在那里。”</td>
+		<td class="en">Falada, ’tis you hang there”;</td></tr>
+		<tr><td width="45%" class="zh" >那颗头答道：</td>
+		<td class="en">and the head replied:</td></tr>
+		<tr><td width="45%" class="zh" >“是你啊，美丽的公主经过门下。</td>
+		<td class="en">“’Tis you; pass under, Princess fair:</td></tr>
+		<tr><td width="45%" class="zh" >要是你的母亲知道了，</td>
+		<td class="en">If your mother only knew,</td></tr>
+		<tr><td width="45%" class="zh" >她的心肯定会碎成两半。”</td>
+		<td class="en">Her heart would surely break in two.”</td></tr>
+		<tr><td width="45%" class="zh" >然后她离开了塔楼，把鹅群赶进一块田地。</td>
+		<td class="en">Then she left the tower and drove the geese into a field.</td></tr>
+		<tr><td width="45%" class="zh" >当他们到了常常放鹅的地方，她坐了下来，解开她的纯金色的头发。</td>
+		<td class="en">And when they had reached the common where the geese fed she sat down and unloosed her hair, which was of pure gold.</td></tr>
+		<tr><td width="45%" class="zh" >柯德金喜欢看它在阳光下闪闪发光，很想拔几根头发下来。</td>
+		<td class="en">Curdken loved to see it glitter in the sun, and wanted much to pull some hair out.</td></tr>
+		<tr><td width="45%" class="zh" >于是她说：</td>
+		<td class="en">Then she spoke:</td></tr>
+		<tr><td width="45%" class="zh" >“风啊，风啊，轻轻地吹，</td>
+		<td class="en">“Wind, wind, gently sway,</td></tr>
+		<tr><td width="45%" class="zh" >吹走柯德金的帽子，</td>
+		<td class="en">Blow Curdken’s hat away;</td></tr>
+		<tr><td width="45%" class="zh" >让他在田地里和荒原上追，</td>
+		<td class="en">Let him chase o’er field and wold</td></tr>
+		<tr><td width="45%" class="zh" >直到我的金发，</td>
+		<td class="en">Till my locks of ruddy gold,</td></tr>
+		<tr><td width="45%" class="zh" >现在正凌乱垂下，</td>
+		<td class="en">Now astray and hanging down,</td></tr>
+		<tr><td width="45%" class="zh" >梳好编盘成发环。”</td>
+		<td class="en">Be combed and plaited in a crown.”</td></tr>
+		<tr><td width="45%" class="zh" >然后一阵疾风吹来，吹走了柯德金的帽子，他只好在山谷间追寻。</td>
+		<td class="en">Then a gust of wind blew Curdken’s hat away, and he had to chase it over hill and dale.</td></tr>
+		<tr><td width="45%" class="zh" >当他追回来时，她已经将头发梳完盘好，他就没机会得到她的头发了。</td>
+		<td class="en">When he returned from the pursuit she had finished her combing and curling, and his chance of getting any hair was gone.</td></tr>
+		<tr><td width="45%" class="zh" >柯德金很生气，不肯和她说话了。</td>
+		<td class="en">Curdken was very angry, and wouldn’t speak to her.</td></tr>
+		<tr><td width="45%" class="zh" >就这样，他们牧鹅到傍晚，然后回去了。</td>
+		<td class="en">So they herded the geese till evening and then went home.</td></tr>
+		<tr><td width="45%" class="zh" >第二天早晨，他们经过大门时，女孩说：</td>
+		<td class="en">The next morning, as they passed under the gate, the girl said:</td></tr>
+		<tr><td width="45%" class="zh" >“哦！</td>
+		<td class="en">“Oh!</td></tr>
+		<tr><td width="45%" class="zh" >法拉达，是你挂在那里。”</td>
+		<td class="en">Falada, ’tis you hang there;”</td></tr>
+		<tr><td width="45%" class="zh" >那颗头答道：</td>
+		<td class="en">and the head replied:</td></tr>
+		<tr><td width="45%" class="zh" >“是你啊，美丽的公主经过门下。</td>
+		<td class="en">“’Tis you; pass under, Princess fair:</td></tr>
+		<tr><td width="45%" class="zh" >要是你的母亲知道了，</td>
+		<td class="en">If your mother only knew,</td></tr>
+		<tr><td width="45%" class="zh" >她的心肯定会碎成两半。”</td>
+		<td class="en">Her heart would surely break in two.”</td></tr>
+		<tr><td width="45%" class="zh" >于是她上了路，直到来到平常放牧的地方。她在那坐了下来，开始梳理她的头发。然后，柯德金跑上前想从她的头上抓取几根头发，但是她匆忙喊道：</td>
+		<td class="en">Then she went on her way till she came to the common, where she sat down and began to comb out her hair; then Curdken ran up to her and wanted to grasp some of the hair from her head, but she called out hastily:</td></tr>
+		<tr><td width="45%" class="zh" >“风啊，风啊，轻轻地吹，</td>
+		<td class="en">“Wind, wind, gently sway,</td></tr>
+		<tr><td width="45%" class="zh" >吹走柯德金的帽子，</td>
+		<td class="en">Blow Curdken’s hat away;</td></tr>
+		<tr><td width="45%" class="zh" >让他在田地里和荒原上追，</td>
+		<td class="en">Let him chase o’er field and wold</td></tr>
+		<tr><td width="45%" class="zh" >直到我的金发，</td>
+		<td class="en">Till my locks of ruddy gold,</td></tr>
+		<tr><td width="45%" class="zh" >现在正凌乱垂下，</td>
+		<td class="en">Now astray and hanging down,</td></tr>
+		<tr><td width="45%" class="zh" >梳好编盘成发环。”</td>
+		<td class="en">Be combed and plaited in a crown.”</td></tr>
+		<tr><td width="45%" class="zh" >接着一阵风吹来，把柯德金的帽子吹向远方，于是他只好去追。当他回来时，她早已盘完她的金发，他便不能得到她的头发了。就这样，他们一起照看着鹅群直到天黑。</td>
+		<td class="en">Then a puff of wind came and blew Curdken’s hat far away, so that he had to run after it; and when he returned she had long finished putting up her golden locks, and he couldn’t get any hair; so they watched the geese till it was dark.</td></tr>
+		<tr><td width="45%" class="zh" >但是那天晚上，当他们回来，柯德金便去了老国王那里，他说：“我拒绝再和那个女孩一起放鹅。”</td>
+		<td class="en">But that evening when they got home Curdken went to the old King, and said: “I refuse to herd geese any longer with that girl.”</td></tr>
+		<tr><td width="45%" class="zh" >“为什么呢？”老国王问道。</td>
+		<td class="en">“For what reason?” asked the old King.</td></tr>
+		<tr><td width="45%" class="zh" >“因为她整天什么事情都不做，只是烦扰我。”柯德金答道。接着，他开始讲述她所有的罪孽：“每天早晨我们赶着鹅群经过黑色城门时，她就会对挂在城墙上的一颗马头说：</td>
+		<td class="en">“Because she does nothing but annoy me all day long,” replied Curdken; and he proceeded to relate all her iniquities, and said: “Every morning as we drive the flock through the dark gate she says to a horse’s head that hangs on the wall:</td></tr>
+		<tr><td width="45%" class="zh" >“‘哦！</td>
+		<td class="en">“‘Oh!</td></tr>
+		<tr><td width="45%" class="zh" >法拉达，是你挂在那里。’</td>
+		<td class="en">Falada, ’tis you hang there’;</td></tr>
+		<tr><td width="45%" class="zh" >然后那颗头答道：</td>
+		<td class="en">and the head replies:</td></tr>
+		<tr><td width="45%" class="zh" >“‘是你啊，美丽的公主经过门下。</td>
+		<td class="en">“‘’Tis you; pass under, Princess fair:</td></tr>
+		<tr><td width="45%" class="zh" >要是你的母亲知道了，</td>
+		<td class="en">If your mother only knew,</td></tr>
+		<tr><td width="45%" class="zh" >她的心肯定会碎成两半。’”</td>
+		<td class="en">Her heart would surely break in two.’”</td></tr>
+		<tr><td width="45%" class="zh" >柯德金接着讲在他们常常牧鹅的地方发生的事情，以及他如何常常不得不去追他的帽子。</td>
+		<td class="en">And Curdken went on to tell what passed on the common where the geese fed, and how he had always to chase his hat.</td></tr>
+		<tr><td width="45%" class="zh" >老国王吩咐他第二天像往常一样去赶出他的鹅群。当早晨来临，他自己躲在了黑色的城门后，听到了牧鹅姑娘如何与法拉达打招呼。</td>
+		<td class="en">The old King bade him go and drive forth his flock as usual next day; and when morning came he himself took up his position behind the dark gate, and heard how the goose-girl greeted Falada.</td></tr>
+		<tr><td width="45%" class="zh" >然后，他跟着她穿过田野，藏在她常放牧的地方的灌木丛后。</td>
+		<td class="en">Then he followed her through the field, and hid himself behind a bush on the common.</td></tr>
+		<tr><td width="45%" class="zh" >很快，他亲眼看到牧鹅小伙与牧鹅姑娘如何看管鹅群，过了片刻，牧鹅姑娘又是如何坐下来，解开她那像金子一样闪耀的头发重复道：</td>
+		<td class="en">He soon saw with his own eyes how the goose-boy and the goose-girl looked after the geese, and how after a time the maiden sat down and loosed her hair, that glittered like gold, and repeated:</td></tr>
+		<tr><td width="45%" class="zh" >“风啊，风啊，轻轻地吹，</td>
+		<td class="en">“Wind, wind, gently sway,</td></tr>
+		<tr><td width="45%" class="zh" >吹走柯德金的帽子，</td>
+		<td class="en">Blow Curdken’s hat away;</td></tr>
+		<tr><td width="45%" class="zh" >让他在田地里和荒原上追，</td>
+		<td class="en">Let him chase o’er field and wold</td></tr>
+		<tr><td width="45%" class="zh" >直到我的金发，</td>
+		<td class="en">Till my locks of ruddy gold</td></tr>
+		<tr><td width="45%" class="zh" >现在正凌乱垂下，</td>
+		<td class="en">Now astray and hanging down,</td></tr>
+		<tr><td width="45%" class="zh" >梳好编盘成发环。”</td>
+		<td class="en">Be combed and plaited in a crown.”</td></tr>
+		<tr><td width="45%" class="zh" >接着一阵疾风吹来，吹走了柯德金的帽子，所以他不得不飞越山谷追逐帽子。而其间，这个女孩悄悄地梳理并编好她的头发：所有这些都被老国王看到，他回到王宫，没有人注意到他。</td>
+		<td class="en">Then a gust of wind came and blew Curdken’s hat away, so that he had to fly over hill and dale after it, and the girl in the meantime quietly combed and plaited her hair: all this the old King observed, and returned to the palace without anyone having noticed him.</td></tr>
+		<tr><td width="45%" class="zh" >晚上，当牧鹅姑娘回来时，他把她叫到一边，问她为什么那样做。</td>
+		<td class="en">In the evening when the goose-girl came home he called her aside, and asked her why she behaved as she did.</td></tr>
+		<tr><td width="45%" class="zh" >“我不能告诉你原因，我怎么敢向任何人吐露我的悲痛呢？因为我对天发过誓，不能告诉任何人，否则我应该已经没命了。”</td>
+		<td class="en">“I may not tell you why; how dare I confide my woes to anyone? for I swore not to by heaven, otherwise I should have lost my life.”</td></tr>
+		<tr><td width="45%" class="zh" >老国王恳请她告诉一切，这让她十分烦恼，但她却什么都不肯说。</td>
+		<td class="en">The old King begged her to tell him all, and left her no peace, but he could get nothing out of her.</td></tr>
+		<tr><td width="45%" class="zh" >最后他说：“好吧，如果你不愿意告诉我，那就向那边的铁炉吐露你的烦恼吧。”然后便离开了。</td>
+		<td class="en">At last he said: “Well, if you won’t tell me, confide your trouble to the iron stove there,” and he went away.</td></tr>
+		<tr><td width="45%" class="zh" >于是她悄悄地走到壁炉旁，开始呜咽、哭泣并倾诉她那可怜的心事：“我坐在这里，被全世界抛弃。我是一个国王的女儿，一个不忠诚的女仆逼着我脱掉我自己的衣服，并占据我新娘的位置，而我不得不做卑微的牧鹅姑娘的工作。</td>
+		<td class="en">Then she crept to the stove, and began to sob and cry and to pour out her poor little heart, and said: “Here I sit, deserted by all the world, I who am a king’s daughter, and a false waiting-maid has forced me to take off my own clothes, and has taken my place with my bridegroom, while I have to fulfill the lowly office of goose-girl.</td></tr>
+		<tr><td width="45%" class="zh" >“要是我的母亲知道了，</td>
+		<td class="en">“If my mother only knew</td></tr>
+		<tr><td width="45%" class="zh" >她的心肯定会碎成两半。”</td>
+		<td class="en">Her heart would surely break in two.”</td></tr>
+		<tr><td width="45%" class="zh" >但是老国王正站在外面的壁炉烟囱旁，听着她说的话。</td>
+		<td class="en">But the old King stood outside at the stove chimney, and listened to her words.</td></tr>
+		<tr><td width="45%" class="zh" >于是，他又走进房间，吩咐她离开壁炉，并令人给她穿上王室礼服——她穿上后实在是太美了。</td>
+		<td class="en">Then he entered the room again, and bidding her leave the stove, he ordered royal apparel to be put on her, in which she looked amazingly lovely.</td></tr>
+		<tr><td width="45%" class="zh" >然后他招来自己的儿子，向他揭露说他的新娘是假的，她什么都不是，只是一个侍女，而真正的新娘正站在他身旁，就是以前假扮成牧鹅女的姑娘。</td>
+		<td class="en">Then he summoned his son, and revealed to him that he had got the false bride, who was nothing but a waiting-maid, while the real one, in the guise of the ex-goose-girl, was standing at his side.</td></tr>
+		<tr><td width="45%" class="zh" >当年轻的国王看到她的美貌，并了解到她如何善良，打心底里十分欢喜。然后举办了一场盛宴，所有的人都被邀请过来。</td>
+		<td class="en">The young King rejoiced from his heart when he saw her beauty and learned how good she was, and a great banquet was prepared, to which everyone was bidden.</td></tr>
+		<tr><td width="45%" class="zh" >新郎坐在上首，一边是真王妃，一边是假王妃；但假王妃觉得如此眼花缭乱，以至于没有认出穿着闪闪发光的衣服的真王妃。</td>
+		<td class="en">The bridegroom sat at the head of the table, the Princess on one side of him and the waiting-maid on the other; but she was so dazzled that she did not recognize the Princess in her glittering garments.</td></tr>
+		<tr><td width="45%" class="zh" >现在，他们已酒足饭饱，开心快活，老国王让侍女给他解决一个棘手问题。</td>
+		<td class="en">Now when they had eaten and drunk, and were merry, the old King asked the waiting-maid to solve a knotty point for him.</td></tr>
+		<tr><td width="45%" class="zh" >“应该怎样，”他说，“惩罚一个欺骗大家的人？”然后，他开始讲述整个故事，最后说：“现在应该如何判决呢？”</td>
+		<td class="en">“What,” said he, “should be done to a certain person who has deceived everyone?” and he proceeded to relate the whole story, ending up with, “Now what sentence should be passed?”</td></tr>
+		<tr><td width="45%" class="zh" >那假新娘答道：“她应该被赤裸裸地装进一个钉满了尖钉子的大桶，由两匹白马在街上拖来拖去，直到死去。”</td>
+		<td class="en">Then the false bride answered: “She deserves to be put stark naked into a barrel lined with sharp nails, which should be dragged by two white horses up and down the street till she is dead.”</td></tr>
+		<tr><td width="45%" class="zh" >“你就是那个人，”国王说，“你已经给自己判了刑；既然这样，你理应受到这样的惩罚。”</td>
+		<td class="en">“You are the person,” said the King, “and you have passed sentence on yourself; and even so it shall be done to you.”</td></tr>
+		<tr><td width="45%" class="zh" >当这个判决被执行后，年轻的国王娶了他真正的新娘，他们和睦幸福地统治着他们的王国。</td>
+		<td class="en">And when the sentence had been carried out the young King was married to his real bride, and both reigned over the kingdom in peace and happiness. </td></tr>
+		<tr><td width="45%" class="zh" ></td>
+		<td class="en"></td></tr>
+	</table>
+</div>
+
+<div class="zh_en"><a href="#" class="zh_btn">中文</a> | <a href="#" class="en_btn">英文</a> | <a href="#" class="zhen_btn">中英文</a></div>
+
+<script src="jquery-1.10.1.min.js"></script>
+<script src="jquery.bookify.js"></script>
+</body>
+</html>

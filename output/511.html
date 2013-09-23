@@ -1,0 +1,595 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+	<!-- link rel="stylesheet" type="text/css" href="book.css" -->
+	<style type="text/css">
+		/* IMPORTANT !!!!
+		line-height, font-size defined in jquery.bookify.js */
+
+		* {
+			/* font-size: 20px; */
+		 }
+
+		table, td, th {
+
+		  }
+
+		td {
+	    	 /* height:50px; */
+	 	     vertical-align:top;
+	 	   	 text-align:left;
+	 	 	 padding-bottom:30px;/*行高的倍数-chenjing*/
+			 padding-left:20px;
+	 	  }
+
+		  /*chenjing*/
+		  .ebook_title{ position:absolute; left:20%; top:7%; font-weight:bold; font-size:35px; width:750px;}
+		  .zh_en{ position:absolute; left:70%; bottom:10%; font-size:14px;}
+		  .pre,.next{ cursor:pointer; font-size:40px; font-weight:bold; position:absolute; top:40%}
+		  .pre{ display:none; left:7%}
+		  .next{right:7%}
+
+	</style>
+
+</head>
+<body>
+<div class="ebook_title"></div>
+<div class="pre"><<</div>
+<div class="next">>></div>
+<div class="ebook_content">
+	<table cellpadding="0" cellspacing="0">
+		<tr><td width="45%" class="zh" >有人影的远景</td>
+		<td class="en">Landscape with Figures</td></tr>
+		<tr><td width="45%" class="zh" >作者：欧内斯特·海明威</td>
+		<td class="en">by Ernest Hemingway</td></tr>
+		<tr><td width="45%" class="zh" >那栋房子里的情况奇怪极了。</td>
+		<td class="en">It was very strange in that house.</td></tr>
+		<tr><td width="45%" class="zh" >电梯自然早已停开。</td>
+		<td class="en">The elevator, of course, no longer ran.</td></tr>
+		<tr><td width="45%" class="zh" >它顺着上下滑动的那根钢柱也已经弯曲了。六层的大理石楼梯，有好几级都破裂了，所以爬楼梯时，你必须小心地踩在边上，免得掉下去。</td>
+		<td class="en">The steel column it slid up and down on was bent and there were several marble stairs in the six flights which were broken so that you had to walk carefully on the edges as you climbed so that you would not fall through.</td></tr>
+		<tr><td width="45%" class="zh" >有些通向房间的门后面其实早已没有了房间。要是你扭开一扇看上去完好无损的门，一脚跨过门槛，便很可能踩空：这座公寓楼曾被高爆炮弹直接击中，四楼和底下三层的正面都被炸掉了。</td>
+		<td class="en">There were doors which opened onto rooms where there were no longer any rooms and you could swing a perfectly sound-looking door open and step across the door sill into space: that floor and the next three floors below having been blasted out of the front of the apartment house by direct hits by high explosive shells.</td></tr>
+		<tr><td width="45%" class="zh" >但是最高两层的正面倒有四个房间还完好无损，所有楼层背面的房间也都还有自来水。</td>
+		<td class="en">Yet the two top floors had four rooms on the front of the house which were intact and there was still running water in the back rooms on all of the floors.</td></tr>
+		<tr><td width="45%" class="zh" >我们叫这栋房子“老宅子”。</td>
+		<td class="en">We called this house the Old Homestead.</td></tr>
+		<tr><td width="45%" class="zh" >在战争最严峻的时候，前线就在这栋公寓的正下方，位于林阴大道环绕的小高地顶上的边沿。战壕和被淋坏晒烂的沙袋至今仍在原处。</td>
+		<td class="en">The front line had, at the vey worst moment, been directly below this apartment house along the upper edge of the little plateau that the boulevard circled and the trench and the weather-rotted sandbags were still there.</td></tr>
+		<tr><td width="45%" class="zh" >它们是那么近，以至于站在这座残破公寓的一个阳台上，你就可以扔块破瓦或者灰泥片过去。</td>
+		<td class="en">They were so close you could throw a broken tile or a piece of mortar from the smashed apartment house down into them as you stood on one of the balconies.</td></tr>
+		<tr><td width="45%" class="zh" >但现在前线已经从高地边沿推进到了河对岸松树散布的山坡上，那座小山就耸立在一个叫“村舍”的旧日皇家猎舍后面。</td>
+		<td class="en">But now the line had been pushed down from the lip of the plateau, across the river and up into the pine-studded slope of the hill that rose behind the old royal hunting lodge that was called the Caso del Campo.</td></tr>
+		<tr><td width="45%" class="zh" >现在战斗就是在那里进行着，我们把“老宅子”当作观察哨和拍摄新闻片的有利地点。</td>
+		<td class="en">It was there that the fighting was going on, now, and we used the Old Homestead both as an observation post and as an advantage point to film from.</td></tr>
+		<tr><td width="45%" class="zh" >那时形势非常危险，天总是那么冷，我们又总是饿肚子，但常常开玩笑。</td>
+		<td class="en">In those days it was very dangerous and always cold and we were always hungry and we joked a great deal.</td></tr>
+		<tr><td width="45%" class="zh" >每次炮弹击中建筑物，砖块和石膏都被炸成粉末，像一大团云；等它们落下来，镜面上全是灰，就像新房子的窗上涂了白粉一样。</td>
+		<td class="en">Each time a shell bursts in a building it makes a great cloud of brick and plaster dust and when this settles it coats the surface of a mirror so that it is as powdered as the windows which have been calcimined over in a new building.</td></tr>
+		<tr><td width="45%" class="zh" >顺着这栋房子的楼梯往上爬，你会发现楼梯旁延伸出的一个房间里居然有面长镜没有破损。我用手指在布满灰尘的镜面上划下了大大的“约翰尼必死”的字样，然后我们找了个托词让摄影师约翰尼到那个房间去。</td>
+		<td class="en">There was a tall unbroken mirror in one of the rooms of that house giving off the stairs as you climbed and on its dusty surface I printed, with my finger, in large letters DEATH TO JOHNNY and we then sent Johnny, the camera-man, into that room on some pretext.</td></tr>
+		<tr><td width="45%" class="zh" >当时正是炮击关头，他打开门看见那可怕的宣告直勾勾地从镜子里盯着他，顿时就面色煞白、勃然大怒，为此过了好久我们才重归于好。</td>
+		<td class="en">When he opened the door, during a shelling, and saw that ghostly announcement staring at him from the glass he went into a white, deadly, Dutch rage and it was quite a time before we were friends again.</td></tr>
+		<tr><td width="45%" class="zh" >第二天，我们在旅馆前面往一辆车里装器材。天气非常寒冷，于是我上车后就把一边的窗玻璃摇了上去。</td>
+		<td class="en">Then the next day when we were loading the equipment into a car in front of the hotel I got into the car and cranked up the glass of the side window as it was bitterly cold.</td></tr>
+		<tr><td width="45%" class="zh" >车窗摇起后，我看见上面印着几个红色的大字：“埃德是个虱子”，想必是用借来的口红写上去的。</td>
+		<td class="en">As the glass rose I saw, printed on it with large red letters in what must have been a borrowed lipstick, ED IS A LICE.</td></tr>
+		<tr><td width="45%" class="zh" >一连几天我们都在用这辆写着标语的车，这标语在西班牙人看来很神秘。</td>
+		<td class="en">We used the car for several days with that mysterious, to the Spaniards, slogan.</td></tr>
+		<tr><td width="45%" class="zh" >他们一定把这几个字当成了某个荷兰或美国的革命组织（也许类似F.A.I.或者C.N.T.这样的组织）的名称缩写或标语。</td>
+		<td class="en">They must have taken it for the initials or slogan of some Holland-American revolutionary organization perhaps resembling the F.A.I. or the C.N.T.</td></tr>
+		<tr><td width="45%" class="zh" >后来有一天，有位英国官员却使我们忘记了之前的那点儿不快。</td>
+		<td class="en">Then there was the day when the great British authority on let us forget just what came to town.</td></tr>
+		<tr><td width="45%" class="zh" >他有顶巨大的德国式钢盔，每次出行，只要是往前线方向去，他都会戴着它。</td>
+		<td class="en">He had a huge, German-type steel helmet which he wore on all expeditions in the direction of the front.</td></tr>
+		<tr><td width="45%" class="zh" >对这种装束我们都没什么好感。</td>
+		<td class="en">This was an item of clothing which none of the rest of us affected.</td></tr>
+		<tr><td width="45%" class="zh" >按常理，既然这种钢盔并不多，就应该留给突击部队。因此这位大员戴着这顶钢盔让我们立即对他产生了反感。</td>
+		<td class="en">It was the general theory that since there were not many steel helmets these should be reserved for the shock troops and his wearing of this helmet formed in us an instant prejudice against the Great Authority.</td></tr>
+		<tr><td width="45%" class="zh" >我们是在一位美国女记者的住所里碰上的，那位女记者有只上好的电炉。</td>
+		<td class="en">We had met in the room of an American woman journalist who had a splendid electric heater.</td></tr>
+		<tr><td width="45%" class="zh" >官员很快就喜欢上了那个舒适的房间，还叫它“俱乐部”。</td>
+		<td class="en">The Authority took an instant fancy to this very pleasant room and named it the Club.</td></tr>
+		<tr><td width="45%" class="zh" >他建议大家都自带酒水，好在这温暖、愉悦的气氛中享用。</td>
+		<td class="en">His proposal was that everyone should bring their own liquor there and be able to enjoy it in the warmth and pleasant atmosphere.</td></tr>
+		<tr><td width="45%" class="zh" >可那美国女记者工作极其勤奋，一直努力不让自己的住所染上“俱乐部”的色彩（虽然也许不是太成功）。因此这样明确的命名和归类对她来说是个不小的打击。</td>
+		<td class="en">As the American girl was exceedingly hard-working and had been trying, perhaps not too successfully, to keep her room from becoming in any sense the Club, this definite baptism and classification came as rather a blow to her.</td></tr>
+		<tr><td width="45%" class="zh" >第二天，我们正在“老宅子”里工作，用一条破席子当屏风，尽可能小心地让摄像机镜头避开下午耀眼的阳光，这时候那位官员由美国女记者陪着来了。</td>
+		<td class="en">We were working there in the Old Homestead the next day, shielding the camera lens as carefully as possible against the glare of the afternoon sun with a screen of broken matting, when the Authority arrived accompanied by the American girl.</td></tr>
+		<tr><td width="45%" class="zh" >他在“俱乐部”里听我们谈到过这个场所，就特意过来看看。</td>
+		<td class="en">He had heard us discussing the location at the Club and had come to pay a visit.</td></tr>
+		<tr><td width="45%" class="zh" >当时我正在破阳台一角的阴影里用一副双筒望远镜观察。那是小型的八倍蔡司镜，用双手一盖，它就不会反光了。</td>
+		<td class="en">I was using a pair of field glasses, eight power, small Zeisses that you could cover with your two hands so that they gave no reflection, and was observing from the shadow in the angle of the broken balcony.</td></tr>
+		<tr><td width="45%" class="zh" >这时进攻快要开始了，我们等待着飞机过来开始轰炸，以此来代替当时由于政府缺乏重炮而没作好的炮击准备。</td>
+		<td class="en">The attack was about to start and we were waiting for the planes to come over and commence the bombardment which substituted for adequate artillery preparation due to the Government’s then shortage of heavy artillery.</td></tr>
+		<tr><td width="45%" class="zh" >我们一向在那房子里工作，把自己像耗子一样小心地藏起来。因为要想工作成功，有继续观测的可能，就绝不能给这栋看似被遗弃的公寓招来任何炮火。</td>
+		<td class="en">We had worked in the house, concealing ourselves as carefully as rats do because the success of our work and the possibility of continued observation depended altogether on not drawing any fire on the seemingly deserted building.</td></tr>
+		<tr><td width="45%" class="zh" >此时，官员走进房间，拉了一把空椅子，坐在一览无余的开敞式阳台的正中心，钢盔、大号望远镜等等一应俱全。</td>
+		<td class="en">Now into the room came the Great Authority, and drawing up one of the empty chairs, seated himself in the exact center of the open balcony, steel helmet, over-sized binoculars and all.</td></tr>
+		<tr><td width="45%" class="zh" >摄影机斜设在阳台窗户的一侧，像机关枪一样被精心伪装。</td>
+		<td class="en">The camera was at an angle on one side of the balcony window as carefully camouflaged as a machine gun.</td></tr>
+		<tr><td width="45%" class="zh" >我则是在另一侧布满阴影的角落里（山坡上的任何人都看不见我），而且一直注意从不穿过阳光照射的开阔处。</td>
+		<td class="en">I was in the angle of shadow on the other, invisible to anyone on the hillside, and always careful never to move across the sunny open space.</td></tr>
+		<tr><td width="45%" class="zh" >而这官员却堂而皇之坐在向阳地中间，头戴钢盔，像全球参谋部的总指挥似的。他的望远镜在阳光下闪闪发光，像一架日光反射信号器。</td>
+		<td class="en">The Authority was seated in plain sight in the middle of the sunny patch looking, in his steel hat, like the head of all the general staffs in the world, his glasses blinking in the sun like a helio.</td></tr>
+		<tr><td width="45%" class="zh" >“你看，”我对他说，</td>
+		<td class="en">“Look,” I said to him.</td></tr>
+		<tr><td width="45%" class="zh" >“我们得在这儿工作。</td>
+		<td class="en">“We have to work here.</td></tr>
+		<tr><td width="45%" class="zh" >你坐在这儿，望远镜反射的光能叫山上所有的人都看见。”</td>
+		<td class="en">From where you’re sitting your glasses make a blink that everybody on that hill can see.”</td></tr>
+		<tr><td width="45%" class="zh" >“我觉得在房子里没有任何危险。”官员用高高在上的口气平静地说。</td>
+		<td class="en">“Ay dount think theys aneh dainjah een a house,” the Authority said with calm and condescending dignity.</td></tr>
+		<tr><td width="45%" class="zh" >“你要是打过野山羊，”我说，“就应该知道：要是你看得到它们，它们也能看到你。</td>
+		<td class="en">“If you ever hunted mountain sheep,” I said, “you know they can see you as far as you can see them.</td></tr>
+		<tr><td width="45%" class="zh" >你没发现用你的望远镜看那些人有多清楚吗？</td>
+		<td class="en">Do you see how clearly you see the men with your glasses?</td></tr>
+		<tr><td width="45%" class="zh" >他们也有望远镜的。”</td>
+		<td class="en">They have glasses too.”</td></tr>
+		<tr><td width="45%" class="zh" >“我觉得在房子里没有任何危险，”官员重复道，</td>
+		<td class="en">“Ay dount think theys aneh dainjah een a house,” the Authority repeated.</td></tr>
+		<tr><td width="45%" class="zh" >“坦克在哪儿呢？”</td>
+		<td class="en">“Wheah are the tanks?”</td></tr>
+		<tr><td width="45%" class="zh" >“在那儿，”我说，</td>
+		<td class="en">“There,” I said.</td></tr>
+		<tr><td width="45%" class="zh" >“树底下。”</td>
+		<td class="en">“Under the trees.”</td></tr>
+		<tr><td width="45%" class="zh" >两个摄影师露出厌恶的表情，生气地在头顶上挥动攥紧的拳头。</td>
+		<td class="en">The two cameramen were making grimaces and shaking their clenched fists over their heads in fury.</td></tr>
+		<tr><td width="45%" class="zh" >“我把大摄影机拿到后面去。”约翰尼说。</td>
+		<td class="en">“I go to take the big camera into the back,” Johnny said.</td></tr>
+		<tr><td width="45%" class="zh" >“小妞儿，乖乖待在后面。”我冲那美国女记者说。</td>
+		<td class="en">“Keep well back, daughter,” I said to the American girl.</td></tr>
+		<tr><td width="45%" class="zh" >然后我又告诉官员：“你知道吧，他们把你当谁的参谋了！</td>
+		<td class="en">Then, to the Authority, “They take you for somebody’s staff, you know.</td></tr>
+		<tr><td width="45%" class="zh" >他们看到你的钢盔和望远镜，还以为我们在指挥作战呢！</td>
+		<td class="en">They see that tin hat and those glasses and they think we’re running the battle.</td></tr>
+		<tr><td width="45%" class="zh" >你这是在自找麻烦，知道吗？”</td>
+		<td class="en">You’re asking for it, you know.”</td></tr>
+		<tr><td width="45%" class="zh" >他还是重复着那句老话。</td>
+		<td class="en">He repeated his refrain.</td></tr>
+		<tr><td width="45%" class="zh" >就在那一刻，第一颗炮弹袭击了我们。</td>
+		<td class="en">It was at that minute that the first one hit us.</td></tr>
+		<tr><td width="45%" class="zh" >它发出一声巨响，那声音就像蒸汽管爆裂加上帆布撕裂。在爆炸的轰隆声和破碎的灰墙掉下时发出的嘎嘎声里，我推着那女记者跑出烟雾弥漫的房间，躲到公寓后面的房间里。</td>
+		<td class="en">It came with a noise like a bursted steam pipe combined with a ripping of canvas and with the burst and the roar and rattle of broken plaster and the dust smoke over us I had the girl out of the room and into the back of the apartment.</td></tr>
+		<tr><td width="45%" class="zh" >正当我冲出房门，一个戴着钢盔的家伙从我身边一闪而过，向楼梯那边跑去。</td>
+		<td class="en">As I dove through the door something with a steel hat on passed me going for the stairs.</td></tr>
+		<tr><td width="45%" class="zh" >你或许会觉得一只兔子一跃而起，左一蹦右一跳地跑掉时的速度已经够快了。可这位官员窜过烟雾弥漫的走廊，冲下那难走的楼梯，夺门而出，钻到街上的速度可要快过任何一只兔子。</td>
+		<td class="en">You may think a rabbit moves fast when it first jumps and starts zigzagging away, but the Authority moved through that smoke-filled hall, down those tricky stairs, out the door, and down the street faster than any rabbit.</td></tr>
+		<tr><td width="45%" class="zh" >我们的一位摄影师说他的莱卡摄像机的镜头都来不及定格官员的动作。</td>
+		<td class="en">One of the cameramen said he had no speed on the lens of his Leica which would stop him in motion.</td></tr>
+		<tr><td width="45%" class="zh" >这固然有些过甚之辞，但也说得一针见血。</td>
+		<td class="en">This of course is inaccurate but it gives the effect.</td></tr>
+		<tr><td width="45%" class="zh" >总之他们对这栋公寓快速轰炸了大约一分钟。</td>
+		<td class="en">Anyway they shelled the house fast for about a minute.</td></tr>
+		<tr><td width="45%" class="zh" >炮弹沿着直线轨迹飞射过来，陡然一震，轰地一响。在这期间你几乎没有时间来屏住呼吸。</td>
+		<td class="en">They came on such a flat trajectory you hardly had time to hold a breath between the rush and the jolt and roar of the burst.</td></tr>
+		<tr><td width="45%" class="zh" >最后一次轰炸过后，我们等了几分钟，看是真的结束了，于是我们就到厨房，拧开水池上的水龙头喝了点儿水，又重新找了个房间，架起摄影机。</td>
+		<td class="en">Then after the last one we waited a couple of minutes to see if it had stopped, had a drink of water from the tap in the kitchen sink, and found a new room to set up the camera.</td></tr>
+		<tr><td width="45%" class="zh" >进攻正好刚刚开始。</td>
+		<td class="en">The attack was just starting.</td></tr>
+		<tr><td width="45%" class="zh" >美国女记者恨透了那个官员。</td>
+		<td class="en">The American girl was very bitter against the Authority.</td></tr>
+		<tr><td width="45%" class="zh" >“是他带我来这儿的，”她说，</td>
+		<td class="en">“He brought me here,” she said.</td></tr>
+		<tr><td width="45%" class="zh" >“还说这里很安全。</td>
+		<td class="en">“He said it was quite safe.</td></tr>
+		<tr><td width="45%" class="zh" >可他却跑掉了，连‘再见’也没说。”</td>
+		<td class="en">And he went away and did not even say good-bye.”</td></tr>
+		<tr><td width="45%" class="zh" >“他可不是个绅士啊，”我说，</td>
+		<td class="en">“He cahnt be a gentleman,” I said.</td></tr>
+		<tr><td width="45%" class="zh" >“你瞧，小妞。</td>
+		<td class="en">“Look, daughter.</td></tr>
+		<tr><td width="45%" class="zh" >快看。</td>
+		<td class="en">Watch.</td></tr>
+		<tr><td width="45%" class="zh" >就现在。</td>
+		<td class="en">Now.</td></tr>
+		<tr><td width="45%" class="zh" >开始啦！”</td>
+		<td class="en">There it goes.”</td></tr>
+		<tr><td width="45%" class="zh" >地面上有些士兵站起来，半弯着腰，朝一小片树林里的一座石头房子跑去。</td>
+		<td class="en">Below us some men stood up, half crouching, and ran forward toward a stone house in a patch of trees.</td></tr>
+		<tr><td width="45%" class="zh" >炮弹瞄准房子打去，那房子便逐渐消失在突然腾起的阵阵尘雾中了。</td>
+		<td class="en">The house was disappearing in the sudden fountainings of dust clouds from the shells that were registering on it.</td></tr>
+		<tr><td width="45%" class="zh" >每次轰炸后，风把尘土吹尽，房子就像从雾里驶出的船一样清楚地显现出来。在士兵面前，有辆坦克颠簸着飞快前进，像只圆顶炮形鼻的甲虫，开进树林里就不见了。</td>
+		<td class="en">The wind blew the dust clear after each shell so that the house kept showing plainly through the dust as a ship comes out of a fog and ahead of the men a tank lurched fast like a round-topped, gun-snouted beetle and went out of sight in the trees.</td></tr>
+		<tr><td width="45%" class="zh" >正看着，那群跑步前进的士兵扑倒在地上。</td>
+		<td class="en">As you watched, the men who were running forward threw themselves flat.</td></tr>
+		<tr><td width="45%" class="zh" >接着另一辆坦克从左边冲上前去，进了树林，还可以看得到它开火的闪光。在石头房子冒出的烟雾中，扑在地上的一名士兵站了起来，发了疯似的跑回当初他们发动攻击时离开的战壕。</td>
+		<td class="en">Then another tank went forward on the left and into the trees and you could see the flash of its firing and in the smoke that blew from the house one of the men who was on the ground stood up and ran wildly back toward the trench that they had left when they attacked.</td></tr>
+		<tr><td width="45%" class="zh" >另一名士兵也起身往回跑，一手抓着步枪，一手抱着头。</td>
+		<td class="en">Another got up and ran back, holding his rifle in one hand, his other hand on his head.</td></tr>
+		<tr><td width="45%" class="zh" >后来，战线上的士兵全都往回跑。</td>
+		<td class="en">Then they were running back from all along the line.</td></tr>
+		<tr><td width="45%" class="zh" >有些人跑着跑着就倒下了。</td>
+		<td class="en">Some fell as they ran.</td></tr>
+		<tr><td width="45%" class="zh" >有些躺在地上就再也起不来了。</td>
+		<td class="en">Others lay on the ground without ever having got up.</td></tr>
+		<tr><td width="45%" class="zh" >他们散落在山坡各处。</td>
+		<td class="en">They were scattered all over the hillside.</td></tr>
+		<tr><td width="45%" class="zh" >“怎么回事？”女记者问。</td>
+		<td class="en">“What’s happened?” the girl asked.</td></tr>
+		<tr><td width="45%" class="zh" >“进攻失败了。”我说。</td>
+		<td class="en">“The attack has failed,” I said.</td></tr>
+		<tr><td width="45%" class="zh" >“为什么？”</td>
+		<td class="en">“Why?”</td></tr>
+		<tr><td width="45%" class="zh" >“没有坚持到底。”</td>
+		<td class="en">“It wasn’t pushed home.”</td></tr>
+		<tr><td width="45%" class="zh" >“为什么？</td>
+		<td class="en">“Why?</td></tr>
+		<tr><td width="45%" class="zh" >他们后退不是跟前进一样危险吗？”</td>
+		<td class="en">Wasn’t it just as dangerous for them to run back as to go forward?”</td></tr>
+		<tr><td width="45%" class="zh" >“不一定。”</td>
+		<td class="en">“Not quite.”</td></tr>
+		<tr><td width="45%" class="zh" >女记者举起望远镜看，</td>
+		<td class="en">The girl held the field glasses to her eyes.</td></tr>
+		<tr><td width="45%" class="zh" >可是又放下了。</td>
+		<td class="en">Then she put them down.</td></tr>
+		<tr><td width="45%" class="zh" >“我看不下去了。”她说。</td>
+		<td class="en">“I can’t see any more,” she said.</td></tr>
+		<tr><td width="45%" class="zh" >泪水顺着她的双颊流下，脸上还在抽搐。</td>
+		<td class="en">The tears were running down her cheeks and her face was working.</td></tr>
+		<tr><td width="45%" class="zh" >我从没见过她哭，如果要哭，我们见过许多可以大哭的事情。</td>
+		<td class="en">I had never seen her cry before and we had seen many things you could cry about if you were going to cry.</td></tr>
+		<tr><td width="45%" class="zh" >打仗时，各个军衔的人，包括将军，有时也会流泪。</td>
+		<td class="en">In a war everybody of all ranks including generals cries at some time or another.</td></tr>
+		<tr><td width="45%" class="zh" >不管人们对你说什么，这句话才是实情。但眼泪总是能忍则忍，而人们也确实是这样做的，所以之前我还没见过这个女孩哭。</td>
+		<td class="en">This is true, no matter what people tell you, but it is to be avoided, and is avoided, and I had not seen this girl doing it before.</td></tr>
+		<tr><td width="45%" class="zh" >“这就是一场进攻？”</td>
+		<td class="en">“And that’s an attack?”</td></tr>
+		<tr><td width="45%" class="zh" >“这就是场进攻，”我说，</td>
+		<td class="en">“That’s an attack,” I said.</td></tr>
+		<tr><td width="45%" class="zh" >“现在你见识到了。”</td>
+		<td class="en">“Now you’ve seen one.”</td></tr>
+		<tr><td width="45%" class="zh" >“那以后会有什么事发生呢？”</td>
+		<td class="en">“And what will happen?”</td></tr>
+		<tr><td width="45%" class="zh" >“要是还有足够的人剩下指挥军队的话，他们或许还会再派他们过去。</td>
+		<td class="en">“They may send them again if there’s enough people left to lead them.</td></tr>
+		<tr><td width="45%" class="zh" >我倒不觉得他们会这么做。</td>
+		<td class="en">I doubt if they will.</td></tr>
+		<tr><td width="45%" class="zh" >你不妨数数那边损失了多少人。”</td>
+		<td class="en">You can count the losses out there if you like.”</td></tr>
+		<tr><td width="45%" class="zh" >“那些人全死了吗？”</td>
+		<td class="en">“Are those men all dead?”</td></tr>
+		<tr><td width="45%" class="zh" >“没有。</td>
+		<td class="en">“No.</td></tr>
+		<tr><td width="45%" class="zh" >有些人伤得太重，不能动了。</td>
+		<td class="en">Some are too badly wounded to move.</td></tr>
+		<tr><td width="45%" class="zh" >天黑时，会有人把他们抬下去。”</td>
+		<td class="en">They will bring them in in the dark.”</td></tr>
+		<tr><td width="45%" class="zh" >“那些坦克现在怎么办呢？”</td>
+		<td class="en">“What will the tanks do now?”</td></tr>
+		<tr><td width="45%" class="zh" >“要是幸运的话它们可以撤回去。”</td>
+		<td class="en">“They’ll go home if they’re lucky.”</td></tr>
+		<tr><td width="45%" class="zh" >可是它们中的一辆很不幸。</td>
+		<td class="en">But one of them was already unlucky.</td></tr>
+		<tr><td width="45%" class="zh" >松林里升起一股黑污的烟柱，并随风飘向一边。</td>
+		<td class="en">In the pine woods a black dirty column of smoke began to rise and was then blown sideways by the wind.</td></tr>
+		<tr><td width="45%" class="zh" >它很快就扩大成一团翻滚的黑云，在油污的黑烟中还能看得见红色的火舌。</td>
+		<td class="en">Soon it was a rolling black cloud and in the greasy black smoke you could see the red flames.</td></tr>
+		<tr><td width="45%" class="zh" >只听见一声爆炸声，冒出一团翻滚着的白烟，然后黑烟就窜得更高了；可是下面着火的范围也更大了。</td>
+		<td class="en">There was an explosion and a billowing of white smoke and then the black smoke rolled higher; but from a wider base.</td></tr>
+		<tr><td width="45%" class="zh" >“那是一辆坦克，”我说，</td>
+		<td class="en">“That’s a tank,” I said.</td></tr>
+		<tr><td width="45%" class="zh" >“起火了。”</td>
+		<td class="en">“Burning.”</td></tr>
+		<tr><td width="45%" class="zh" >我们站在那里继续看着。</td>
+		<td class="en">We stood and watched.</td></tr>
+		<tr><td width="45%" class="zh" >透过望远镜可以看见两个人从战壕的一个角落里爬了出来，抬起一副担架，顺着一道斜坡往小山上爬去。</td>
+		<td class="en">Through the glasses you could see two men get out of an angle of the trench and start up a slant of the hill carrying a stretcher.</td></tr>
+		<tr><td width="45%" class="zh" >看上去他们爬得缓慢而吃力。</td>
+		<td class="en">They seemed to move slowly and ploddingly.</td></tr>
+		<tr><td width="45%" class="zh" >看着看着，前面那人腿一弯跪下了，随后便一屁股坐了下去。</td>
+		<td class="en">As you watched the man in front sank onto his knees and then sat down.</td></tr>
+		<tr><td width="45%" class="zh" >后面那人早就扑倒在地上。</td>
+		<td class="en">The man behind had dropped to the ground.</td></tr>
+		<tr><td width="45%" class="zh" >他向前爬去。</td>
+		<td class="en">He crawled forward.</td></tr>
+		<tr><td width="45%" class="zh" >然后用手臂撑着前面那人的肩膀，拖着他向战壕爬去。</td>
+		<td class="en">Then with his arm under the first man’s shoulder he started to crawl, dragging him toward the trench.</td></tr>
+		<tr><td width="45%" class="zh" >过了一会儿他停止了移动，只见他脸朝下，直挺挺地趴在那里。</td>
+		<td class="en">Then he stopped moving and you saw that he was lying flat on his face.</td></tr>
+		<tr><td width="45%" class="zh" >这样两个人都躺在那里不动了。</td>
+		<td class="en">They both lay there not moving now.</td></tr>
+		<tr><td width="45%" class="zh" >对房子的炮击停止了，此刻四下一片宁静。</td>
+		<td class="en">They had stopped shelling the house and it was quiet now.</td></tr>
+		<tr><td width="45%" class="zh" >那间大大的农舍和砌了围墙的院子在青色山坡的映衬下黄得十分显眼。由于据点上加筑了防御工事，又挖了交通壕，山坡被翻起的尘土弄得白斑累累。</td>
+		<td class="en">The big farmhouse and walled court showed clear and yellow against the green hillside that was scarred white with the dirt where the strong points had been fortified and the communication trenches dug.</td></tr>
+		<tr><td width="45%" class="zh" >这时山坡上有些小火堆升起细烟，那是行军的人在做饭。</td>
+		<td class="en">There was smoke from small fires rising now over the hillside where men were cooking.</td></tr>
+		<tr><td width="45%" class="zh" >顺着斜坡往上直到大农舍，一路上都躺着这场进攻战遗下的伤亡士兵，就好像许多包裹散落在青草坡上。</td>
+		<td class="en">And up the slope toward the big farmhouse lay the casualties of the attack like many scattered bundles on the green slope.</td></tr>
+		<tr><td width="45%" class="zh" >那辆坦克还在树林里燃烧，已经烧得又黑又油了。</td>
+		<td class="en">The tank was burning black and greasy in the trees.</td></tr>
+		<tr><td width="45%" class="zh" >“太可怕了，”女记者说，</td>
+		<td class="en">“It’s horrible,” the girl said.</td></tr>
+		<tr><td width="45%" class="zh" >“我生平还是第一次见到这种场面。</td>
+		<td class="en">“It’s the first time I’ve ever seen it.</td></tr>
+		<tr><td width="45%" class="zh" >实在太可怕了。”</td>
+		<td class="en">It’s really horrible.”</td></tr>
+		<tr><td width="45%" class="zh" >“打仗的场面向来这么可怕。”</td>
+		<td class="en">“It always has been.”</td></tr>
+		<tr><td width="45%" class="zh" >“你难道不觉得讨厌吗？”</td>
+		<td class="en">“Don’t you hate it?”</td></tr>
+		<tr><td width="45%" class="zh" >“我讨厌。我一直就很讨厌。</td>
+		<td class="en">“I hate it and I always have hated it.</td></tr>
+		<tr><td width="45%" class="zh" >但干一行就得懂一行。</td>
+		<td class="en">But when you have to do it you ought to know how.</td></tr>
+		<tr><td width="45%" class="zh" >这是一场正面攻击战。</td>
+		<td class="en">That was a frontal attack.</td></tr>
+		<tr><td width="45%" class="zh" >打正面攻击战就等于谋杀。”</td>
+		<td class="en">They are just murder.”</td></tr>
+		<tr><td width="45%" class="zh" >“有别的进攻办法吗？”</td>
+		<td class="en">“Are there other ways to attack?”</td></tr>
+		<tr><td width="45%" class="zh" >“噢，当然有。</td>
+		<td class="en">“Oh sure.</td></tr>
+		<tr><td width="45%" class="zh" >办法多了。</td>
+		<td class="en">Lots of them.</td></tr>
+		<tr><td width="45%" class="zh" >但你必须先有军事知识、军队纪律和受过训练的班长、排长。</td>
+		<td class="en">But you have to have knowledge and discipline and trained squad and section leaders.</td></tr>
+		<tr><td width="45%" class="zh" >并且最重要的是你应该有出奇制胜的计谋。”</td>
+		<td class="en">And most of all you ought to have surprise.”</td></tr>
+		<tr><td width="45%" class="zh" >“现在天色太黑没法工作，”约翰尼说着就把他的远距镜头的盖子盖上了，</td>
+		<td class="en">“It makes now too dark to work,” Johnny said putting the cap over his telephoto lens.</td></tr>
+		<tr><td width="45%" class="zh" >“喂，‘lice’老兄。</td>
+		<td class="en">“Hello you old lice.</td></tr>
+		<tr><td width="45%" class="zh" >现在我们回旅馆去吧。</td>
+		<td class="en">Now we go home to the hotel.</td></tr>
+		<tr><td width="45%" class="zh" >今天我们的活干得相当不错。”</td>
+		<td class="en">Today we work pretty good.”</td></tr>
+		<tr><td width="45%" class="zh" >“是啊，”另一个摄影师说，</td>
+		<td class="en">“Yes,” said the other one.</td></tr>
+		<tr><td width="45%" class="zh" >“今天我们拍到了一些很好的东西。</td>
+		<td class="en">“Today we have got something very good.</td></tr>
+		<tr><td width="45%" class="zh" >可是进攻没有成功，真是太遗憾了。</td>
+		<td class="en">It is too dom bad the attack is no good.</td></tr>
+		<tr><td width="45%" class="zh" >算了，还是别想这事为好。</td>
+		<td class="en">Is better not to think about it.</td></tr>
+		<tr><td width="45%" class="zh" >希望改天我们能拍到一次成功的进攻。</td>
+		<td class="en">Sometime we film a successful attack.</td></tr>
+		<tr><td width="45%" class="zh" >只是进攻胜利的时候往往不是下雨就是下雪。”</td>
+		<td class="en">Only always with a successful attack it rains or snows.”</td></tr>
+		<tr><td width="45%" class="zh" >“我再也不想看这些了，”那女记者说，</td>
+		<td class="en">“I don’t want to see any more ever,” the girl said.</td></tr>
+		<tr><td width="45%" class="zh" >“我今天算是见识过了。</td>
+		<td class="en">“I’ve seen it now.</td></tr>
+		<tr><td width="45%" class="zh" >没有什么能引诱我再看这些了——无论是好奇心，还是靠它写文章赚大钱。</td>
+		<td class="en">Nothing would ever make me see it for curiosity or to make money writing about it.</td></tr>
+		<tr><td width="45%" class="zh" >那些人和我们一样都是血肉之躯的男子汉啊！</td>
+		<td class="en">Those are men as we are.</td></tr>
+		<tr><td width="45%" class="zh" >可瞧瞧他们，就那样躺在山坡上了。”</td>
+		<td class="en">Look at them there on that hillside.”</td></tr>
+		<tr><td width="45%" class="zh" >“你可不是男子汉，”约翰尼说，</td>
+		<td class="en">“You are not men,” said Johnny.</td></tr>
+		<tr><td width="45%" class="zh" >“你是个女儿家。</td>
+		<td class="en">“You are a womans.</td></tr>
+		<tr><td width="45%" class="zh" >不要混淆了。”</td>
+		<td class="en">Don’t make a confusion.”</td></tr>
+		<tr><td width="45%" class="zh" > “现在那个戴钢盔的家伙又来了，”另一个摄影师望着窗外说，</td>
+		<td class="en">“Comes now the steel hat man,” said the other looking out of the window.</td></tr>
+		<tr><td width="45%" class="zh" >“大模大样地来了。</td>
+		<td class="en">“Comes now with much dignity.</td></tr>
+		<tr><td width="45%" class="zh" >我真希望我手里有颗炸弹，扔出去冷不丁吓他个半死。”</td>
+		<td class="en">I wish I had bomb to throw to make suddenly a surprise.”</td></tr>
+		<tr><td width="45%" class="zh" >我们正收拾着摄影机和相关器材，那戴钢盔的官员进来了。</td>
+		<td class="en">We were packing up the cameras and equipment when the steel-hatted Authority came in.</td></tr>
+		<tr><td width="45%" class="zh" >“哈罗，”他说道，</td>
+		<td class="en">“Hullo,” he said.</td></tr>
+		<tr><td width="45%" class="zh" >“你拍到些好照片了吗？</td>
+		<td class="en">“Did you make some good pictures?</td></tr>
+		<tr><td width="45%" class="zh" >伊丽莎白，我有辆车停在后面的一条街上，我来送你回去。”</td>
+		<td class="en">I have a car in one of the back streets to take you home, Elizabeth.”</td></tr>
+		<tr><td width="45%" class="zh" >“我要跟埃德温·亨利一起回去。”女记者说。</td>
+		<td class="en">“I’m going home with Edwin Henry,” the girl said.</td></tr>
+		<tr><td width="45%" class="zh" >“风小点儿了吗？”</td>
+		<td class="en">“Did the wind die down?”</td></tr>
+		<tr><td width="45%" class="zh" >我出于礼节跟他搭话。</td>
+		<td class="en">I asked him conversationally.</td></tr>
+		<tr><td width="45%" class="zh" >他没搭理我，继续问女记者：“你不走？”</td>
+		<td class="en">He let that go by and said to the girl, “You won’t come?”</td></tr>
+		<tr><td width="45%" class="zh" >“不，”女记者说，</td>
+		<td class="en">“No,” she said.</td></tr>
+		<tr><td width="45%" class="zh" >“我们大家准备一块走。”</td>
+		<td class="en">“We are all going home together.”</td></tr>
+		<tr><td width="45%" class="zh" >“今晚‘俱乐部’见。”他乐呵呵地对我说。</td>
+		<td class="en">“I’ll see you at the Club tonight.” he said to me very pleasantly.</td></tr>
+		<tr><td width="45%" class="zh" >“你已经不再是‘俱乐部’的人了。”</td>
+		<td class="en">“You don’t belong to the Club any more.”</td></tr>
+		<tr><td width="45%" class="zh" >我尽量学着英国人的腔调告诉他。</td>
+		<td class="en">I told him, speaking as nearly English as I could.</td></tr>
+		<tr><td width="45%" class="zh" >大家一起下楼。因为大理石上有窟窿，我们走得十分小心。再加上公寓又添了“新伤”，我们只得一一跨过、绕过。</td>
+		<td class="en">We all started down the stairs together, being very careful about the holes in the marble, and walking over and around the new damage.</td></tr>
+		<tr><td width="45%" class="zh" ></td>
+		<td class="en">It seemed a very long stairway.</td></tr>
+		<tr><td width="45%" class="zh" >我捡起一个铜制的机头盖帽，已经被撞扁了，底部还有石膏的划痕。我将它递给了那个叫伊丽莎白的女记者。</td>
+		<td class="en">I picked up a brass nose-cap flattened and plaster marked at the end and handed it to the girl called Elizabeth.</td></tr>
+		<tr><td width="45%" class="zh" >“我不想要。”她说。到了门口，大家都停了下来，让那个戴钢盔的家伙一个人走在前头。</td>
+		<td class="en">“I don’t want it.” she said and at the doorway we all stopped and let the steel-hatted man go on ahead alone.</td></tr>
+		<tr><td width="45%" class="zh" >他架子十足地穿过间或有冷枪打来的那一段街道。在对面围墙的掩护下，他继续往前走着，仍然架子十足。</td>
+		<td class="en">He walked with great dignity across the part of the street where you were sometimes fired on and continued on, with dignity, in the shelter of the wall opposite.</td></tr>
+		<tr><td width="45%" class="zh" >于是，我们也一次一个，冲到围墙的庇护下。</td>
+		<td class="en">Then, one at a time, we sprinted across to the lee of the wall.</td></tr>
+		<tr><td width="45%" class="zh" >只要在这里待过一阵子，你就会知道往往第三个或者第四个穿过开阔地的人会招来敌人的火力。所以只要过了这个关口，我们总是挺高兴的。</td>
+		<td class="en">It is the third or fourth man to cross an open space who draws the fire, you learn after you have been around a while, and we were always pleased to be across that particular place.</td></tr>
+		<tr><td width="45%" class="zh" >于是我们四个人就在围墙的掩护下并排沿着大街走，手里拿着摄影机，脚下跨过刚飞来的铁片、新碎的砖块，还有成块的石头，一路上看着前面那个戴钢盔的家伙（他已经不再是“俱乐部”的人了）架子十足的步态。</td>
+		<td class="en">So we walked up the street now, protected by the wall, four abreast, carrying the cameras and stepping over the new iron fragments, the freshly broken bricks, and the blocks of stone, and watching the dignity of the walk of the steel-hatted man ahead who no longer belonged to the Club.</td></tr>
+		<tr><td width="45%" class="zh" >“真讨厌，我还得写篇电讯稿，”我说，</td>
+		<td class="en">“I hate to write a dispatch,” I said.</td></tr>
+		<tr><td width="45%" class="zh" >“今天的稿可不好写。</td>
+		<td class="en">“It’s not going to be an easy one to write.</td></tr>
+		<tr><td width="45%" class="zh" >谁叫这次进攻失败了呢。”</td>
+		<td class="en">This offensive is gone.”</td></tr>
+		<tr><td width="45%" class="zh" >“你这是怎么了，老兄？”约翰尼问。</td>
+		<td class="en">“What’s the matter with you, boy?” asked Johnny.</td></tr>
+		<tr><td width="45%" class="zh" >“你必须写些可以说的事情，”另一个摄影师轻声说，</td>
+		<td class="en">“You must write what can be said,” the other one said gently.</td></tr>
+		<tr><td width="45%" class="zh" >“今天发生的事情这么多，当然有话可说咯。”</td>
+		<td class="en">“Certainly something can be said about a day so full of events.”</td></tr>
+		<tr><td width="45%" class="zh" >“他们什么时候把伤员弄回来？”女记者问。</td>
+		<td class="en">“When will they get the wounded back?” the girl asked.</td></tr>
+		<tr><td width="45%" class="zh" >她没戴帽子，散漫地跨着大步子。头发披在皮领短夹克衫的领子上，在越来越昏暗的光线下现出灰黄的颜色。</td>
+		<td class="en">She wore no hat and walked with a long loose stride and her hair, which was a dusty yellow in the fading light, hung over the collar of her short, fur-collared jacket.</td></tr>
+		<tr><td width="45%" class="zh" >她回过头来，头发也跟着一甩。</td>
+		<td class="en">It swung as she turned her head.</td></tr>
+		<tr><td width="45%" class="zh" >她脸色苍白，看上去好像病了。</td>
+		<td class="en">Her face was white and she looked ill.</td></tr>
+		<tr><td width="45%" class="zh" >“我不是告诉你了吗？等天一黑就把伤员弄回去。”</td>
+		<td class="en">“I told you as soon as it gets dark.”</td></tr>
+		<tr><td width="45%" class="zh" >“上帝保佑，快点儿天黑吧，”她说，</td>
+		<td class="en">“God make it get dark quick,” she said.</td></tr>
+		<tr><td width="45%" class="zh" >“看来这就是战争。</td>
+		<td class="en">“So that’s war.</td></tr>
+		<tr><td width="45%" class="zh" >这就是我来到这里要看和写的东西。</td>
+		<td class="en">That’s what I’ve come here to see and write about.</td></tr>
+		<tr><td width="45%" class="zh" >那两个抬担架出去的人死了吗？”</td>
+		<td class="en">Were those two men killed who went out with the stretcher?”</td></tr>
+		<tr><td width="45%" class="zh" >“死了，”我说，</td>
+		<td class="en">“Yes,” I said.</td></tr>
+		<tr><td width="45%" class="zh" >“肯定死了。”</td>
+		<td class="en">“Positively.”</td></tr>
+		<tr><td width="45%" class="zh" >“他们行动太慢了。”女孩怜悯地说。</td>
+		<td class="en">“They moved so slowly.” the girl said pitifully.</td></tr>
+		<tr><td width="45%" class="zh" >“人有时候想走却很难迈开腿，”我说，</td>
+		<td class="en">“Sometime’s it’s very hard to make the legs move,” I said.</td></tr>
+		<tr><td width="45%" class="zh" >“就像在深沙或梦里走路似的。”</td>
+		<td class="en">“It’s like walking in deep sand or in a dream.”</td></tr>
+		<tr><td width="45%" class="zh" >我们前面那个戴钢盔的人还是一直沿着大街在走。</td>
+		<td class="en">Ahead of us the man in the steel hat was still walking up the street.</td></tr>
+		<tr><td width="45%" class="zh" >他左边是一排残破的房子，右边是营房的砖墙。</td>
+		<td class="en">There was a line of shattered houses on his left and the brick wall of the barracks on his right.</td></tr>
+		<tr><td width="45%" class="zh" >他的车停在大街的尽头，而我们的车也停在那里一所房子的背风面。</td>
+		<td class="en">His car was parked at the end of the street where ours was also standing in the lee of a house.</td></tr>
+		<tr><td width="45%" class="zh" >“我们还是带他回‘俱乐部’吧，”女记者说，</td>
+		<td class="en">“Let’s take him back to the Club,” the girl said.</td></tr>
+		<tr><td width="45%" class="zh" >“我可不想任何人今晚受伤。</td>
+		<td class="en">“I don’t want anyone to be hurt tonight.</td></tr>
+		<tr><td width="45%" class="zh" >无论是在感情上，还是什么别的方面。</td>
+		<td class="en">Not their feelings nor anything.</td></tr>
+		<tr><td width="45%" class="zh" >嘿！”她喊道，</td>
+		<td class="en">Heh!” she called.</td></tr>
+		<tr><td width="45%" class="zh" >“等等我们！</td>
+		<td class="en">“Wait for us.</td></tr>
+		<tr><td width="45%" class="zh" >我们来了！”</td>
+		<td class="en">We’re coming.”</td></tr>
+		<tr><td width="45%" class="zh" >那人站住回头一看——他转动脑袋的时候，又大又重的钢盔显得滑稽极了，就像是什么驯顺的牲口头上长着的两只巨角。</td>
+		<td class="en">He stopped and looked back, the great heavy helmet looking ridiculous as he turned his head, like the huge horns on some harmless beast.</td></tr>
+		<tr><td width="45%" class="zh" >他在那里等着，我们跟上前去。</td>
+		<td class="en">He waited and we came up.</td></tr>
+		<tr><td width="45%" class="zh" >“我能用我的车帮你们顺道载点儿摄影器材吗？”他问道。</td>
+		<td class="en">“Can I help you with any of that?” he asked.</td></tr>
+		<tr><td width="45%" class="zh" >“不用了。</td>
+		<td class="en">“No.</td></tr>
+		<tr><td width="45%" class="zh" >我们的车就停在前头。”</td>
+		<td class="en">The car’s just there ahead.”</td></tr>
+		<tr><td width="45%" class="zh" >“我们都去‘俱乐部’的。”女记者说。</td>
+		<td class="en">“We’re all going to the Club,” the girl said.</td></tr>
+		<tr><td width="45%" class="zh" >她对他微微一笑。</td>
+		<td class="en">She smiled at him.</td></tr>
+		<tr><td width="45%" class="zh" >“你也来，再带上一瓶酒，怎么样？”</td>
+		<td class="en">“Would you come and bring a bottle of something?”</td></tr>
+		<tr><td width="45%" class="zh" >“那太好了，”他说，</td>
+		<td class="en">“That would be so nice,” he said.</td></tr>
+		<tr><td width="45%" class="zh" >“我带点儿什么酒好呢？”</td>
+		<td class="en">“What should I bring?”</td></tr>
+		<tr><td width="45%" class="zh" >“随便，”女记者说，</td>
+		<td class="en">“Anything,” the girl said.</td></tr>
+		<tr><td width="45%" class="zh" >“你想带什么就带什么。</td>
+		<td class="en">“Bring anything you like.</td></tr>
+		<tr><td width="45%" class="zh" >我有些工作要先做好。</td>
+		<td class="en">I have to do some work first.</td></tr>
+		<tr><td width="45%" class="zh" >七点半左右碰面吧。”</td>
+		<td class="en">Make it seven thirtyish.”</td></tr>
+		<tr><td width="45%" class="zh" >“你要坐我的车回去吗？”他问她，</td>
+		<td class="en">“Will you ride home with me?” he asked her.</td></tr>
+		<tr><td width="45%" class="zh" >“他们那辆车上装的都是那些玩意，怕是太挤了。”</td>
+		<td class="en">“I’m afraid the other car is crowded with all that bit.”</td></tr>
+		<tr><td width="45%" class="zh" >“好的，”她说，</td>
+		<td class="en">“Yes,” she said.</td></tr>
+		<tr><td width="45%" class="zh" >“我挺乐意的。</td>
+		<td class="en">“I’d like to.</td></tr>
+		<tr><td width="45%" class="zh" >谢谢你啦！”</td>
+		<td class="en">Thank you.”</td></tr>
+		<tr><td width="45%" class="zh" >于是他俩上了一辆车，我们则把所有的器材装上了另一辆车。</td>
+		<td class="en">They got in one car and we loaded all the stuff into the other.</td></tr>
+		<tr><td width="45%" class="zh" >“怎么搞的，老兄？”</td>
+		<td class="en">“What’s the matter, boy?”</td></tr>
+		<tr><td width="45%" class="zh" >约翰尼说，</td>
+		<td class="en">Johnny said.</td></tr>
+		<tr><td width="45%" class="zh" >“你的妞却由别人陪着回家？”</td>
+		<td class="en">“Your girl go home with somebody else?”</td></tr>
+		<tr><td width="45%" class="zh" >“那场进攻让她心里很不安。</td>
+		<td class="en">“The attack upset her.</td></tr>
+		<tr><td width="45%" class="zh" >她心里可难受着呢。”</td>
+		<td class="en">She feels very badly.”</td></tr>
+		<tr><td width="45%" class="zh" >“看进攻战而心不乱的女人可算不上真女人。”约翰尼说。</td>
+		<td class="en">“A woman who doesn’t upset by an attack is no woman,” said Johnny.</td></tr>
+		<tr><td width="45%" class="zh" >“这场进攻败得太惨了，”另外一个摄影师说，</td>
+		<td class="en">“It was a very unsuccessful attack,” said the other.</td></tr>
+		<tr><td width="45%" class="zh" >“幸亏她没有到太近的地方看。</td>
+		<td class="en">“Fortunately she did not see it from too close.</td></tr>
+		<tr><td width="45%" class="zh" >今后不管危不危险，我们绝不能让她近距离看进攻场面。</td>
+		<td class="en">We must never let her see one from close regardless of the danger.</td></tr>
+		<tr><td width="45%" class="zh" >这种场面太惨烈了。</td>
+		<td class="en">It is too strong a thing.</td></tr>
+		<tr><td width="45%" class="zh" >从她站的那里看过去还仅仅像看场电影一样。</td>
+		<td class="en">From where she saw it is only a picture.</td></tr>
+		<tr><td width="45%" class="zh" >就像是老式作战场面。”</td>
+		<td class="en">Like old-fashioned battle scene.”</td></tr>
+		<tr><td width="45%" class="zh" >“她心地善良，”约翰尼说，</td>
+		<td class="en">“She has a kind heart,” said Johnny.</td></tr>
+		<tr><td width="45%" class="zh" >“跟你不一样，‘lice’老兄。”</td>
+		<td class="en">“Different than you, you old lice.”</td></tr>
+		<tr><td width="45%" class="zh" >“我的心地很善良，”我说，</td>
+		<td class="en">“I have a kind heart,” I said.</td></tr>
+		<tr><td width="45%" class="zh" >“并且你刚才应该用‘louse'，</td>
+		<td class="en">“And it’s louse.</td></tr>
+		<tr><td width="45%" class="zh" >而不是‘lice’。</td>
+		<td class="en">Not lice.</td></tr>
+		<tr><td width="45%" class="zh" >‘lice’是复数形式。”</td>
+		<td class="en">Lice is the plural.”</td></tr>
+		<tr><td width="45%" class="zh" >“我更喜欢用‘lice',”约翰尼说，</td>
+		<td class="en">“I like lice better,” said Johnny.</td></tr>
+		<tr><td width="45%" class="zh" >“它听起来更坚定一些。”</td>
+		<td class="en">“It sounds more determined.”</td></tr>
+		<tr><td width="45%" class="zh" >可他却抬起手擦掉了用口红写在车窗上的字。</td>
+		<td class="en">But he put up his hand and rubbed out the words written in lipstick on the window.</td></tr>
+		<tr><td width="45%" class="zh" >“明天我们换个花样开玩笑吧，”他说，</td>
+		<td class="en">“We make a new joke tomorrow,” he said.</td></tr>
+		<tr><td width="45%" class="zh" >“镜子上写字的事情我就不跟你计较了。”</td>
+		<td class="en">“It’s all right now about the writing on the mirror.”</td></tr>
+		<tr><td width="45%" class="zh" >“很好，”我说，</td>
+		<td class="en">“Good,” I said.</td></tr>
+		<tr><td width="45%" class="zh" >“我很高兴。”</td>
+		<td class="en">“I’m glad.”</td></tr>
+		<tr><td width="45%" class="zh" >“你这个‘lice'老兄哟。”约翰尼说着拍了一下我的背。</td>
+		<td class="en">“You old lice,” said Johnny and slapped me on the back.</td></tr>
+		<tr><td width="45%" class="zh" >“应该说‘louse'。”</td>
+		<td class="en">“Louse is the word.”</td></tr>
+		<tr><td width="45%" class="zh" >“不！</td>
+		<td class="en">“No.</td></tr>
+		<tr><td width="45%" class="zh" >就要说‘lice’！</td>
+		<td class="en">Lice.</td></tr>
+		<tr><td width="45%" class="zh" >这个词我喜欢多了。</td>
+		<td class="en">I like much better.</td></tr>
+		<tr><td width="45%" class="zh" >它的口气要坚定好多倍呢！”</td>
+		<td class="en">Is many times more determined.”</td></tr>
+		<tr><td width="45%" class="zh" >“你见鬼去吧！”</td>
+		<td class="en">“Go to hell.”</td></tr>
+		<tr><td width="45%" class="zh" >“好啊，”约翰尼说着，开心地笑了，</td>
+		<td class="en">“Good,” said Johnny, smiling happily.</td></tr>
+		<tr><td width="45%" class="zh" >“现在我们大家又都是好朋友了。</td>
+		<td class="en">“Now we are all good friends again.</td></tr>
+		<tr><td width="45%" class="zh" >在战争中我们大家可都要小心，别伤了彼此的感情啊！”</td>
+		<td class="en">In a war we must all be careful not to hurt each other’s feelings.”</td></tr>
+		<tr><td width="45%" class="zh" ></td>
+		<td class="en"></td></tr>
+	</table>
+</div>
+
+<div class="zh_en"><a href="#" class="zh_btn">中文</a> | <a href="#" class="en_btn">英文</a> | <a href="#" class="zhen_btn">中英文</a></div>
+
+<script src="jquery-1.10.1.min.js"></script>
+<script src="jquery.bookify.js"></script>
+</body>
+</html>

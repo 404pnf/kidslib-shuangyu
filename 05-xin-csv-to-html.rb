@@ -1,3 +1,4 @@
+
 require 'find'
 require 'csv'
 require 'erubis'
@@ -5,14 +6,13 @@ require 'pp'
 require 'fileutils'
 
 CSV_FILEFODLER = 'db/2qi-csv/'
-OUTPUT = 'output-html'
+OUTPUT = 'output'
 VIEW_FOLDER = 'views'
 TPL_FILE = 'views/book.erubis.html'
 BOOK_TITLES = 'db/xin-book-titles.csv'
 SUFFIX = '.csv'
 
 def xin_csv_2_html
-
   files = Find.find(CSV_FILEFODLER).select { |f| f =~ /#{ SUFFIX }$/}
   titles = CSV.readlines(BOOK_TITLES).each_with_object(Hash.new) do |e, a|
     id, *title = e
@@ -22,7 +22,8 @@ def xin_csv_2_html
   files.each do |file|
     id = File.basename(file, SUFFIX)
     title = titles[id].join(' | ') unless titles[id].nil?
-    paragraphs = CSV.readlines file
+    # 二期中英文顺序和一期相反的
+    paragraphs = CSV.readlines(file).map { |(en, zh)| [zh, en] }
 
     eruby = Erubis::Eruby.new(File.read(TPL_FILE)) # create Eruby object
     html_str =  eruby.result(binding())   # TODO get result; all local variables are available in the template, might not be a good idea
@@ -32,11 +33,13 @@ def xin_csv_2_html
   end
 end
 
-def copy_js_css_2_ouputfolder
-  # copy necessary js/css files from views/ to output-html
-  # ref: http://www.ruby-doc.org/stdlib-2.0/libdoc/fileutils/rdoc/FileUtils.html#method-c-copy
-  FileUtils.cp_r Dir.glob("#{VIEW_FOLDER}/*.js"), OUTPUT, :noop => false, :verbose => true
-  FileUtils.cp_r Dir.glob("#{VIEW_FOLDER}/*.css"), OUTPUT, :noop => false, :verbose => true
+def copy_asset_to_output
+  # If you want to copy all contents of a directory instead of the
+  # directory itself, c.f. src/x -> dest/x, src/y -> dest/y,
+  # use following code.
+  # cp_r('src', 'dest') makes dest/src,
+  # but this doesn't.
+  FileUtils.cp_r 'views/.', 'output', :verbose => true
 end
 
 def suceed_msg
@@ -51,6 +54,6 @@ end
 
 if __FILE__ == $PROGRAM_NAME
   xin_csv_2_html
-  #copy_js_css_2_ouputfolder
+  copy_asset_to_outputr
   #suceed_msg
 end

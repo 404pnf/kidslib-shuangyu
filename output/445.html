@@ -1,0 +1,227 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+	<!-- link rel="stylesheet" type="text/css" href="book.css" -->
+	<style type="text/css">
+		/* IMPORTANT !!!!
+		line-height, font-size defined in jquery.bookify.js */
+
+		* {
+			/* font-size: 20px; */
+		 }
+
+		table, td, th {
+
+		  }
+
+		td {
+	    	 /* height:50px; */
+	 	     vertical-align:top;
+	 	   	 text-align:left;
+	 	 	 padding-bottom:30px;/*行高的倍数-chenjing*/
+			 padding-left:20px;
+	 	  }
+
+		  /*chenjing*/
+		  .ebook_title{ position:absolute; left:20%; top:7%; font-weight:bold; font-size:35px; width:750px;}
+		  .zh_en{ position:absolute; left:70%; bottom:10%; font-size:14px;}
+		  .pre,.next{ cursor:pointer; font-size:40px; font-weight:bold; position:absolute; top:40%}
+		  .pre{ display:none; left:7%}
+		  .next{right:7%}
+
+	</style>
+
+</head>
+<body>
+<div class="ebook_title"></div>
+<div class="pre"><<</div>
+<div class="next">>></div>
+<div class="ebook_content">
+	<table cellpadding="0" cellspacing="0">
+		<tr><td width="45%" class="zh" >一只名叫基萨的猫</td>
+		<td class="en">Kisa the Cat</td></tr>
+		<tr><td width="45%" class="zh" >作者：安德鲁·朗格</td>
+		<td class="en">by Andrew Lang</td></tr>
+		<tr><td width="45%" class="zh" >很久以前，有一位王后，她养了一只美丽的烟灰色的猫。猫有着中国蓝的眼睛，王后对它宠爱有加。</td>
+		<td class="en">Once upon a time there lived a queen who had a beautiful cat, the colour of smoke, with china-blue eyes, which she was very fond of.</td></tr>
+		<tr><td width="45%" class="zh" >这只猫时刻伴随着王后，无论她去哪里，猫都紧跟其后，甚至当王后乘着她那华贵的琉璃马车出行时，猫也得意洋洋地蹲坐其旁。</td>
+		<td class="en">The cat was constantly with her, and ran after her wherever she went, and even sat up proudly by her side when she drove out in her fine glass coach.</td></tr>
+		<tr><td width="45%" class="zh" >“哦，猫咪，”有一天王后说，“你比我更快乐！</td>
+		<td class="en">‘Oh, pussy,’ said the queen one day, ‘you are happier than I am!</td></tr>
+		<tr><td width="45%" class="zh" >因为你有一只像你一样的宝贝小猫，而我除了你以外，没有谁能为我解闷。”</td>
+		<td class="en">For you have a dear kitten just like yourself, and I have nobody to play with but you.’</td></tr>
+		<tr><td width="45%" class="zh" >“别哭泣，”猫将爪子搭在女主人的胳膊上，回应道，</td>
+		<td class="en">‘Don’t cry,’ answered the cat, laying her paw on her mistress’s arm.</td></tr>
+		<tr><td width="45%" class="zh" >“哭泣毫无作用。</td>
+		<td class="en">‘Crying never does any good.</td></tr>
+		<tr><td width="45%" class="zh" >我来想想能怎么办。”</td>
+		<td class="en">I will see what can be done.’</td></tr>
+		<tr><td width="45%" class="zh" >那只猫很守信。</td>
+		<td class="en">The cat was as good as her word.</td></tr>
+		<tr><td width="45%" class="zh" >出行一回来，它就小步跑进森林，向住在那里的一个小精灵请教。不久之后，王后便有了一个洁白似雪、灿若阳光的小女孩。</td>
+		<td class="en">As soon as she returned from her drive she trotted off to the forest to consult a fairy who dwelt there, and very soon after the queen had a little girl, who seemed made out of snow and sunbeams.</td></tr>
+		<tr><td width="45%" class="zh" >王后很欣喜，小婴儿不久就开始注意到在房间跳来跳去的小猫，并且如果小猫不蜷缩在她身边的话，她根本无法入睡。</td>
+		<td class="en">The queen was delighted, and soon the baby began to take notice of the kitten as she jumped about the room, and would not go to sleep at all unless the kitten lay curled up beside her.</td></tr>
+		<tr><td width="45%" class="zh" >两三个月过去了，婴儿仍然没什么变化，而快速成长的小猫却已有了成猫的模样。一天夜里，保姆像往常一样去找它，把它放进婴儿床里，它却不见了踪影。</td>
+		<td class="en">Two or three months went by, and though the baby was still a baby, the kitten was fast becoming a cat, and one evening when, as usual, the nurse came to look for her, to put her in the baby’s cot, she was nowhere to be found.</td></tr>
+		<tr><td width="45%" class="zh" >要知道，这是一次规模多么宏大的搜寻小猫的行动啊！</td>
+		<td class="en">What a hunt there was for that kitten, to be sure!</td></tr>
+		<tr><td width="45%" class="zh" >每位仆人都渴望找到它，因为王后必会奖赏这个幸运儿。哪怕绝不可能找到的地方，他们也不放过。</td>
+		<td class="en">The servants, each anxious to find her, as the queen was certain to reward the lucky man, searched in the most impossible places.</td></tr>
+		<tr><td width="45%" class="zh" >箱子打开了，那里几乎连猫爪子也藏不下；书从书架上搬了下来，以防小猫躲在后面；抽屉都被拉开，说不定小猫被关在里面。</td>
+		<td class="en">Boxes were opened that would hardly have held the kitten’s paw; books were taken from bookshelves, lest the kitten should have got behind them, drawers were pulled out, for perhaps the kitten might have got shut in.</td></tr>
+		<tr><td width="45%" class="zh" >但这些都是徒劳。</td>
+		<td class="en">But it was all no use.</td></tr>
+		<tr><td width="45%" class="zh" >小猫显然是跑掉了，没有人知道它还会不会回来。</td>
+		<td class="en">The kitten had plainly run away, and nobody could tell if it would ever choose to come back.</td></tr>
+		<tr><td width="45%" class="zh" >时光荏苒，有一天，公主在花园里玩着球，她无意中把球抛得比平时远了些，球滚入了一簇玫瑰花丛里。</td>
+		<td class="en">Years passed away, and one day, when the princess was playing ball in the garden, she happened to throw her ball farther than usual, and it fell into a clump of rose-bushes.</td></tr>
+		<tr><td width="45%" class="zh" >公主自然马上追了过去，她弯下腰，在高高的草丛中摸索着，看看球是否藏在那里。这时，她听到一个声音在喊她：“英吉布乔格！</td>
+		<td class="en">The princess of course ran after it at once, and she was stooping down to feel if it was hidden in the long grass, when she heard a voice calling her: ‘Ingibjorg!</td></tr>
+		<tr><td width="45%" class="zh" >英吉布乔格！”那声音说道，“你不记得我了吗？</td>
+		<td class="en">Ingibjorg!’ it said, ‘have you forgotten me?</td></tr>
+		<tr><td width="45%" class="zh" >我是你的姐姐，基萨！”</td>
+		<td class="en">I am Kisa, your sister!’</td></tr>
+		<tr><td width="45%" class="zh" >“但我从来没有姐姐。”英吉布乔格满脸疑惑地答道，因为她对发生在那么久以前的事一无所知。</td>
+		<td class="en">‘But I never HAD a sister,’ answered Ingibjorg, very much puzzled; for she knew nothing of what had taken place so long ago.</td></tr>
+		<tr><td width="45%" class="zh" >“你不记得我总是在你的小床里与你共眠，并且我不在你就哭个不停？</td>
+		<td class="en">‘Don’t you remember how I always slept in your cot beside you, and how you cried till I came?</td></tr>
+		<tr><td width="45%" class="zh" >不过，女孩子就是毫无记性！</td>
+		<td class="en">But girls have no memories at all!</td></tr>
+		<tr><td width="45%" class="zh" >哎呀，一旦我进入王宫，我马上就可以找到通往那张小床的路。”</td>
+		<td class="en">Why, I could find my way straight up to that cot this moment, if I was once inside the palace.’</td></tr>
+		<tr><td width="45%" class="zh" >“那你为什么后来又离开了呢？”公主问道。</td>
+		<td class="en">‘Why did you go away then?’ asked the princess.</td></tr>
+		<tr><td width="45%" class="zh" >基萨还没来得及回答，英吉布乔格的侍女就气喘吁吁地赶到了面前。一见这只奇怪的猫她们便惊骇不已，使得基萨跳进了灌木丛，回到了森林里。</td>
+		<td class="en">But before Kisa could answer, Ingibjorg’s attendants arrived breathless on the scene, and were so horrified at the sight of a strange cat, that Kisa plunged into the bushes and went back to the forest.</td></tr>
+		<tr><td width="45%" class="zh" >侍女们吓跑了公主昔日的玩伴，这让她很气恼。王后每晚都会去她的房间道声晚安，她便把这事告诉了王后。</td>
+		<td class="en">The princess was very much vexed with her ladies-in-waiting for frightening away her old playfellow, and told the queen who came to her room every evening to bid her good-night.</td></tr>
+		<tr><td width="45%" class="zh" >“是的，基萨说的完全属实，”王后回应道，“我很乐意再见到它。</td>
+		<td class="en">‘Yes, it is quite true what Kisa said,’ answered the queen; ‘I should have liked to see her again.</td></tr>
+		<tr><td width="45%" class="zh" >也许某一天它会回来，那时你就把它带来见我。”</td>
+		<td class="en">Perhaps, some day, she will return, and then you must bring her to me.’</td></tr>
+		<tr><td width="45%" class="zh" >第二天早上，天气炎热，公主要求去森林里玩耍。那里绿树成阴，向来都是凉爽之地。</td>
+		<td class="en">Next morning it was very hot, and the princess declared that she must go and play in the forest, where it was always cool, under the big shady trees.</td></tr>
+		<tr><td width="45%" class="zh" >侍女们像往常一样，由着公主做任何她想做的事。她们在苔藓满布的岸边坐下，小溪在身旁清脆作响，不一会儿，她们便沉沉地睡去。</td>
+		<td class="en">As usual, her attendants let her do anything she pleased, and sitting down on a mossy bank where a little stream tinkled by, soon fell sound asleep.</td></tr>
+		<tr><td width="45%" class="zh" >一看自己已不在她们的看护之下，公主便高兴起来。她四处游荡，时刻期盼着看见绕着圆环跳舞的小仙女，或是在树后窥视她的棕色的小精灵。</td>
+		<td class="en">The princess saw with delight that they would pay no heed to her, and wandered on and on, expecting every moment to see some fairies dancing round a ring, or some little brown elves peeping at her from behind a tree.</td></tr>
+		<tr><td width="45%" class="zh" >唉！但这些她都没有见到。相反，一个可怕的巨人从洞穴里走了出来，并命令她跟随其后。</td>
+		<td class="en">But, alas! she met none of these; instead, a horrible giant came out of his cave and ordered her to follow him.</td></tr>
+		<tr><td width="45%" class="zh" >巨人又大又丑，这让公主感到很害怕，她开始懊悔自己没有呆在有人可以救援的范围之内。不服从巨人的命令一点儿用也没有，她只得服从地走在后面。</td>
+		<td class="en">The princess felt much afraid, as he was so big and ugly, and began to be sorry that she had not stayed within reach of help; but as there was no use in disobeying the giant, she walked meekly behind.</td></tr>
+		<tr><td width="45%" class="zh" >他们走了很长的路，英吉布乔格已经很累了，最后，她哭了起来。</td>
+		<td class="en">They went a long way, and Ingibjorg grew very tired, and at length began to cry.</td></tr>
+		<tr><td width="45%" class="zh" >“我不喜欢女孩子发出讨厌的噪音，”巨人转身说道，</td>
+		<td class="en">‘I don’t like girls who make horrid noises,’ said the giant, turning round.</td></tr>
+		<tr><td width="45%" class="zh" >“如果你实在想哭，我就给你哭的理由。”</td>
+		<td class="en">‘But if you WANT to cry, I will give you something to cry for.’</td></tr>
+		<tr><td width="45%" class="zh" >话毕，巨人从腰带上抽出一把斧头，将公主双脚砍下，他把它们捡起来放进了口袋。</td>
+		<td class="en">And drawing an axe from his belt, he cut off both her feet, which he picked up and put in his pocket.</td></tr>
+		<tr><td width="45%" class="zh" >然后他就离开了。</td>
+		<td class="en">Then he went away.</td></tr>
+		<tr><td width="45%" class="zh" >可怜的英吉布乔格倒在草地上承受着剧烈的疼痛，没有人知道去哪里找她，她怀疑自己是否会死在那里。</td>
+		<td class="en">Poor Ingibjorg lay on the grass in terrible pain, and wondering if she should stay there till she died, as no one would know where to look for her.</td></tr>
+		<tr><td width="45%" class="zh" >她不知道离自己早晨出发时已过去了多长时间——当然，这对她而言像是过了几年。她听见车轮声时，太阳仍然当空照耀。由于惊吓与疼痛，公主的咽喉已经干哑，她费了很大的劲才发出一声呼喊。</td>
+		<td class="en">How long it was since she had set out in the morning she could not tell—it seemed years to her, of course; but the sun was still high in the heavens when she heard the sound of wheels, and then, with a great effort, for her throat was parched with fright and pain, she gave a shout.</td></tr>
+		<tr><td width="45%" class="zh" >“我来了！”有人回应道。一会儿，基萨驾着一辆马车从树林中驶来，它把尾巴当作鞭子，鞭挞着马，好让它跑得更快些。</td>
+		<td class="en">‘I am coming!’ was the answer; and in another moment a cart made its way through the trees, driven by Kisa, who used her tail as a whip to urge the horse to go faster.</td></tr>
+		<tr><td width="45%" class="zh" >基萨一眼就看见英吉布乔格躺在那里，它迅速跳下马车，两只前爪小心翼翼地将公主抱起，将她安置在松软的干草上，随后驱车驶回了自己的小屋。</td>
+		<td class="en">Directly Kisa saw Ingibjorg lying there, she jumped quickly down, and lifting the girl carefully in her two front paws, laid her upon some soft hay, and drove back to her own little hut.</td></tr>
+		<tr><td width="45%" class="zh" >房子的角落有一堆垫子，基萨把它们布置成了一张床。</td>
+		<td class="en">In the corner of the room was a pile of cushions, and these Kisa arranged as a bed.</td></tr>
+		<tr><td width="45%" class="zh" >经历了这么多，此时的英吉布乔格几乎已经昏厥。她贪婪地喝了些牛奶，随即躺在了垫子上。基萨从橱柜里拿来一些干草药，在温水里泡一泡，系在了流血不止的双腿上。</td>
+		<td class="en">Ingibjorg, who by this time was nearly fainting from all she had gone through, drank greedily some milk, and then sank back on the cushions while Kisa fetched some dried herbs from a cupboard, soaked them in warm water and tied them on the bleeding legs.</td></tr>
+		<tr><td width="45%" class="zh" >疼痛即刻消失了，英吉布乔格抬头看了看基萨，冲它微笑。</td>
+		<td class="en">The pain vanished at once, and Ingibjorg looked up and smiled at Kisa.</td></tr>
+		<tr><td width="45%" class="zh" >“你现在该休息了，”猫说，“你应该不介意我离开一会儿。</td>
+		<td class="en">‘You will go to sleep now,’ said the cat, ‘and you will not mind if I leave you for a little while.</td></tr>
+		<tr><td width="45%" class="zh" >我会把门锁上，没有人可以伤害你。”</td>
+		<td class="en">I will lock the door, and no one can hurt you.’</td></tr>
+		<tr><td width="45%" class="zh" >它话还没说完，公主就睡着了。</td>
+		<td class="en">But before she had finished the princess was asleep.</td></tr>
+		<tr><td width="45%" class="zh" >马车就停在门口，基萨跳上了马车，拾起缰绳，径直朝着巨人的洞穴驶去。</td>
+		<td class="en">Then Kisa got into the cart, which was standing at the door, and catching up the reins, drove straight to the giant’s cave.</td></tr>
+		<tr><td width="45%" class="zh" >基萨把马车藏在一些树的后面，蹑手蹑脚地潜行至门口，门敞开着。它蹲伏着，听着巨人正和他的妻子说些什么。他们正在吃晚饭。</td>
+		<td class="en">Leaving her cart behind some trees, Kisa crept gently up to the open door, and, crouching down, listened to what the giant was telling his wife, who was at supper with him.</td></tr>
+		<tr><td width="45%" class="zh" >“一等我有时间我就返回去把她杀了，”巨人说，“绝不能让森林里的人知道一个小女孩竟敢违抗我！”</td>
+		<td class="en">‘The first day that I can spare I shall just go back and kill her,’ he said; ‘it would never do for people in the forest to know that a mere girl can defy me!’</td></tr>
+		<tr><td width="45%" class="zh" >巨人和他的妻子不停地用各种污言秽语谩骂英吉布乔格的不端行为，丝毫没有注意到基萨溜进了一个黑暗的角落，并将满满一袋盐都倒进了炉火前的那口大锅里。</td>
+		<td class="en">And he and his wife were so busy calling Ingibjorg all sorts of names for her bad behaviour, that they never noticed Kisa stealing into a dark corner, and upsetting a whole bag of salt into the great pot before the fire.</td></tr>
+		<tr><td width="45%" class="zh" >“哎呀，渴死我了！”不一会儿，巨人大喊了一声。</td>
+		<td class="en">‘Dear me, how thirsty I am!’ cried the giant by-and-by.</td></tr>
+		<tr><td width="45%" class="zh" >“我也是，”妻子呼应道，</td>
+		<td class="en">‘So am I,’ answered the wife.</td></tr>
+		<tr><td width="45%" class="zh" >“我要是没喝那最后一勺肉汤就好了，我敢肯定它有问题。”</td>
+		<td class="en">‘I do wish I had not taken that last spoonful of broth; I am sure something was wrong with it.’</td></tr>
+		<tr><td width="45%" class="zh" >“要是不喝点儿水，我会死的。”巨人继续说道。</td>
+		<td class="en">‘If I don’t get some water I shall die,’ went on the giant.</td></tr>
+		<tr><td width="45%" class="zh" >他冲出洞穴，沿着小道，朝着路前方的河流跑去，他的妻子跟在后面。</td>
+		<td class="en">And rushing out of the cave, followed by his wife, he ran down the path which led to the river.</td></tr>
+		<tr><td width="45%" class="zh" >接着基萨就溜进屋里，争分夺秒地搜寻着每个孔穴，直到它走到一些杂草里，发现藏着那的英吉布乔格的脚。它把那双脚放进马车，再一次驶回了自己的小屋。</td>
+		<td class="en">Then Kisa entered the hut, and lost no time in searching every hole till she came upon some grass, under which Ingibjorg’s feet were hidden, and putting them in her cart, drove back again to her own hut.</td></tr>
+		<tr><td width="45%" class="zh" >英吉布乔格一直躺着，担惊受怕，不敢入睡，任何一丝声音都会使她颤抖。见到基萨她很欣慰。</td>
+		<td class="en">Ingibjorg was thankful to see her, for she had lain, too frightened to sleep, trembling at every noise.</td></tr>
+		<tr><td width="45%" class="zh" >当基萨扭动钥匙的时候，她欣喜地喊道：“哦，是你吗？”</td>
+		<td class="en">‘Oh, is it you?’ she cried joyfully, as Kisa turned the key.</td></tr>
+		<tr><td width="45%" class="zh" >猫进来了，握着两只由银质拖鞋包裹着的干净的小脚。</td>
+		<td class="en">And the cat came in, holding up the two neat little feet in their silver slippers.</td></tr>
+		<tr><td width="45%" class="zh" >“只消两分钟，双腿就会像之前一样结实！”基萨说。</td>
+		<td class="en">‘In two minutes they shall be as tight as they ever were!’ said Kisa.</td></tr>
+		<tr><td width="45%" class="zh" >它带来了了几根巨人随意堆在公主脚上的魔草，将双脚缠在双腿上。</td>
+		<td class="en">And taking some strings of the magic grass which the giant had carelessly heaped on them, she bound the feet on to the legs above.</td></tr>
+		<tr><td width="45%" class="zh" >“当然，一段时间内你还不能走路，你可别指望能那样，”它继续说道，</td>
+		<td class="en">‘Of course you won’t be able to walk for some time; you must not expect THAT,’ she continued.</td></tr>
+		<tr><td width="45%" class="zh" >“话说回来，倘若你恢复得不错，也许一个星期内，我就又可以带你回家了。”</td>
+		<td class="en">‘But if you are very good, perhaps, in about a week, I may carry you home again.’</td></tr>
+		<tr><td width="45%" class="zh" >她确实恢复得不错。猫驾着马车，猛烈地用尾巴抽打着马，车子直抵王宫大门。国王和王后见到已经失踪的女儿安坐在猫身旁，他们宣布，把公主从巨人的手中营救出来的人，获得任何奖赏都不为过。</td>
+		<td class="en">And so she did; and when the cat drove the cart up to the palace gate, lashing the horse furiously with her tail, and the king and queen saw their lost daughter sitting beside her, they declared that no reward could be too great for the person who had brought her out of the giant’s hands.</td></tr>
+		<tr><td width="45%" class="zh" >“关于奖赏我们以后再谈论吧。”那只猫说道，它深深地鞠了一躬，调转了马头。</td>
+		<td class="en">‘We will talk about that by-and-by,’ said the cat, as she made her best bow, and turned her horse’s head.</td></tr>
+		<tr><td width="45%" class="zh" >基萨离开了公主，甚至没有向她道一声别，公主很不开心。</td>
+		<td class="en">The princess was very unhappy when Kisa left her without even bidding her farewell.</td></tr>
+		<tr><td width="45%" class="zh" >她不吃不喝，也丝毫不理睬父母给她买的美丽的衣裳。</td>
+		<td class="en">She would neither eat nor drink, nor take any notice of all the beautiful dresses her parents bought for her.</td></tr>
+		<tr><td width="45%" class="zh" >“除非我们能让她笑，否则她会死的，”人们窃窃私语。</td>
+		<td class="en">‘She will die, unless we can make her laugh,’ one whispered to the other.</td></tr>
+		<tr><td width="45%" class="zh" >“这世上还有什么办法我们没试过吗？”</td>
+		<td class="en">‘Is there anything in the world that we have left untried?’</td></tr>
+		<tr><td width="45%" class="zh" >“除了结婚了。”国王回答道。</td>
+		<td class="en">‘Nothing except marriage,’ answered the king.</td></tr>
+		<tr><td width="45%" class="zh" >他将能想到的所有年轻英俊的男子都邀请到王宫里来，恳求公主从中挑选一个做丈夫。</td>
+		<td class="en">And he invited all the handsomest young men he could think of to the palace, and bade the princess choose a husband from among them.</td></tr>
+		<tr><td width="45%" class="zh" >她花了一些时间来决定谁是她最爱慕的人，但最后，她选定了一位年轻的王子。王子的眼睛像森林里的一弯池水，头发像闪耀的黄金。</td>
+		<td class="en">It took her some time to decide which she admired the most, but at last she fixed upon a young prince, whose eyes were like the pools in the forest, and his hair of bright gold.</td></tr>
+		<tr><td width="45%" class="zh" >国王和王后非常满意，因为这个年轻人是一位邻国国王的儿子。他们下令预先备好豪华的宴会。</td>
+		<td class="en">The king and the queen were greatly pleased, as the young man was the son of a neighbouring king, and they gave orders that a splendid feast should be got ready.</td></tr>
+		<tr><td width="45%" class="zh" >婚礼结束后，基萨突然出现在他们眼前。英吉布乔格冲上前去，双臂紧紧搂住它。</td>
+		<td class="en">When the marriage was over, Kisa suddenly stood before them, and Ingibjorg rushed forward and clasped her in her arms.</td></tr>
+		<tr><td width="45%" class="zh" >“我来领取我的奖赏，”猫说。</td>
+		<td class="en">‘I have come to claim my reward,’ said the cat.</td></tr>
+		<tr><td width="45%" class="zh" >“让我今晚睡在你的床尾吧。”</td>
+		<td class="en">‘Let me sleep for this night at the foot of your bed.’</td></tr>
+		<tr><td width="45%" class="zh" >“只有这个请求吗？”英吉布乔格十分失望地问。</td>
+		<td class="en">‘Is that ALL?’ asked Ingibjorg, much disappointed.</td></tr>
+		<tr><td width="45%" class="zh" >“这就够了。”猫回答说。</td>
+		<td class="en">‘It is enough,’ answered the cat.</td></tr>
+		<tr><td width="45%" class="zh" >当晨曦微露，躺在床上的不是猫，而是一位美丽的公主。</td>
+		<td class="en">And when the morning dawned, it was no cat that lay upon the bed, but a beautiful princess.</td></tr>
+		<tr><td width="45%" class="zh" >“我和母亲都被一个恶毒的精灵施了魔法，”她说，“我们只有做了某种旷古绝今的善事，才能逃脱魔咒。</td>
+		<td class="en">‘My mother and I were both enchanted by a spiteful fairy,’ said she, ‘we could not free ourselves till we had done some kindly deed that had never been wrought before.</td></tr>
+		<tr><td width="45%" class="zh" >我的母亲至死都没有机会找到不一样的事可做，而我利用巨人的恶行，让你变得和以前一样完整。”</td>
+		<td class="en">My mother died without ever finding a chance of doing anything new, but I took advantage of the evil act of the giant to make you as whole as ever.’</td></tr>
+		<tr><td width="45%" class="zh" >之后，他们都过着最快乐的时光，公主一直住在王宫，直到她自己也结婚才离开，去管理一个属于自己的王国。</td>
+		<td class="en">Then they were all more delighted than before, and the princess lived in the court until she, too, married, and went away to govern one of her own.</td></tr>
+		<tr><td width="45%" class="zh" ></td>
+		<td class="en"></td></tr>
+	</table>
+</div>
+
+<div class="zh_en"><a href="#" class="zh_btn">中文</a> | <a href="#" class="en_btn">英文</a> | <a href="#" class="zhen_btn">中英文</a></div>
+
+<script src="jquery-1.10.1.min.js"></script>
+<script src="jquery.bookify.js"></script>
+</body>
+</html>

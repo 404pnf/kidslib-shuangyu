@@ -1,0 +1,147 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+	<!-- link rel="stylesheet" type="text/css" href="book.css" -->
+	<style type="text/css">
+		/* IMPORTANT !!!!
+		line-height, font-size defined in jquery.bookify.js */
+
+		* {
+			/* font-size: 20px; */
+		 }
+
+		table, td, th {
+
+		  }
+
+		td {
+	    	 /* height:50px; */
+	 	     vertical-align:top;
+	 	   	 text-align:left;
+	 	 	 padding-bottom:30px;/*行高的倍数-chenjing*/
+			 padding-left:20px;
+	 	  }
+
+		  /*chenjing*/
+		  .ebook_title{ position:absolute; left:20%; top:7%; font-weight:bold; font-size:35px; width:750px;}
+		  .zh_en{ position:absolute; left:70%; bottom:10%; font-size:14px;}
+		  .pre,.next{ cursor:pointer; font-size:40px; font-weight:bold; position:absolute; top:40%}
+		  .pre{ display:none; left:7%}
+		  .next{right:7%}
+
+	</style>
+
+</head>
+<body>
+<div class="ebook_title"></div>
+<div class="pre"><<</div>
+<div class="next">>></div>
+<div class="ebook_content">
+	<table cellpadding="0" cellspacing="0">
+		<tr><td width="45%" class="zh" >蟾蜍与钻石</td>
+		<td class="en">Toads and Diamonds</td></tr>
+		<tr><td width="45%" class="zh" >作者：安德鲁·朗格</td>
+		<td class="en">by Andrew Lang</td></tr>
+		<tr><td width="45%" class="zh" >从前有一位寡妇，她有两个女儿。</td>
+		<td class="en">There was once upon a time a widow who had two daughters.</td></tr>
+		<tr><td width="45%" class="zh" >大女儿无论是模样和脾气都和母亲十分相像，以至于任何人看到她就像看到了她的母亲一样。</td>
+		<td class="en">The eldest was so much like her in the face and humor that whoever looked upon the daughter saw the mother.</td></tr>
+		<tr><td width="45%" class="zh" >她们都很不讨人喜欢，而且十分傲慢，以至于没人跟她们相处。</td>
+		<td class="en">They were both so disagreeable and so proud that there was no living with them.</td></tr>
+		<tr><td width="45%" class="zh" >小女儿却像极了她的父亲，礼貌友善，性情温柔可爱，并且算得上是世界上最漂亮的姑娘之一。</td>
+		<td class="en">The youngest, who was the very picture of her father for courtesy and sweetness of temper, was withal one of the most beautiful girls ever seen.</td></tr>
+		<tr><td width="45%" class="zh" >因为人们天生偏爱与自己相像的人，这个女人甚是宠爱她的大女儿，同时又极其厌恶她的小女儿——她让小女儿在厨房吃饭，让她不停地干活。</td>
+		<td class="en">As people naturally love their own likeness, this mother even doted on her eldest daughter and at the same time had a horrible aversion for the youngest—she made her eat in the kitchen and work continually.</td></tr>
+		<tr><td width="45%" class="zh" >除此之外，这个可怜的孩子还被迫每天两次到离家一英里半以外的地方打水，再将满满的水罐提回家。</td>
+		<td class="en">Among other things, this poor child was forced twice a day to draw water above a mile and a-half off the house, and bring home a pitcher full of it.</td></tr>
+		<tr><td width="45%" class="zh" >有一天，她在泉边打水时，一位可怜的妇人朝她走来，向她讨水喝。</td>
+		<td class="en">One day, as she was at this fountain, there came to her a poor woman, who begged of her to let her drink.</td></tr>
+		<tr><td width="45%" class="zh" >“哦！好啊，愿意为您效劳，大婶。”这个可爱的小女孩说道，说完立即冲洗了下水罐，并从泉水的最干净处汲取了一些清水，递给了那位妇人。女孩一直托着水罐，好让她能更容易地喝到水。</td>
+		<td class="en">“Oh! ay, with all my heart, Goody,” said this pretty little girl; and rinsing immediately the pitcher, she took up some water from the clearest place of the fountain, and gave it to her, holding up the pitcher all the while, that she might drink the easier.</td></tr>
+		<tr><td width="45%" class="zh" >喝完水后，这位善良的妇人对女孩说道：</td>
+		<td class="en">The good woman, having drunk, said to her:</td></tr>
+		<tr><td width="45%" class="zh" >“亲爱的姑娘，你是如此可爱，如此礼貌善良。我忍不住要送你一件礼物。”</td>
+		<td class="en">“You are so very pretty, my dear, so good and so mannerly, that I cannot help giving you a gift.”</td></tr>
+		<tr><td width="45%" class="zh" >因为她是一个仙女，化作了一个可怜的乡村妇人，想要亲眼见识一下这位可爱姑娘到底有多礼貌端庄。</td>
+		<td class="en">For this was a fairy, who had taken the form of a poor country woman, to see how far the civility and good manners of this pretty girl would go.</td></tr>
+		<tr><td width="45%" class="zh" >“我要送你一件礼物，”仙女接着说，“那就是，你每说一个字，都会有一朵鲜花或一颗钻石从你的嘴里冒出来。”</td>
+		<td class="en">“I will give you for a gift,” continued the Fairy, “that, at every word you speak, there shall come out of your mouth either a flower or a jewel.”</td></tr>
+		<tr><td width="45%" class="zh" >当这位可爱的姑娘回到家时，她的母亲责骂她在泉水边逗留了太长时间。</td>
+		<td class="en">When this pretty girl came home her mother scolded her for staying so long at the fountain.</td></tr>
+		<tr><td width="45%" class="zh" >“请原谅我，妈妈，”可怜的姑娘说，“没有尽快赶回来。”</td>
+		<td class="en">“I beg your pardon, mamma,” said the poor girl, “for not making more haste.”</td></tr>
+		<tr><td width="45%" class="zh" >当她说出这些话时，从她嘴里冒出了两朵玫瑰，两粒珍珠，还有两颗钻石。</td>
+		<td class="en">And in speaking these words there came out of her mouth two roses, two pearls, and two diamonds.</td></tr>
+		<tr><td width="45%" class="zh" >“瞧瞧我看见了什么？”她的母亲惊愕地叫起来，</td>
+		<td class="en">“What is it I see there?” said the mother, quite astonished.</td></tr>
+		<tr><td width="45%" class="zh" >“我想我看到这个孩子嘴里吐出了珍珠和钻石！</td>
+		<td class="en">“I think I see pearls and diamonds come out of the girl’s mouth!</td></tr>
+		<tr><td width="45%" class="zh" >这是怎么回事，我的孩子？”</td>
+		<td class="en">How happens this, child?”</td></tr>
+		<tr><td width="45%" class="zh" >这还是她第一次称呼小女儿为“我的孩子”。</td>
+		<td class="en">This was the first time she had ever called her child.</td></tr>
+		<tr><td width="45%" class="zh" >这个可怜的孩子坦诚地告诉了她泉水边发生的一切，说话时有无数颗钻石从她嘴里冒出来。</td>
+		<td class="en">The poor creature told her frankly all the matter, not without dropping out infinite numbers of diamonds.</td></tr>
+		<tr><td width="45%" class="zh" >“太好了，”母亲喊道，“我必须让我的孩子也去那里。</td>
+		<td class="en">“In good faith,” cried the mother, “I must send my child thither.</td></tr>
+		<tr><td width="45%" class="zh" >过来，范妮，看看你妹妹说话时嘴里吐出了什么。</td>
+		<td class="en">Come hither, Fanny; look what comes out of thy sister’s mouth when she speaks.</td></tr>
+		<tr><td width="45%" class="zh" >亲爱的，难道你不想被赠与同样的礼物吗？</td>
+		<td class="en">Wouldst not thou be glad, my dear, to have the same gift given thee?</td></tr>
+		<tr><td width="45%" class="zh" >你只需要去从泉水里打些水出来，当某个穷女人向你要水喝时，给她喝就是了，记得给她水时要非常礼貌。”</td>
+		<td class="en">Thou hast nothing else to do but go and draw water out of the fountain, and when a certain poor woman asks you to let her drink, to give it to her very civilly.”</td></tr>
+		<tr><td width="45%" class="zh" >“我去打水，那一定会是个十分美丽的画面。”这个缺乏教养的冒失女说道。</td>
+		<td class="en">“It would be a very fine sight indeed,” said this ill-bred minx, “to see me go draw water.”</td></tr>
+		<tr><td width="45%" class="zh" >“赶紧去吧！”她母亲喊道，“现在就去。”</td>
+		<td class="en">“You shall go, hussy!” said the mother; “and this minute.”</td></tr>
+		<tr><td width="45%" class="zh" >然后她出发了，带上了家里最好的银水杯，但一路上抱怨个没完。</td>
+		<td class="en">So away she went, but grumbling all the way, taking with her the best silver tankard in the house.</td></tr>
+		<tr><td width="45%" class="zh" >她刚到泉边，就看到一个衣着极其华丽的女士从林中走出，来到她跟前，向她要水喝。</td>
+		<td class="en">She was no sooner at the fountain than she saw coming out of the wood a lady most gloriously dressed, who came up to her, and asked to drink.</td></tr>
+		<tr><td width="45%" class="zh" >你知道的，这还是那位仙女。但这次她以公主的气场和打扮出现在了那善良女孩的姐姐面前，想要亲眼见识一下这个姑娘到底有多蛮横无理。</td>
+		<td class="en">This was, you must know, the very fairy who appeared to her sister, but now had taken the air and dress of a princess, to see how far this girl’s rudeness would go.</td></tr>
+		<tr><td width="45%" class="zh" >“我来到这里难道是为了取水伺候你喝的吗？”骄傲莽撞的女孩说，</td>
+		<td class="en">“Am I come hither,” said the proud, saucy one, “to serve you with water, pray?</td></tr>
+		<tr><td width="45%" class="zh" >“你认为我带这个银杯子过来是为了服侍你喝水的，是吗？</td>
+		<td class="en">I suppose the silver tankard was brought purely for your ladyship, was it?</td></tr>
+		<tr><td width="45%" class="zh" >但是，如果你很想的话，你可以喝里面的水。”</td>
+		<td class="en">However, you may drink out of it, if you have a fancy.”</td></tr>
+		<tr><td width="45%" class="zh" >“你真是太不懂礼貌了，”仙女面无表情地回答说，</td>
+		<td class="en">“You are not over and above mannerly,” answered the Fairy, without putting herself in a passion.</td></tr>
+		<tr><td width="45%" class="zh" >“好，因为你如此缺乏教养，如此刻薄冷漠，我也要送你一件礼物，你每说一个字，都会有一条蛇或蟾蜍从你嘴里蹦出来。”</td>
+		<td class="en">“Well, then, since you have so little breeding, and are so disobliging, I give you for a gift that at every word you speak there shall come out of your mouth a snake or a toad.”</td></tr>
+		<tr><td width="45%" class="zh" >她母亲一看到她归来，就大喊道：</td>
+		<td class="en">So soon as her mother saw her coming she cried out:</td></tr>
+		<tr><td width="45%" class="zh" >“哎，女儿？”</td>
+		<td class="en">“Well, daughter?”</td></tr>
+		<tr><td width="45%" class="zh" >“哎，妈妈？”那无礼粗野的女儿答道，这时从她嘴里跑出了两条毒蛇和两只癞蛤蟆。</td>
+		<td class="en">“Well, mother?” answered the pert hussy, throwing out of her mouth two vipers and two toads.</td></tr>
+		<tr><td width="45%" class="zh" >“哦！天啊，”寡妇叫起来，“我看到了什么？</td>
+		<td class="en">“Oh! mercy,” cried the mother; “what is it I see?</td></tr>
+		<tr><td width="45%" class="zh" >啊！准是她那卑鄙的妹妹干的好事，她要为此付出代价。”说罢寡妇就跑去揍她的小女儿。</td>
+		<td class="en">Oh! it is that wretch her sister who has occasioned all this; but she shall pay for it”; and immediately she ran to beat her.</td></tr>
+		<tr><td width="45%" class="zh" >那个可怜的孩子逃了出去，藏身于森林中，但并没有离家很远。</td>
+		<td class="en">The poor child fled away from her, and went to hide herself in the forest, not far from thence.</td></tr>
+		<tr><td width="45%" class="zh" >国王的儿子打猎归来的途中遇上了女孩，觉得她非常漂亮，便问她一个人在那里做什么，为什么哭泣。</td>
+		<td class="en">The King’s son, then on his return from hunting, met her, and seeing her so very pretty, asked her what she did there alone and why she cried.</td></tr>
+		<tr><td width="45%" class="zh" >“唉，阁下，是我的妈妈将我赶了出来。”</td>
+		<td class="en">“Alas! sir, my mamma has turned me out of doors.”</td></tr>
+		<tr><td width="45%" class="zh" >国王的儿子看到五六颗珍珠以及差不多数量的钻石从她嘴里冒了出来，便很想她告诉自己到底发生了什么。</td>
+		<td class="en">The King’s son, who saw five or six pearls and as many diamonds come out of her mouth, desired her to tell him how that happened.</td></tr>
+		<tr><td width="45%" class="zh" >于是，女孩告诉了他事情的始末，王子因此而爱上了她，而且认为这样一件礼物比任何嫁妆都珍贵，他带着女孩回到了他父王的城堡，并娶她为妻。</td>
+		<td class="en">She thereupon told him the whole story; and so the King’s son fell in love with her, and, considering himself that such a gift was worth more than any marriage portion, conducted her to the palace of the King his father, and there married her.</td></tr>
+		<tr><td width="45%" class="zh" >至于女孩的姐姐，她让自己变得极度令人讨厌，所以连她自己的母亲也嫌弃她，把她赶了出去。这个悲惨的可怜虫在外流浪了很久，没有人愿意收留她。她跑到树林里的某一个角落，最后死在了那里。</td>
+		<td class="en">As for the sister, she made herself so much hated that her own mother turned her off; and the miserable wretch, having wandered about a good while without finding anybody to take her in, went to a corner of the wood, and there died. </td></tr>
+		<tr><td width="45%" class="zh" ></td>
+		<td class="en"></td></tr>
+	</table>
+</div>
+
+<div class="zh_en"><a href="#" class="zh_btn">中文</a> | <a href="#" class="en_btn">英文</a> | <a href="#" class="zhen_btn">中英文</a></div>
+
+<script src="jquery-1.10.1.min.js"></script>
+<script src="jquery.bookify.js"></script>
+</body>
+</html>
