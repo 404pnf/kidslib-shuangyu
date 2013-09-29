@@ -14,14 +14,23 @@ SUFFIX = '.csv'
 
 def xin_csv_2_html
   files = Find.find(CSV_FILEFODLER).select { |f| f =~ /#{ SUFFIX }$/}
-  titles = CSV.readlines(BOOK_TITLES).each_with_object(Hash.new) do |e, a|
-    id, *title = e
-    a[id] = title
-  end
+  #titles = CSV.readlines(BOOK_TITLES).each_with_object(Hash.new) do |e, a|
+    #id, *title = e
+    #a[id] = title
+  #end
   # pp titles
   files.each do |file|
     id = File.basename(file, SUFFIX)
-    title = titles[id].join(' | ') unless titles[id].nil?
+    #title = titles[id].join(' | ') unless titles[id].nil?
+    # > File.readlines('401.csv').first
+    # => "\"A Fable\",\"寓言一则\"\n"
+    # > File.readlines('401.csv').first.split(',')[1]
+    # => "\"寓言一则\"\n"
+    # s.split(',') # 有些标题的英文中有英文逗号，因此取最后一个元素保险
+    # => ["\"A ", "Fable\"", "\"寓言一则\"\n"]
+    title = File.readlines(file).first.split(',').last.chomp
+    p title
+
     # 二期中英文顺序和一期相反的
     paragraphs = CSV.readlines(file).map { |(en, zh)| [zh, en] }
 

@@ -1,1 +1,1 @@
-rsync -avz --delete output-html/* wxkj:/var/www/ilearning/bilingual/
+rsync -avz output/* wxkj:/var/www/ilearning/bilingual/
