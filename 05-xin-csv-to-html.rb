@@ -1,68 +1,100 @@
 
-require 'find'
+# ## 使用方法
+#
+#     ruby script.rb inputdir, outputdir
+#
+# ----
+
+# ## 脚本说明
+#
+# 将csv文件的记录变成html。html中通过标签配合js达到了中英文分栏显示
+# 且可以单独看中文或英文
+#
+# csv文件格式是
+#
+#     zh, en
+#     "中文第1段", "para 1"
+#     "中文第2段", "para 2"
+#
+# ----
+
+# ## 模版文件
+#
+# 参考 views/book.erubis.html
+#
+# ----
+
+# ## 引用库
 require 'csv'
 require 'erubis'
-require 'pp'
 require 'fileutils'
 
-CSV_FILEFODLER = 'db/2qi-csv/'
-OUTPUT = 'output'
-VIEW_FOLDER = 'views'
-TPL_FILE = 'views/book.erubis.html'
-BOOK_TITLES = 'db/xin-book-titles.csv'
-SUFFIX = '.csv'
 
-def xin_csv_2_html
-  files = Find.find(CSV_FILEFODLER).select { |f| f =~ /#{ SUFFIX }$/}
-  #titles = CSV.readlines(BOOK_TITLES).each_with_object(Hash.new) do |e, a|
-    #id, *title = e
-    #a[id] = title
-  #end
-  # pp titles
+# ## 类只是为了封装
+# 只是为了封装
+class Bilingual
+
+  # 如果不用File.basename @id返回的是带着input path的路径
+  # 后面写文件到out的时候，不需要这个路径
+  def initialize(file)
+    @h = CSV.table(file).map(&:to_hash) # an array of hash
+    @id = File.basename(file).sub(/\.csv$/, '')
+  end
+
+  def context
+    t, *content = @h # 第一行是题目
+    title = [t[:zh]||'', t[:en]||''].join(' | ')
+    {
+        title: title,
+        content: content,
+    }
+  end
+
+  def id
+    @id
+  end
+
+  def title
+    self.context[:title]
+  end
+
+end
+
+# ----
+# ## 绑定变量到模版的并写文件的函数
+def xin_csv_2_html(input, out)
+  files = Dir["#{input}/*.csv"]
+
   files.each do |file|
-    id = File.basename(file, SUFFIX)
-    #title = titles[id].join(' | ') unless titles[id].nil?
-    # > File.readlines('401.csv').first
-    # => "\"A Fable\",\"寓言一则\"\n"
-    # > File.readlines('401.csv').first.split(',')[1]
-    # => "\"寓言一则\"\n"
-    # s.split(',') # 有些标题的英文中有英文逗号，因此取最后一个元素保险
-    # => ["\"A ", "Fable\"", "\"寓言一则\"\n"]
-    title = File.readlines(file).first.split(',').last.chomp
-    p title
+    e = Bilingual.new file
 
-    # 二期中英文顺序和一期相反的
-    paragraphs = CSV.readlines(file).map { |(en, zh)| [zh, en] }
+    eruby = Erubis::Eruby.new(File.read(TPL_FILE))
+    html_str =  eruby.evaluate(e.context)
 
-    eruby = Erubis::Eruby.new(File.read(TPL_FILE)) # create Eruby object
-    html_str =  eruby.result(binding())   # TODO get result; all local variables are available in the template, might not be a good idea
-
-    p "generating #{OUTPUT}/#{id}.html: #{title}"
-    File.write("#{OUTPUT}/#{id}.html", html_str)
+    p "generating #{out}/#{e.id}.html: #{e.title}"
+    File.write("#{out}/#{e.id}.html", html_str)
   end
 end
 
+# ---
+# ## 复制样式等资源文件到输出目录
 def copy_asset_to_output
-  # If you want to copy all contents of a directory instead of the
-  # directory itself, c.f. src/x -> dest/x, src/y -> dest/y,
-  # use following code.
-  # cp_r('src', 'dest') makes dest/src,
-  # but this doesn't.
   FileUtils.cp_r 'views/.', 'output', :verbose => true
 end
 
-def suceed_msg
-  # 友情提示
-  p ''
-  p '------------'
-  p '友情提示'
-  p '-------------'
-  p ''
-  p "生成的文件在： #{OUTPUT}"
-end
+# ----
+# ## 预设常量
+CSV_FILEFODLER =  ARGV[0] || 'db/all-csv/'
+OUTPUT = 'output'
+VIEW_FOLDER = 'views'
+TPL_FILE = 'views/book.erubis.html'
+SUFFIX = '.csv'
 
+# ----
+# ## 干活
 if __FILE__ == $PROGRAM_NAME
-  xin_csv_2_html
+  t = Time.new
+  xin_csv_2_html CSV_FILEFODLER, OUTPUT
   copy_asset_to_output
-  #suceed_msg
+  p "耗时 #{Time.now - t} 秒"
 end
