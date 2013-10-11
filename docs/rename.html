@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>rename.rb</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page">
+            
+              
+              <a class="source" href="01-iyc_to_csv.html">
+                01-iyc_to_csv.rb
+              </a>
+            
+              
+              <a class="source" href="02-csv_to_html.html">
+                02-csv_to_html.rb
+              </a>
+            
+              
+              <a class="source" href="03-convert-xin-book-info-to-csv.html">
+                03-convert-xin-book-info-to-csv.rb
+              </a>
+            
+              
+              <a class="source" href="04-xin_shuangyu_to_csv.html">
+                04-xin_shuangyu_to_csv.rb
+              </a>
+            
+              
+              <a class="source" href="05-xin-csv-to-html.html">
+                05-xin-csv-to-html.rb
+              </a>
+            
+              
+              <a class="source" href="rename.html">
+                rename.rb
+              </a>
+            
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>rename.rb</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="comment">#!/usr/bin/env ruby</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <p>rename.rb is a Ruby version of the popular Perl command found in many
+modern Linux distributions.</p>
+<p>rename.rb was adapted from Larry Wall and Robin Barker&#39;s similar Perl
+script. This version, however, supports Ruby- instead of Perl-style
+filename transformations. Of particular interest in the Ruby script
+is the fact that an internal variable &#39;f&#39;, representing the current
+filename being renamed, is exposed on the external command line to
+the caller. This leads to the potential application of interesting
+Ruby-based side effects involving passive or active manipulation of
+the filename or the contents of the file while it is being renamed.</p>
+<p>For example, clever if somewhat silly transformations of filenames
+can be accomplished.  You can turn all the files in a directory into
+their natural palindromes with the command:</p>
+<p>  ./rename.rb -n &#39;concat(f.chop.reverse)&#39; *</p>
+<p>In this command, the -n option tells rename not to actually perform
+the rename, but only to show what would have been done. The command
+&#39;concat(f.chop.reverse)&#39; is enclosed in quotes (due to the embedded
+parentheses) and applied to each filename in turn. Finally, the
+filenames to be renamed comprise the remaining arguments on the command
+line. In this case the shell glob expression * tells shell to produce
+a list of all the file and directory names in the current directory
+and provide this list as arguments to rename.rb.</p>
+<p>The following command adds the md5sum of the contents of the file to
+the new name of the corresponding file:</p>
+<p>  ./rename.rb -n &#39;concat(&quot;.&quot;+<code>md5sum #{f}|cut -d&quot; &quot; -f 1</code>).chomp&#39; *</p>
+<p>Lower-casing each file or directory name in a directory is accomplished
+by this simple command:</p>
+<p>  ./rename.rb -n downcase *</p>
+<p>Like Perl&#39;s version, this script will not rename a file if the
+transformed filename is the same as the original filename unless
+--force is requested. Instead, the program will silently resume
+processing any remaining filenames.</p>
+<p>The options for rename.rb:</p>
+<pre><code>-v, --verbose
+     Print names of files successfully renamed
+-n, --no-act
+     Show which files would have been renamed, but do not actually perform the action
+-f, --force
+     Overwrite existing files</code></pre>
+<p>If filenames are not provided, rename.rb will read names from standard input.</p>
+<p>Copyright (c) 2008 Technetra Corp</p>
+<p>Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the &quot;Software&quot;), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:</p>
+<p>The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="keyword">require</span> <span class="string">'optparse'</span>
+ 
+verbose = no_act = force = op = <span class="keyword">nil</span>
+<span class="constant">OptionParser</span>.new <span class="keyword">do</span> |opts|
+  opts.banner = <span class="string">"Usage: rename.rb [options]"</span>
+  opts.on(<span class="string">"-v"</span>, <span class="string">"--verbose"</span>, <span class="string">"Run verbosely"</span>) { |v| verbose = v }
+  opts.on(<span class="string">"-n"</span>, <span class="string">"--[no-]no-act"</span>, <span class="string">"Show what files would have been renamed"</span>) { |n| no_act = n }
+  opts.on(<span class="string">"-f"</span>, <span class="string">"--force"</span>, <span class="string">"Force, overwrite existing files"</span>) { |f| force = f }
+<span class="keyword">end</span>.parse!
+ 
+verbose = <span class="keyword">true</span> <span class="keyword">if</span> no_act
+op = <span class="constant">ARGV</span>.shift
+ 
+<span class="keyword">if</span> (argvcopy = <span class="constant">ARGV</span>).empty?
+    print <span class="string">"reading filenames from STDIN\n"</span> <span class="keyword">if</span> verbose
+    argvcopy = <span class="constant">STDIN</span>.read.split(<span class="string">"\n"</span>)
+<span class="keyword">end</span>
+ 
+argvcopy.each { |f|
+    was = f
+    f = eval(<span class="string">"f.dup.<span class="subst">#{op}</span>"</span>)
+    <span class="keyword">next</span> <span class="keyword">if</span> was == f <span class="comment"># ignore quietly</span>
+    <span class="keyword">if</span> <span class="constant">File</span>.exist?(f) <span class="keyword">and</span> !force
+	print  <span class="string">"<span class="subst">#{was}</span> not renamed: <span class="subst">#{f}</span> already exists\n"</span>
+    <span class="keyword">elsif</span> no_act <span class="keyword">or</span> <span class="constant">File</span>.rename(was, f)
+	print <span class="string">"<span class="subst">#{was}</span> renamed as <span class="subst">#{f}</span>\n"</span> <span class="keyword">if</span> verbose
+    <span class="keyword">else</span>
+	print <span class="string">"Can't rename <span class="subst">#{was}</span> <span class="subst">#{f}</span>: $!\n"</span>
+    <span class="keyword">end</span>
+}</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>
