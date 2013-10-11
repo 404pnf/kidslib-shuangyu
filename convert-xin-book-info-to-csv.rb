@@ -1,3 +1,8 @@
+# # 这个脚本基本没有了
+# 只是当时用一回吧
+# 先保留着
+# ----
+
 require 'csv'
 
 # 1. 转二期双语的信息表文件到csv
@@ -9,7 +14,7 @@ XIN_BOOK_TITLES = 'db/xin-book-titles.csv'
 s = File.readlines BOOK_INFO
 arr = s.map { |l| l.chomp.split(/\t/)}
 csv = arr.map { |l| l.to_csv(force_quotes: true)}
-# csv header 
+# csv header
 # "书名（英文）","书名","fenlei","nianling","bid"
 csv_str = csv.join
 
