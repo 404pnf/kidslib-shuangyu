@@ -177,6 +177,8 @@
 <li>预先处理的csv，替换了 \&quot; 因此脚本中不需处理</li>
 <li>有些行注释掉了 csv默认注释可以用顶头的 # 号</li>
 </ol>
+<p>输出格式是</p>
+<pre><code>  [[&quot;第1段&quot;, &quot;para 1&quot;], [&quot;第2段&quot;, &quot;para 2&quot;], ... ]</code></pre>
 <p>:skip_lines
 When set to an object responding to match, every line matching
 it is considered a comment and ignored during parsing.
@@ -253,8 +255,9 @@ If the passed object does not respond to match, ArgumentError is thrown.</p>
             </div>
             
             <div class="content"><div class='highlight'><pre><span class="function"><span class="keyword">def</span> <span class="title">book_merge</span><span class="params">(cnt_h, t_h)</span></span>
-  cnt_h.keys.each_with_object(<span class="constant">Hash</span>.new{ |h, k| h[k] = [[<span class="string">'zh'</span>, <span class="string">'en'</span>]] }) <span class="keyword">do</span> |(id, zh, en), obj|
-    obj[id] &lt;&lt; [zh, en]
+  cnt_h.keys.each_with_object(<span class="constant">Hash</span>.new{ |h, k| h[k] = [[<span class="string">'zh'</span>, <span class="string">'en'</span>]] }) <span class="keyword">do</span> |id, obj|
+    obj[id] &lt;&lt; t_h[id] <span class="comment"># 先把题目写进去</span>
+    cnt_h[id].each { |e| obj[id] &lt;&lt; e} <span class="comment"># 内容本身已经是数组套数组了</span>
   <span class="keyword">end</span>
 <span class="keyword">end</span></pre></div></div>
             
@@ -303,14 +306,7 @@ If the passed object does not respond to match, ArgumentError is thrown.</p>
             
             <div class="content"><div class='highlight'><pre><span class="function"><span class="keyword">def</span> <span class="title">iyc_2_csv</span></span>
   titles, contents = get_titles(<span class="constant">BOOK_TITLES</span>), get_contents(<span class="constant">BOOK_CONTENTS</span>)
-  books = book_merge contents, titles
-  books.each <span class="keyword">do</span> |bookid, paragraphs|
-    id = bookid + <span class="string">'.csv'</span>
-    csv = paragraphs.map { |para| para.to_csv(<span class="symbol">force_quotes:</span> <span class="keyword">true</span>) }
-    p <span class="string">"generating <span class="subst">#{bookid}</span>"</span>
-    <span class="constant">File</span>.write(<span class="string">"<span class="subst">#{<span class="constant">OUTPUT</span>}</span>/<span class="subst">#{id}</span>"</span>, csv.join(<span class="string">''</span>) )
-  <span class="keyword">end</span>
-<span class="keyword">end</span></pre></div></div>
+  books = book_merge contents, titles</pre></div></div>
             
         </li>
         
@@ -318,15 +314,16 @@ If the passed object does not respond to match, ArgumentError is thrown.</p>
         <li id="section-14">
             <div class="annotation">
               
-              <div class="pilwrap for-h2">
+              <div class="pilwrap ">
                 <a class="pilcrow" href="#section-14">&#182;</a>
               </div>
-              <h2>干活</h2>
+              <p>pp books[&#39;1&#39;]</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre><span class="keyword">if</span> __FILE_<span class="number">_</span> == <span class="variable">$PROGRAM_NAME</span>
-  iyc_2_csv</pre></div></div>
+            <div class="content"><div class='highlight'><pre>  books.each <span class="keyword">do</span> |bookid, paragraphs|
+    id = bookid + <span class="string">'.csv'</span>
+    csv = paragraphs.map { |para| para.to_csv(<span class="symbol">force_quotes:</span> <span class="keyword">true</span>) }</pre></div></div>
             
         </li>
         
@@ -337,12 +334,13 @@ If the passed object does not respond to match, ArgumentError is thrown.</p>
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-15">&#182;</a>
               </div>
-              <p>get_titles(BOOK_TITLES)
-get_contents(BOOK_CONTENTS)</p>
+              <p>p &quot;generating #{bookid}&quot;</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre><span class="keyword">end</span></pre></div></div>
+            <div class="content"><div class='highlight'><pre>    <span class="constant">File</span>.write(<span class="string">"<span class="subst">#{<span class="constant">OUTPUT</span>}</span>/<span class="subst">#{id}</span>"</span>, csv.join(<span class="string">''</span>) )
+  <span class="keyword">end</span>
+<span class="keyword">end</span></pre></div></div>
             
         </li>
         
@@ -350,8 +348,25 @@ get_contents(BOOK_CONTENTS)</p>
         <li id="section-16">
             <div class="annotation">
               
-              <div class="pilwrap ">
+              <div class="pilwrap for-h2">
                 <a class="pilcrow" href="#section-16">&#182;</a>
+              </div>
+              <h2>干活</h2>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="keyword">if</span> __FILE_<span class="number">_</span> == <span class="variable">$PROGRAM_NAME</span>
+  iyc_2_csv
+<span class="keyword">end</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-17">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-17">&#182;</a>
               </div>
               <hr>
 
@@ -360,11 +375,11 @@ get_contents(BOOK_CONTENTS)</p>
         </li>
         
         
-        <li id="section-17">
+        <li id="section-18">
             <div class="annotation">
               
               <div class="pilwrap for-h2">
-                <a class="pilcrow" href="#section-17">&#182;</a>
+                <a class="pilcrow" href="#section-18">&#182;</a>
               </div>
               <h2>ruby需要csv中的双引号是被双引号扩着而不是用反斜杠</h2>
 <p>we need this gsub
