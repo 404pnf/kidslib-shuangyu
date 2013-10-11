@@ -1,3 +1,5 @@
+# # 这个脚本不需要使用了。因为一二期csv到html的转换脚本已经统一了
+
 require 'find'
 require 'csv'
 require 'erubis'
