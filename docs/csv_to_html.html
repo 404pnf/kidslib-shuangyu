@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>csv_to_html.rb</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page">
+            
+              
+              <a class="source" href="convert-xin-book-info-to-csv.html">
+                convert-xin-book-info-to-csv.rb
+              </a>
+            
+              
+              <a class="source" href="csv_to_html.html">
+                csv_to_html.rb
+              </a>
+            
+              
+              <a class="source" href="iyc_to_csv.html">
+                iyc_to_csv.rb
+              </a>
+            
+              
+              <a class="source" href="rename.html">
+                rename.rb
+              </a>
+            
+              
+              <a class="source" href="tsv_to_csv.html">
+                tsv_to_csv.rb
+              </a>
+            
+              
+              <a class="source" href="给二期csv添加headers.html">
+                给二期csv添加headers.rb
+              </a>
+            
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>csv_to_html.rb</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h2">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <h2>使用方法</h2>
+<pre><code>ruby script.rb inputdir, outputdir</code></pre>
+<hr>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h2">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <h2>脚本说明</h2>
+<p>将csv文件的记录变成html。html中通过标签配合js达到了中英文分栏显示
+且可以单独看中文或英文</p>
+<p>csv文件格式是</p>
+<pre><code>zh, en
+&quot;中文第1段&quot;, &quot;para 1&quot;
+&quot;中文第2段&quot;, &quot;para 2&quot;</code></pre>
+<hr>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h2">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <h2>模版文件</h2>
+<p>参考 views/book.erubis.html</p>
+<hr>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h2">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <h2>引用库</h2>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="keyword">require</span> <span class="string">'csv'</span>
+<span class="keyword">require</span> <span class="string">'erubis'</span>
+<span class="keyword">require</span> <span class="string">'fileutils'</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h2">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <h2>类只是为了封装</h2>
+<p>只是为了封装</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="class"><span class="keyword">class</span> <span class="title">Bilingual</span></span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>如果不用File.basename @id返回的是带着input path的路径
+后面写文件到out的时候，不需要这个路径</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span><span class="params">(file)</span></span>
+    <span class="variable">@h</span> = <span class="constant">CSV</span>.table(file).map(&amp;<span class="symbol">:to_hash</span>) <span class="comment"># an array of hash</span>
+    <span class="variable">@id</span> = <span class="constant">File</span>.basename(file).sub(<span class="regexp">/\.csv$/</span>, <span class="string">''</span>)
+  <span class="keyword">end</span>
+
+  <span class="function"><span class="keyword">def</span> <span class="title">context</span></span>
+    t, *content = <span class="variable">@h</span> <span class="comment"># 第一行是题目</span>
+    title = [t[<span class="symbol">:zh</span>]||<span class="string">''</span>, t[<span class="symbol">:en</span>]||<span class="string">''</span>].join(<span class="string">' | '</span>)
+    {
+        <span class="symbol">title:</span> title,
+        <span class="symbol">content:</span> content,
+    }
+  <span class="keyword">end</span>
+
+  <span class="function"><span class="keyword">def</span> <span class="title">id</span></span>
+    <span class="variable">@id</span>
+  <span class="keyword">end</span>
+
+  <span class="function"><span class="keyword">def</span> <span class="title">title</span></span>
+    <span class="keyword">self</span>.context[<span class="symbol">:title</span>]
+  <span class="keyword">end</span>
+
+<span class="keyword">end</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <hr>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h2">
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <h2>绑定变量到模版的并写文件的函数</h2>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="function"><span class="keyword">def</span> <span class="title">xin_csv_2_html</span><span class="params">(input, out)</span></span>
+  files = <span class="constant">Dir</span>[<span class="string">"<span class="subst">#{input}</span>/*.csv"</span>]
+
+  files.each <span class="keyword">do</span> |file|
+    e = <span class="constant">Bilingual</span>.new file
+
+    eruby = <span class="constant">Erubis::Eruby</span>.new(<span class="constant">File</span>.read(<span class="constant">TPL_FILE</span>))
+    html_str =  eruby.evaluate(e.context)
+
+    p <span class="string">"generating <span class="subst">#{out}</span>/<span class="subst">#{e.id}</span>.html: <span class="subst">#{e.title}</span>"</span>
+    <span class="constant">File</span>.write(<span class="string">"<span class="subst">#{out}</span>/<span class="subst">#{e.id}</span>.html"</span>, html_str)
+  <span class="keyword">end</span>
+<span class="keyword">end</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-10">&#182;</a>
+              </div>
+              <hr>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-11">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h2">
+                <a class="pilcrow" href="#section-11">&#182;</a>
+              </div>
+              <h2>复制样式等资源文件到输出目录</h2>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="function"><span class="keyword">def</span> <span class="title">copy_asset_to_output</span></span>
+  <span class="constant">FileUtils</span>.cp_r <span class="string">'views/.'</span>, <span class="string">'output'</span>, <span class="symbol">:verbose</span> =&gt; <span class="keyword">true</span>
+<span class="keyword">end</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-12">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-12">&#182;</a>
+              </div>
+              <hr>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-13">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h2">
+                <a class="pilcrow" href="#section-13">&#182;</a>
+              </div>
+              <h2>预设常量</h2>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="constant">CSV_FILEFODLER</span> =  <span class="constant">ARGV</span>[<span class="number">0</span>] || <span class="string">'db/all-csv/'</span>
+<span class="constant">OUTPUT</span> = <span class="string">'output'</span>
+<span class="constant">VIEW_FOLDER</span> = <span class="string">'views'</span>
+<span class="constant">TPL_FILE</span> = <span class="string">'views/book.erubis.html'</span>
+<span class="constant">SUFFIX</span> = <span class="string">'.csv'</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-14">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-14">&#182;</a>
+              </div>
+              <hr>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-15">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h2">
+                <a class="pilcrow" href="#section-15">&#182;</a>
+              </div>
+              <h2>干活</h2>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="keyword">if</span> __FILE_<span class="number">_</span> == <span class="variable">$PROGRAM_NAME</span>
+  t = <span class="constant">Time</span>.new
+  xin_csv_2_html <span class="constant">CSV_FILEFODLER</span>, <span class="constant">OUTPUT</span>
+  copy_asset_to_output
+  p <span class="string">"耗时 <span class="subst">#{<span class="constant">Time</span>.now - t}</span> 秒"</span>
+<span class="keyword">end</span></pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>
