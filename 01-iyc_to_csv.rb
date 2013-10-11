@@ -42,6 +42,10 @@ end
 # 1. 预先处理的csv，替换了 \" 因此脚本中不需处理
 # 1. 有些行注释掉了 csv默认注释可以用顶头的 # 号
 #
+# 输出格式是
+#
+#       [["第1段", "para 1"], ["第2段", "para 2"], ... ]
+#
 # :skip_lines
 # When set to an object responding to match, every line matching
 # it is considered a comment and ignored during parsing.
@@ -85,8 +89,9 @@ end
 #
 
 def book_merge(cnt_h, t_h)
-  cnt_h.keys.each_with_object(Hash.new{ |h, k| h[k] = [['zh', 'en']] }) do |(id, zh, en), obj|
-    obj[id] << [zh, en]
+  cnt_h.keys.each_with_object(Hash.new{ |h, k| h[k] = [['zh', 'en']] }) do |id, obj|
+    obj[id] << t_h[id] # 先把题目写进去
+    cnt_h[id].each { |e| obj[id] << e} # 内容本身已经是数组套数组了
   end
 end
 
@@ -100,20 +105,18 @@ OUTPUT = './db/all-csv/'
 def iyc_2_csv
   titles, contents = get_titles(BOOK_TITLES), get_contents(BOOK_CONTENTS)
   books = book_merge contents, titles
+  #pp books['1']
   books.each do |bookid, paragraphs|
     id = bookid + '.csv'
     csv = paragraphs.map { |para| para.to_csv(force_quotes: true) }
-    p "generating #{bookid}"
+    #p "generating #{bookid}"
     File.write("#{OUTPUT}/#{id}", csv.join('') )
   end
 end
 
-
 # ## 干活
 if __FILE__ == $PROGRAM_NAME
   iyc_2_csv
-  #get_titles(BOOK_TITLES)
-  #get_contents(BOOK_CONTENTS)
 end
 
 # ----
