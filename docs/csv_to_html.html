@@ -288,7 +288,7 @@
 
             </div>
             
-            <div class="content"><div class='highlight'><pre><span class="constant">CSV_FILEFODLER</span> =  <span class="constant">ARGV</span>[<span class="number">0</span>] || <span class="string">'db/all-csv/'</span>
+            <div class="content"><div class='highlight'><pre><span class="constant">CSV_FILEFODLER</span> =  <span class="string">'db/all-csv/'</span>
 <span class="constant">OUTPUT</span> = <span class="string">'output'</span>
 <span class="constant">VIEW_FOLDER</span> = <span class="string">'views'</span>
 <span class="constant">TPL_FILE</span> = <span class="string">'views/book.erubis.html'</span>
@@ -320,11 +320,9 @@
 
             </div>
             
-            <div class="content"><div class='highlight'><pre><span class="keyword">if</span> __FILE_<span class="number">_</span> == <span class="variable">$PROGRAM_NAME</span>
-  t = <span class="constant">Time</span>.new
+            <div class="content"><div class='highlight'><pre><span class="function"><span class="keyword">def</span> <span class="title">csv_to_html</span></span>
   xin_csv_2_html <span class="constant">CSV_FILEFODLER</span>, <span class="constant">OUTPUT</span>
   copy_asset_to_output
-  p <span class="string">"耗时 <span class="subst">#{<span class="constant">Time</span>.now - t}</span> 秒"</span>
 <span class="keyword">end</span></pre></div></div>
             
         </li>

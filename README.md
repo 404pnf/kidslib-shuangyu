@@ -6,6 +6,15 @@ Generate html for individual book.  Book contents are in db/*.csv
 我们先生成每本书单独的csv文件。
 
 # Usage
+## 参数写死在脚本中
+
+为了方便使用rake。
+
+## rake
+
+用rake并查看帮助。
+
+rake -T 列出所有任务
 
 ## 一期
 01...rb和02..rb

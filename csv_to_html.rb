@@ -84,7 +84,7 @@ end
 
 # ----
 # ## 预设常量
-CSV_FILEFODLER =  ARGV[0] || 'db/all-csv/'
+CSV_FILEFODLER =  'db/all-csv/'
 OUTPUT = 'output'
 VIEW_FOLDER = 'views'
 TPL_FILE = 'views/book.erubis.html'
@@ -92,9 +92,7 @@ SUFFIX = '.csv'
 
 # ----
 # ## 干活
-if __FILE__ == $PROGRAM_NAME
-  t = Time.new
+def csv_to_html
   xin_csv_2_html CSV_FILEFODLER, OUTPUT
   copy_asset_to_output
-  p "耗时 #{Time.now - t} 秒"
 end
