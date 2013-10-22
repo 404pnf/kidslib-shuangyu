@@ -1,5 +1,6 @@
 require 'csv'
 
+# 命名空间
 module Kidslib
 
   def self.r(f)
@@ -16,10 +17,10 @@ module Kidslib
   end
 
   def get_fenlei_nianling(path)
-    a = Dir[ path.chomp('/') + '/*.csv'].map {|e| r(e) + [nl]}
-    aa = a.map {|zh, en, id, nianling| [id, nianling, '双语阅读', zh, en]}
+    a = Dir[ path.chomp('/') + '/*.csv'].map { |e| r(e) + [nl] }
+    aa = a.map { |zh, en, id, nianling| [id, nianling, '双语阅读', zh, en] }
     s = to_csv_str aa.sort_by { |id, _, _, _, _| id.to_i }
-    p "生成的文件是  ./fenlei.csv "
+    p '生成的文件是  ./fenlei.csv'
     File.write('fenlei.csv', s)
   end
 
@@ -27,4 +28,4 @@ module Kidslib
 
 end
 
-Kidslib::get_fenlei_nianling('all-csv')
+Kidslib.get_fenlei_nianling('db/all-csv')
