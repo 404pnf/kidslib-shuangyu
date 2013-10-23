@@ -5,11 +5,15 @@
 # 不再需要使用了。
 
 require 'csv'
+require 'find'
 
+# ghd => get header
 def ghd(path)
-  Dir['path/*.csv'].each do |f|
-    c = CSV.read(f).unshift ['en', 'zh']
-    out = c.map { |e| e.to_csv(force_quotes: true) }.join('')
+  Find.find(path).each do |f|
+    next unless f =~ /.csv$/
+    c = CSV.read(f).unshift %w(en zh)
+    out = c.map { |e| e.to_csv(force_quotes: true) }
+           .join
     File.write("#{f}.new", out)
   end
 end

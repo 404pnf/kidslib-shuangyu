@@ -29,7 +29,6 @@ require 'csv'
 require 'erubis'
 require 'fileutils'
 
-
 # ## 类只是为了封装
 # 只是为了封装
 class Bilingual
@@ -43,19 +42,12 @@ class Bilingual
 
   def context
     t, *content = @h # 第一行是题目
-    title = [t[:zh]||'', t[:en]||''].join(' | ')
+    title = [t[:zh] || '', t[:en] || ''].join(' | ')
     {
         title: title,
         content: content,
+        id: @id
     }
-  end
-
-  def id
-    @id
-  end
-
-  def title
-    self.context[:title]
   end
 
 end
@@ -66,20 +58,20 @@ def xin_csv_2_html(input, out)
   files = Dir["#{input}/*.csv"]
 
   files.each do |file|
-    e = Bilingual.new file
+    context = Bilingual.new file
 
     eruby = Erubis::Eruby.new(File.read(TPL_FILE))
-    html_str =  eruby.evaluate(e.context)
+    html_str =  eruby.evaluate(context)
 
-    p "generating #{out}/#{e.id}.html: #{e.title}"
-    File.write("#{out}/#{e.id}.html", html_str)
+    p "generating #{ out }/#{ context[:id] }.html: #{ context[:title] }"
+    File.write("#{ out }/#{ context[:id] }.html", html_str)
   end
 end
 
 # ---
 # ## 复制样式等资源文件到输出目录
 def copy_asset_to_output
-  FileUtils.cp_r 'views/.', 'output', :verbose => true
+  FileUtils.cp_r 'views/.', 'output', verbose: true
 end
 
 # ----
@@ -96,3 +88,5 @@ def csv_to_html
   xin_csv_2_html CSV_FILEFODLER, OUTPUT
   copy_asset_to_output
 end
+
+__FILE__ == $PROGRAM_NAME && csv_to_html

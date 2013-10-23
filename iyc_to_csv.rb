@@ -25,7 +25,7 @@ require 'fileutils'
 # 1. 如果csv中有注释行，忽略  skip_lines: /^#/
 def get_titles(file)
   c = CSV.table(file, converters: nil).map(&:to_hash)
-  c.each_with_object({}) { |e, obj| obj[ e[:id] ] = [ e[:zh]||'', e[:en]||'' ] }
+  c.each_with_object({}) { |e, obj| obj[e[:id]] = [e[:zh] || '', e[:en] || ''] }
 end
 # ----
 
@@ -55,8 +55,8 @@ end
 #
 def get_contents(file)
   cnt = CSV.table file, converters: nil
-  cnt.each_with_object(Hash.new { |h, k| h[k] = Array.new}) do |e, obj|
-    id, zh, en = e[:bookid], e[:segment_zh]||'', e[:segment_en]||''
+  cnt.each_with_object(Hash.new { |h, k| h[k] = Array.new }) do |e, obj|
+    id, zh, en = e[:bookid], e[:segment_zh] || '', e[:segment_en] || ''
     obj[id] << [zh, en]
   end
 end
@@ -89,9 +89,9 @@ end
 #
 
 def book_merge(cnt_h, t_h)
-  cnt_h.keys.each_with_object(Hash.new{ |h, k| h[k] = [['zh', 'en']] }) do |id, obj|
+  cnt_h.keys.each_with_object(Hash.new { |h, k| h[k] = [%w(zh en)] }) do |id, obj|
     obj[id] << t_h[id] # 先把题目写进去
-    cnt_h[id].each { |e| obj[id] << e} # 内容本身已经是数组套数组了
+    cnt_h[id].each { |e| obj[id] << e } # 内容本身已经是数组套数组了
   end
 end
 
@@ -105,19 +105,17 @@ OUTPUT = './db/all-csv/'
 def iyc_2_csv
   titles, contents = get_titles(BOOK_TITLES), get_contents(BOOK_CONTENTS)
   books = book_merge contents, titles
-  #pp books['1']
+  # pp books['1']
   books.each do |bookid, paragraphs|
     id = bookid + '.csv'
     csv = paragraphs.map { |para| para.to_csv(force_quotes: true) }
-    #p "generating #{bookid}"
-    File.write("#{OUTPUT}/#{id}", csv.join('') )
+    # p "generating #{bookid}"
+    File.write("#{OUTPUT}/#{id}", csv.join(''))
   end
 end
 
 # ## 干活
-if __FILE__ == $PROGRAM_NAME
-  iyc_2_csv
-end
+iyc_2_csv if __FILE__ == $PROGRAM_NAME
 
 # ----
 # ## ruby需要csv中的双引号是被双引号扩着而不是用反斜杠
