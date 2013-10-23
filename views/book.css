@@ -1,5 +1,5 @@
 /* line-height, font-size efined in js */
-* { 
+* {
 	/*font-size: 20px;*/
 	}
 
@@ -8,16 +8,16 @@ table, td, th {
   }
 
 td {
-	 /* height:50px; */
-     vertical-align:top;
-   	 text-align:left;
- 	 padding-bottom:30px;/*行高的倍数-chenjing*/
-	 padding-left:20px;
+    /* height:50px; */
+    vertical-align:top;
+    text-align:left;
+    padding-bottom:30px;/*行高的倍数-chenjing*/
+    padding-left:20px;
 	 }
 
 /*chenjing*/
 .ebook_title { position:absolute; left:20%; top:7%;
- font-weight:bold; font-size:35px; width:750px;
- }
+               font-weight:bold; font-size:35px; width:750px;
+              }
 
 .zh_en { position:absolute; left:70%; bottom:10%; font-size:14px;}

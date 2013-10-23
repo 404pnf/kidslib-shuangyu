@@ -89,4 +89,4 @@ def csv_to_html
   copy_asset_to_output
 end
 
-__FILE__ == $PROGRAM_NAME && csv_to_html
+# __FILE__ == $PROGRAM_NAME && csv_to_html

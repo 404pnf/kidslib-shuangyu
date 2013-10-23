@@ -28,4 +28,4 @@ module Kidslib
 
 end
 
-Kidslib.get_fenlei_nianling('db/all-csv')
+# Kidslib.get_fenlei_nianling('db/all-csv') if __FILE__ == $PROGRAM_NAME

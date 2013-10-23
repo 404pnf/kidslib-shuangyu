@@ -19,33 +19,13 @@
           <div id="jump_page">
             
               
-              <a class="source" href="convert-xin-book-info-to-csv.html">
-                convert-xin-book-info-to-csv.rb
-              </a>
-            
-              
               <a class="source" href="csv_to_html.html">
                 csv_to_html.rb
               </a>
             
               
-              <a class="source" href="iyc_to_csv.html">
-                iyc_to_csv.rb
-              </a>
-            
-              
-              <a class="source" href="rename.html">
-                rename.rb
-              </a>
-            
-              
-              <a class="source" href="tsv_to_csv.html">
-                tsv_to_csv.rb
-              </a>
-            
-              
-              <a class="source" href="给二期csv添加headers.html">
-                给二期csv添加headers.rb
+              <a class="source" href="get-fenlei-nl.html">
+                get-fenlei-nl.rb
               </a>
             
           </div>
@@ -175,19 +155,12 @@
 
   <span class="function"><span class="keyword">def</span> <span class="title">context</span></span>
     t, *content = <span class="variable">@h</span> <span class="comment"># 第一行是题目</span>
-    title = [t[<span class="symbol">:zh</span>]||<span class="string">''</span>, t[<span class="symbol">:en</span>]||<span class="string">''</span>].join(<span class="string">' | '</span>)
+    title = [t[<span class="symbol">:zh</span>] || <span class="string">''</span>, t[<span class="symbol">:en</span>] || <span class="string">''</span>].join(<span class="string">' | '</span>)
     {
         <span class="symbol">title:</span> title,
         <span class="symbol">content:</span> content,
+        <span class="symbol">id:</span> <span class="variable">@id</span>
     }
-  <span class="keyword">end</span>
-
-  <span class="function"><span class="keyword">def</span> <span class="title">id</span></span>
-    <span class="variable">@id</span>
-  <span class="keyword">end</span>
-
-  <span class="function"><span class="keyword">def</span> <span class="title">title</span></span>
-    <span class="keyword">self</span>.context[<span class="symbol">:title</span>]
   <span class="keyword">end</span>
 
 <span class="keyword">end</span></pre></div></div>
@@ -222,13 +195,13 @@
   files = <span class="constant">Dir</span>[<span class="string">"<span class="subst">#{input}</span>/*.csv"</span>]
 
   files.each <span class="keyword">do</span> |file|
-    e = <span class="constant">Bilingual</span>.new file
+    context = <span class="constant">Bilingual</span>.new file
 
     eruby = <span class="constant">Erubis::Eruby</span>.new(<span class="constant">File</span>.read(<span class="constant">TPL_FILE</span>))
-    html_str =  eruby.evaluate(e.context)
+    html_str =  eruby.evaluate(context)
 
-    p <span class="string">"generating <span class="subst">#{out}</span>/<span class="subst">#{e.id}</span>.html: <span class="subst">#{e.title}</span>"</span>
-    <span class="constant">File</span>.write(<span class="string">"<span class="subst">#{out}</span>/<span class="subst">#{e.id}</span>.html"</span>, html_str)
+    p <span class="string">"generating <span class="subst">#{ out }</span>/<span class="subst">#{ context[<span class="symbol">:id</span>] }</span>.html: <span class="subst">#{ context[<span class="symbol">:title</span>] }</span>"</span>
+    <span class="constant">File</span>.write(<span class="string">"<span class="subst">#{ out }</span>/<span class="subst">#{ context[<span class="symbol">:id</span>] }</span>.html"</span>, html_str)
   <span class="keyword">end</span>
 <span class="keyword">end</span></pre></div></div>
             
@@ -259,7 +232,7 @@
             </div>
             
             <div class="content"><div class='highlight'><pre><span class="function"><span class="keyword">def</span> <span class="title">copy_asset_to_output</span></span>
-  <span class="constant">FileUtils</span>.cp_r <span class="string">'views/.'</span>, <span class="string">'output'</span>, <span class="symbol">:verbose</span> =&gt; <span class="keyword">true</span>
+  <span class="constant">FileUtils</span>.cp_r <span class="string">'views/.'</span>, <span class="string">'output'</span>, <span class="symbol">verbose:</span> <span class="keyword">true</span>
 <span class="keyword">end</span></pre></div></div>
             
         </li>
@@ -324,6 +297,19 @@
   xin_csv_2_html <span class="constant">CSV_FILEFODLER</span>, <span class="constant">OUTPUT</span>
   copy_asset_to_output
 <span class="keyword">end</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-16">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-16">&#182;</a>
+              </div>
+              <p><strong>FILE</strong> == $PROGRAM_NAME &amp;&amp; csv_to_html</p>
+
+            </div>
             
         </li>
         
