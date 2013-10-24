@@ -52,13 +52,22 @@ class Bilingual
 
 end
 
+
+# ----
+# ## 预设常量
+CSV_FILEFODLER =  'db/all-csv/'
+OUTPUT = 'output'
+VIEW_FOLDER = 'views'
+TPL_FILE = 'views/book.erubis.html'
+SUFFIX = '.csv'
+
 # ----
 # ## 绑定变量到模版的并写文件的函数
 def xin_csv_2_html(input, out)
-  files = Dir["#{input}/*.csv"]
+  files = Dir["#{ input }/*.csv"]
 
   files.each do |file|
-    context = Bilingual.new file
+    context = Bilingual.new(file).context
 
     eruby = Erubis::Eruby.new(File.read(TPL_FILE))
     html_str =  eruby.evaluate(context)
@@ -75,18 +84,10 @@ def copy_asset_to_output
 end
 
 # ----
-# ## 预设常量
-CSV_FILEFODLER =  'db/all-csv/'
-OUTPUT = 'output'
-VIEW_FOLDER = 'views'
-TPL_FILE = 'views/book.erubis.html'
-SUFFIX = '.csv'
-
-# ----
 # ## 干活
 def csv_to_html
   xin_csv_2_html CSV_FILEFODLER, OUTPUT
   copy_asset_to_output
 end
 
-# __FILE__ == $PROGRAM_NAME && csv_to_html
+__FILE__ == $PROGRAM_NAME && csv_to_html

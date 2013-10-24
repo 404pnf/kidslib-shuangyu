@@ -21,7 +21,9 @@ end
 
 desc "generate fenlei"
 task :fenlei do
-  time { Kidslib.get_fenlei_nianling }
+  input = 'db/all-csv' 
+  #time { Kidslib.get_fenlei_nianling(input) }
+  Kidslib.get_fenlei_nianling(input)
 end
 
 desc "deploy"
