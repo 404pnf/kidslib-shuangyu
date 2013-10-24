@@ -52,7 +52,6 @@ class Bilingual
 
 end
 
-
 # ----
 # ## 预设常量
 CSV_FILEFODLER =  'db/all-csv/'

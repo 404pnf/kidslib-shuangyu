@@ -187,23 +187,15 @@
               <div class="pilwrap for-h2">
                 <a class="pilcrow" href="#section-9">&#182;</a>
               </div>
-              <h2>绑定变量到模版的并写文件的函数</h2>
+              <h2>预设常量</h2>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre><span class="function"><span class="keyword">def</span> <span class="title">xin_csv_2_html</span><span class="params">(input, out)</span></span>
-  files = <span class="constant">Dir</span>[<span class="string">"<span class="subst">#{input}</span>/*.csv"</span>]
-
-  files.each <span class="keyword">do</span> |file|
-    context = <span class="constant">Bilingual</span>.new file
-
-    eruby = <span class="constant">Erubis::Eruby</span>.new(<span class="constant">File</span>.read(<span class="constant">TPL_FILE</span>))
-    html_str =  eruby.evaluate(context)
-
-    p <span class="string">"generating <span class="subst">#{ out }</span>/<span class="subst">#{ context[<span class="symbol">:id</span>] }</span>.html: <span class="subst">#{ context[<span class="symbol">:title</span>] }</span>"</span>
-    <span class="constant">File</span>.write(<span class="string">"<span class="subst">#{ out }</span>/<span class="subst">#{ context[<span class="symbol">:id</span>] }</span>.html"</span>, html_str)
-  <span class="keyword">end</span>
-<span class="keyword">end</span></pre></div></div>
+            <div class="content"><div class='highlight'><pre><span class="constant">CSV_FILEFODLER</span> =  <span class="string">'db/all-csv/'</span>
+<span class="constant">OUTPUT</span> = <span class="string">'output'</span>
+<span class="constant">VIEW_FOLDER</span> = <span class="string">'views'</span>
+<span class="constant">TPL_FILE</span> = <span class="string">'views/book.erubis.html'</span>
+<span class="constant">SUFFIX</span> = <span class="string">'.csv'</span></pre></div></div>
             
         </li>
         
@@ -227,12 +219,22 @@
               <div class="pilwrap for-h2">
                 <a class="pilcrow" href="#section-11">&#182;</a>
               </div>
-              <h2>复制样式等资源文件到输出目录</h2>
+              <h2>绑定变量到模版的并写文件的函数</h2>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre><span class="function"><span class="keyword">def</span> <span class="title">copy_asset_to_output</span></span>
-  <span class="constant">FileUtils</span>.cp_r <span class="string">'views/.'</span>, <span class="string">'output'</span>, <span class="symbol">verbose:</span> <span class="keyword">true</span>
+            <div class="content"><div class='highlight'><pre><span class="function"><span class="keyword">def</span> <span class="title">xin_csv_2_html</span><span class="params">(input, out)</span></span>
+  files = <span class="constant">Dir</span>[<span class="string">"<span class="subst">#{ input }</span>/*.csv"</span>]
+
+  files.each <span class="keyword">do</span> |file|
+    context = <span class="constant">Bilingual</span>.new(file).context
+
+    eruby = <span class="constant">Erubis::Eruby</span>.new(<span class="constant">File</span>.read(<span class="constant">TPL_FILE</span>))
+    html_str =  eruby.evaluate(context)
+
+    p <span class="string">"generating <span class="subst">#{ out }</span>/<span class="subst">#{ context[<span class="symbol">:id</span>] }</span>.html: <span class="subst">#{ context[<span class="symbol">:title</span>] }</span>"</span>
+    <span class="constant">File</span>.write(<span class="string">"<span class="subst">#{ out }</span>/<span class="subst">#{ context[<span class="symbol">:id</span>] }</span>.html"</span>, html_str)
+  <span class="keyword">end</span>
 <span class="keyword">end</span></pre></div></div>
             
         </li>
@@ -257,15 +259,13 @@
               <div class="pilwrap for-h2">
                 <a class="pilcrow" href="#section-13">&#182;</a>
               </div>
-              <h2>预设常量</h2>
+              <h2>复制样式等资源文件到输出目录</h2>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre><span class="constant">CSV_FILEFODLER</span> =  <span class="string">'db/all-csv/'</span>
-<span class="constant">OUTPUT</span> = <span class="string">'output'</span>
-<span class="constant">VIEW_FOLDER</span> = <span class="string">'views'</span>
-<span class="constant">TPL_FILE</span> = <span class="string">'views/book.erubis.html'</span>
-<span class="constant">SUFFIX</span> = <span class="string">'.csv'</span></pre></div></div>
+            <div class="content"><div class='highlight'><pre><span class="function"><span class="keyword">def</span> <span class="title">copy_asset_to_output</span></span>
+  <span class="constant">FileUtils</span>.cp_r <span class="string">'views/.'</span>, <span class="string">'output'</span>, <span class="symbol">verbose:</span> <span class="keyword">true</span>
+<span class="keyword">end</span></pre></div></div>
             
         </li>
         
@@ -296,20 +296,9 @@
             <div class="content"><div class='highlight'><pre><span class="function"><span class="keyword">def</span> <span class="title">csv_to_html</span></span>
   xin_csv_2_html <span class="constant">CSV_FILEFODLER</span>, <span class="constant">OUTPUT</span>
   copy_asset_to_output
-<span class="keyword">end</span></pre></div></div>
-            
-        </li>
-        
-        
-        <li id="section-16">
-            <div class="annotation">
-              
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-16">&#182;</a>
-              </div>
-              <p><strong>FILE</strong> == $PROGRAM_NAME &amp;&amp; csv_to_html</p>
+<span class="keyword">end</span>
 
-            </div>
+__FILE_<span class="number">_</span> == <span class="variable">$PROGRAM_NAME</span> &amp;&amp; csv_to_html</pre></div></div>
             
         </li>
         
