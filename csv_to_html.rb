@@ -55,7 +55,7 @@ end
 # ----
 # ## 预设常量
 CSV_FILEFODLER =  'db/all-csv/'
-OUTPUT = 'output'
+OUTPUT = '_output'
 VIEW_FOLDER = 'views'
 TPL_FILE = 'views/book.erubis.html'
 SUFFIX = '.csv'
@@ -63,14 +63,11 @@ SUFFIX = '.csv'
 # ----
 # ## 绑定变量到模版的并写文件的函数
 def xin_csv_2_html(input, out)
-  files = Dir["#{ input }/*.csv"]
-
-  files.each do |file|
+  FileUtils.mkdir_p "#{ out }/html/" unless File.exist? "#{ out }/html/"
+  Dir["#{ input }/*.csv"].each do |file|
     context = Bilingual.new(file).context
-
     eruby = Erubis::Eruby.new(File.read(TPL_FILE))
     html_str =  eruby.evaluate(context)
-
     p "generating #{ out }/#{ context[:id] }.html: #{ context[:title] }"
     File.write("#{ out }/#{ context[:id] }.html", html_str)
   end
@@ -79,7 +76,7 @@ end
 # ---
 # ## 复制样式等资源文件到输出目录
 def copy_asset_to_output
-  FileUtils.cp_r 'views/.', 'output', verbose: true
+  FileUtils.cp_r 'views/.', '_output', verbose: true
 end
 
 # ----
